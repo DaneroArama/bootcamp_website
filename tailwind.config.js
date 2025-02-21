@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         'malinton': ['Malinton', 'sans-serif'],
         'sf-pro': ['SF Pro Display', 'sans-serif'],
-        'gothic': ['Gothic A1', 'sans-serif'],
+        'gothic': ['Gothic60', 'sans-serif'],
       },
     },
   },
