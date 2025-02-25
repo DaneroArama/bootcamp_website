@@ -32,7 +32,7 @@ const MentorSection = () => {
         <section className="w-full md:w-[80%] mx-auto">
             {/* Black Header Section */}
             <div className="bg-black p-4 md:p-6 flex items-center border-white border-4">
-                <h2 className="text-white text-2xl md:text-4xl font-bold">Mentor List ⟨⟩</h2>
+                <h2 className="text-white text-2xl md:text-4xl font-bold">Mentor List</h2>
             </div>
 
             {/* Mentor Cards Grid */}
@@ -45,15 +45,15 @@ const MentorSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             whileHover={{ scale: 1.02 }}
-                            className="flex flex-col"
+                            className="flex flex-row bg-[#363636]"
                         >
                             {/* Mentor Image Section */}
-                            <div className="w-full aspect-square bg-pink-300 flex items-center justify-center">
-                                <span className="text-4xl">⟨⟩</span>
+                            <div className="w-24 h-24 bg-[#E7A8E2] flex items-center justify-center flex-shrink-0">
+                                <span className="text-4xl"></span>
                             </div>
 
                             {/* Mentor Info Section */}
-                            <div className="bg-gray-800 p-4">
+                            <div className="p-4 flex flex-col justify-center">
                                 <h3 className="text-white text-lg font-medium">{mentor.name}</h3>
                                 <p className="text-gray-400 text-sm">{mentor.program}</p>
                             </div>
@@ -65,7 +65,7 @@ const MentorSection = () => {
                 <div className="flex justify-center mt-8">
                     <motion.button
                         whileHover={{ scale: 1.05 }}
-                        className="bg-black text-white px-6 py-3 rounded-full flex items-center space-x-2"
+                        className="bg-black border-white border-2 text-white px-6 py-3 rounded-full flex items-center space-x-2"
                     >
                         <span className="text-purple-400">✧</span>
                         <span>Explore all mentors on event</span>
@@ -78,3 +78,11 @@ const MentorSection = () => {
 };
 
 export default MentorSection; 
+
+/*
+<img 
+    src={mentor.image} 
+    alt={mentor.name}
+    className="w-full aspect-square object-cover"
+/>
+*/
