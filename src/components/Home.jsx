@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, useAnimation } from 'framer-motion';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Squares from './SquareBackground';
 import attendee1 from '../img/Logo.png'; // Adjust the path as necessary
 import attendee2 from '../img/Logo.png'; // Adjust the path as necessary
@@ -10,8 +12,11 @@ import mentor3 from '../img/Logo.png'; // Adjust the path as necessary
 import speaker1 from '../img/Logo.png'; // Adjust the path as necessary
 import speaker2 from '../img/Logo.png'; // Adjust the path as necessary
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const Home = () => {
     const heroRef = useRef(null);
+    const textRefs = useRef([]);
     const { scrollYProgress } = useScroll({
         target: heroRef,
         offset: ["start start", "end start"]
@@ -47,16 +52,6 @@ export const Home = () => {
     
     return (
         <div className="relative min-h-screen overflow-hidden">
-            <div className="absolute inset-0">
-                <Squares
-                    direction="diagonal"
-                    speed={0.2}
-                    borderColor="#ffffff"
-                    squareSize={80}
-                    hoverFillColor="rgba(245, 176, 65, 0.1)"
-                />
-            </div>
-
             {/* Hero Section with Scroll-based Pin */}
             <div ref={heroRef} className="h-[100vh] relative">
                 <motion.div
@@ -73,15 +68,23 @@ export const Home = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <div className="max-w-7xl mx-auto text-center space-y-4 text-white">
-                        <h1 className="text-5xl md:text-5xl lg:text-7xl font-bold">
+                        <h1 
+                            ref={(el) => textRefs.current[0] = el}
+                            className="text-5xl md:text-5xl lg:text-7xl font-bold"
+                        >
                             Design Your <span className="bg-[#F5B041] px-8 py-3 text-xl md:text-xl lg:text-5xl rounded-full">Future</span> with
                         </h1>
-                        <h1 className="text-5xl md:text-5xl lg:text-7xl font-bold">
-                            Real-W<span className="text-green-500">🍀</span>rld <span className="inline-flex items-center space-x-2 border-2 border-purple-500 rounded-full px-6 py-2 text-purple-500 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out cursor-pointer">
+                        <h1 
+                            ref={(el) => textRefs.current[1] = el}
+                            className="text-5xl md:text-5xl lg:text-7xl font-bold"
+                        >
+                            Real-W<span className="text-green-500">🍀</span>rld 
+                            <span className="inline-flex items-center space-x-2 border-2 border-purple-500 rounded-full px-6 py-2 text-purple-500 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out cursor-pointer">
                                 <svg className="w-60 h-11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <path d="M5 12h40M24 5l7 7-7 7"></path>
                                 </svg>
-                            </span> Experience
+                            </span> 
+                            Experience
                         </h1>
                     </div>
                 </motion.div>
@@ -94,7 +97,7 @@ export const Home = () => {
                     className="max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1.6fr_1.3fr_1.2fr] gap-6"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
+                    viewport={{ margin: "-50px" }}
                 >
                     {/* Bootcamp Card */}
                     <motion.div
@@ -102,8 +105,9 @@ export const Home = () => {
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
                         }}
-                        transition={{ duration: 0.5, delay: 0 }}
-                        className="bg-emerald-500 p-10 border-white border-4 text-white flex flex-col justify-between"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="bg-emerald-500 p-10 border-white border-4 text-white flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">BOOTCAMP</h3>
                         <div>
@@ -118,8 +122,9 @@ export const Home = () => {
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
                         }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                        className="bg-red-400 p-10 border-white border-4 text-white flex flex-col justify-between"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="bg-red-400 p-10 border-white border-4 text-white flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">LOCATION</h3>
                         <div>
@@ -134,8 +139,9 @@ export const Home = () => {
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
                         }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="bg-blue-500 p-10 border-white border-4 text-white flex flex-col justify-between"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="bg-blue-500 p-10 border-white border-4 text-white flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">100 +</h3>
                         <div className="flex mb-6">
@@ -152,8 +158,9 @@ export const Home = () => {
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
                         }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
-                        className="bg-[#F5B041] p-10 border-white border-4 flex flex-col justify-between"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="bg-[#F5B041] p-10 border-white border-4 flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">DATE & TIME</h3>
                         <div>
@@ -168,7 +175,7 @@ export const Home = () => {
                     className="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_1.2fr_1.6fr] gap-6 mt-6"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ margin: "-100px" }}
                 >
                     {/* Mentors Card */}
                     <motion.div
@@ -176,8 +183,9 @@ export const Home = () => {
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
                         }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
-                        className="bg-purple-200 p-8 border-white border-4 flex flex-col justify-between"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="bg-purple-200 p-8 border-white border-4 flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">MENTORS</h3>
                         <div className="flex mb-6">
@@ -194,8 +202,9 @@ export const Home = () => {
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
                         }}
-                        transition={{ duration: 0.5, delay: 0.5 }}
-                        className="bg-purple-500 p-8 border-white border-4 text-white flex flex-col justify-between"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="bg-purple-500 p-8 border-white border-4 text-white flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">SPEAKERS</h3>
                         <div className="flex">
@@ -211,8 +220,9 @@ export const Home = () => {
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
                         }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                        className="bg-white p-8 border-white border-4 relative flex flex-col justify-between"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="bg-white p-8 border-white border-4 relative flex flex-col justify-between cursor-pointer"
                     >
                         <div className="flex flex-wrap gap-4 justify-center items-center">
                             <div className="bg-purple-600 rounded-full p-3">
