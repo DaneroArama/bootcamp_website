@@ -8,12 +8,12 @@ const SpeakerSection = () => {
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi."
         },
         {
-            name: "Ko Lamin Thaw",
+            name: "Ko Ko Lamin Thaw",
             position: "Actor",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi."
         },
         {
-            name: "Ko Lamin Thaw",
+            name: "Ko Ko Ko Lamin Thaw",
             position: "Actor",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi."
         },
@@ -24,7 +24,7 @@ const SpeakerSection = () => {
         <section className="w-full md:w-[80%] mx-auto">
             {/* Black Header Section */}
             <div className="bg-black p-4 md:p-6 flex items-center border-white border-4">
-                <h2 className="text-white text-2xl md:text-4xl font-bold">Speaker List ❋</h2>
+                <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Speaker List ❋</h2>
             </div>
 
             {/* Speaker Cards Container */}

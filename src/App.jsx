@@ -2,6 +2,7 @@ import { Home } from "./components/Home";
 import { AboutSection } from "./components/AboutSection";
 import Squares from "./components/SquareBackground";
 import SpeakerSection from "./components/SpeakerSection";
+import MentorSection from "./components/MentorSection";
 
 const App = () => {
     return (
@@ -20,8 +21,9 @@ const App = () => {
             {/* Content layer */}
             <div className="relative">
                 <Home />
-                <AboutSection />
+                <AboutSection/>
                 <SpeakerSection/>
+                <MentorSection/>
             </div>
         </>
     );
