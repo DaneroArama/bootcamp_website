@@ -32,7 +32,7 @@ const MentorSection = () => {
         <section className="w-full md:w-[80%] mx-auto">
             {/* Black Header Section */}
             <div className="bg-black p-4 md:p-6 flex items-center border-white border-4">
-                <h2 className="text-white text-2xl md:text-4xl font-bold">Mentor List</h2>
+                <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Mentor List</h2>
             </div>
 
             {/* Mentor Cards Grid */}
