@@ -37,7 +37,7 @@ const MentorSection = () => {
 
             {/* Mentor Cards Grid */}
             <div className="container mx-auto px-2 md:px-4 py-4 md:py-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 cursor-pointer">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {mentors.map((mentor, index) => (
                         <motion.div
                             key={index}
@@ -45,15 +45,15 @@ const MentorSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             whileHover={{ scale: 1.02 }}
-                            className="bg-gray-800 flex items-center space-x-4 p-4"
+                            className="flex flex-col"
                         >
-                            {/* Mentor Avatar */}
-                            <div className="w-16 h-16 bg-pink-300 rounded-none flex-shrink-0 flex items-center justify-center">
-                                <span className="text-2xl">⟨⟩</span>
+                            {/* Mentor Image Section */}
+                            <div className="w-full aspect-square bg-pink-300 flex items-center justify-center">
+                                <span className="text-4xl">⟨⟩</span>
                             </div>
 
-                            {/* Mentor Info */}
-                            <div>
+                            {/* Mentor Info Section */}
+                            <div className="bg-gray-800 p-4">
                                 <h3 className="text-white text-lg font-medium">{mentor.name}</h3>
                                 <p className="text-gray-400 text-sm">{mentor.program}</p>
                             </div>
@@ -65,7 +65,7 @@ const MentorSection = () => {
                 <div className="flex justify-center mt-8">
                     <motion.button
                         whileHover={{ scale: 1.05 }}
-                        className="bg-black text-white px-6 py-3 rounded-full flex items-center space-x-2 border-white border-2"
+                        className="bg-black text-white px-6 py-3 rounded-full flex items-center space-x-2"
                     >
                         <span className="text-purple-400">✧</span>
                         <span>Explore all mentors on event</span>
