@@ -2,35 +2,18 @@ import React from 'react';
 
 export const DesignSection = () => {
   return (
-      <div className="flex flex-wrap gap-4 p-4">
-        <div
-            className="bg-green-500 w-full md:w-1/3 h-40 border-2 border-black rounded-lg shadow-lg transition-transform transform hover:scale-105"></div>
-        <div className="bg-pink-200 w-full md:w-1/3 h-40 border-2 border-black rounded-lg shadow-lg relative">
-          <div className="absolute top-0 left-0 flex flex-col items-center space-y-2 p-2">
-            <div
-                className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center shadow-md transition-transform transform hover:scale-110">
-              <span className="text-white">😊</span>
-            </div>
-            <div
-                className="bg-red-500 rounded-full w-12 h-12 flex items-center justify-center shadow-md transition-transform transform hover:scale-110">
-              <span className="text-white">😊</span>
-            </div>
-            <div
-                className="bg-yellow-500 rounded-full w-12 h-12 flex items-center justify-center shadow-md transition-transform transform hover:scale-110">
-              <span className="text-white">😊</span>
-            </div>
+      <>
+          <div className="grid grid-cols-5 grid-rows-3 gap-2 h-full">
+              <div className="row-span-2 bg-gray-200 flex items-center justify-center">1</div>
+              <div className="row-span-3 bg-gray-300 flex items-center justify-center">2</div>
+              <div className="col-start-1 row-start-3 bg-gray-400 flex items-center justify-center">3</div>
+              <div className="row-span-2 col-start-1 row-start-4 bg-gray-500 flex items-center justify-center">4</div>
+              <div className="col-span-2 row-span-2 col-start-2 row-start-4 bg-gray-600 flex items-center justify-center">5</div>
+              <div className="col-span-2 row-span-2 col-start-3 row-start-1 bg-gray-700 flex items-center justify-center">6</div>
+              <div className="col-start-3 row-start-3 bg-gray-800 flex items-center justify-center">7</div>
+              <div className="row-span-3 col-start-4 row-start-3 bg-gray-900 flex items-center justify-center text-white">8</div>
           </div>
-        </div>
-        <div
-            className="bg-black w-full md:w-1/3 h-40 border-2 border-black flex items-center justify-center rounded-lg shadow-lg">
-          <span className="text-purple-500 text-3xl font-bold">design!</span>
-        </div>
-        <div
-            className="bg-green-500 w-full md:w-1/3 h-40 border-2 border-black rounded-lg shadow-lg transition-transform transform hover:scale-105"></div>
-        <div
-            className="bg-green-500 w-full md:w-1/3 h-40 border-2 border-black rounded-lg shadow-lg transition-transform transform hover:scale-105"></div>
-        <div
-            className="bg-green-500 w-full md:w-1/3 h-40 border-2 border-black rounded-lg shadow-lg transition-transform transform hover:scale-105"></div>
-      </div>
+          );
+      </>
   );
 };

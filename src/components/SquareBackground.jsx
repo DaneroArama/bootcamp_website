@@ -134,7 +134,7 @@ const Squares = ({
     return (
         <canvas
             ref={canvasRef}
-            className="w-full h-full border-none block bg-white"
+            className="w-full h-full border-none block bg-black"
         ></canvas>
     );
 };
