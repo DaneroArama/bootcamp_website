@@ -3,32 +3,23 @@ import { motion } from "framer-motion";
 const SponsorSection = () => {
     const companies = [
         { name: "Company 1", color: "bg-[#EBFF00]", position: "-top-8 left-32" },
-        { name: "Company 1", color: "bg-pink-300", position: "-top-8 right-32" },
-        { name: "Company 1", color: "bg-orange-300", position: "top-12 left-1/2 -translate-x-1/2" },
-        { name: "Company 1", color: "bg-green-800 text-white", position: "top-12 right-24" },
+        { name: "Company 2", color: "bg-pink-300", position: "-top-8 right-32" },
+        { name: "Company 3", color: "bg-orange-300", position: "top-12 left-1/2 -translate-x-1/2" },
+        { name: "Company 4", color: "bg-green-800 text-white", position: "top-12 right-24" },
     ];
 
     return (
         <section className="w-full md:w-[80%] mx-auto py-16">
             {/* Sponsors Section */}
-            <div className="relative group mb-32">
+            <div className="relative mb-32 group">
                 {/* Floating Company Buttons */}
                 {companies.map((company, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 0 }}
                         whileHover={{ scale: 1.05 }}
-                        animate={["visible"]}
-                        variants={{
-                            visible: {
-                                opacity: 1,
-                                y: 0,
-                                transition: { delay: 0.2 }
-                            }
-                        }}
                         className={`absolute ${company.position} ${company.color} px-4 py-1 rounded-full 
-                                  opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                              opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out pointer-events-none`}
                     >
                         {company.name}
                     </motion.div>
@@ -39,7 +30,7 @@ const SponsorSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-4xl md:text-6xl font-bold text-center text-white"
+                    className="text-4xl md:text-6xl font-bold text-center text-white cursor-pointer hover:text-gray-200"
                 >
                     Our Partner & Sponsors
                 </motion.h2>
@@ -100,4 +91,4 @@ const SponsorSection = () => {
     );
 };
 
-export default SponsorSection; 
+export default SponsorSection;

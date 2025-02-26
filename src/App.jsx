@@ -6,6 +6,7 @@ import MentorSection from "./components/MentorSection";
 import HeroSection from "./components/HeroSection";
 import TimetableSection from "./components/TimetableSection";
 import SponsorSection from "./components/SponsorSection";
+import MachineGunLoader from "./components/MachineGunLoader";
 
 const App = () => {
     return (
@@ -23,6 +24,7 @@ const App = () => {
 
             {/* Content layer */}
             <div className="relative">
+                <MachineGunLoader text="Design Your Future with Real World Experience! Yesssss!" wordClassName="font-malinton"/>
                 <Home />
                 <HeroSection/>
                 <AboutSection/>

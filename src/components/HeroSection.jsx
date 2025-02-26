@@ -19,7 +19,7 @@ const HeroSection = () => {
                         <span className="text-[#E77FE7]">Design!</span>
                     </h1>
                     
-                    <p className="text-white text-xl md:text-2xl mt-4">
+                    <p className="text-white text-xl md:text-2xl font-malinton">
                         Think, Sprint, Design 2025
                     </p>
 
