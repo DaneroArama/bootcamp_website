@@ -4,6 +4,7 @@ const Squares = ({
                      direction = "right",
                      speed = 1,
                      borderColor = "#999",
+                     borderOpacity = 0.3,
                      squareSize = 40,
                      hoverFillColor = "#222",
                  }) => {
@@ -38,6 +39,14 @@ const Squares = ({
             const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize;
             const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize;
 
+            // Convert hex color to rgba
+            const hexToRgba = (hex, opacity) => {
+                const r = parseInt(hex.slice(1, 3), 16);
+                const g = parseInt(hex.slice(3, 5), 16);
+                const b = parseInt(hex.slice(5, 7), 16);
+                return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+            };
+
             for (let x = startX; x < canvas.width + squareSize; x += squareSize) {
                 for (let y = startY; y < canvas.height + squareSize; y += squareSize) {
                     const squareX = x - (gridOffset.current.x % squareSize);
@@ -53,7 +62,7 @@ const Squares = ({
                         ctx.fillRect(squareX, squareY, squareSize, squareSize);
                     }
 
-                    ctx.strokeStyle = borderColor;
+                    ctx.strokeStyle = hexToRgba(borderColor, borderOpacity);
                     ctx.strokeRect(squareX, squareY, squareSize, squareSize);
                 }
             }
@@ -135,7 +144,7 @@ const Squares = ({
             canvas.removeEventListener("mousemove", handleMouseMove);
             canvas.removeEventListener("mouseleave", handleMouseLeave);
         };
-    }, [direction, speed, borderColor, hoverFillColor, squareSize]);
+    }, [direction, speed, borderColor, borderOpacity, hoverFillColor, squareSize]);
 
     return (
         <canvas
