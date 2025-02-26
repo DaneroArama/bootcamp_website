@@ -33,7 +33,8 @@ const Squares = ({
             if (!ctx) return;
 
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+            ctx.lineWidth = 0.5;
+            
             const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize;
             const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize;
 
@@ -59,35 +60,40 @@ const Squares = ({
         };
 
         const updateAnimation = () => {
-            const effectiveSpeed = Math.max(speed, 0.1);
-            switch (direction) {
-                case "right":
-                    gridOffset.current.x =
-                        (gridOffset.current.x - effectiveSpeed + squareSize) % squareSize;
-                    break;
-                case "left":
-                    gridOffset.current.x =
-                        (gridOffset.current.x + effectiveSpeed + squareSize) % squareSize;
-                    break;
-                case "up":
-                    gridOffset.current.y =
-                        (gridOffset.current.y + effectiveSpeed + squareSize) % squareSize;
-                    break;
-                case "down":
-                    gridOffset.current.y =
-                        (gridOffset.current.y - effectiveSpeed + squareSize) % squareSize;
-                    break;
-                case "diagonal":
-                    gridOffset.current.x =
-                        (gridOffset.current.x - effectiveSpeed + squareSize) % squareSize;
-                    gridOffset.current.y =
-                        (gridOffset.current.y - effectiveSpeed + squareSize) % squareSize;
-                    break;
-                default:
-                    break;
+            // Draw grid first
+            drawGrid();
+
+            // Only update position if speed is not 0
+            if (speed !== 0) {
+                switch (direction) {
+                    case "right":
+                        gridOffset.current.x =
+                            (gridOffset.current.x - speed + squareSize) % squareSize;
+                        break;
+                    case "left":
+                        gridOffset.current.x =
+                            (gridOffset.current.x + speed + squareSize) % squareSize;
+                        break;
+                    case "up":
+                        gridOffset.current.y =
+                            (gridOffset.current.y + speed + squareSize) % squareSize;
+                        break;
+                    case "down":
+                        gridOffset.current.y =
+                            (gridOffset.current.y - speed + squareSize) % squareSize;
+                        break;
+                    case "diagonal":
+                        gridOffset.current.x =
+                            (gridOffset.current.x - speed + squareSize) % squareSize;
+                        gridOffset.current.y =
+                            (gridOffset.current.y - speed + squareSize) % squareSize;
+                        break;
+                    default:
+                        break;
+                }
             }
 
-            drawGrid();
+            // Continue animation frame
             requestRef.current = requestAnimationFrame(updateAnimation);
         };
 

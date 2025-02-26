@@ -14,7 +14,7 @@ const App = () => {
             <div className="fixed inset-0 -z-10">
                 <Squares
                     direction="diagonal"
-                    speed={0.01}
+                    speed={0}
                     borderColor="#ffffff"
                     squareSize={150}
                     hoverFillColor="rgba(245, 176, 65, 0.1)"
