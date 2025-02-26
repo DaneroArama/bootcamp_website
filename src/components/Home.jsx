@@ -109,9 +109,9 @@ export const Home = () => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="bg-emerald-500 p-10 border-white border-4 text-white flex flex-col justify-between cursor-pointer"
                     >
-                        <h3 className="text-3xl font-bold mb-6 font-gothic">BOOTCAMP</h3>
+                        <h3 className="text-3xl font-bold mb-6 font-gothic">Think, Sprint, Design</h3>
                         <div>
-                            <p className="text-2xl font-semibold font-malinton">Think, Sprint, Design</p>
+                            <p className="text-2xl font-semibold font-malinton">1st Myanmar In-person Bootcamp</p>
                             <p className="font-malinton text-xl">2025</p>
                         </div>
                     </motion.div>
@@ -128,8 +128,8 @@ export const Home = () => {
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">LOCATION</h3>
                         <div>
-                            <p className="text-2xl font-semibold mb-6 font-malinton">SITE Yangon Campus</p>
-                            <p className="font-malinton text-xl">123, Nat mauk Street</p>
+                            <p className="text-2xl font-semibold mb-6 font-malinton">Citizens Pay Office</p>
+                            <p className="font-malinton text-lg">Yangon Innovation Centre (YIC) , Kyan Mar Yay Seik Khan</p>
                         </div>
                     </motion.div>
 
@@ -143,13 +143,11 @@ export const Home = () => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="bg-blue-500 p-10 border-white border-4 text-white flex flex-col justify-between cursor-pointer"
                     >
-                        <h3 className="text-3xl font-bold mb-6 font-gothic">100 +</h3>
-                        <div className="flex mb-6">
-                            <img src={attendee1} alt="Attendee 1" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={attendee2} alt="Attendee 2" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={attendee3} alt="Attendee 3" className="w-12 h-12 rounded-full" />
+                        <h3 className="text-3xl font-bold mb-6 font-gothic">DATE & TIME</h3>
+                        <div>
+                            <p className="text-2xl font-semibold font-malinton">April 5th to 6th</p>
+                            <p className="font-malinton text-xl">9am to 4pm</p>
                         </div>
-                        <p className="font-malinton text-xl">Total Person</p>
                     </motion.div>
 
                     {/* Date & Time Card */}
@@ -162,10 +160,10 @@ export const Home = () => {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="bg-[#F5B041] p-10 border-white border-4 flex flex-col justify-between cursor-pointer"
                     >
-                        <h3 className="text-3xl font-bold mb-6 font-gothic">DATE & TIME</h3>
+                        <h3 className="text-3xl font-bold mb-6 font-gothic">Register</h3>
                         <div>
-                            <p className="text-2xl font-semibold mb-6 font-malinton">March 2nd/3rd</p>
-                            <p className="font-malinton text-xl">12 PM to 3 PM</p>
+                            <p className="text-2xl font-semibold mb-6 font-malinton">Stay Tuned</p>
+                            <p className="font-malinton text-xl">Will Be Announced</p>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -194,6 +192,7 @@ export const Home = () => {
                             <img src={mentor3} alt="Mentor 3" className="w-12 h-12 rounded-full" />
                         </div>
                         <p className="text-xl font-malinton">Over 20+ Mentors</p>
+                        <p className="text-xl font-malinton"> From Different Industry Experts</p>
                     </motion.div>
 
                     {/* Speakers Card */}

@@ -43,8 +43,8 @@ const MentorSection = () => {
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            whileHover={{ scale: 1.02 }}
+                            transition={{ duration: 0.1, delay: index * 0.1 }}
+                            whileHover={{ scale: 1.05 }}
                             className="flex flex-row bg-[#363636]"
                         >
                             {/* Mentor Image Section */}
