@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
     return (
-        <section className="w-full md:w-[80%] mx-auto min-h-screen flex flex-col items-center justify-center relative">
+        <section className="w-full md:w-[80%] mx-auto min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
             {/* Main Text Content */}
             <div className="text-center z-10">
                 <motion.div 

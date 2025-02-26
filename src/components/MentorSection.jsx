@@ -29,7 +29,7 @@ const MentorSection = () => {
     ];
 
     return (
-        <section className="w-full md:w-[80%] mx-auto">
+        <section className="w-full md:w-[80%] mx-auto overflow-hidden">
             {/* Black Header Section */}
             <div className="bg-black p-4 md:p-6 flex items-center border-white border-4">
                 <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Mentor List</h2>
@@ -43,7 +43,7 @@ const MentorSection = () => {
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.1, delay: index * 0.1 }}
+                            transition={{ duration: 0.1, delay: index * 0.5 }}
                             whileHover={{ scale: 1.05 }}
                             className="flex flex-row bg-[#363636]"
                         >
