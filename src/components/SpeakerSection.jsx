@@ -9,12 +9,12 @@ const SpeakerSection = () => {
         },
         {
             name: "Ko Ko Lamin Thaw",
-            position: "Actor",
+            position: "Singer",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi."
         },
         {
             name: "Ko Ko Ko Lamin Thaw",
-            position: "Actor",
+            position: "Oh Lala",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi."
         },
         // Add more speakers as needed
@@ -34,7 +34,7 @@ const SpeakerSection = () => {
                         key={index}
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.2 }}
+                        transition={{ duration: 0.5 }}
                         whileHover={{ scale: 1.02 }}
                         className="bg-[#E7A8E2] p-4 md:p-6 mb-4 md:mb-6 flex flex-col md:flex-row gap-4 md:gap-6 items-start"
                     >

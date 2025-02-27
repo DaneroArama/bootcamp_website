@@ -18,12 +18,12 @@ const TimetableSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-4xl md:text-6xl font-bold text-center mb-8 font-malinton"
+                className="text-4xl md:text-6xl font-bold text-center mb-8 font-malinton flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5"
             >
                 Check 
-                <span className="mx-5 px-8 bg-purple-200 rounded-full font-malinton">our</span>
+                <span className="px-8 bg-purple-200 rounded-full font-malinton">our</span>
                 event 
-                <span className="mx-5 px-8 bg-[#EBFF00] rounded-full font-malinton">timetable</span>
+                <span className="px-8 bg-[#EBFF00] rounded-full font-malinton">timetable</span>
             </motion.h2>
 
             {/* Go Now Button */}

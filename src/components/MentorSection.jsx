@@ -3,6 +3,14 @@ import { motion } from "framer-motion";
 const MentorSection = () => {
     const mentors = [
         {
+            name: "Wai Yi Mon Soe",
+            program: "THINK, SPRINT, DESIGN 2025"
+        },
+        {
+            name: "Thiri",
+            program: "THINK, SPRINT, DESIGN 2025"
+        },
+        {
             name: "Ei Thaw Zin",
             program: "THINK, SPRINT, DESIGN 2025"
         },
@@ -11,19 +19,11 @@ const MentorSection = () => {
             program: "THINK, SPRINT, DESIGN 2025"
         },
         {
-            name: "Thiri",
-            program: "THINK, SPRINT, DESIGN 2025"
-        },
-        {
             name: "Ko Khant (Barry)",
             program: "THINK, SPRINT, DESIGN 2025"
         },
         {
             name: "Zawe Kaung Htet",
-            program: "THINK, SPRINT, DESIGN 2025"
-        },
-        {
-            name: "Wai Yi Mon Soe",
             program: "THINK, SPRINT, DESIGN 2025"
         }
     ];
@@ -43,7 +43,7 @@ const MentorSection = () => {
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.1, delay: index * 0.5 }}
+                            transition={{ duration: 0.1, delay: index * 0.1 }}
                             whileHover={{ scale: 1.05 }}
                             className="flex flex-row bg-[#363636]"
                         >
