@@ -8,10 +8,10 @@ const Footer = () => {
     const socialLinks = [
         { name: 'Facebook', url: 'https://www.facebook.com/uxmyanmar', icon: 'fab fa-facebook-f' },
         { name: 'Messenger', url: 'https://m.me/uxmyanmar', icon: 'fab fa-facebook-messenger' },
-        { name: 'Instagram', url: 'https://www.instagram.com/uxmyanmar', icon: 'fab fa-instagram' },
-        { name: 'YouTube', url: 'https://www.youtube.com/@uxmyanmar', icon: 'fab fa-youtube' },
-        { name: 'LinkedIn', url: 'https://www.linkedin.com/company/uxmm', icon: 'fab fa-linkedin-in' },
-        { name: 'Medium', url: 'https://medium.com/@uxmyanmar', icon: 'fab fa-medium-m' }
+        { name: 'Instagram', url: 'http://instagram.com/uxmm_official/', icon: 'fab fa-instagram' },
+        { name: 'YouTube', url: 'https://www.youtube.com/channel/UClLaxKGmw5yR1w8aBtCNV_w', icon: 'fab fa-youtube' },
+        { name: 'LinkedIn', url: 'https://www.linkedin.com/company/uxmm/', icon: 'fab fa-linkedin-in' },
+        { name: 'Medium', url: 'https://medium.com/uxmm', icon: 'fab fa-medium-m' }
     ];
 
     return (
