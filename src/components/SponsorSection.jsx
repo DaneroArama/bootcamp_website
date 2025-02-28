@@ -51,7 +51,7 @@ const SponsorSection = () => {
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-4xl md:text-6xl font-bold"
+                        className="text-4xl md:text-6xl font-bold font-gothic"
                     >
                         FUTURE
                     </motion.p>

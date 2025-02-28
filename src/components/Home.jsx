@@ -18,11 +18,10 @@ export const Home = () => {
     return (
         <div className="relative min-h-screen overflow-hidden">
             {/* Hero Section with Scroll-based Pin */}
-
                 <div className="left-0 right-0 z-10 flex items-center justify-center py-12">
-                    <div className="max-w-7xl mx-auto text-center space-y-4 text-white">
-                        <h1 className="text-5xl md:text-5xl lg:text-7xl font-bold">
-                            Design Your <span className="bg-[#F5B041] px-8 py-3 text-xl md:text-xl lg:text-5xl rounded-full">Future</span> with
+                    <div className="max-w-8xl mx-auto text-center space-y-4 text-white">
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
+                            Design Your <span className="bg-[#F5B041] px-8 py-3 text-2xl md:text-2xl lg:text-5xl rounded-full">Future</span> with
                         </h1>
                         <h1 className="text-5xl md:text-5xl lg:text-7xl font-bold">
                             Real-W<span className="text-green-500">🍀</span>rld
@@ -54,7 +53,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-emerald-500 p-10 border-white border-4 text-white flex flex-col justify-between cursor-pointer"
+                        className="bg-emerald-500 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">Think, Sprint, Design</h3>
                         <div>
@@ -71,7 +70,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-red-400 p-10 border-white border-4 text-white flex flex-col justify-between cursor-pointer"
+                        className="bg-red-400 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">LOCATION</h3>
                         <div>
@@ -88,7 +87,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-blue-500 p-10 border-white border-4 text-white flex flex-col justify-between cursor-pointer"
+                        className="bg-blue-500 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">DATE & TIME</h3>
                         <div>
@@ -105,7 +104,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-[#F5B041] p-10 border-white border-4 flex flex-col justify-between cursor-pointer"
+                        className="bg-[#F5B041] p-10 border-black border-4 flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">Register</h3>
                         <div>
@@ -120,7 +119,7 @@ export const Home = () => {
                     className="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_1.2fr_1.6fr] gap-6 mt-6"
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ margin: "-100px" }}
+                    viewport={{ margin: "-50px" }}
                 >
                     {/* Mentors Card */}
                     <motion.div
@@ -130,7 +129,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-purple-200 p-8 border-white border-4 flex flex-col justify-between cursor-pointer"
+                        className="bg-purple-200 p-8 border-black border-4 flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">MENTORS</h3>
                         <div className="flex mb-6">
@@ -150,7 +149,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-purple-500 p-8 border-white border-4 text-white flex flex-col justify-between cursor-pointer"
+                        className="bg-purple-500 p-8 border-black border-4 text-white flex flex-col justify-between cursor-pointer"
                     >
                         <h3 className="text-3xl font-bold mb-6 font-gothic">SPEAKERS</h3>
                         <div className="flex">
@@ -168,7 +167,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-white p-8 border-white border-4 relative flex flex-col justify-between cursor-pointer"
+                        className="bg-white p-8 border-black border-4 relative flex flex-col justify-between cursor-pointer"
                     >
                         <div className="flex flex-wrap gap-4 justify-center items-center">
                             <div className="bg-purple-600 rounded-full p-3">

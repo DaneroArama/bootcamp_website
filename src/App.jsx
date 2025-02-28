@@ -7,6 +7,8 @@ import HeroSection from "./components/HeroSection";
 import TimetableSection from "./components/TimetableSection";
 import SponsorSection from "./components/SponsorSection";
 import MachineGunLoader from "./components/MachineGunLoader";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
     return (
@@ -15,7 +17,7 @@ const App = () => {
             <div className="fixed inset-0 -z-10">
                 <Squares
                     direction="diagonal"
-                    speed={0.1}
+                    speed={0.05}
                     borderColor="#ffffff"
                     squareSize={150}
                     hoverFillColor="rgba(245, 176, 65, 0.1)"
@@ -24,14 +26,33 @@ const App = () => {
 
             {/* Content layer */}
             <div className="relative">
+                <Navbar/>
                 <MachineGunLoader text="Design Your Future with Real World Experience! Yesssss!" wordClassName="font-malinton"/>
-                <Home />
-                <HeroSection/>
-                <AboutSection/>
-                <SpeakerSection/>
-                <MentorSection/>
-                <TimetableSection/>
-                <SponsorSection/>
+                <section className="pt-24" id="home">
+                    <Home />
+                </section>
+
+                <section id="about">
+                    <AboutSection />
+                </section>
+
+                <section id="speakers">
+                    <SpeakerSection />
+                </section>
+
+                <section id="mentors">
+                    <MentorSection />
+                </section>
+
+                <section id="programs">
+                    <TimetableSection />
+                </section>
+
+                <section id="sponsors">
+                    <SponsorSection />
+                </section>
+
+                <Footer />
             </div>
         </>
     );

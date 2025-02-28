@@ -21,9 +21,9 @@ const TimetableSection = () => {
                 className="text-4xl md:text-6xl font-bold text-center mb-8 font-malinton flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5"
             >
                 Check 
-                <span className="px-8 bg-purple-200 rounded-full font-malinton">our</span>
+                <span className="px-8 py-2 bg-purple-200 rounded-full font-malinton">our</span>
                 event 
-                <span className="px-8 bg-[#EBFF00] rounded-full font-malinton">timetable</span>
+                <span className="px-8 py-2 bg-[#EBFF00] rounded-full font-malinton">timetable</span>
             </motion.h2>
 
             {/* Go Now Button */}
