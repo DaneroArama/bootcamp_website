@@ -43,7 +43,17 @@ const Footer = () => {
                         <h3 className="text-lg font-bold mb-4 font-malinton bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Contact Us</h3>
                         <ul className="space-y-2 text-gray-300">
                             <motion.li whileHover={{ x: 5 }} className="font-malinton hover:text-white transition-colors duration-300">
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@uxmm.org" target="_blank" rel="noopener noreferrer">
+                                <a
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@uxmm.org"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={(e) => {
+                                        if (navigator.userAgent.toLowerCase().includes("android")) {
+                                            e.preventDefault();
+                                            window.location.href = "intent://compose?to=info@uxmm.org#Intent;scheme=mailto;package=com.google.android.gm;end;";
+                                        }
+                                    }}
+                                >
                                     info@uxmm.org
                                 </a>
                             </motion.li>

@@ -26,8 +26,36 @@ export const Home = () => {
                         <h1 className="text-5xl md:text-5xl lg:text-7xl font-bold">
                             Real-W<span className="text-green-500">🍀</span>rld
                             <span className="inline-flex items-center space-x-2 border-2 border-purple-500 rounded-full px-6 py-2 text-purple-500 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out cursor-pointer">
-                                <svg className="w-60 h-11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M5 12h40M24 5l7 7-7 7"></path>
+                                <svg 
+                                    className="w-60 h-11 pl-5"
+                                    viewBox="0 0 200 24" 
+                                    fill="none" 
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <line 
+                                        x1="0" 
+                                        y1="12" 
+                                        x2="180" 
+                                        y2="12" 
+                                        stroke="currentColor" 
+                                        strokeWidth="2"
+                                    />
+                                    <line 
+                                        x1="160" 
+                                        y1="2" 
+                                        x2="180" 
+                                        y2="12" 
+                                        stroke="currentColor" 
+                                        strokeWidth="2"
+                                    />
+                                    <line 
+                                        x1="160" 
+                                        y1="22" 
+                                        x2="180" 
+                                        y2="12" 
+                                        stroke="currentColor" 
+                                        strokeWidth="2"
+                                    />
                                 </svg>
                             </span>
                             Experience
