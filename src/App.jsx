@@ -32,6 +32,8 @@ const App = () => {
                     <Home />
                 </section>
 
+                <HeroSection/>
+
                 <section id="about">
                     <AboutSection />
                 </section>
