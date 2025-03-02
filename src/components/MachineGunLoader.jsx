@@ -9,6 +9,8 @@ gsap.registerPlugin(TextPlugin, EasePack);
 const MachineGunLoader = ({ text, children }) => {
     const [loadingComplete, setLoadingComplete] = useState(false);
     const loaderRef = useRef(null);
+    const leftCurtainRef = useRef(null);
+    const rightCurtainRef = useRef(null);
     const contentRef = useRef(null);
 
     useEffect(() => {
@@ -18,12 +20,13 @@ const MachineGunLoader = ({ text, children }) => {
         
         if (loadingComplete) {
             const loader = loaderRef.current;
+            const leftCurtain = leftCurtainRef.current;
+            const rightCurtain = rightCurtainRef.current;
             const content = contentRef.current;
 
-            if (loader && content) {
-                gsap.to(loader, {
-                    duration: 1,
-                    autoAlpha: 0,
+            if (loader && content && leftCurtain && rightCurtain) {
+                // Create timeline for curtain animation
+                const tl = gsap.timeline({
                     onComplete: () => {
                         loader.style.display = 'none';
                         // Re-enable scrolling after loader is complete
@@ -31,7 +34,14 @@ const MachineGunLoader = ({ text, children }) => {
                         document.documentElement.style.overflow = '';
                         gsap.set(content, { opacity: 1 });
                         gsap.from(content, { duration: 1, opacity: 0 });
-                    },
+                    }
+                });
+
+                // Animate curtains opening
+                tl.to([leftCurtain, rightCurtain], {
+                    duration: 1.2,
+                    x: (index) => index === 0 ? '-100%' : '100%',
+                    ease: "power2.inOut"
                 });
             }
         }
@@ -61,9 +71,20 @@ const MachineGunLoader = ({ text, children }) => {
         <>
             <div
                 ref={loaderRef}
-                className="fixed inset-0 bg-black flex items-center justify-center z-50 overflow-hidden touch-none"
+                className="fixed inset-0 flex items-center justify-center z-50 overflow-hidden touch-none"
             >
-                <div className="w-full max-w-4xl mx-auto px-4">
+                {/* Left Curtain */}
+                <div 
+                    ref={leftCurtainRef}
+                    className="absolute left-0 top-0 w-1/2 h-full bg-black z-40"
+                />
+                {/* Right Curtain */}
+                <div 
+                    ref={rightCurtainRef}
+                    className="absolute right-0 top-0 w-1/2 h-full bg-black z-40"
+                />
+                {/* Text Container */}
+                <div className="w-full max-w-4xl mx-auto px-4 z-50">
                     <MachineGunText
                         text={text}
                         wordClassName="text-4xl md:text-6xl font-bold"

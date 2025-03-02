@@ -11,7 +11,13 @@ import mentor2 from '../img/Logo.png'; // Adjust the path as necessary
 import mentor3 from '../img/Logo.png'; // Adjust the path as necessary
 import speaker1 from '../img/Logo.png'; // Adjust the path as necessary
 import speaker2 from '../img/Logo.png'; // Adjust the path as necessary
-
+import BlueSquishyGhost from '../img/Cartoon mascot/BlueSquishyGhost.svg';
+import GreenGhost from '../img/Cartoon mascot/GreenGhost.svg';
+import PurpleRectangleGhost from '../img/Cartoon mascot/PurpleRectangleGhost.svg';
+import RedRectangleGhost from '../img/Cartoon mascot/RedRectangleGhost.svg';
+import YellowOvalGhost from '../img/Cartoon mascot/YellowOvalGhost.svg';
+import Mentor from '../img/Event Logo & Icon/Mentor.svg'
+import Speaker from '../img/Event Logo & Icon/Speaker.svg'
 gsap.registerPlugin(ScrollTrigger);
 
 export const Home = () => {
@@ -24,8 +30,7 @@ export const Home = () => {
                             Design Your <span className="bg-[#F5B041] px-8 py-3 text-2xl md:text-2xl lg:text-5xl rounded-full">Future</span> with
                         </h1>
                         <h1 className="text-5xl md:text-5xl lg:text-7xl font-bold">
-                            Real-W<span className="text-green-500">🍀</span>rld
-                            <span className="inline-flex items-center space-x-2 border-2 border-purple-500 rounded-full px-6 py-2 text-purple-500 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out cursor-pointer">
+                            Real-W<span className="text-green-500">🍀</span>rld <span className="inline-flex items-center space-x-2 border-2 border-purple-500 rounded-full px-6 py-2 text-purple-500 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out cursor-pointer">
                                 <svg 
                                     className="w-60 h-11 pl-5"
                                     viewBox="0 0 200 24" 
@@ -57,8 +62,7 @@ export const Home = () => {
                                         strokeWidth="2"
                                     />
                                 </svg>
-                            </span>
-                            Experience
+                            </span> Experience
                         </h1>
                     </div>
                 </div>
@@ -81,10 +85,16 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-emerald-500 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer"
+                        className="bg-emerald-400 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
                     >
-                        <h3 className="text-3xl font-bold mb-6 font-gothic">Think, Sprint, Design</h3>
-                        <div>
+                        <motion.img
+                            src={GreenGhost}
+                            className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
+                            animate={{ y: [-8, 0, -8] }}
+                            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                        />
+                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">Think, Sprint, Design</h3>
+                        <div className="relative z-10">
                             <p className="text-2xl font-semibold font-malinton">1st Myanmar In-person Bootcamp</p>
                             <p className="font-malinton text-xl">2025</p>
                         </div>
@@ -98,10 +108,16 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-red-400 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer"
+                        className="bg-red-300 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
                     >
-                        <h3 className="text-3xl font-bold mb-6 font-gothic">LOCATION</h3>
-                        <div>
+                        <motion.img
+                            src={RedRectangleGhost}
+                            className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
+                            animate={{ y: [-8, 0, -8] }}
+                            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                        />
+                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">LOCATION</h3>
+                        <div className="relative z-10">
                             <p className="text-2xl font-semibold mb-6 font-malinton">Citizens Pay Office</p>
                             <p className="font-malinton text-lg">Yangon Innovation Centre (YIC) , Kyan Mar Yay Seik Khan</p>
                         </div>
@@ -115,16 +131,22 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-blue-500 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer"
+                        className="bg-blue-500 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
                     >
-                        <h3 className="text-3xl font-bold mb-6 font-gothic">DATE & TIME</h3>
-                        <div>
+                        <motion.img
+                            src={BlueSquishyGhost}
+                            className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
+                            animate={{ y: [-8, 0, -8] }}
+                            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                        />
+                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">DATE & TIME</h3>
+                        <div className="relative z-10">
                             <p className="text-2xl font-semibold font-malinton">April 5th to 6th</p>
                             <p className="font-malinton text-xl">9am to 4pm</p>
                         </div>
                     </motion.div>
 
-                    {/* Date & Time Card */}
+                    {/* Register Card */}
                     <motion.div
                         variants={{
                             hidden: { x: 100, opacity: 0 },
@@ -132,10 +154,16 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-[#F5B041] p-10 border-black border-4 flex flex-col justify-between cursor-pointer"
+                        className="bg-[#F5B041] p-10 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
                     >
-                        <h3 className="text-3xl font-bold mb-6 font-gothic">Register</h3>
-                        <div>
+                        <motion.img
+                            src={YellowOvalGhost}
+                            className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
+                            animate={{ y: [-8, 0, -8] }}
+                            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                        />
+                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">Register</h3>
+                        <div className="relative z-10">
                             <p className="text-2xl font-semibold mb-6 font-malinton">Stay Tuned</p>
                             <p className="font-malinton text-xl">Will Be Announced</p>
                         </div>
@@ -157,16 +185,22 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-purple-200 p-8 border-black border-4 flex flex-col justify-between cursor-pointer"
+                        className="bg-purple-200 p-8 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
                     >
-                        <h3 className="text-3xl font-bold mb-6 font-gothic">MENTORS</h3>
-                        <div className="flex mb-6">
+                        <motion.img
+                            src={Mentor}
+                            className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
+                            animate={{ y: [-8, 0, -8] }}
+                            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                        />
+                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">MENTORS</h3>
+                        <div className="flex mb-6 relative z-10">
                             <img src={mentor1} alt="Mentor 1" className="w-12 h-12 rounded-full -mr-2" />
                             <img src={mentor2} alt="Mentor 2" className="w-12 h-12 rounded-full -mr-2" />
                             <img src={mentor3} alt="Mentor 3" className="w-12 h-12 rounded-full" />
                         </div>
-                        <p className="text-xl font-malinton">Over 20+ Mentors</p>
-                        <p className="text-xl font-malinton"> From Different Industry Experts</p>
+                        <p className="text-xl font-malinton relative z-10">Over 20+ Mentors</p>
+                        <p className="text-xl font-malinton relative z-10"> From Different Industry Experts</p>
                     </motion.div>
 
                     {/* Speakers Card */}
@@ -177,14 +211,20 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-purple-500 p-8 border-black border-4 text-white flex flex-col justify-between cursor-pointer"
+                        className="bg-purple-500 p-8 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
                     >
-                        <h3 className="text-3xl font-bold mb-6 font-gothic">SPEAKERS</h3>
-                        <div className="flex">
+                        <motion.img
+                            src={Speaker}
+                            className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
+                            animate={{ y: [-8, 0, -8] }}
+                            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                        />
+                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">SPEAKERS</h3>
+                        <div className="flex relative z-10">
                             <img src={speaker1} alt="Speaker 1" className="w-12 h-12 rounded-full -mr-2" />
                             <img src={speaker2} alt="Speaker 2" className="w-12 h-12 rounded-full" />
                         </div>
-                        <p className="text-xl font-malinton">Ko Lamin & Ko Harry</p>
+                        <p className="text-xl font-malinton relative z-10">Ko Lamin & Ko Harry</p>
                     </motion.div>
 
                     {/* Opportunities Section */}
@@ -195,28 +235,28 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-white p-8 border-black border-4 relative flex flex-col justify-between cursor-pointer"
+                        className="bg-white p-8 border-black border-4 relative flex flex-col justify-between font-malinton cursor-pointer overflow-hidden"
                     >
-                        <div className="flex flex-wrap gap-4 justify-center items-center">
+                        <div className="flex flex-wrap gap-4 justify-center items-center relative z-10">
                             <div className="bg-purple-600 rounded-full p-3">
                                 <div className="w-8 h-8 text-white">&#8594;</div>
                             </div>
-                            <button className="px-8 py-3 bg-white border-2 border-gray-200 rounded-full text-black font-medium text-lg">
+                            <button className="px-5 py-3 bg-white border-2 border-gray-200 rounded-full text-black font-medium text-lg">
                                 Community Events
                             </button>
-                            <button className="px-8 py-3 bg-blue-600 rounded-full text-white font-medium text-lg">
+                            <button className="px-5 py-3 bg-blue-600 rounded-full text-white font-medium text-lg">
                                 Mentorship
                             </button>
-                            <button className="px-8 py-3 bg-pink-300 rounded-full text-black font-medium text-lg">
+                            <button className="px-5 py-3 bg-pink-300 rounded-full text-black font-medium text-lg">
                                 Volunteer Opportunities
                             </button>
-                            <button className="px-8 py-3 bg-white border-2 border-gray-200 rounded-full text-black font-medium text-lg">
+                            <button className="px-5 py-3 bg-white border-2 border-gray-200 rounded-full text-black font-medium text-lg">
                                 Research
                             </button>
-                            <button className="px-8 py-3 bg-white border-2 border-gray-200 rounded-full text-blue-600 font-medium text-lg">
+                            <button className="px-5 py-3 bg-white border-2 border-gray-200 rounded-full text-blue-600 font-medium text-lg">
                                 Jobs
                             </button>
-                            <button className="px-8 py-3 bg-[#F5B041] rounded-full text-black font-medium text-lg">
+                            <button className="px-5 py-3 bg-[#F5B041] rounded-full text-black font-medium text-lg">
                                 Internship
                             </button>
                             <button className="px-8 py-3 bg-black rounded-full text-white font-medium text-lg">

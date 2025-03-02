@@ -87,22 +87,6 @@ const Footer = () => {
                         <p className="text-gray-400 text-sm font-malinton">
                             © 2024 UX MM. All rights reserved.
                         </p>
-                        <div className="flex space-x-6">
-                            <motion.a
-                                href="#"
-                                whileHover={{ x: 5 }}
-                                className="text-gray-400 hover:text-white text-sm font-malinton transition-colors duration-300"
-                            >
-                                Privacy Policy
-                            </motion.a>
-                            <motion.a
-                                href="#"
-                                whileHover={{ x: 5 }}
-                                className="text-gray-400 hover:text-white text-sm font-malinton transition-colors duration-300"
-                            >
-                                Terms of Service
-                            </motion.a>
-                        </div>
                     </div>
                 </div>
             </div>
