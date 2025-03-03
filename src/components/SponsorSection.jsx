@@ -9,6 +9,7 @@ const SponsorSection = () => {
     ];
 
     return (
+        <>
         <section className="w-full md:w-[80%] mx-auto py-16 overflow-hidden">
             {/* Sponsors Section */}
             <div className="relative mb-32 group">
@@ -88,6 +89,7 @@ const SponsorSection = () => {
                 </motion.div>
             </div>
         </section>
+        </>
     );
 };
 
