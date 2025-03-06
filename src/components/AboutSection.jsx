@@ -42,19 +42,22 @@ export const AboutSection = () => {
               <motion.img
                 src={BlueRingGhost}
                 className="absolute top-0 -right-20 w-[260px] h-[260px]"
-                animate={{ y: [-5, 0, -5] }}
+                initial={{ rotate: -90 }}
+                animate={{ y: [-5, 0, -5], rotate: -90 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               />
               <motion.img
                 src={RedRectangleGhost}
                 className="absolute top-[30%] -right-20 w-[260px] h-[260px]"
-                animate={{ y: [-5, 0, -5] }}
+                initial={{ rotate: -90 }}
+                animate={{ y: [-5, 0, -5], rotate: -90 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
               />
               <motion.img
                 src={YellowOvalGhost}
-                className="absolute top-30 -right-20 w-[260px] h-[260px]"
-                animate={{ y: [-5, 0, -5] }}
+                className="absolute top-[60%] -right-20 w-[260px] h-[260px]"
+                initial={{ rotate: -90 }}
+                animate={{ y: [-5, 0, -5], rotate: -90 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
               />
             </div>
@@ -177,27 +180,27 @@ export const AboutSection = () => {
 
           {/* Div 2 */}
           <motion.div
-            className="aspect-square relative overflow-hidden bg-purple-300 col-span-2"
+            className="aspect-square relative overflow-hidden h-[200px] w-full bg-purple-300 col-span-2"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
             <div className="absolute inset-0 flex items-center justify-center">
               <motion.img
                 src={BlueRingGhost}
-                className="absolute w-[150px] h-[150px]"
-                animate={{ y: [-5, 0, -5] }}
+                className="absolute w-[150px] h-[150px] left-0 -bottom-10"
+                animate={{ y: [-5, 0, -5]}}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               />
               <motion.img
                 src={RedRectangleGhost}
-                className="absolute w-[150px] h-[150px]"
-                animate={{ y: [-5, 0, -5] }}
+                className="absolute w-[150px] h-[150px] left-[30%] -bottom-10"
+                animate={{ y: [-5, 0, -5]}}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
               />
               <motion.img
                 src={YellowOvalGhost}
-                className="absolute w-[150px] h-[150px]"
-                animate={{ y: [-5, 0, -5] }}
+                className="absolute w-[150px] h-[150px] left-[60%] -bottom-10"
+                animate={{ y: [-5, 0, -5]}}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
               />
             </div>
