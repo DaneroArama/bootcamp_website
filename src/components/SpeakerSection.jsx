@@ -158,9 +158,9 @@ const SpeakerSection = () => {
                             onClick={() => paginate(currentPage - 1)}
                             disabled={currentPage === 1}
                             className={`px-4 py-2 rounded-full transition-all duration-300 ${
-                                currentPage === 1 
-                                ? 'bg-gray-300 cursor-not-allowed' 
-                                : 'bg-black text-white hover:bg-gray-800'
+                                currentPage === 1
+                                    ? 'bg-gray-600 cursor-not-allowed'
+                                    : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
                             }`}
                         >
                             Previous
@@ -173,8 +173,8 @@ const SpeakerSection = () => {
                                     onClick={() => paginate(i + 1)}
                                     className={`w-10 h-10 rounded-full transition-all duration-300 ${
                                         currentPage === i + 1
-                                        ? 'bg-[#E7A8E2] text-black'
-                                        : 'bg-black text-white hover:bg-gray-800'
+                                            ? 'bg-[#E7A8E2] text-black'
+                                            : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
                                     }`}
                                 >
                                     {i + 1}
@@ -186,9 +186,9 @@ const SpeakerSection = () => {
                             onClick={() => paginate(currentPage + 1)}
                             disabled={currentPage === totalPages}
                             className={`px-4 py-2 rounded-full transition-all duration-300 ${
-                                currentPage === totalPages 
-                                ? 'bg-gray-300 cursor-not-allowed' 
-                                : 'bg-black text-white hover:bg-gray-800'
+                                currentPage === totalPages
+                                    ? 'bg-gray-600 cursor-not-allowed'
+                                    : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
                             }`}
                         >
                             Next
