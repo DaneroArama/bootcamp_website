@@ -11,13 +11,14 @@ const SpeakerSection = () => {
             name: "Ko Lamin Thaw",
             position: "Actor",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
-            confirmed: true
+            confirmed: true,
+            image: "" // Add speaker image path here
         },
         {
             name: "Ko Ko Lamin Thaw",
             position: "Singer",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
-            confirmed: false
+            confirmed: true
         },
         {
             name: "Ko Ko Ko Lamin Thaw",
@@ -112,8 +113,30 @@ const SpeakerSection = () => {
                                 )}
 
                                 {/* Image Placeholder */}
-                                <div className="w-full md:w-64 h-48 md:h-64 bg-gray-300 flex-shrink-0">
-                                    {/* Add image here */}
+                                <div className="w-full md:w-64 h-48 md:h-64 bg-gray-300 flex-shrink-0 overflow-hidden">
+                                    {speaker.image ? (
+                                        <img 
+                                            src={speaker.image} 
+                                            alt={speaker.name}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center bg-gray-300">
+                                            <svg 
+                                                className="w-16 h-16 text-gray-400" 
+                                                fill="none" 
+                                                stroke="currentColor" 
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path 
+                                                    strokeLinecap="round" 
+                                                    strokeLinejoin="round" 
+                                                    strokeWidth="2" 
+                                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" 
+                                                />
+                                            </svg>
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Content */}

@@ -10,12 +10,13 @@ const MentorSection = () => {
         {
             name: "Wai Yi Mon Soe",
             program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: true
+            confirmed: true,
+            image: "" // Add mentor image path here
         },
         {
             name: "Thiri",
             program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: false
+            confirmed: true
         },
         {
             name: "Ei Thaw Zin",
@@ -25,12 +26,12 @@ const MentorSection = () => {
         {
             name: "MayVe",
             program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: false
+            confirmed: true
         },
         {
             name: "Ko Khant (Barry)",
             program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: true
+            confirmed: false
         },
         {
             name: "Zawe Kaung Htet",
@@ -123,8 +124,30 @@ const MentorSection = () => {
                                 )}
 
                                 {/* Mentor Image Section */}
-                                <div className="w-24 h-24 bg-[#E7A8E2] flex items-center justify-center flex-shrink-0">
-                                    <span className="text-4xl"></span>
+                                <div className="w-24 h-24 bg-[#E7A8E2] flex items-center justify-center flex-shrink-0 overflow-hidden">
+                                    {mentor.image ? (
+                                        <img 
+                                            src={mentor.image} 
+                                            alt={mentor.name}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center">
+                                            <svg 
+                                                className="w-12 h-12 text-gray-600" 
+                                                fill="none" 
+                                                stroke="currentColor" 
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path 
+                                                    strokeLinecap="round" 
+                                                    strokeLinejoin="round" 
+                                                    strokeWidth="2" 
+                                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" 
+                                                />
+                                            </svg>
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Mentor Info Section */}
