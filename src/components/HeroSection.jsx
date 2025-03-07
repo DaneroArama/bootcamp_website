@@ -9,9 +9,6 @@ import RedRectangleGhost from '../img/Cartoon mascot/RedRectangleGhost.svg';
 import YellowOvalGhost from '../img/Cartoon mascot/YellowOvalGhost.svg';
 
 const HeroSection = () => {
-    // Set this to false to stop animations
-    const isAnimating = false;
-
     const ghostsConfig = [
         {
             src: GreenGhost,

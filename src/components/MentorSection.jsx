@@ -63,11 +63,6 @@ const MentorSection = () => {
             program: "THINK, SPRINT, DESIGN 2025",
             confirmed: true
         },
-        {
-            name: "Zawe Kaung Htet",
-            program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: false
-        }
         // Add more mentors as needed
     ];
 
