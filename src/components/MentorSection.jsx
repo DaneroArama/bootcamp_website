@@ -5,6 +5,7 @@ import Barry from "../img/Mentors/Barry.jpeg";
 import NweOoLwin from "../img/Mentors/Nwe Oo Lwin.jpg";
 import Zawkaunghtet from "../img/Mentors/Zawekaunghtet.png";
 import MinNandaZaw from "../img/Mentors/Min Nanda Zan.png";
+import SeintSinsarLwin from "../img/Mentors/Seint Sinsar Lwin.png";
 const MentorSection = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const mentorsPerPage = 6;
@@ -13,24 +14,24 @@ const MentorSection = () => {
     const mentors = [
         {
             name: "Thazin Win",
-            program: "Mentor",
+            program: "MENTOR",
             confirmed: true,
             image: "" // Add mentor image path here
         },
         {
-            name: "Lynn Htet Thant ",
-            program: "Mentor",
+            name: "Lynn Htet Thant",
+            program: "MENTOR",
             confirmed: true
         },
         {
             name: "Ei Thaw Zin",
-            program: "THINK, SPRINT, DESIGN 2025",
+            program: "Mentor Assistant",
             confirmed: true,
             image: EiThawZin
         },
         {
             name: "Ko Khant (Barry)",
-            program: "Mentor",
+            program: "MENTOR",
             confirmed: true,
             image: Barry
         },
@@ -42,21 +43,33 @@ const MentorSection = () => {
         },
         {
             name: "Zawe Kaung Htet",
-            program: "Mentor",
+            program: "MENTOR",
             confirmed: true,
             image: Zawkaunghtet
         },
         {
             name: "Min Ye Htut Myat",
-            program: "Mentor",
-            confirmed: false,
+            program: "MENTOR",
+            confirmed: true,
             image: ""
         },
         {
             name: "Min Nanda Zan",
-            program: "Mentor, Trainer",
+            program: "MENTOR, Trainer",
             confirmed: true,
             image: MinNandaZaw
+        },
+        {
+            name: "Seint Sinsar Lwin",
+            program: "Mentor Assistant",
+            confirmed: true,
+            image: SeintSinsarLwin
+        },
+        {
+            name: "SomeOne",
+            program: "Mentor Assistant",
+            confirmed: false,
+            image: ""
         },
     ];
 

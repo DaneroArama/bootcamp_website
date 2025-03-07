@@ -9,41 +9,118 @@ const SpeakerSection = () => {
 
     const speakers = [
         {
-            name: "Ko Lamin Thaw",
-            position: "Actor",
+            name: "Ye Lin Aung",
+            position: "??????",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
             confirmed: true,
             image: teamPhoto // Add speaker image path here
         },
         {
-            name: "Ko Ko Lamin Thaw",
-            position: "Singer",
+            name: "Mya Myint Zu",
+            position: "Deputy Chief Executive Officer",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
             confirmed: true
         },
         {
-            name: "Ko Ko Ko Lamin Thaw",
-            position: "Oh Lala",
-            description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
-            confirmed: true
-        },
-        {
-            name: "Ko Ko Lamin Thaw",
-            position: "Singer",
+            name: "Zaw Moe Thant",
+            position: "??????",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
             confirmed: false
         },
         {
-            name: "Ko Ko Lamin Thaw",
-            position: "Singer",
-            description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
-            confirmed: true
+            name: "Ko Tun Tun Linn",
+            position: "Managing Director",
+            description: "An experienced leader with a proven track record of success in growing fintech businesses, building high performing teams, and delivering value added solutions for customers and partners. Led cross functional teams in executing strategy, people management, business development, strategic partnerships, agent/merchant network management, product development, regulatory and financial operations. Worked with strategic partner organizations from various industry verticals, and participated regularly as a speaker in major conferences.",
+            confirmed: false
+        },
+        {
+            name: "Pyay Thar Kyaw",
+            position: "MBA | Product Management",
+            description: "",
+            confirmed: false
         },
         {
             name: "Aung Nyein Chan",
-            position: "Singer",
-            description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
+            position: "??????",
+            description: "?????",
             confirmed: false
+        },
+        {
+            name: "Khine Zar Thwe",
+            position: "Engineer @ Mercari | Founder @ Women in AI Myanmar🇲🇲",
+            description: "",
+            confirmed: false
+        },
+        {
+            name: "May Khine Nyein",
+            position: "Software Engineer | Rakuten Mobile Inc.",
+            description: "I have excellent knowledge and experience in developing web applications with Ruby on Rails. During Oway Travel & Tour Company, I was responsible for building the server-side application for Taxi hiring Mobile Apps. In addition, I developed websites and web applications for the e-Government System of the Yangon Regional Government, Yangon, Myanmar. I have experience in planning, designing, developing, and delivering scalable web applications which are deployed on Digital Ocean's droplets and Amazon Web Services' EC2 servers.",
+            confirmed: true
+        },
+        {
+            name: "Thet Zarni Win",
+            position: "UX Designer",
+            description: "UX Designer with a successful track record in SaaS, B2B Retail&Wholesale, and Hospitality industries, targeting South East Asia and North America markets. Proficient in dashboard, Web and app Design, User Research, Iterative Development, and Design Systems. \n" +
+                "Passionate about delivering human-centric solutions for diverse global users. With 4+ years in Hospitality SaaS Startup, I bring diverse insights to my design work.\n" +
+                "\n" +
+                "During these years as a UX Designer, \n" +
+                "-Designed over 100 pages on mobile and web apps, and web designs including AR/VR and AI for medium-sized SaaS companies in the North American market.\n" +
+                "- Revamped B2B retail and wholesale app, incorporating business needs & and goals and enhancing functionality for the Southeast Asia market.\n" +
+                "\n" +
+                "I am enthusiastic about opportunities that allow me to apply my diverse experience and knowledge to contribute to the growth of businesses and products.\n",
+            confirmed: true
+        },
+        {
+            name: "Phyu Mon Theint",
+            position: "Digital Transformation & Design in APAC 🌎",
+            description: "As someone with a decade of experience in the digital scene across Southeast Asia, my interest lies in meaningful interactions, inclusion, innovation, and digital transformation. Always leaning towards research & strategy but never getting out of touch with craft, I've both helped startups bring creative ideas to life and spearheaded customer-centric transformations at international corporates. Beyond my work, I'm a proud mom of two who thrives on outdoor adventures.",
+            confirmed: true
+        },
+        {
+            name: "Harry",
+            position: "Senior Product Designer",
+            description: "I am a self-taught digital product designer with 5 years of experience in digital product development. And my goal since my teenage is to make digital products to help people's life easier and more efficient.",
+            confirmed: true
+        },
+        {
+            name: "AP",
+            position: "?????",
+            description: "",
+            confirmed: false
+        },
+        {
+            name: "Kayson Jett",
+            position: "??????",
+            description: "",
+            confirmed: false
+        },
+        {
+            name: "Su Myat Hnin",
+            position: "UI/UX & Product Designer",
+            description: "I'm a UI/UX & Product designer with 5+ years experience and focus on giving an easy interface for users by utilizing my unique skills and expertise. Besides that, I aim at creating something user-centric and intuitive designs for everyone with less technical knowledge.",
+            confirmed: true
+        },
+        {
+            name: "Aung Pyae Sone Oo",
+            position: "Senior UI/UX & Visual Designer | AIIMS Group | Dubai based",
+            description: "Senior UI/UX and Visual Designer at AIIMS Group in Dubai, I bring over four years of industry experience, specializing in crafting experiences and building identities. Managed high-impact projects in digital banking, classifieds, healthcare insurance, and loyalty reward applications, among other web and mobile experiences.",
+            confirmed: true
+        },
+        {
+            name: "Aye Pa Pa Myo",
+            position: "Senior UX Designer@BlokID",
+            description: "I'm an UI UX designer focusing on creating meaningful experiences through design. ",
+            confirmed: true
+        },
+        {
+            name: "Zawe Kaung Htet",
+            position: "UX & UI Designer | Fintech | E-commerce | Telecommunications | Professional Freelancer",
+            description: "With a proficient background encompassing over four years of hands-on experience in the realm of UX & UI design, I have consistently honed my expertise in this field. My dedication to professional growth extends beyond my current competencies, as I am actively acquiring product management skills and aspire to take on the role of a product owner.\n" +
+                "\n" +
+                "In addition to my core expertise in UX & UI design, I possess a diverse skill set that includes graphic designing, video editing, web development, and broadcasting. These supplementary proficiencies further bolster my ability to contribute effectively to multifaceted projects and initiatives.\n" +
+                "\n" +
+                "I am committed to delivering excellence in every endeavor and am enthusiastic about leveraging my skillset to elevate user experiences and drive successful product outcomes.",
+            confirmed: true
         },
     ];
 
