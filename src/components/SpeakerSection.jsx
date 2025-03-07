@@ -7,7 +7,6 @@ const SpeakerSection = () => {
     const speakersPerPage = 3;
     const titleRef = useRef(null);
 
-
     const speakers = [
         {
             name: "Ko Lamin Thaw",

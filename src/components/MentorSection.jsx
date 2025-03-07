@@ -1,6 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
-
+import EiThawZin from '../img/Mentors/EiThaw Zin.jpeg';
+import Barry from "../img/Mentors/Barry.jpeg";
+import NweOoLwin from "../img/Mentors/Nwe Oo Lwin.jpg";
+import Zawkaunghtet from "../img/Mentors/Zawekaunghtet.png";
+import MinNandaZaw from "../img/Mentors/Min Nanda Zan.png";
 const MentorSection = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const mentorsPerPage = 6;
@@ -8,62 +12,52 @@ const MentorSection = () => {
 
     const mentors = [
         {
-            name: "Wai Yi Mon Soe",
-            program: "THINK, SPRINT, DESIGN 2025",
+            name: "Thazin Win",
+            program: "Mentor",
             confirmed: true,
             image: "" // Add mentor image path here
         },
         {
-            name: "Thiri",
-            program: "THINK, SPRINT, DESIGN 2025",
+            name: "Lynn Htet Thant ",
+            program: "Mentor",
             confirmed: true
         },
         {
             name: "Ei Thaw Zin",
             program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: true
-        },
-        {
-            name: "MayVe",
-            program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: true
+            confirmed: true,
+            image: EiThawZin
         },
         {
             name: "Ko Khant (Barry)",
-            program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: false
+            program: "Mentor",
+            confirmed: true,
+            image: Barry
+        },
+        {
+            name: "Nwe Oo Lwin",
+            program: "Mentor Assistant",
+            confirmed: true,
+            image: NweOoLwin
         },
         {
             name: "Zawe Kaung Htet",
-            program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: false
+            program: "Mentor",
+            confirmed: true,
+            image: Zawkaunghtet
         },
         {
-            name: "MayVe",
-            program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: false
+            name: "Min Ye Htut Myat",
+            program: "Mentor",
+            confirmed: false,
+            image: ""
         },
         {
-            name: "Ko Khant (Barry)",
-            program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: true
+            name: "Min Nanda Zan",
+            program: "Mentor, Trainer",
+            confirmed: true,
+            image: MinNandaZaw
         },
-        {
-            name: "Zawe Kaung Htet",
-            program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: false
-        },
-        {
-            name: "MayVe",
-            program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: false
-        },
-        {
-            name: "Ko Khant (Barry)",
-            program: "THINK, SPRINT, DESIGN 2025",
-            confirmed: true
-        },
-        // Add more mentors as needed
     ];
 
     // Calculate total pages
