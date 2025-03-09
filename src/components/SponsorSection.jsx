@@ -1,95 +1,187 @@
 import { motion } from "framer-motion";
+import UxseaLogo from "../img/Partners/uxsea.png";
+import ProductBazeLogo from "../img/Partners/productbaze.png";
+import UxphLogo from "../img/Partners/uxph.png";
+import SavvyuxLogo from "../img/Partners/savvyux.png";
+import UxtestingLogo from "../img/Partners/uxtesting.png";
 
 const SponsorSection = () => {
-    const companies = [
-        { name: "Company 1", color: "bg-[#EBFF00]", position: "-top-8 left-32" },
-        { name: "Company 2", color: "bg-pink-300", position: "-top-8 right-32" },
-        { name: "Company 3", color: "bg-orange-300", position: "top-12 left-1/2 -translate-x-1/2" },
-        { name: "Company 4", color: "bg-green-800 text-white", position: "top-12 right-24" },
+    // Sponsors data structure - easy to add more sponsors and types
+    const sponsors = [
+        {
+            type: "Lunch Sponsor",
+            items: [
+                { id: 1, logo: "", name: "Sponsor 1" },
+                { id: 2, logo: "", name: "Sponsor 2" },
+                { id: 3, logo: "", name: "Sponsor 3" },
+                { id: 4, logo: "", name: "Sponsor 4" }
+            ]
+        }
     ];
 
     return (
-        <>
-        <section className="w-full md:w-[80%] mx-auto py-16 overflow-hidden">
-            {/* Sponsors Section */}
-            <div className="relative mb-32 group">
-                {/* Floating Company Buttons */}
-                {companies.map((company, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileHover={{ scale: 1.05 }}
-                        className={`absolute ${company.position} ${company.color} px-4 py-1 rounded-full 
-                              opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out pointer-events-none`}
-                    >
-                        {company.name}
-                    </motion.div>
-                ))}
+        <section className="w-full">
+            {/* Become a Sponsor Section */}
+            <div className="px-4 md:px-12 py-12 md:py-16 border-b border-zinc-900">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start max-w-5xl mx-auto gap-8 md:gap-0">
+                    {/* Left side - Become a Sponsor */}
+                    <div className="flex items-center gap-2">
+                        <h2 className="text-3xl md:text-4xl text-white font-medium">Become</h2>
+                        <div className="relative">
+                            <motion.button
+                                whileHover={{ scale: 1.02 }}
+                                className="bg-[#EBFF00] px-6 py-2 rounded-full text-2xl md:text-3xl font-medium relative z-10"
+                            >
+                                a Sponsor
+                            </motion.button>
+                            <div className="absolute inset-0 bg-[#EBFF00] rounded-full blur-sm opacity-30"></div>
+                        </div>
+                    </div>
 
-                {/* Main Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="text-4xl md:text-6xl font-bold text-center text-white cursor-pointer hover:text-gray-200"
-                >
-                    Our Partner & Sponsors
-                </motion.h2>
+                    {/* Right side - Text and Apply button */}
+                    <div className="flex flex-col md:items-end gap-4">
+                        <p className="text-white/80 md:text-right text-base md:text-lg">
+                            We value the support of our sponsors and<br />
+                            offer various partnership levels
+                        </p>
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            className="flex items-center gap-2 text-white border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white hover:text-black transition-colors w-fit"
+                        >
+                            <span className="text-purple-400">✦</span>
+                            Apply for Sponsorship
+                            <span className="ml-1">→</span>
+                        </motion.button>
+                    </div>
+                </div>
             </div>
 
-            {/* Main Sponsor Section */}
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                <div className="text-white text-center md:text-left">
-                    <motion.h3
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="text-3xl md:text-5xl mb-4"
-                    >
-                        Our Main Sponsor is
-                    </motion.h3>
-                    <motion.p
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-4xl md:text-6xl font-bold font-gothic"
-                    >
-                        FUTURE
-                    </motion.p>
+            {/* Our Partners & Sponsors */}
+            <div className="px-4 md:px-12 py-12 md:py-16 border-b border-zinc-900">
+                {/* Title with floating bubbles */}
+                <div className="relative mb-16">
+                    {/* Main title with bubbles positioned around it */}
+                    <div className="relative mx-auto max-w-3xl">
+                        {/* Main title */}
+                        <h2 className="text-3xl md:text-5xl font-bold text-center text-white relative z-10">
+                            Our Partner & Sponsors
+                        </h2>
+
+                        {/* Floating company bubbles - positioned to overlap with title */}
+                        <motion.div 
+                            className="absolute -top-6 left-0 z-20 hidden md:block"
+                            initial={{ opacity: 1 }}
+                            animate={{ 
+                                y: [0, -5, 0], 
+                                rotate: -8,
+                                transition: { repeat: Infinity, duration: 3 } 
+                            }}
+                        >
+                            <div className="bg-[#EBFF00] px-6 py-2 rounded-full text-black font-medium transform">
+                                Company 1
+                            </div>
+                        </motion.div>
+                        
+                        <motion.div 
+                            className="absolute -top-6 right-0 z-20 hidden md:block"
+                            initial={{ opacity: 1 }}
+                            animate={{ 
+                                y: [0, -8, 0], 
+                                rotate: 5,
+                                transition: { repeat: Infinity, duration: 4 } 
+                            }}
+                        >
+                            <div className="bg-pink-300 px-6 py-2 rounded-full text-black font-medium transform">
+                                Company 1
+                            </div>
+                        </motion.div>
+                        
+                        <motion.div 
+                            className="absolute top-8 left-[20%] z-20 hidden md:block rotate-6"
+                            initial={{ opacity: 1 }}
+                            animate={{ 
+                                y: [0, -6, 0],
+                                transition: { repeat: Infinity, duration: 3.5 } 
+                            }}
+                        >
+                            <div className="bg-orange-300 px-6 py-2 rounded-full text-black font-medium transform">
+                                Company 1
+                            </div>
+                        </motion.div>
+                        
+                        <motion.div 
+                            className="absolute top-8 right-[20%] z-20 hidden md:block"
+                            initial={{ opacity: 1 }}
+                            animate={{ 
+                                y: [0, -7, 0], 
+                                rotate: 8,
+                                transition: { repeat: Infinity, duration: 3.2 } 
+                            }}
+                        >
+                            <div className="bg-green-800 px-6 py-2 rounded-full text-[#EBFF00] font-medium transform">
+                                Company 1
+                            </div>
+                        </motion.div>
+                    </div>
                 </div>
 
-                {/* Social Media Card */}
-                <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="bg-white rounded-3xl w-full md:w-[400px]"
-                >
-                    <div className="p-4 border-b">
-                        <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
-                            <div>
-                                <p className="font-bold">Interaktell</p>
-                                <p className="text-sm">Bilbao, Spain</p>
-                            </div>
+                {/* Sponsor Logos Grid */}
+                <div className="max-w-5xl mx-auto">
+                    {sponsors.map((sponsorType) => (
+                        <div key={sponsorType.type} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                            {sponsorType.items.map((sponsor) => (
+                                <div key={sponsor.id} className="relative">
+                                    {/* Sponsor Card */}
+                                    <motion.div
+                                        whileHover={{ scale: 1.02 }}
+                                        className="aspect-square bg-[#111111] rounded-md overflow-hidden flex items-center justify-center border border-zinc-900 relative"
+                                    >
+                                        {/* Logo */}
+                                        <div className="w-16 h-16 md:w-20 md:h-20">
+                                            <svg viewBox="0 0 100 100" className="w-full h-full">
+                                                <path
+                                                    d="M30,0 C30,0 70,0 70,0 C70,0 100,30 100,30 C100,30 100,70 100,70 C100,70 70,100 70,100 C70,100 30,100 30,100 C30,100 0,70 0,70 C0,70 0,30 0,30 C0,30 30,0 30,0"
+                                                    fill="white"
+                                                />
+                                            </svg>
+                                        </div>
+                                        
+                                        {/* Sponsor Type Label - positioned at bottom left */}
+                                        <div className="absolute bottom-3 left-3">
+                                            <div className="flex items-center gap-1 bg-white text-black px-2 py-0.5 rounded-full text-xs font-medium font-malinton">
+                                                <span className="text-purple-400">✦</span>
+                                                <span>{sponsorType.type}</span>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                </div>
+                            ))}
                         </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Our Partners Section */}
+            <div className="px-4 md:px-12 py-12 md:py-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+                    Our Partner
+                </h2>
+                <div className="bg-[#111111] py-8 md:py-12 rounded-md">
+                    <h3 className="text-lg md:text-xl text-gray-400 mb-8 text-center uppercase tracking-widest">
+                        Our Community Partners
+                    </h3>
+                    
+                    {/* Community Partners Grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center max-w-4xl mx-auto px-4">
+                        <img src={UxseaLogo} alt="UXSEA Society" className="w-24 md:w-32 opacity-50 hover:opacity-100 transition-opacity" />
+                        <img src={ProductBazeLogo} alt="Product Baze" className="w-24 md:w-32 opacity-50 hover:opacity-100 transition-opacity" />
+                        <img src={UxphLogo} alt="UXPH" className="w-24 md:w-32 opacity-50 hover:opacity-100 transition-opacity" />
+                        <img src={SavvyuxLogo} alt="Savvyux" className="w-24 md:w-32 opacity-50 hover:opacity-100 transition-opacity" />
+                        <img src={UxtestingLogo} alt="UX Testing" className="w-24 md:w-32 opacity-50 hover:opacity-100 transition-opacity" />
                     </div>
-                    <div className="p-8">
-                        <h4 className="text-2xl font-bold mb-4">Hola,<br />this is a text-based post.</h4>
-                        <p className="text-xl">Enjoy!</p>
-                    </div>
-                    <div className="p-4 border-t flex justify-between items-center">
-                        <div className="flex gap-4">
-                            <span>♡</span>
-                            <span>💭</span>
-                            <span>↗</span>
-                        </div>
-                        <span>🔖</span>
-                    </div>
-                </motion.div>
+                </div>
             </div>
         </section>
-        </>
     );
 };
 

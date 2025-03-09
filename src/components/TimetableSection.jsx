@@ -43,7 +43,7 @@ const TimetableSection = () => {
     ];
 
     return (
-        <section className="w-full bg-white md:w-[80%] mx-auto py-16 flex flex-col items-center overflow-hidden">
+        <section className="w-full bg-white py-16 flex flex-col items-center overflow-hidden">
             {/* Title */}
             <motion.p 
                 initial={{ opacity: 0, y: -20 }}

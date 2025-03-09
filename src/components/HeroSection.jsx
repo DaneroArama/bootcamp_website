@@ -13,7 +13,7 @@ const HeroSection = () => {
         {
             src: GreenGhost,
             alt: "Green Ghost",
-            className: "absolute left-0 bottom-1 md:bottom-6 w-[100px] h-[100px] md:w-[200px] md:h-[200px]",
+            className: "absolute left-0 bottom-1 md:bottom-6 w-[100px] h-[100px] md:w-[250px] md:h-[250px]",
             style: { zIndex: 4 },
             animate: {
                 y: [0, -10, 0],
@@ -28,7 +28,7 @@ const HeroSection = () => {
         {
             src: BlueRingGhost,
             alt: "Blue Ring Ghost",
-            className: "absolute left-[15%] bottom-6 md:bottom-16 w-[120px] h-[120px] md:w-[280px] md:h-[280px]",
+            className: "absolute left-[15%] bottom-6 md:bottom-16 w-[120px] h-[120px] md:w-[320px] md:h-[320px]",
             style: { zIndex: 3 },
             animate: {
                 y: [0, -15, 0],
@@ -43,7 +43,7 @@ const HeroSection = () => {
         {
             src: GreyOvalGhost,
             alt: "Grey Oval Ghost",
-            className: "absolute left-[9%] -bottom-8 md:-bottom-14 w-[130px] h-[130px] md:w-[300px] md:h-[300px]",
+            className: "absolute left-[9%] -bottom-8 md:-bottom-14 w-[130px] h-[130px] md:w-[320px] md:h-[320px]",
             style: { zIndex: 6 },
             animate: {
                 y: [0, -12, 0],
@@ -58,7 +58,7 @@ const HeroSection = () => {
         {
             src: PurpleRectangleGhost,
             alt: "Purple Rectangle Ghost",
-            className: "absolute left-[32%] -bottom-2 w-[110px] h-[110px] md:w-[260px] md:h-[260px]",
+            className: "absolute left-[28%] -bottom-2 w-[110px] h-[110px] md:w-[300px] md:h-[300px]",
             style: { zIndex: 5 },
             animate: {
                 y: [0, -8, 0],
@@ -73,7 +73,7 @@ const HeroSection = () => {
         {
             src: RedRectangleGhost,
             alt: "Red Rectangle Ghost",
-            className: "absolute left-[47%] -bottom-2 w-[100px] h-[100px] md:w-[240px] md:h-[240px]",
+            className: "absolute left-[40%] -bottom-2 w-[100px] h-[100px] md:w-[300px] md:h-[300px]",
             style: { zIndex: 6 },
             animate: {
                 y: [0, -10, 0],
@@ -88,7 +88,7 @@ const HeroSection = () => {
         {
             src: YellowOvalGhost,
             alt: "Yellow Oval Ghost",
-            className: "absolute left-[60%] -bottom-10 w-[115px] h-[115px] md:w-[270px] md:h-[270px]",
+            className: "absolute left-[55%] -bottom-10 w-[115px] h-[115px] md:w-[300px] md:h-[300px]",
             style: { zIndex: 3 },
             animate: {
                 y: [0, -13, 0],
@@ -103,7 +103,7 @@ const HeroSection = () => {
         {
             src: BlueSquishyGhost,
             alt: "Blue Squishy Ghost",
-            className: "absolute left-[75%] bottom-7 w-[95px] h-[95px] md:w-[220px] md:h-[220px]",
+            className: "absolute left-[70%] bottom-7 w-[95px] h-[95px] md:w-[250px] md:h-[250px]",
             style: { zIndex: 2 },
             animate: {
                 y: [0, -11, 0],
@@ -118,7 +118,7 @@ const HeroSection = () => {
         {
             src: RedDiamondGhost,
             alt: "Red Diamond Ghost",
-            className: "absolute left-[85%] bottom-0 w-[90px] h-[90px] md:w-[210px] md:h-[210px]",
+            className: "absolute left-[80%] bottom-0 w-[90px] h-[90px] md:w-[250px] md:h-[250px]",
             style: { zIndex: 1 },
             animate: {
                 y: [0, -9, 0],
@@ -133,7 +133,7 @@ const HeroSection = () => {
     ];
 
     return (
-        <section className="w-full md:w-[80%] mx-auto min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+        <section className="w-full px-4 md:px-12 min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
             {/* Main Text Content */}
             <div className="text-center z-10 mb-20 md:mb-32">
                 <motion.div
@@ -157,7 +157,7 @@ const HeroSection = () => {
                     {/* Register Button */}
                     <motion.button
                         whileHover={{ scale: 1.05 }}
-                        className="mt-8 bg-transparent text-white px-8 py-3 rounded-full border border-white flex items-center space-x-2 hover:bg-white/10"
+                        className="mt-8 bg-transparent text-white px-8 py-3 rounded-full border border-white flex items-center space-x-2 hover:bg-white hover:text-black"
                     >
                         <span className="text-purple-400">✦</span>
                         <span className="mx-2">Register Now</span>

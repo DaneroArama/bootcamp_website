@@ -72,10 +72,48 @@ export const AboutSection = () => {
 
   return (
     <div className="min-h-screen bg-transparent">
+      {/* Text Section */}
+      <div className="w-full px-4 md:px-12 py-12">
+        {/* About UXMM Section */}
+        <div className="grid grid-cols-1 md:grid-cols-[0.5fr_1fr] gap-8 mb-16">
+          <div className="text-white text-2xl md:text-3xl font-gothic uppercase tracking-wider">
+            About UXMM
+          </div>
+          <div className="space-y-2">
+            <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
+              Since 2020,
+              <strong className="text-pink-500"> UXMM (User Experience Myanmar)</strong> has been a{' '}
+              <strong className="text-yellow-500">volunteer-driven, non-profit organization</strong> dedicated to supporting designers through{' '}
+              <strong className="text-blue-500">resources, education, and networking</strong>.
+            </p>
+            <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
+              We provide 
+              <strong className="text-green-500"> meetups, conferences, workshops, and mentorship</strong> to foster innovation, collaboration, and continuous learning. Our mission is to advance{' '}
+              <strong className="text-pink-500">design and technology</strong> in Myanmar and beyond
+            </p>
+          </div>
+        </div>
+
+        {/* About Bootcamp Section */}
+        <div className="grid grid-cols-1 md:grid-cols-[0.5fr_1fr] gap-8">
+          <div className="text-white text-2xl md:text-3xl font-gothic uppercase tracking-wider">
+            About Bootcamp
+          </div>
+          <div className="space-y-2">
+            <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
+              Gain essential UX/UI skills in user research, interaction design, and prototyping.
+            </p>
+            <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
+              Work on real projects, get expert mentorship, and build a portfolio while networking. Launch your UX/UI career with confidence!
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Desktop Layout */}
-      <div className="hidden sm:flex justify-center items-center p-10" ref={ref}>
+      <div className="hidden sm:flex justify-center items-center px-4 md:px-12 py-12" ref={ref}>
         <motion.div 
-          className="grid grid-cols-5 grid-rows-6 gap-2 max-w-7xl w-full h-[800px]"
+          className="grid grid-cols-5 grid-rows-6 gap-2 w-full h-[800px]"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "show" : "hidden"}
