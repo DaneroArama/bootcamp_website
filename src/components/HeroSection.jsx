@@ -167,7 +167,7 @@ const HeroSection = () => {
             </div>
 
             {/* Character Illustrations */}
-            <div className="absolute -bottom-8 sm:-bottom-20 w-full px-0 md:px-8">
+            <div className="absolute -bottom-8 sm:-bottom-20 w-full">
                 <div className="relative h-52 sm:h-64 md:h-80">
                     {ghostsConfig.map((ghost, index) => (
                         <motion.img

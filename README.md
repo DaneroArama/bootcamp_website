@@ -1,3 +1,52 @@
+# Bootcamp Website
+
+A modern, responsive website for the UXMM Bootcamp featuring animations, interactive elements, and optimized performance.
+
+## Features
+
+- Responsive design for all screen sizes
+- Smooth animations with Framer Motion
+- Interactive UI components
+- Pagination for content-heavy sections
+
+## Getting Started
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Start the development server:
+```bash
+npm start
+```
+
+## Project Structure
+
+- `src/components/` - React components
+- `src/img/` - Images and assets
+- `src/utils/` - Utility functions
+
+## Components
+
+- **HeroSection** - Main landing section with animated mascots
+- **AboutSection** - Information about UXMM and the bootcamp
+- **SpeakerSection** - Speaker profiles with pagination
+- **MentorSection** - Mentor profiles with pagination
+- **SponsorSection** - Sponsor information and logos
+
+## Performance Optimizations
+
+- Component-based architecture
+- Efficient animations with Framer Motion
+- Pagination for large data sets
+
+## Technologies Used
+
+- React
+- Framer Motion
+- Tailwind CSS
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

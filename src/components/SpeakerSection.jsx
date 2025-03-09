@@ -250,7 +250,7 @@ const SpeakerSection = () => {
                 {/* Pagination */}
                 {totalPages > 1 && (
                     <motion.div 
-                        className="flex justify-center items-center gap-4 mt-8"
+                        className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mt-8"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
@@ -258,7 +258,7 @@ const SpeakerSection = () => {
                         <button
                             onClick={() => paginate(currentPage - 1)}
                             disabled={currentPage === 1}
-                            className={`px-4 py-2 rounded-full transition-all duration-300 ${
+                            className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full transition-all duration-300 text-sm md:text-base ${
                                 currentPage === 1
                                     ? 'bg-gray-600 cursor-not-allowed'
                                     : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
@@ -267,7 +267,71 @@ const SpeakerSection = () => {
                             Previous
                         </button>
                         
-                        <div className="flex gap-2">
+                        {/* Mobile pagination (with ellipsis) */}
+                        <div className="flex gap-1 sm:hidden">
+                            {/* First page */}
+                            <button
+                                onClick={() => paginate(1)}
+                                className={`w-8 h-8 rounded-full transition-all duration-300 text-sm ${
+                                    currentPage === 1
+                                        ? 'bg-[#E7A8E2] text-black'
+                                        : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
+                                }`}
+                            >
+                                1
+                            </button>
+                            
+                            {/* Middle section */}
+                            {currentPage !== 1 && currentPage !== totalPages ? (
+                                <>
+                                    {/* Ellipsis before current page if needed */}
+                                    {currentPage > 2 && (
+                                        <div className="w-8 h-8 flex items-center justify-center text-white text-sm">
+                                            ...
+                                        </div>
+                                    )}
+                                    
+                                    {/* Current page */}
+                                    <button
+                                        onClick={() => paginate(currentPage)}
+                                        className="w-8 h-8 rounded-full bg-[#E7A8E2] text-black text-sm"
+                                    >
+                                        {currentPage}
+                                    </button>
+                                    
+                                    {/* Ellipsis after current page if needed */}
+                                    {currentPage < totalPages - 1 && (
+                                        <div className="w-8 h-8 flex items-center justify-center text-white text-sm">
+                                            ...
+                                        </div>
+                                    )}
+                                </>
+                            ) : (
+                                /* Simple ellipsis when on first or last page */
+                                totalPages > 2 && (
+                                    <div className="w-8 h-8 flex items-center justify-center text-white text-sm">
+                                        ...
+                                    </div>
+                                )
+                            )}
+                            
+                            {/* Last page (if more than one page) */}
+                            {totalPages > 1 && (
+                                <button
+                                    onClick={() => paginate(totalPages)}
+                                    className={`w-8 h-8 rounded-full transition-all duration-300 text-sm ${
+                                        currentPage === totalPages
+                                            ? 'bg-[#E7A8E2] text-black'
+                                            : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
+                                    }`}
+                                >
+                                    {totalPages}
+                                </button>
+                            )}
+                        </div>
+                        
+                        {/* Desktop pagination (all page numbers) */}
+                        <div className="hidden sm:flex gap-2">
                             {[...Array(totalPages)].map((_, i) => (
                                 <button
                                     key={i}
@@ -286,7 +350,7 @@ const SpeakerSection = () => {
                         <button
                             onClick={() => paginate(currentPage + 1)}
                             disabled={currentPage === totalPages}
-                            className={`px-4 py-2 rounded-full transition-all duration-300 ${
+                            className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full transition-all duration-300 text-sm md:text-base ${
                                 currentPage === totalPages
                                     ? 'bg-gray-600 cursor-not-allowed'
                                     : 'bg-black text-white hover:bg-gray-800 border-2 border-white'

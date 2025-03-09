@@ -21,43 +21,9 @@ const SponsorSection = () => {
 
     return (
         <section className="w-full">
-            {/* Become a Sponsor Section */}
-            <div className="px-4 md:px-12 py-12 md:py-16 border-b border-zinc-900">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start max-w-5xl mx-auto gap-8 md:gap-0">
-                    {/* Left side - Become a Sponsor */}
-                    <div className="flex items-center gap-2">
-                        <h2 className="text-3xl md:text-4xl text-white font-medium font-malinton">Become</h2>
-                        <div className="relative">
-                            <motion.button
-                                whileHover={{ scale: 1.02 }}
-                                className="bg-[#EBFF00] px-6 py-2 rounded-full text-2xl md:text-3xl font-medium font-malinton relative z-10"
-                            >
-                                a Sponsor
-                            </motion.button>
-                            <div className="absolute inset-0 bg-[#EBFF00] rounded-full blur-sm opacity-30"></div>
-                        </div>
-                    </div>
-
-                    {/* Right side - Text and Apply button */}
-                    <div className="flex flex-col md:items-end gap-4">
-                        <p className="text-white/80 md:text-right text-base md:text-lg">
-                            We value the support of our sponsors and<br />
-                            offer various partnership levels
-                        </p>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            className="flex items-center gap-2 text-white border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white hover:text-black transition-colors w-fit font-malinton"
-                        >
-                            <span className="text-purple-400">✦</span>
-                            Apply for Sponsorship
-                            <span className="ml-1">→</span>
-                        </motion.button>
-                    </div>
-                </div>
-            </div>
 
             {/* Our Partners & Sponsors */}
-            <div className="px-4 md:px-12 py-12 md:py-16 border-b border-zinc-900">
+            <div className="px-4 md:px-12 py-12 md:py-16">
                 {/* Title with floating bubbles */}
                 <div className="relative mb-16">
                     {/* Main title with bubbles positioned around it */}
@@ -155,6 +121,41 @@ const SponsorSection = () => {
                             ))}
                         </div>
                     ))}
+                </div>
+            </div>
+
+            {/* Become a Sponsor Section */}
+            <div className="px-4 md:px-12 py-12 md:py-16">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start max-w-5xl mx-auto gap-8 md:gap-0">
+                    {/* Left side - Become a Sponsor */}
+                    <div className="flex items-center gap-2">
+                        <div className="text-3xl md:text-4xl text-white font-medium font-malinton">Become</div>
+                        <div className="relative">
+                            <motion.button
+                                whileHover={{ scale: 1.02 }}
+                                className="bg-[#EBFF00] px-6 py-2 rounded-full text-2xl md:text-3xl font-medium font-malinton relative z-10"
+                            >
+                                a Sponsor
+                            </motion.button>
+                            <div className="absolute inset-0 bg-[#EBFF00] rounded-full blur-sm opacity-30"></div>
+                        </div>
+                    </div>
+
+                    {/* Right side - Text and Apply button */}
+                    <div className="flex flex-col md:items-end gap-4">
+                        <p className="text-white/80 md:text-right text-base md:text-lg">
+                            We value the support of our sponsors and<br />
+                            offer various partnership levels
+                        </p>
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            className="flex items-center gap-2 text-white border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white hover:text-black transition-colors w-fit font-malinton"
+                        >
+                            <span className="text-purple-400">✦</span>
+                            Apply for Sponsorship
+                            <span className="ml-1">→</span>
+                        </motion.button>
+                    </div>
                 </div>
             </div>
 

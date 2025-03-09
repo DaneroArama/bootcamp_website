@@ -76,27 +76,27 @@ export const AboutSection = () => {
       <div className="w-full px-4 md:px-12 py-12">
         {/* About UXMM Section */}
         <div className="grid grid-cols-1 md:grid-cols-[0.5fr_1fr] gap-8 mb-16">
-          <div className="text-white text-2xl md:text-3xl font-gothic uppercase tracking-wider">
+          <div className="text-white text-2xl md:text-3xl font-bold font-gothic uppercase tracking-wider">
             About UXMM
           </div>
           <div className="space-y-2">
             <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
               Since 2020,
-              <strong className="text-pink-500"> UXMM (User Experience Myanmar)</strong> has been a{' '}
-              <strong className="text-yellow-500">volunteer-driven, non-profit organization</strong> dedicated to supporting designers through{' '}
-              <strong className="text-blue-500">resources, education, and networking</strong>.
+              <strong className="font-bold"> UXMM (User Experience Myanmar)</strong> has been a{' '}
+              <strong className="font-medium">volunteer-driven, non-profit organization</strong> dedicated to supporting designers through{' '}
+              <strong className="font-medium">resources, education, and networking</strong>.
             </p>
             <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
               We provide 
-              <strong className="text-green-500"> meetups, conferences, workshops, and mentorship</strong> to foster innovation, collaboration, and continuous learning. Our mission is to advance{' '}
-              <strong className="text-pink-500">design and technology</strong> in Myanmar and beyond
+              <strong className="font-medium"> meetups, conferences, workshops, and mentorship</strong> to foster innovation, collaboration, and continuous learning. Our mission is to advance{' '}
+              <strong className="font-medium">design and technology</strong> in Myanmar and beyond
             </p>
           </div>
         </div>
 
         {/* About Bootcamp Section */}
         <div className="grid grid-cols-1 md:grid-cols-[0.5fr_1fr] gap-8">
-          <div className="text-white text-2xl md:text-3xl font-gothic uppercase tracking-wider">
+          <div className="text-white text-2xl md:text-3xl font-bold font-gothic uppercase tracking-wider">
             About Bootcamp
           </div>
           <div className="space-y-2">
