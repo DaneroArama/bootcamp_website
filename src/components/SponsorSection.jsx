@@ -26,11 +26,11 @@ const SponsorSection = () => {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start max-w-5xl mx-auto gap-8 md:gap-0">
                     {/* Left side - Become a Sponsor */}
                     <div className="flex items-center gap-2">
-                        <h2 className="text-3xl md:text-4xl text-white font-medium">Become</h2>
+                        <h2 className="text-3xl md:text-4xl text-white font-medium font-malinton">Become</h2>
                         <div className="relative">
                             <motion.button
                                 whileHover={{ scale: 1.02 }}
-                                className="bg-[#EBFF00] px-6 py-2 rounded-full text-2xl md:text-3xl font-medium relative z-10"
+                                className="bg-[#EBFF00] px-6 py-2 rounded-full text-2xl md:text-3xl font-medium font-malinton relative z-10"
                             >
                                 a Sponsor
                             </motion.button>
@@ -46,7 +46,7 @@ const SponsorSection = () => {
                         </p>
                         <motion.button
                             whileHover={{ scale: 1.05 }}
-                            className="flex items-center gap-2 text-white border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white hover:text-black transition-colors w-fit"
+                            className="flex items-center gap-2 text-white border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white hover:text-black transition-colors w-fit font-malinton"
                         >
                             <span className="text-purple-400">✦</span>
                             Apply for Sponsorship
@@ -63,17 +63,16 @@ const SponsorSection = () => {
                     {/* Main title with bubbles positioned around it */}
                     <div className="relative mx-auto max-w-3xl">
                         {/* Main title */}
-                        <h2 className="text-3xl md:text-5xl font-bold text-center text-white relative z-10">
+                        <h2 className="text-3xl md:text-5xl font-bold text-center text-white relative z-10 font-malinton">
                             Our Partner & Sponsors
                         </h2>
 
                         {/* Floating company bubbles - positioned to overlap with title */}
                         <motion.div 
-                            className="absolute -top-6 left-0 z-20 hidden md:block"
-                            initial={{ opacity: 1 }}
+                            className="absolute -top-6 left-20 z-20 hidden md:block"
+                            initial={{ rotate: -20 }}
                             animate={{ 
-                                y: [0, -5, 0], 
-                                rotate: -8,
+                                y: [0, -5, 0],
                                 transition: { repeat: Infinity, duration: 3 } 
                             }}
                         >
@@ -83,11 +82,10 @@ const SponsorSection = () => {
                         </motion.div>
                         
                         <motion.div 
-                            className="absolute -top-6 right-0 z-20 hidden md:block"
-                            initial={{ opacity: 1 }}
+                            className="absolute -top-6 left-[40%] z-20 hidden md:block"
+                            initial={{ rotate: 20 }}
                             animate={{ 
-                                y: [0, -8, 0], 
-                                rotate: 5,
+                                y: [0, -8, 0],
                                 transition: { repeat: Infinity, duration: 4 } 
                             }}
                         >
@@ -97,8 +95,8 @@ const SponsorSection = () => {
                         </motion.div>
                         
                         <motion.div 
-                            className="absolute top-8 left-[20%] z-20 hidden md:block rotate-6"
-                            initial={{ opacity: 1 }}
+                            className="absolute top-14 left-[30%] z-0 hidden md:block rotate-6"
+                            initial={{ rotate: 15 }}
                             animate={{ 
                                 y: [0, -6, 0],
                                 transition: { repeat: Infinity, duration: 3.5 } 
@@ -110,11 +108,10 @@ const SponsorSection = () => {
                         </motion.div>
                         
                         <motion.div 
-                            className="absolute top-8 right-[20%] z-20 hidden md:block"
-                            initial={{ opacity: 1 }}
+                            className="absolute top-10 right-[10%] z-0 hidden md:block"
+                            initial={{ rotate: -20 }}
                             animate={{ 
-                                y: [0, -7, 0], 
-                                rotate: 8,
+                                y: [0, -7, 0],
                                 transition: { repeat: Infinity, duration: 3.2 } 
                             }}
                         >

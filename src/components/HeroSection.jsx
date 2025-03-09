@@ -103,7 +103,7 @@ const HeroSection = () => {
         {
             src: BlueSquishyGhost,
             alt: "Blue Squishy Ghost",
-            className: "absolute left-[70%] bottom-7 w-[95px] h-[95px] md:w-[250px] md:h-[250px]",
+            className: "absolute left-[71%] bottom-2 md:bottom-6 w-[90px] h-[90px] md:w-[250px] md:h-[250px]",
             style: { zIndex: 2 },
             animate: {
                 y: [0, -11, 0],
@@ -118,7 +118,7 @@ const HeroSection = () => {
         {
             src: RedDiamondGhost,
             alt: "Red Diamond Ghost",
-            className: "absolute left-[80%] bottom-0 w-[90px] h-[90px] md:w-[250px] md:h-[250px]",
+            className: "absolute right-0 bottom-0 w-[90px] h-[90px] md:w-[250px] md:h-[250px]",
             style: { zIndex: 1 },
             animate: {
                 y: [0, -9, 0],
@@ -167,7 +167,7 @@ const HeroSection = () => {
             </div>
 
             {/* Character Illustrations */}
-            <div className="absolute -bottom-8 sm:-bottom-20 w-full">
+            <div className="absolute -bottom-8 sm:-bottom-20 w-full px-0 md:px-8">
                 <div className="relative h-52 sm:h-64 md:h-80">
                     {ghostsConfig.map((ghost, index) => (
                         <motion.img
