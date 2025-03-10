@@ -399,15 +399,31 @@ const MentorSection = () => {
                         onClick={closeBioModal}
                     >
                         <motion.div 
-                            className="bg-[#1A1A1A] max-w-xl w-full rounded-lg overflow-hidden max-h-[80vh]"
+                            className="bg-[#1A1A1A] max-w-xl w-full rounded-lg overflow-hidden max-h-[90vh]"
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.9, opacity: 0 }}
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <div className="flex flex-col md:flex-row h-full md:max-h-[50vh]">
+                            <div className="flex flex-col h-full">
+                                {/* Header with name, role, and close button */}
+                                <div className="p-4 flex justify-between items-start border-b border-gray-800">
+                                    <div>
+                                        <h2 className="text-white text-xl font-bold">{selectedMentor.name}</h2>
+                                        <p className="text-gray-400 text-sm mt-1">{selectedMentor.role}</p>
+                                    </div>
+                                    <button 
+                                        onClick={closeBioModal}
+                                        className="text-gray-400 hover:text-white"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+
                                 {/* Mentor Image */}
-                                <div className="w-full md:w-1/3 h-48 md:h-auto bg-[#E7A8E2] flex-shrink-0">
+                                <div className="w-full h-48 bg-[#E7A8E2] flex-shrink-0">
                                     {selectedMentor.image ? (
                                         <img 
                                             src={selectedMentor.image} 
@@ -433,56 +449,40 @@ const MentorSection = () => {
                                     )}
                                 </div>
                                 
-                                {/* Mentor Info */}
-                                <div className="p-6 flex-1 flex flex-col md:max-h-[80vh]">
-                                    <div className="flex justify-between items-start">
-                                        <div>
-                                            <h2 className="text-white text-2xl font-bold">{selectedMentor.name}</h2>
-                                            <p className="text-gray-400 text-sm mt-1">{selectedMentor.role}</p>
-                                        </div>
-                                        <button 
-                                            onClick={closeBioModal}
-                                            className="text-gray-400 hover:text-white"
-                                        >
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </button>
+                                {/* Bio Content - Scrollable */}
+                                <div 
+                                    ref={bioContentRef}
+                                    onScroll={handleScroll}
+                                    className="p-4 overflow-y-auto flex-1 scrollbar-hide relative touch-auto" 
+                                    style={{ 
+                                        scrollbarWidth: 'none', 
+                                        msOverflowStyle: 'none',
+                                        WebkitOverflowScrolling: 'touch', // Enable momentum scrolling on iOS
+                                        maxHeight: '30vh'
+                                    }}
+                                >
+                                    <h3 className="text-white text-lg font-medium mb-2">Bio</h3>
+                                    <div className="text-gray-300 space-y-4 pb-6">
+                                        {selectedMentor.bio.split('\n\n').map((paragraph, index) => (
+                                            <p key={index}>
+                                                {paragraph.split('\n').map((line, lineIndex) => (
+                                                    <React.Fragment key={lineIndex}>
+                                                        {line}
+                                                        {lineIndex < paragraph.split('\n').length - 1 && <br />}
+                                                    </React.Fragment>
+                                                ))}
+                                            </p>
+                                        ))}
                                     </div>
                                     
-                                    <div 
-                                        ref={bioContentRef}
-                                        onScroll={handleScroll}
-                                        className="mt-4 border-t border-gray-700 pt-4 flex-1 overflow-y-auto scrollbar-hide relative" 
-                                        style={{ 
-                                            scrollbarWidth: 'none', 
-                                            msOverflowStyle: 'none',
-                                            WebkitOverflowScrolling: 'touch' // Enable momentum scrolling on iOS
-                                        }}
-                                    >
-                                        <h3 className="text-white text-lg font-medium mb-2">Bio</h3>
-                                        <div className="text-gray-300 space-y-4 pb-6">
-                                            {selectedMentor.bio.split('\n\n').map((paragraph, index) => (
-                                                <p key={index}>
-                                                    {paragraph.split('\n').map((line, lineIndex) => (
-                                                        <React.Fragment key={lineIndex}>
-                                                            {line}
-                                                            {lineIndex < paragraph.split('\n').length - 1 && <br />}
-                                                        </React.Fragment>
-                                                    ))}
-                                                </p>
-                                            ))}
+                                    {/* Scroll indicator arrow */}
+                                    {showScrollIndicator && (
+                                        <div className="sticky bottom-0 left-0 w-full bg-gradient-to-t from-[#1A1A1A] to-transparent h-12 flex justify-center items-end pb-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                                            </svg>
                                         </div>
-                                        
-                                        {/* Scroll indicator arrow */}
-                                        {showScrollIndicator && (
-                                            <div className="sticky bottom-0 left-0 w-full bg-gradient-to-t from-[#1A1A1A] to-transparent h-12 flex justify-center items-end pb-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                                                </svg>
-                                            </div>
-                                        )}
-                                    </div>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>
