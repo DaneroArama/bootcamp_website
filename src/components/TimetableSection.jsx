@@ -10,36 +10,78 @@ const TimetableSection = () => {
             day: "Day 1",
             date: "April 5th",
             events: [
-                { time: "09:00 AM", title: "Registration & Welcome", description: "Check-in and welcome ceremony" },
-                { time: "10:00 AM", title: "Opening Keynote", description: "Introduction to Design Sprint methodology" },
-                { time: "12:00 PM", title: "Lunch Break", description: "Networking lunch" },
-                { time: "01:00 PM", title: "Workshop Session", description: "Problem definition and ideation" },
-                { time: "04:00 PM", title: "Day 1 Wrap-up", description: "Summary and preparation for Day 2" }
+                {
+                    time: { start: "12:00", end: "14:00" },
+                    title: "What we mean when we say \"strategy\", and the role UX plays",
+                    speaker: {
+                        name: "Ko Khant (Barry)",
+                        role: "COMPANY NAME OR JOB TITLE",
+                        image: "path_to_image"
+                    }
+                },
+                {
+                    time: { start: "14:00", end: "15:00" },
+                    title: "What we mean when we say \"strategy\", and the role UX plays blah blah",
+                    isWorkshop: true,
+                    speaker: {
+                        name: "Workshop with Participant",
+                        role: "COMPANY NAME OR JOB TITLE"
+                    }
+                },
+                {
+                    time: { start: "2:00", end: "3:00" },
+                    title: "Breaktime",
+                    isBreak: true
+                },
+                {
+                    time: { start: "14:00", end: "15:00" },
+                    title: "What we mean when we say \"strategy\", and the role UX plays blah blah",
+                    isWorkshop: true,
+                    speaker: {
+                        name: "Workshop with Participant",
+                        role: "COMPANY NAME OR JOB TITLE"
+                    }
+                }
             ]
         },
         {
             day: "Day 2",
             date: "April 6th",
             events: [
-                { time: "09:00 AM", title: "Day 2 Kickoff", description: "Review and team formation" },
-                { time: "10:00 AM", title: "Sprint Workshop", description: "Prototyping and testing" },
-                { time: "12:00 PM", title: "Lunch Break", description: "Networking lunch" },
-                { time: "01:00 PM", title: "Final Sprint", description: "Solution refinement" },
-                { time: "03:00 PM", title: "Presentations", description: "Team presentations" },
-                { time: "04:00 PM", title: "Closing Ceremony", description: "Awards and closing remarks" }
+                {
+                    time: { start: "12:00", end: "14:00" },
+                    title: "What we mean when we say \"strategy\", and the role UX plays",
+                    speaker: {
+                        name: "Ko Khant (Barry)",
+                        role: "COMPANY NAME OR JOB TITLE",
+                        image: "path_to_image"
+                    }
+                },
+                {
+                    time: { start: "14:00", end: "15:00" },
+                    title: "What we mean when we say \"strategy\", and the role UX plays blah blah",
+                    isWorkshop: true,
+                    speaker: {
+                        name: "Workshop with Participant",
+                        role: "COMPANY NAME OR JOB TITLE"
+                    }
+                },
+                {
+                    time: { start: "2:00", end: "3:00" },
+                    title: "Breaktime",
+                    isBreak: true
+                },
+                {
+                    time: { start: "14:00", end: "15:00" },
+                    title: "What we mean when we say \"strategy\", and the role UX plays blah blah",
+                    isWorkshop: true,
+                    speaker: {
+                        name: "Workshop with Participant",
+                        role: "COMPANY NAME OR JOB TITLE"
+                    }
+                }
             ]
         },
-        {
-            day: "Day 3",
-            date: "April 7th",
-            events: [
-                { time: "09:00 AM", title: "Registration & Welcome", description: "Check-in and welcome ceremony" },
-                { time: "10:00 AM", title: "Opening Keynote", description: "Introduction to Design Sprint methodology" },
-                { time: "12:00 PM", title: "Lunch Break", description: "Networking lunch" },
-                { time: "01:00 PM", title: "Workshop Session", description: "Problem definition and ideation" },
-                { time: "04:00 PM", title: "Day 1 Wrap-up", description: "Summary and preparation for Day 2" }
-            ]
-        }
     ];
 
     return (
@@ -122,33 +164,71 @@ const TimetableSection = () => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="space-y-4"
+                        className="max-w-6xl mx-auto px-4 space-y-4"
                     >
-                        {/* Date Display for Mobile */}
-                        <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="md:hidden mb-6 text-center"
-                        >
-                            <h3 className="text-2xl font-bold text-purple-600 font-malinton">
-                                {timetableData[activeTab].date}
-                            </h3>
-                        </motion.div>
-
                         {timetableData[activeTab].events.map((event, eventIndex) => (
                             <motion.div
                                 key={eventIndex}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.3, delay: eventIndex * 0.1 }}
-                                className="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow"
+                                className={`flex items-start gap-8 p-6 ${
+                                    event.isWorkshop 
+                                    ? 'border-2 border-blue-400 bg-white' 
+                                    : event.isBreak
+                                    ? 'bg-transparent'
+                                    : 'bg-gray-50'
+                                } rounded-lg`}
                             >
-                                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                                    <div className="flex items-center space-x-4">
-                                        <span className="text-purple-600 font-semibold text-lg">{event.time}</span>
-                                        <h4 className="font-bold text-lg">{event.title}</h4>
+                                {/* Time Section */}
+                                <div className="w-48 flex-shrink-0">
+                                    <div className="text-2xl font-malinton">
+                                        {event.time.start}
+                                        <span className="mx-2 text-gray-400">TO</span>
+                                        {event.time.end}
                                     </div>
-                                    <p className="text-gray-600 mt-2 md:mt-0">{event.description}</p>
+                                </div>
+
+                                {/* Content Section */}
+                                <div className="flex-grow">
+                                    {event.isBreak ? (
+                                        <div className="flex items-center gap-4">
+                                            <span className="text-red-500">☕</span>
+                                            <span className="text-xl font-bold">{event.title}</span>
+                                            <span className="bg-[#EBFF00] px-4 py-1 rounded-full text-sm">
+                                                {event.time.start} TO {event.time.end}
+                                            </span>
+                                        </div>
+                                    ) : (
+                                        <>
+                                            <h3 className="text-xl font-bold mb-2">{event.title}</h3>
+                                            {event.speaker && (
+                                                <div className="flex items-center justify-between">
+                                                    <div className="flex items-center gap-3">
+                                                        {event.isWorkshop ? (
+                                                            <div className="w-8 h-8 grid grid-cols-2 gap-0.5">
+                                                                {[...Array(4)].map((_, i) => (
+                                                                    <div key={i} className="bg-blue-400 rounded-sm" />
+                                                                ))}
+                                                            </div>
+                                                        ) : (
+                                                            <div className="w-8 h-8 bg-purple-400 rounded-full" />
+                                                        )}
+                                                        <div>
+                                                            <p className="font-medium">{event.speaker.name}</p>
+                                                            <p className="text-gray-500 text-sm">{event.speaker.role}</p>
+                                                        </div>
+                                                    </div>
+                                                    {event.speaker.image && (
+                                                        <div className="flex -space-x-2">
+                                                            <div className="w-8 h-8 rounded-full bg-gray-200" />
+                                                            <div className="w-8 h-8 rounded-full bg-gray-300" />
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            )}
+                                        </>
+                                    )}
                                 </div>
                             </motion.div>
                         ))}

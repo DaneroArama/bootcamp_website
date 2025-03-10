@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
-import teamPhoto from '../img/pic1.png';
 
 const SpeakerSection = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -13,7 +12,7 @@ const SpeakerSection = () => {
             position: "??????",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
             confirmed: true,
-            image: teamPhoto // Add speaker image path here
+            image: "" // Add speaker image path here
         },
         {
             name: "Mya Myint Zu",

@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
-import teamPhoto from '../img/pic1.png';
-import teamPhoto2 from '../img/pic2.png';
-import teamPhoto3 from '../img/pic3.png';
-import teamPhoto4 from '../img/pic4.png';
+import teamPhoto from '../img/pic1.webp';
+import teamPhoto2 from '../img/pic2.webp';
+import teamPhoto3 from '../img/pic3.webp';
+import teamPhoto4 from '../img/pic4.webp';
 import uxmmlogo from '../img/uxmmlogo.png';
 import BlueRingGhost from "../img/Cartoon mascot/BlueRingGhost.svg";
 import RedRectangleGhost from "../img/Cartoon mascot/RedRectangleGhost.svg";
