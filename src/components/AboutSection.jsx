@@ -83,13 +83,13 @@ export const AboutSection = () => {
             <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
               Since 2020,
               <strong className="font-bold"> UXMM (User Experience Myanmar)</strong> has been a{' '}
-              <strong className="font-medium">volunteer-driven, non-profit organization</strong> dedicated to supporting designers through{' '}
-              <strong className="font-medium">resources, education, and networking</strong>.
+              <strong className="font-bold">volunteer-driven, non-profit organization</strong> dedicated to supporting designers through{' '}
+              <strong className="font-bold">resources, education, and networking</strong>.
             </p>
             <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
               We provide 
-              <strong className="font-medium"> meetups, conferences, workshops, and mentorship</strong> to foster innovation, collaboration, and continuous learning. Our mission is to advance{' '}
-              <strong className="font-medium">design and technology</strong> in Myanmar and beyond
+              <strong className="font-bold"> meetups, conferences, workshops, and mentorship</strong> to foster innovation, collaboration, and continuous learning. Our mission is to advance{' '}
+              <strong className="font-bold">design and technology</strong> in Myanmar and beyond
             </p>
           </div>
         </div>
