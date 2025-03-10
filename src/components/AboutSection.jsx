@@ -74,22 +74,23 @@ export const AboutSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-transparent">
+    <div className="min-h-screen bg-transparent p-10">
+
       {/* Text Section */}
       <div className="w-full px-4 md:px-12 py-12">
         {/* About UXMM Section */}
         <div className="grid grid-cols-1 md:grid-cols-[0.5fr_1fr] gap-8 mb-16">
-          <div className="text-white text-2xl md:text-3xl font-bold font-gothic uppercase tracking-wider">
+          <div className="text-white text-xl md:text-2xl font-bold font-gothic uppercase tracking-wider">
             About UXMM
           </div>
           <div className="space-y-2">
-            <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
+            <p className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed">
               Since 2020,
               <strong className="font-bold"> UXMM (User Experience Myanmar)</strong> has been a{' '}
               <strong className="font-bold">volunteer-driven, non-profit organization</strong> dedicated to supporting designers through{' '}
               <strong className="font-bold">resources, education, and networking</strong>.
             </p>
-            <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
+            <p className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed">
               We provide 
               <strong className="font-bold"> meetups, conferences, workshops, and mentorship</strong> to foster innovation, collaboration, and continuous learning. Our mission is to advance{' '}
               <strong className="font-bold">design and technology</strong> in Myanmar and beyond
@@ -99,14 +100,14 @@ export const AboutSection = () => {
 
         {/* About Bootcamp Section */}
         <div className="grid grid-cols-1 md:grid-cols-[0.5fr_1fr] gap-8">
-          <div className="text-white text-2xl md:text-3xl font-bold font-gothic uppercase tracking-wider">
+          <div className="text-white text-xl md:text-2xl font-bold font-gothic uppercase tracking-wider">
             About Bootcamp
           </div>
           <div className="space-y-2">
-            <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
+            <p className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed">
               Gain essential UX/UI skills in user research, interaction design, and prototyping.
             </p>
-            <p className="text-xl md:text-3xl text-white leading-normal md:leading-relaxed">
+            <p className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed">
               Work on real projects, get expert mentorship, and build a portfolio while networking. Launch your UX/UI career with confidence!
             </p>
           </div>
