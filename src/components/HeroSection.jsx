@@ -188,7 +188,7 @@ const HeroSection = () => {
                     </div>
 
                     <p className="text-white text-xl md:text-2xl font-malinton">
-                        Think, Sprint, Design 2025
+                        First Myanmar In-person Bootcamp 2025
                     </p>
 
                     {/* Register Button */}
