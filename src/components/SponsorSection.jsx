@@ -158,27 +158,6 @@ const SponsorSection = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Our Partners Section */}
-            <div className="px-4 md:px-12 py-12 md:py-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
-                    Our Partner
-                </h2>
-                <div className="bg-[#111111] py-8 md:py-12 rounded-md">
-                    <h3 className="text-lg md:text-xl text-gray-400 mb-8 text-center uppercase tracking-widest">
-                        Our Community Partners
-                    </h3>
-                    
-                    {/* Community Partners Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center max-w-4xl mx-auto px-4">
-                        <img src={UxseaLogo} alt="UXSEA Society" className="w-24 md:w-32 opacity-50 hover:opacity-100 transition-opacity" />
-                        <img src={ProductBazeLogo} alt="Product Baze" className="w-24 md:w-32 opacity-50 hover:opacity-100 transition-opacity" />
-                        <img src={UxphLogo} alt="UXPH" className="w-24 md:w-32 opacity-50 hover:opacity-100 transition-opacity" />
-                        <img src={SavvyuxLogo} alt="Savvyux" className="w-24 md:w-32 opacity-50 hover:opacity-100 transition-opacity" />
-                        <img src={UxtestingLogo} alt="UX Testing" className="w-24 md:w-32 opacity-50 hover:opacity-100 transition-opacity" />
-                    </div>
-                </div>
-            </div>
         </section>
     );
 };

@@ -12,6 +12,9 @@ import One from "../img/Event Logo & Icon/Participant.svg";
 import Two from "../img/Event Logo & Icon/Mentor.svg";
 import Three from "../img/Event Logo & Icon/Speaker.svg";
 import Four from "../img/Event Logo & Icon/Group 1000007090.svg";
+import DESIGN from '../img/Event Logo & Icon/DESIGN.svg';
+import PurpleStar from '../img/Second Icon/Purple Star.svg';
+import GreenStar from '../img/Second Icon/Green Star.svg';
 
 export const AboutSection = () => {
   const ref = React.useRef(null);
@@ -179,22 +182,42 @@ export const AboutSection = () => {
 
           {/* Div 4 */}
           <motion.div
-            className="col-span-2 row-span-4 col-start-1 row-start-5 bg-black border-4 border-white flex flex-wrap gap-4 justify-center items-center overflow-hidden"
+            className="col-span-2 row-span-4 col-start-1 row-start-5 p-3 bg-black border-4 border-white flex flex-wrap gap-0 justify-center items-center overflow-hidden"
             variants={divVariants.bottomLeft}
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            <button className="px-5 py-3 bg-white border-2 border-gray-200 rounded-full text-black font-medium text-lg">
-              Community Events
-            </button>
-            <button className="px-5 py-3 bg-blue-600 rounded-full text-white font-medium text-lg">
-              Mentorship
-            </button>
-            <button className="px-5 py-3 bg-pink-300 rounded-full text-black font-medium text-lg">
-              Volunteer Opportunities
-            </button>
-            <div className="text-pink-300 font-bold text-4xl">
-              DESIGN
+            <div className="flex flex-row gap-4 justify-center items-center w-full">
+              <button className="px-5 py-3 bg-black border-white border-2 rounded-full font-malinton text-2xl text-white font-medium">
+                Community Events
+              </button>
+              <button className="px-5 py-3 bg-[#4A7BF7] rounded-full text-black font-malinton text-2xl font-medium">
+                Mentorship
+              </button>
+            </div>
+            
+            <div className="flex w-full items-center justify-center relative">
+              <img 
+                src={PurpleStar} 
+                alt="Purple Star" 
+                className="w-10 h-10 absolute left-5"
+              />
+              <button className="px-5 py-3 bg-[#E9A0E9] rounded-full text-black text-2xl font-medium font-malinton mx-auto">
+                Volunteer Opportunities
+              </button>
+              <img 
+                src={GreenStar} 
+                alt="Green Star" 
+                className="w-10 h-10 absolute right-5"
+              />
+            </div>
+            
+            <div className="w-full flex justify-center mt-4">
+              <img 
+                src={DESIGN} 
+                alt="DESIGN" 
+                className="w-[80%] h-auto"
+              />
             </div>
           </motion.div>
 
@@ -331,19 +354,37 @@ export const AboutSection = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="flex flex-wrap gap-2 justify-center">
-              <button className="px-4 py-2 bg-white rounded-full text-black font-medium text-sm">
+            <div className="flex flex-wrap gap-4 justify-center items-center w-full">
+              <button className="px-5 py-3 bg-white border border-black rounded-full text-black font-medium">
                 Community Events
               </button>
-              <button className="px-4 py-2 bg-blue-600 rounded-full text-white font-medium text-sm">
+              <button className="px-5 py-3 bg-[#4A7BF7] rounded-full text-white font-medium">
                 Mentorship
               </button>
-              <button className="px-4 py-2 bg-pink-300 rounded-full text-black font-medium text-sm">
+            </div>
+            
+            <div className="flex w-full items-center justify-center relative">
+              <img 
+                src={PurpleStar} 
+                alt="Purple Star" 
+                className="w-10 h-10 absolute left-0"
+              />
+              <button className="px-5 py-3 bg-[#E9A0E9] rounded-full text-black font-medium mx-auto">
                 Volunteer Opportunities
               </button>
+              <img 
+                src={GreenStar} 
+                alt="Green Star" 
+                className="w-10 h-10 absolute right-0"
+              />
             </div>
-            <div className="text-pink-300 font-bold text-3xl">
-              DESIGN
+            
+            <div className="w-full flex justify-center mt-4">
+              <img 
+                src={DESIGN} 
+                alt="DESIGN" 
+                className="w-[80%] h-auto"
+              />
             </div>
           </motion.div>
 

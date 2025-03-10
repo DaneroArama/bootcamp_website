@@ -2,15 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Squares from './SquareBackground';
-import attendee1 from '../img/Logo.png'; // Adjust the path as necessary
-import attendee2 from '../img/Logo.png'; // Adjust the path as necessary
-import attendee3 from '../img/Logo.png'; // Adjust the path as necessary
-import mentor1 from '../img/Logo.png'; // Adjust the path as necessary
-import mentor2 from '../img/Logo.png'; // Adjust the path as necessary
-import mentor3 from '../img/Logo.png'; // Adjust the path as necessary
+import mentor1 from "../img/Mentors/Ko Myo Maung Maung.webp"; // Adjust the path as necessary
+import mentor2 from "../img/Mentors/Barry.webp"; // Adjust the path as necessary
+import mentor3 from "../img/Mentors/Min Nanda Zan.webp"; // Adjust the path as necessary
+import mentor4 from "../img/Mentors/Zwekaunghtet.webp";
+import mentor5 from "../img/Mentors/Aye Chan Pyae.webp";
 import speaker1 from '../img/Logo.png'; // Adjust the path as necessary
 import speaker2 from '../img/Logo.png'; // Adjust the path as necessary
+import speaker3 from '../img/Logo.png'; // Adjust the path as necessary
+import speaker4 from '../img/Logo.png'; // Adjust the path as necessary
+import speaker5 from '../img/Logo.png'; // Adjust the path as necessary
 import BlueSquishyGhost from '../img/Cartoon mascot/BlueSquishyGhost.svg';
 import GreenGhost from '../img/Cartoon mascot/GreenGhost.svg';
 import PurpleRectangleGhost from '../img/Cartoon mascot/PurpleRectangleGhost.svg';
@@ -18,6 +19,8 @@ import RedRectangleGhost from '../img/Cartoon mascot/RedRectangleGhost.svg';
 import YellowOvalGhost from '../img/Cartoon mascot/YellowOvalGhost.svg';
 import Mentor from '../img/Event Logo & Icon/Mentor.svg'
 import Speaker from '../img/Event Logo & Icon/Speaker.svg'
+import BlueFlower from '../img/Second Icon/Blue Flower.svg';
+import GreenStar from '../img/Second Icon/Green Star.svg';
 gsap.registerPlugin(ScrollTrigger);
 
 export const Home = () => {
@@ -27,10 +30,10 @@ export const Home = () => {
                 <div className="left-0 right-0 z-10 flex items-center justify-center py-12">
                     <div className="max-w-8xl mx-auto text-center space-y-4 text-white">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-                            Design Your <span className="bg-[#F5B041] px-8 py-3 text-2xl md:text-2xl lg:text-5xl rounded-full">Future</span> with
+                            Design Your <span className="bg-[#F5B041] px-8 py-3 text-2xl md:text-2xl lg:text-5xl rounded-full">Future</span> with <img src={BlueFlower} alt="Yellow Star" className="inline-block w-12 h-12" />
                         </h1>
                         <h1 className="text-5xl md:text-5xl lg:text-7xl font-bold">
-                            Real-W<span className="text-green-500">🍀</span>rld <span className="inline-flex items-center space-x-2 border-2 border-purple-500 rounded-full px-6 py-2 text-purple-500 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out cursor-pointer">
+                            Real-W<img src={GreenStar} alt="Green Star" className="inline-block w-10 h-10" />rld <span className="inline-flex items-center space-x-2 border-2 border-purple-500 rounded-full px-6 py-2 text-purple-500 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out cursor-pointer">
                                 <svg 
                                     className="w-60 h-11 pl-5"
                                     viewBox="0 0 200 24" 
@@ -118,7 +121,7 @@ export const Home = () => {
                         />
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">LOCATION</h3>
                         <div className="relative z-10">
-                            <p className="text-2xl font-semibold mb-6 font-malinton">Citizens Pay Office</p>
+                            <p className="text-2xl font-semibold mb-6 font-malinton">CTZPay Office</p>
                             <p className="font-malinton text-lg">Yangon Innovation Centre (YIC) , Kyan Mar Yay Seik Khan</p>
                         </div>
                     </motion.div>
@@ -194,13 +197,14 @@ export const Home = () => {
                             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
                         />
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">MENTORS</h3>
-                        <div className="flex mb-6 relative z-10">
+                        <div className="flex relative z-10">
                             <img src={mentor1} alt="Mentor 1" className="w-12 h-12 rounded-full -mr-2" />
                             <img src={mentor2} alt="Mentor 2" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={mentor3} alt="Mentor 3" className="w-12 h-12 rounded-full" />
+                            <img src={mentor3} alt="Mentor 3" className="w-12 h-12 rounded-full -mr-2" />
+                            <img src={mentor4} alt="Mentor 4" className="w-12 h-12 rounded-full -mr-2" />
+                            <img src={mentor5} alt="Mentor 5" className="w-12 h-12 rounded-full -mr-2" />
                         </div>
                         <p className="text-xl font-malinton relative z-10">Over 20+ Mentors</p>
-                        <p className="text-xl font-malinton relative z-10"> From Different Industry Experts</p>
                     </motion.div>
 
                     {/* Speakers Card */}
@@ -235,33 +239,34 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-white p-8 border-black border-4 relative flex flex-col justify-between font-malinton cursor-pointer overflow-hidden"
+                        className="bg-white p-6 border-black border-4 relative flex flex-col justify-between font-malinton cursor-pointer overflow-hidden"
                     >
-                        <div className="flex flex-wrap gap-4 justify-center items-center relative z-10">
-                            <div className="bg-purple-600 rounded-full p-3">
-                                <div className="w-8 h-8 text-white">&#8594;</div>
-                            </div>
-                            <button className="px-5 py-3 bg-white border-2 border-gray-200 rounded-full text-black font-medium text-lg">
+                        <div className="flex flex-wrap gap-3 justify-center items-center">
+                            <button className="px-5 py-3 bg-white rounded-full border-2 border-black text-black font-medium text-lg flex items-center">
+                                <span className="mr-2">→</span>
                                 Community Events
                             </button>
-                            <button className="px-5 py-3 bg-blue-600 rounded-full text-white font-medium text-lg">
+                            <button className="px-5 py-3 bg-blue-600 rounded-full text-black font-medium text-lg">
                                 Mentorship
                             </button>
+                            <img src={require('../img/Second Icon/Yellow Star.svg').default} alt="Yellow Star" className="w-12 h-12" />
                             <button className="px-5 py-3 bg-pink-300 rounded-full text-black font-medium text-lg">
                                 Volunteer Opportunities
                             </button>
-                            <button className="px-5 py-3 bg-white border-2 border-gray-200 rounded-full text-black font-medium text-lg">
+                            <button className="px-5 py-3 bg-white border-2 border-black rounded-full text-black font-medium text-lg">
                                 Research
                             </button>
-                            <button className="px-5 py-3 bg-white border-2 border-gray-200 rounded-full text-blue-600 font-medium text-lg">
+                            <button className="px-5 py-3 bg-white border-2 border-blue-600 rounded-full text-blue-600 font-medium text-lg">
                                 Jobs
                             </button>
                             <button className="px-5 py-3 bg-[#F5B041] rounded-full text-black font-medium text-lg">
                                 Internship
                             </button>
+                            <img src={require('../img/Second Icon/Purple Star.svg').default} alt="Purple Star" className="w-10 h-10" />
                             <button className="px-8 py-3 bg-black rounded-full text-white font-medium text-lg">
                                 Service
                             </button>
+                            <img src={require('../img/Second Icon/Green Star.svg').default} alt="Green Star" className="w-12 h-12" />
                         </div>
                     </motion.div>
                 </motion.div>

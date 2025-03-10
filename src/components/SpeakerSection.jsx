@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
+import White from "../img/Second Icon/White.svg";
 
 const SpeakerSection = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -58,7 +59,7 @@ const SpeakerSection = () => {
         <section className="w-full md:w-[80%] mx-auto">
             {/* Black Header Section */}
             <div ref={titleRef} className="bg-black p-4 md:p-6 flex items-center border-white border-4">
-                <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Speaker List ❋</h2>
+                <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Speaker List </h2><img src={White} alt="Yellow Star" className="w-12 h-12 pl-3 inline-block text-white" />
             </div>
 
             {/* Speaker Cards Container */}
@@ -72,13 +73,13 @@ const SpeakerSection = () => {
                         exit="exit"
                     >
                         {currentSpeakers.map((speaker, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 50 }}
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -50 }}
-                                transition={{ duration: 0.5 }}
-                                whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.5 }}
+                        whileHover={{ scale: 1.02 }}
                                 className={`bg-[#E7A8E2] p-4 md:p-6 mb-4 md:mb-6 flex flex-col md:flex-row gap-4 md:gap-6 items-start relative ${!speaker.confirmed ? 'select-none' : ''}`}
                             >
                                 {/* Locked Overlay for Unconfirmed Speakers */}
@@ -94,7 +95,7 @@ const SpeakerSection = () => {
                                     </div>
                                 )}
 
-                                {/* Image Placeholder */}
+                        {/* Image Placeholder */}
                                 <div className="w-full md:w-64 h-48 md:h-64 bg-gray-300 flex-shrink-0 overflow-hidden">
                                     {speaker.image ? (
                                         <img 
@@ -119,29 +120,29 @@ const SpeakerSection = () => {
                                             </svg>
                                         </div>
                                     )}
-                                </div>
+                        </div>
 
-                                {/* Content */}
-                                <div className="flex-grow w-full">
-                                    <div className="flex flex-col md:flex-row justify-between items-start gap-3 md:gap-0">
-                                        <div className="w-full">
+                        {/* Content */}
+                        <div className="flex-grow w-full">
+                            <div className="flex flex-col md:flex-row justify-between items-start gap-3 md:gap-0">
+                                <div className="w-full">
                                             <h3 className="text-xl md:text-2xl font-bold mb-1 md:mb-2">
                                                 {speaker.confirmed ? speaker.name : "Mystery Speaker"}
                                             </h3>
                                             <p className="text-lg md:text-xl mb-2">
                                                 {speaker.confirmed ? speaker.position : "Role to be announced"}
                                             </p>
-                                        </div>
+                                </div>
                                         <button 
                                             className={`bg-white px-4 py-1.5 md:px-4 md:py-2 rounded-full flex items-center gap-2 text-sm md:text-base ${!speaker.confirmed ? 'opacity-50 cursor-not-allowed' : ''}`}
                                             disabled={!speaker.confirmed}
                                         >
-                                            <span>Speaker Details </span>
-                                            <span>↓</span>
-                                        </button>
-                                    </div>
-                                    {/* Full-width horizontal line */}
-                                    <div className="w-full h-[2px] bg-black mb-4"></div>
+                                    <span>Speaker Details </span>
+                                    <span>↓</span>
+                                </button>
+                            </div>
+                            {/* Full-width horizontal line */}
+                            <div className="w-full h-[2px] bg-black mb-4"></div>
                                     <p className="text-base md:text-lg">
                                         {speaker.confirmed ? speaker.description : "Speaker details will be revealed soon..."}
                                     </p>

@@ -7,6 +7,9 @@ import PurpleRectangleGhost from '../img/Cartoon mascot/PurpleRectangleGhost.svg
 import RedDiamondGhost from '../img/Cartoon mascot/RedDiamondGhost.svg';
 import RedRectangleGhost from '../img/Cartoon mascot/RedRectangleGhost.svg';
 import YellowOvalGhost from '../img/Cartoon mascot/YellowOvalGhost.svg';
+import ThinkSVG from '../img/Event Logo & Icon/THINK.svg';
+import SprintSVG from '../img/Event Logo & Icon/SPRINT.svg';
+import DesignSVG from '../img/Event Logo & Icon/DESIGN.svg';
 
 const HeroSection = () => {
     const ghostsConfig = [
@@ -140,15 +143,49 @@ const HeroSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col items-center gap-2"
+                    className="flex flex-col items-center gap-6"
                 >
-                    <h1 className="text-5xl md:text-7xl font-bold">
-                        <span className="text-[#4A90E2]">Think,</span>
-                        <br />
-                        <span className="text-[#F5B041]">Sprint,</span>
-                        <br />
-                        <span className="text-[#E77FE7]">Design!</span>
-                    </h1>
+                    <div className="flex flex-col items-center gap-4">
+                        <motion.img 
+                            src={ThinkSVG} 
+                            alt="Think" 
+                            className="w-[200px] md:w-[350px]"
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ 
+                                duration: 0.7, 
+                                delay: 0.2,
+                                type: "spring",
+                                stiffness: 100
+                            }}
+                        />
+                        <motion.img 
+                            src={SprintSVG} 
+                            alt="Sprint" 
+                            className="w-[250px] md:w-[400px]"
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ 
+                                duration: 0.7, 
+                                delay: 0.5,
+                                type: "spring",
+                                stiffness: 100
+                            }}
+                        />
+                        <motion.img 
+                            src={DesignSVG} 
+                            alt="Design" 
+                            className="w-[300px] md:w-[450px]"
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ 
+                                duration: 0.7, 
+                                delay: 0.8,
+                                type: "spring",
+                                stiffness: 100
+                            }}
+                        />
+                    </div>
 
                     <p className="text-white text-xl md:text-2xl font-malinton">
                         Think, Sprint, Design 2025
@@ -157,7 +194,7 @@ const HeroSection = () => {
                     {/* Register Button */}
                     <motion.button
                         whileHover={{ scale: 1.05 }}
-                        className="mt-8 bg-transparent text-white px-8 py-3 rounded-full border border-white flex items-center space-x-2 hover:bg-white hover:text-black"
+                        className="mt-4 bg-transparent text-white px-8 py-3 rounded-full border border-white flex items-center space-x-2 hover:bg-white hover:text-black"
                     >
                         <span className="text-purple-400">✦</span>
                         <span className="mx-2">Register Now</span>

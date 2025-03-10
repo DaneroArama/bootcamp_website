@@ -3,12 +3,13 @@ import React, { useState, useRef, useEffect } from "react";
 import EiThawZin from '../img/Mentors/EiThaw Zin.webp';
 import Barry from "../img/Mentors/Barry.webp";
 import NweOoLwin from "../img/Mentors/Nwe Oo Lwin.webp";
-import Zawkaunghtet from "../img/Mentors/Zawekaunghtet.webp";
+import Zawkaunghtet from "../img/Mentors/Zwekaunghtet.webp";
 import MinNandaZaw from "../img/Mentors/Min Nanda Zan.webp";
 import SeintSinsarLwin from "../img/Mentors/Seint Sinsar Lwin.webp";
 import AChanPyae from "../img/Mentors/Aye Chan Pyae.webp";
 import KoMyoMaungMaung from "../img/Mentors/Ko Myo Maung Maung.webp";
 import ShuMawaSoe from "../img/Mentors/Shu Mawa Soe.webp";
+import White from "../img/Second Icon/white1.svg";
 
 const TrainerSection = () => {
     const [selectedTrainer, setSelectedTrainer] = useState(null);
@@ -69,7 +70,7 @@ const TrainerSection = () => {
                 "\n" +
                 "Beyond his professional work, A Chan Pyae is actively involved in the local design community, sharing his knowledge and mentoring aspiring designers. He is passionate about raising the standard of design in Myanmar and contributing to the growth of the tech ecosystem.",
             confirmed: true,
-            image: ""
+            image: AChanPyae
         },
         {
             name: "Ko Khant (Barry)",
@@ -133,7 +134,7 @@ const TrainerSection = () => {
             image: ShuMawaSoe
         },
         {
-            name: "Zawe Kaung Htet",
+            name: "Zwe Kaung Htet",
             role: "TRAINER",
             bio: "I am currently a Senior UI/UX Designer at Ooredoo Myanmar and formerly held the same role at A Bank. With over six years of industry experience, I have worked across multiple domains, including eCommerce, POS systems, ERP Systems, Banking, Fintech, and Telecommunications. My expertise lies in crafting seamless user experiences and intuitive interfaces that drive engagement and efficiency. I am passionate about sharing my knowledge and contributing to the growth of the design community.",
             confirmed: true,
@@ -271,7 +272,7 @@ const TrainerSection = () => {
         <section className="w-full md:w-[80%] mx-auto overflow-hidden">
             {/* Black Header Section */}
             <div ref={titleRef} className="bg-black p-4 md:p-6 flex items-center border-white border-4">
-                <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Trainer List</h2>
+                <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Trainer List</h2><img src={White} alt="Yellow Star" className="w-12 h-12 pl-3 inline-block text-white" />
             </div>
 
             {/* Trainer Cards Grid */}
@@ -301,7 +302,7 @@ const TrainerSection = () => {
 
                             <div className="flex items-center">
                                 {/* Trainer Image Section */}
-                                <div className="w-24 h-24 bg-[#E7A8E2] flex items-center justify-center flex-shrink-0">
+                            <div className="w-24 h-24 bg-[#E7A8E2] flex items-center justify-center flex-shrink-0">
                                     {trainer.image ? (
                                         <img 
                                             src={trainer.image} 
@@ -325,7 +326,7 @@ const TrainerSection = () => {
                                             </svg>
                                         </div>
                                     )}
-                                </div>
+                            </div>
 
                                 {/* Trainer Info Section */}
                                 <div className="px-4 py-2 flex-grow">
