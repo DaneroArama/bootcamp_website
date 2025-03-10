@@ -62,7 +62,45 @@ const TrainerSection = () => {
             image: KoMyoMaungMaung
         },
         {
-            name: "A Chan Pyae",
+            name: "Ko Khant (Barry)",
+            role: "TRAINER",
+            bio: "I'm Ko Khant who you might know as Barry. For a glance of my career, I was a former Product Designer at Singapore Design Agency called Hub Solutions. And I'm working with Hysan Education as a UXUI Designer for SAAS products right now. You might also notice me as a design instructor at Code Mal Academy with UXUI classes too. If we bring back some good old memories, we all might be familiar with creative contents from Compass which was missing for so long. I was also taking care of the content creation back there. \n" +
+                "\n" +
+                "ကိုခန့်ဖြစ်ပါတယ်၊ Barry လို့လည်းအများစုသိကြမယ်ထင်ပါသဗျ၊ Career Life ကိုပြောပါဆိုရင်တော့ Hub Solutions လို့ခေါ်တဲ့ Singapore Agency မှာ Product Designer အနေနဲ့လုပ်ခဲ့ပါတယ်၊ လက်ရှိမှာတော့ အားတဲ့အချိန်တွေမှာ Hysan Education နဲ့အတူ SAAS Products တွေအတွက်လက်တွဲပြီးတော့ UXUI ပိုင်းတာဝန်ယူလုပ်ပေးနေတာလည်းရှိပါတယ်၊ ဒါတွေအပြင် Code Mal Academy မှာလည်း အတန်းကြော်ညာတွေခဏခဏတက်လာလို့သတိထားမိမှာကတော့ Design Instructor အနေနဲ့လည်းလုပ်နေတယ်ဆိုပါတော့၊ အတိတ်ဟောင်းကို စားမြုံ့ပြန်ရရင်တော့ အရင်က UXUI Content တွေ စိတ်ဝင်စားဖို့ကောင်းခဲ့တဲ့တစ်ခေတ်တုန်းကလည်း Compass မှာ Content Creation ပိုင်းလုပ်ခဲ့တာလေးကလည်း လူဟောင်းတွေဆိုရင် သတိရနေဦးမှာပါ။",
+            confirmed: true,
+            image: Barry
+        },
+        {
+            name: "Ko Lynn Htet Thant",
+            role: "TRAINER",
+            bio: "A passionate UX designer with 4 years of experience creating user-centered interfaces and applications. Skilled in the entire design process, from user research and prototyping to usability testing and implementation. Equally enthusiastic about sharing knowledge and fostering the next generation of UX professionals.",
+            confirmed: true
+        },
+        {
+            name: "Ko Min Nanda Zan",
+            role: "TRAINER",
+            bio: "A creative and detail-oriented Product Designer and UX Specialist with over 6 years of experience in design and user-centered solutions. I began my career as a freelance graphic designer in 2017 and transitioned to a full-time role at Venus Lab in 2018, where I evolved from a Graphic Designer to a UX/UI Designer, contributing to branding, e-commerce, and AR projects. After 4 impactful years at Venus Lab, I joined Brycen Myanmar in 2023 as a Senior UX/UI Specialist, customizing HR products for international clients.\n" +
+                "\n" +
+                "Currently, I am part of Wave Money (Digital Money Myanmar) as a UX Specialist and Product Designer, leading the Agent App Tribe. My designs are used by over 50,000 agents, and I actively conduct user research, create personas, and perform testing to deliver seamless digital experiences. Passionate about solving user problems and crafting intuitive designs, I continue to grow and innovate in the ever-evolving design landscape.",
+            confirmed: true,
+            image: MinNandaZaw
+        },
+        {
+            name: "Ko Min Ye Htut Myat",
+            role: "TRAINER",
+            bio: "Min Ye is a Burmese UX/UI Designer who is passionate to solve problems at the intersection of design, technology and business. Experienced working well known start-up company which provides services to different products in Myanmar.",
+            confirmed: true,
+            image: ""
+        },
+        {
+            name: "Zwe Kaung Htet",
+            role: "TRAINER",
+            bio: "I am currently a Senior UI/UX Designer at Ooredoo Myanmar and formerly held the same role at A Bank. With over six years of industry experience, I have worked across multiple domains, including eCommerce, POS systems, ERP Systems, Banking, Fintech, and Telecommunications. My expertise lies in crafting seamless user experiences and intuitive interfaces that drive engagement and efficiency. I am passionate about sharing my knowledge and contributing to the growth of the design community.",
+            confirmed: true,
+            image: Zawkaunghtet
+        },
+        {
+            name: "Ma A Chan Pyae",
             role: "TRAINER",
             bio: "A Chan Pyae is a passionate UX/UI Designer with a strong background in creating user-centered digital experiences. Currently working at Dinger, he specializes in designing intuitive and engaging interfaces for fintech products.\n" +
                 "\n" +
@@ -73,19 +111,11 @@ const TrainerSection = () => {
             image: AChanPyae
         },
         {
-            name: "Ko Khant (Barry)",
+            name: "Ma Shu Mawa Soe",
             role: "TRAINER",
-            bio: "I'm Ko Khant who you might know as Barry. For a glance of my career, I was a former Product Designer at Singapore Design Agency called Hub Solutions. And I'm working with Hysan Education as a UXUI Designer for SAAS products right now. You might also notice me as a design instructor at Code Mal Academy with UXUI classes too. If we bring back some good old memories, we all might be familiar with creative contents from Compass which was missing for so long. I was also taking care of the content creation back there. \n" +
-                "\n" +
-                "ကိုခန့်ဖြစ်ပါတယ်၊ Barry လို့လည်းအများစုသိကြမယ်ထင်ပါသဗျ၊ Career Life ကိုပြောပါဆိုရင်တော့ Hub Solutions လို့ခေါ်တဲ့ Singapore Agency မှာ Product Designer အနေနဲ့လုပ်ခဲ့ပါတယ်၊ လက်ရှိမှာတော့ အားတဲ့အချိန်တွေမှာ Hysan Education နဲ့အတူ SAAS Products တွေအတွက်လက်တွဲပြီးတော့ UXUI ပိုင်းတာဝန်ယူလုပ်ပေးနေတာလည်းရှိပါတယ်၊ ဒါတွေအပြင် Code Mal Academy မှာလည်း အတန်းကြော်ညာတွေခဏခဏတက်လာလို့သတိထားမိမှာကတော့ Design Instructor အနေနဲ့လည်းလုပ်နေတယ်ဆိုပါတော့၊ အတိတ်ဟောင်းကို စားမြုံ့ပြန်ရရင်တော့ အရင်က UXUI Content တွေ စိတ်ဝင်စားဖို့ကောင်းခဲ့တဲ့တစ်ခေတ်တုန်းကလည်း Compass မှာ Content Creation ပိုင်းလုပ်ခဲ့တာလေးကလည်း လူဟောင်းတွေဆိုရင် သတိရနေဦးမှာပါ။",
+            bio: "Hello! I'm Shu Mawa. I'm a UX Designer currently in the fintech space. For the past 4 years, I've helped a range of clients, from established organizations to early startups, drive their missions through better, more inclusive user experiences. Over the years, I've used Design Thinking and UX methodologies to provide solutions that empower overlooked communities and bring to life the product vision.",
             confirmed: true,
-            image: Barry
-        },
-        {
-            name: "Lynn Htet Thant",
-            role: "TRAINER",
-            bio: "A passionate UX designer with 4 years of experience creating user-centered interfaces and applications. Skilled in the entire design process, from user research and prototyping to usability testing and implementation. Equally enthusiastic about sharing knowledge and fostering the next generation of UX professionals.",
-            confirmed: true
+            image: ShuMawaSoe
         },
         {
             name: "Ma Thazin Win",
@@ -111,36 +141,6 @@ const TrainerSection = () => {
             image: "" // Add mentor image path here
         },
         {
-            name: "Min Nanda Zan",
-            role: "TRAINER",
-            bio: "A creative and detail-oriented Product Designer and UX Specialist with over 6 years of experience in design and user-centered solutions. I began my career as a freelance graphic designer in 2017 and transitioned to a full-time role at Venus Lab in 2018, where I evolved from a Graphic Designer to a UX/UI Designer, contributing to branding, e-commerce, and AR projects. After 4 impactful years at Venus Lab, I joined Brycen Myanmar in 2023 as a Senior UX/UI Specialist, customizing HR products for international clients.\n" +
-                "\n" +
-                "Currently, I am part of Wave Money (Digital Money Myanmar) as a UX Specialist and Product Designer, leading the Agent App Tribe. My designs are used by over 50,000 agents, and I actively conduct user research, create personas, and perform testing to deliver seamless digital experiences. Passionate about solving user problems and crafting intuitive designs, I continue to grow and innovate in the ever-evolving design landscape.",
-            confirmed: true,
-            image: MinNandaZaw
-        },
-        {
-            name: "Min Ye Htut Myat",
-            role: "TRAINER",
-            bio: "Min Ye is a Burmese UX/UI Designer who is passionate to solve problems at the intersection of design, technology and business. Experienced working well known start-up company which provides services to different products in Myanmar.",
-            confirmed: true,
-            image: ""
-        },
-        {
-            name: "Shu Mawa Soe",
-            role: "TRAINER",
-            bio: "Hello! I'm Shu Mawa. I'm a UX Designer currently in the fintech space. For the past 4 years, I've helped a range of clients, from established organizations to early startups, drive their missions through better, more inclusive user experiences. Over the years, I've used Design Thinking and UX methodologies to provide solutions that empower overlooked communities and bring to life the product vision.",
-            confirmed: true,
-            image: ShuMawaSoe
-        },
-        {
-            name: "Zwe Kaung Htet",
-            role: "TRAINER",
-            bio: "I am currently a Senior UI/UX Designer at Ooredoo Myanmar and formerly held the same role at A Bank. With over six years of industry experience, I have worked across multiple domains, including eCommerce, POS systems, ERP Systems, Banking, Fintech, and Telecommunications. My expertise lies in crafting seamless user experiences and intuitive interfaces that drive engagement and efficiency. I am passionate about sharing my knowledge and contributing to the growth of the design community.",
-            confirmed: true,
-            image: Zawkaunghtet
-        },
-        {
             name: "SomeOne",
             role: "TRAINER",
             bio: "Bio will be revealed soon.",
@@ -162,7 +162,7 @@ const TrainerSection = () => {
             image: ""
         },
         {
-            name: "Ei Thaw Zin",
+            name: "Ma Ei Thaw Zin",
             role: "TRAINER ASSISTANT",
             bio: "Ei Thaw Zin is a creative and passionate UX/UI Designer with a knack for turning complex ideas into simple, innovative, and user-friendly digital products. Currently working at KBZ Bank, she specializes in transforming complex financial processes into intuitive designs that enhance usability and innovation.\n" +
                 "\n" +
@@ -173,7 +173,7 @@ const TrainerSection = () => {
             image: EiThawZin
         },
         {
-            name: "Ma Hay Mar",
+            name: "Ma Hnin Hay Mar Aung",
             role: "TRAINER ASSISTANT",
             bio: "မနှင်းဟေမာအောင်ဟာ Product Designer အနေဖြင့် Business Education Background မှလာသူဖြစ်ပြီး uab bank ရဲ့ Former Fintech Product Designer တစ်ဦးဖြစ်ပါတယ်\n" +
                 "E-wallets, B2B, B2C, ATS system, Travel & Community စတဲ့ projectတွေမှာ Product Designer အနေဖြင့်တာဝန်ယူလုပ်ကိုင်ခဲ့ပြီး လက်ရှိမှာတော့ Celestial Dragon Tech ရဲ့ founder တစ်ဦးအနေဖြင့် User တွေအတွက် လွယ်ကူရိုးရှင်းပြီး Value ပေးနိုင်မယ့် Digital Products တွေကို Business Concept နဲ့ အညီ ပူးပေါင်းဖန်တီးပေးနေပါတယ်",
@@ -181,7 +181,7 @@ const TrainerSection = () => {
             image: ""
         },
         {
-            name: "Nwe Oo Lwin",
+            name: "Ma Nwe Oo Lwin",
             role: "TRAINER ASSISTANT",
             bio: "I am a UI/UX Designer at an Information and Technology company, focusing on creating intuitive and user-friendly experiences. With a strong interest in UX principles, I enjoy sharing knowledge and supporting others in their design journey. As a Trainer Assistant, I aim to guide participants in developing their design thinking and practical skills.\n" +
                 "\n" +
@@ -190,7 +190,7 @@ const TrainerSection = () => {
             image: NweOoLwin
         },
         {
-            name: "Seint Sinsar Lwin",
+            name: "Ma Seint Sinsar Lwin",
             role: "TRAINER ASSISTANT",
             bio: "Seint Sinsar Lwin is a Sr. UI/UX Designer with over 4 years of experience in the UI/UX design field. She currently works at one of Myanmar's leading local banks, where she plays a pivotal role in leading the design team to enhance the organization's UX Maturity level. \n" +
                 "\n" +
