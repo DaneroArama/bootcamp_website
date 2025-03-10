@@ -74,7 +74,7 @@ export const AboutSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-transparent p-10">
+    <div className="min-h-screen bg-transparent p-0 md:p-10">
 
       {/* Text Section */}
       <div className="w-full px-4 md:px-12 py-12">
@@ -351,15 +351,15 @@ export const AboutSection = () => {
 
           {/* Div 4 */}
           <motion.div
-            className="col-span-2 bg-black border-2 border-white p-6 flex flex-col gap-4 items-center"
+            className="col-span-2 bg-black border-2 border-white p-2 flex flex-col gap-3 items-center"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="flex flex-wrap gap-4 justify-center items-center w-full">
-              <button className="px-5 py-3 bg-white border border-black rounded-full text-black font-medium">
+            <div className="flex flex-row gap-4 justify-center items-center w-full">
+              <button className="px-3 py-3 bg-black border border-white rounded-full font-malinton text-white font-medium">
                 Community Events
               </button>
-              <button className="px-5 py-3 bg-[#4A7BF7] rounded-full text-white font-medium">
+              <button className="px-3 py-3 bg-[#4A7BF7] rounded-full text-white font-malinton font-medium">
                 Mentorship
               </button>
             </div>
@@ -370,7 +370,7 @@ export const AboutSection = () => {
                 alt="Purple Star" 
                 className="w-10 h-10 absolute left-0"
               />
-              <button className="px-5 py-3 bg-[#E9A0E9] rounded-full text-black font-medium mx-auto">
+              <button className="px-5 py-3 bg-[#E9A0E9] rounded-full text-black font-malinton font-medium mx-auto">
                 Volunteer Opportunities
               </button>
               <img 
