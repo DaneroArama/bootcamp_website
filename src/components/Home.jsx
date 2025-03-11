@@ -14,7 +14,6 @@ import speaker4 from '../img/Logo.png'; // Adjust the path as necessary
 import speaker5 from '../img/Logo.png'; // Adjust the path as necessary
 import BlueSquishyGhost from '../img/Cartoon mascot/BlueSquishyGhost.svg';
 import GreenGhost from '../img/Cartoon mascot/GreenGhost.svg';
-import PurpleRectangleGhost from '../img/Cartoon mascot/PurpleRectangleGhost.svg';
 import RedRectangleGhost from '../img/Cartoon mascot/RedRectangleGhost.svg';
 import YellowOvalGhost from '../img/Cartoon mascot/YellowOvalGhost.svg';
 import Mentor from '../img/Event Logo & Icon/Mentor.svg'
@@ -226,7 +225,10 @@ export const Home = () => {
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">SPEAKERS</h3>
                         <div className="flex relative z-10">
                             <img src={speaker1} alt="Speaker 1" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={speaker2} alt="Speaker 2" className="w-12 h-12 rounded-full" />
+                            <img src={speaker2} alt="Speaker 2" className="w-12 h-12 rounded-full -mr-2" />
+                            <img src={speaker3} alt="Speaker 1" className="w-12 h-12 rounded-full -mr-2" />
+                            <img src={speaker4} alt="Speaker 2" className="w-12 h-12 rounded-full -mr-2" />
+                            <img src={speaker5} alt="Speaker 1" className="w-12 h-12 rounded-full -mr-2" />
                         </div>
                         <p className="text-xl font-malinton relative z-10">Ko Lamin & Ko Harry</p>
                     </motion.div>

@@ -1,9 +1,4 @@
 import { motion } from "framer-motion";
-import UxseaLogo from "../img/Partners/uxsea.png";
-import ProductBazeLogo from "../img/Partners/productbaze.png";
-import UxphLogo from "../img/Partners/uxph.png";
-import SavvyuxLogo from "../img/Partners/savvyux.png";
-import UxtestingLogo from "../img/Partners/uxtesting.png";
 
 const SponsorSection = () => {
     // Sponsors data structure - easy to add more sponsors and types
