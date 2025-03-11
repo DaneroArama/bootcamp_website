@@ -21,7 +21,41 @@ import Speaker from '../img/Event Logo & Icon/Speaker.svg'
 import BlueFlower from '../img/Second Icon/Blue Flower.svg';
 import GreenStar from '../img/Second Icon/Green Star.svg';
 import { LinkPreview } from "../components/ui/LinkPreview";
+import AnimatedAvatar from "./ui/AnimatedAvatar";
 gsap.registerPlugin(ScrollTrigger);
+
+const mentor = [
+    {
+        id: 1,
+        name: "Ko Myo Maung Maung",
+        designation: "Mentor",
+        image: mentor1
+    },
+    {
+        id: 2,
+        name: "Ko Khant",
+        designation: "Mentor",
+        image: mentor2
+   },
+    {
+        id: 3,
+        name: "Min Nanda Zan",
+        designation: "Mentor",
+        image: mentor3
+    },
+    {
+        id: 4,
+        name: "Zwe Kaung Htet",
+        designation: "Mentor",
+        image: mentor4
+    },
+    {
+        id: 5,
+        name: "Aye Chan Pyae",
+        designation: "Mentor",
+        image: mentor5
+    },
+];
 
 export const Home = () => {
     return (
@@ -121,7 +155,7 @@ export const Home = () => {
                         />
                         <h3 className="text-3xl font-bold mb-1 font-gothic relative z-10">LOCATION</h3>
                         <div className="relative z-10">
-                            <p className="text-2xl font-semibold mb-6 font-malinton">CTZPay Office</p>
+                            <p className="text-2xl font-semibold mt-8 mb-0 font-malinton">CTZPay Office</p>
                             <LinkPreview
                                 url="https://maps.app.goo.gl/noQkfVBmHF4yjzwC8"
                                 className="font-malinton text-lg"
@@ -200,14 +234,12 @@ export const Home = () => {
                             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
                         />
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">MENTORS</h3>
-                        <div className="flex relative z-10">
-                            <img src={mentor1} alt="Mentor 1" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={mentor2} alt="Mentor 2" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={mentor3} alt="Mentor 3" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={mentor4} alt="Mentor 4" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={mentor5} alt="Mentor 5" className="w-12 h-12 rounded-full -mr-2" />
+                        <div className="flex flex-col gap-4">
+                            <div className="flex flex-row ">
+                                <AnimatedAvatar items={mentor}/>
+                            </div>
+                            <p className="text-xl font-malinton relative z-10">Over 20+ Mentors</p>
                         </div>
-                        <p className="text-xl font-malinton relative z-10">Over 20+ Mentors</p>
                     </motion.div>
 
                     {/* Speakers Card */}
@@ -228,11 +260,7 @@ export const Home = () => {
                         />
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">SPEAKERS</h3>
                         <div className="flex relative z-10">
-                            <img src={speaker1} alt="Speaker 1" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={speaker2} alt="Speaker 2" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={speaker3} alt="Speaker 1" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={speaker4} alt="Speaker 2" className="w-12 h-12 rounded-full -mr-2" />
-                            <img src={speaker5} alt="Speaker 1" className="w-12 h-12 rounded-full -mr-2" />
+                            <AnimatedAvatar items={mentor}/>
                         </div>
                         <p className="text-xl font-malinton relative z-10">Ko Lamin & Ko Harry</p>
                     </motion.div>
