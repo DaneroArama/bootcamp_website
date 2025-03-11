@@ -134,7 +134,7 @@ const Squares = ({
         };
     }, [direction, speed, borderColor, borderOpacity, hoverFillColor, squareSize]);
 
-    return <canvas ref={canvasRef} className="w-full h-full fixed top-0 left-0 -z-10" />;
+    return <canvas ref={canvasRef} className="w-full h-full fixed top-0 left-0 -z-10 bg-black" />;
 };
 
 export default Squares;
