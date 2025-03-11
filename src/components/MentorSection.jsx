@@ -304,7 +304,8 @@ const TrainerSection = () => {
                                 {/* Trainer Image Section */}
                             <div className="w-24 h-24 bg-[#E7A8E2] flex items-center justify-center flex-shrink-0">
                                     {trainer.image ? (
-                                        <img 
+                                        <img
+                                            loading="lazy"
                                             src={trainer.image} 
                                             alt={trainer.name}
                                             className="w-full h-full object-cover"
