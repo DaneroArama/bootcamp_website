@@ -9,6 +9,9 @@ import SeintSinsarLwin from "../img/Mentors/Seint Sinsar Lwin.webp";
 import AChanPyae from "../img/Mentors/Aye Chan Pyae.webp";
 import KoMyoMaungMaung from "../img/Mentors/Ko Myo Maung Maung.webp";
 import ShuMawaSoe from "../img/Mentors/Shu Mawa Soe.webp";
+import MinYeHtutMyat from "../img/Mentors/Min Ye Htut Myat.webp";
+import LynnHtetThant from "../img/Mentors/Lynnhtet Thant.webp";
+import HninHayMarAung from "../img/Mentors/Hnin Hay Mar Aung.webp";
 import White from "../img/Second Icon/white1.svg";
 
 const TrainerSection = () => {
@@ -74,7 +77,8 @@ const TrainerSection = () => {
             name: "Ko Lynn Htet Thant",
             role: "TRAINER",
             bio: "A passionate UX designer with 4 years of experience creating user-centered interfaces and applications. Skilled in the entire design process, from user research and prototyping to usability testing and implementation. Equally enthusiastic about sharing knowledge and fostering the next generation of UX professionals.",
-            confirmed: true
+            confirmed: true,
+            image: LynnHtetThant
         },
         {
             name: "Ko Min Nanda Zan",
@@ -90,7 +94,7 @@ const TrainerSection = () => {
             role: "TRAINER",
             bio: "Min Ye is a Burmese UX/UI Designer who is passionate to solve problems at the intersection of design, technology and business. Experienced working well known start-up company which provides services to different products in Myanmar.",
             confirmed: true,
-            image: ""
+            image: MinYeHtutMyat
         },
         {
             name: "Zwe Kaung Htet",
@@ -178,7 +182,7 @@ const TrainerSection = () => {
             bio: "မနှင်းဟေမာအောင်ဟာ Product Designer အနေဖြင့် Business Education Background မှလာသူဖြစ်ပြီး uab bank ရဲ့ Former Fintech Product Designer တစ်ဦးဖြစ်ပါတယ်\n" +
                 "E-wallets, B2B, B2C, ATS system, Travel & Community စတဲ့ projectတွေမှာ Product Designer အနေဖြင့်တာဝန်ယူလုပ်ကိုင်ခဲ့ပြီး လက်ရှိမှာတော့ Celestial Dragon Tech ရဲ့ founder တစ်ဦးအနေဖြင့် User တွေအတွက် လွယ်ကူရိုးရှင်းပြီး Value ပေးနိုင်မယ့် Digital Products တွေကို Business Concept နဲ့ အညီ ပူးပေါင်းဖန်တီးပေးနေပါတယ်",
             confirmed: true,
-            image: ""
+            image: HninHayMarAung
         },
         {
             name: "Ma Nwe Oo Lwin",
