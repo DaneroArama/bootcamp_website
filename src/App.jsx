@@ -1,12 +1,12 @@
 import { Home } from "./components/Home";
 import { AboutSection } from "./components/AboutSection";
-import Squares from "./components/SquareBackground";
+import Squares from "./components/ui/SquareBackground";
 import SpeakerSection from "./components/SpeakerSection";
 import MentorSection from "./components/MentorSection";
 import HeroSection from "./components/HeroSection";
 import TimetableSection from "./components/TimetableSection";
 import SponsorSection from "./components/SponsorSection";
-import MachineGunLoader from "./components/MachineGunLoader";
+import MachineGunLoader from "./components/ui/MachineGunLoader";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 

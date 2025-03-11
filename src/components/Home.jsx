@@ -20,6 +20,7 @@ import Mentor from '../img/Event Logo & Icon/Mentor.svg'
 import Speaker from '../img/Event Logo & Icon/Speaker.svg'
 import BlueFlower from '../img/Second Icon/Blue Flower.svg';
 import GreenStar from '../img/Second Icon/Green Star.svg';
+import { LinkPreview } from "../components/ui/LinkPreview";
 gsap.registerPlugin(ScrollTrigger);
 
 export const Home = () => {
@@ -121,7 +122,10 @@ export const Home = () => {
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">LOCATION</h3>
                         <div className="relative z-10">
                             <p className="text-2xl font-semibold mb-6 font-malinton">CTZPay Office</p>
-                            <a href="https://maps.app.goo.gl/noQkfVBmHF4yjzwC8" className="font-malinton text-lg">Yangon Innovation Centre (YIC) , Kyan Mar Yay Seik Khan</a>
+                            <LinkPreview
+                                url="https://maps.app.goo.gl/noQkfVBmHF4yjzwC8"
+                                className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
+                            >Yangon Innovation Centre (YIC) , Kyan Mar Yay Seik Khan</LinkPreview>
                         </div>
                     </motion.div>
 
