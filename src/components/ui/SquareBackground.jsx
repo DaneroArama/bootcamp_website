@@ -7,6 +7,7 @@ const Squares = ({
                      borderOpacity = 0.3,
                      squareSize = 40,
                      hoverFillColor = "#222",
+                     className = "",
                  }) => {
     const canvasRef = useRef(null);
     const requestRef = useRef(null);
@@ -134,7 +135,7 @@ const Squares = ({
         };
     }, [direction, speed, borderColor, borderOpacity, hoverFillColor, squareSize]);
 
-    return <canvas ref={canvasRef} className="w-full h-full fixed top-0 left-0 -z-10 bg-black" />;
+    return <canvas ref={canvasRef} className={`w-full h-screen fixed top-0 left-0 -z-10 bg-black ${className}`} />;
 };
 
 export default Squares;

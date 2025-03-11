@@ -12,18 +12,17 @@ import Footer from "./components/Footer";
 
 const App = () => {
     return (
-        <>
-            {/* Background squares layer */}
-            <div className="fixed pt-5 -z-10">
-                <Squares
-                    direction="diagonal"
-                    speed={0.05}
-                    borderColor="#ffffff"
-                    opacity={0.5}
-                    squareSize={150}
-                    hoverFillColor="rgba(245, 176, 65, 0.1)"
-                />
-            </div>
+        <div className="min-h-screen relative">
+            {/* Background squares layer - increased height for mobile */}
+            <Squares
+                direction="diagonal"
+                speed={0.05}
+                borderColor="#ffffff"
+                opacity={0.5}
+                squareSize={150}
+                hoverFillColor="rgba(245, 176, 65, 0.1)"
+                className="h-[200vh]" // Added extra height to cover scrolling on mobile
+            />
 
             {/* Content layer */}
             <div className="relative">
@@ -34,7 +33,8 @@ const App = () => {
                 </section>
 
                 <HeroSection/>
-
+                
+                {/* Rest of the sections */}
                 <section id="about">
                     <AboutSection />
                 </section>
@@ -57,7 +57,7 @@ const App = () => {
 
                 <Footer />
             </div>
-        </>
+        </div>
     );
 };
 
