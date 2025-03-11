@@ -14,6 +14,16 @@ const SponsorSection = () => {
                 { id: 1, logo: "", name: "Sponsor 1" },
                 { id: 2, logo: "", name: "Sponsor 2" },
                 { id: 3, logo: "", name: "Sponsor 3" },
+                { id: 4, logo: "", name: "Sponsor 4" },
+                { id: 5, logo: "", name: "Sponsor 5" }
+            ]
+        },
+        {
+            type: "Something else",
+            items: [
+                { id: 1, logo: "", name: "Sponsor 1" },
+                { id: 2, logo: "", name: "Sponsor 2" },
+                { id: 3, logo: "", name: "Sponsor 3" },
                 { id: 4, logo: "", name: "Sponsor 4" }
             ]
         }
@@ -35,7 +45,7 @@ const SponsorSection = () => {
 
                         {/* Floating company bubbles - positioned to overlap with title */}
                         <motion.div 
-                            className="absolute -top-6 left-20 z-20 hidden md:block"
+                            className="absolute -top-6 left-20 z-0 hidden md:block"
                             initial={{ rotate: -20 }}
                             animate={{ 
                                 y: [0, -5, 0],
@@ -48,7 +58,7 @@ const SponsorSection = () => {
                         </motion.div>
                         
                         <motion.div 
-                            className="absolute -top-6 left-[40%] z-20 hidden md:block"
+                            className="absolute -top-6 left-[40%] z-0 hidden md:block"
                             initial={{ rotate: 20 }}
                             animate={{ 
                                 y: [0, -8, 0],
@@ -91,7 +101,7 @@ const SponsorSection = () => {
                 {/* Sponsor Logos Grid */}
                 <div className="max-w-5xl mx-auto">
                     {sponsors.map((sponsorType) => (
-                        <div key={sponsorType.type} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                        <div key={sponsorType.type} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-2">
                             {sponsorType.items.map((sponsor) => (
                                 <div key={sponsor.id} className="relative">
                                     {/* Sponsor Card */}
@@ -100,7 +110,7 @@ const SponsorSection = () => {
                                         className="aspect-square bg-[#111111] rounded-md overflow-hidden flex items-center justify-center border border-zinc-900 relative"
                                     >
                                         {/* Logo */}
-                                        <div className="w-16 h-16 md:w-20 md:h-20">
+                                        <div className="w-16 h-16 md:w-30 md:h-30">
                                             <svg viewBox="0 0 100 100" className="w-full h-full">
                                                 <path
                                                     d="M30,0 C30,0 70,0 70,0 C70,0 100,30 100,30 C100,30 100,70 100,70 C100,70 70,100 70,100 C70,100 30,100 30,100 C30,100 0,70 0,70 C0,70 0,30 0,30 C0,30 30,0 30,0"
@@ -111,7 +121,7 @@ const SponsorSection = () => {
                                         
                                         {/* Sponsor Type Label - positioned at bottom left */}
                                         <div className="absolute bottom-3 left-3">
-                                            <div className="flex items-center gap-1 bg-white text-black px-2 py-0.5 rounded-full text-xs font-medium font-malinton">
+                                            <div className="flex items-center gap-1 bg-white text-black px-3 py-1 rounded-full text-xs md:text-lg font-medium font-malinton">
                                                 <span className="text-purple-400">✦</span>
                                                 <span>{sponsorType.type}</span>
                                             </div>
