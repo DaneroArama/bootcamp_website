@@ -20,7 +20,7 @@ import Mentor from '../img/Event Logo & Icon/Mentor.svg'
 import Speaker from '../img/Event Logo & Icon/Speaker.svg'
 import BlueFlower from '../img/Second Icon/Blue Flower.svg';
 import GreenStar from '../img/Second Icon/Green Star.svg';
-import { LinkPreview } from "../components/ui/LinkPreview";
+import { LinkPreview } from "./ui/LinkPreview";
 import AnimatedAvatar from "./ui/AnimatedAvatar";
 gsap.registerPlugin(ScrollTrigger);
 

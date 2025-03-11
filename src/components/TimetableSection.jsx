@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-
+import Coffee from "../img/Second Icon/CoffeeBreak.svg";
+import Speaker from '../img/Event Logo & Icon/Speaker.svg'
+import Participant from '../img/Event Logo & Icon/Participant.svg'
 const TimetableSection = () => {
     const [showTimetable, setShowTimetable] = useState(false);
     const [activeTab, setActiveTab] = useState(0);
@@ -138,7 +140,7 @@ const TimetableSection = () => {
                     transition={{ duration: 0.5 }}
                     className="w-full mt-12"
                 >
-                    {/* Tabs */}
+                    {/* Tabs - keeping this section as requested */}
                     <div className="flex flex-wrap justify-center gap-4 mb-6">
                         {timetableData.map((day, index) => (
                             <motion.button
@@ -158,7 +160,7 @@ const TimetableSection = () => {
                         ))}
                     </div>
 
-                    {/* Active Tab Content */}
+                    {/* Active Tab Content - Updated to match the image */}
                     <motion.div
                         key={activeTab}
                         initial={{ opacity: 0, x: 20 }}
@@ -172,64 +174,68 @@ const TimetableSection = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.3, delay: eventIndex * 0.1 }}
-                                className={`flex items-start gap-8 p-6 ${
-                                    event.isWorkshop 
-                                    ? 'border-2 border-blue-400 bg-white' 
-                                    : event.isBreak
-                                    ? 'bg-transparent'
-                                    : 'bg-gray-50'
-                                } rounded-lg`}
+                                className={`border border-gray-200 rounded-lg overflow-hidden ${
+                                    event.isBreak ? 'flex flex-col items-center' : ''
+                                }`}
                             >
-                                {/* Time Section */}
-                                <div className="w-48 flex-shrink-0">
-                                    <div className="text-2xl font-malinton">
-                                        {event.time.start}
-                                        <span className="mx-2 text-gray-400">TO</span>
-                                        {event.time.end}
-                                    </div>
-                                </div>
-
-                                {/* Content Section */}
-                                <div className="flex-grow">
-                                    {event.isBreak ? (
-                                        <div className="flex items-center gap-4">
-                                            <span className="text-red-500">☕</span>
-                                            <span className="text-xl font-bold">{event.title}</span>
-                                            <span className="bg-[#EBFF00] px-4 py-1 rounded-full text-sm">
+                                {event.isBreak ? (
+                                    <div className="w-full flex items-center justify-center py-4">
+                                        <div className="flex items-center">
+                                            <img 
+                                                src= {Coffee}
+                                                alt="Coffee Break" 
+                                                className="w-8 h-8 mr-2" 
+                                            />
+                                            <span className="font-medium">{event.title}</span>
+                                            <span className="ml-4 bg-[#EBFF00] px-4 py-1 rounded-full text-sm">
                                                 {event.time.start} TO {event.time.end}
                                             </span>
                                         </div>
-                                    ) : (
-                                        <>
-                                            <h3 className="text-xl font-bold mb-2">{event.title}</h3>
+                                    </div>
+                                ) : (
+                                    <div className="flex flex-col md:flex-row">
+                                        {/* Time Column */}
+                                        <div className="w-full md:w-48 p-4 flex-shrink-0 flex items-center">
+                                            <div className="text-xl font-medium">
+                                                {event.time.start}
+                                                <span className="mx-2 text-gray-400 text-sm">TO</span>
+                                                {event.time.end}
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Content Column */}
+                                        <div className={`flex-grow p-4 ${event.isWorkshop ? 'border-l-4 border-blue-400' : 'border-l-4 border-purple-400'}`}>
+                                            <h3 className="text-lg font-bold mb-2">{event.title}</h3>
+                                            
                                             {event.speaker && (
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center gap-3">
                                                         {event.isWorkshop ? (
-                                                            <div className="w-8 h-8 grid grid-cols-2 gap-0.5">
-                                                                {[...Array(4)].map((_, i) => (
-                                                                    <div key={i} className="bg-blue-400 rounded-sm" />
-                                                                ))}
-                                                            </div>
+                                                            <img className="w-6 h-6 flex items-center justify-center"
+                                                                 src={Participant}
+                                                                 alt="purple"/>
                                                         ) : (
-                                                            <div className="w-8 h-8 bg-purple-400 rounded-full" />
+                                                            <img className="w-6 h-6 flex items-center justify-center"
+                                                                 src={Speaker}
+                                                                 alt="purple"/>
                                                         )}
                                                         <div>
-                                                            <p className="font-medium">{event.speaker.name}</p>
-                                                            <p className="text-gray-500 text-sm">{event.speaker.role}</p>
+                                                            <p className="text-sm font-medium">{event.speaker.name}</p>
+                                                            <p className="text-gray-500 text-xs">{event.speaker.role}</p>
                                                         </div>
                                                     </div>
+                                                    
                                                     {event.speaker.image && (
                                                         <div className="flex -space-x-2">
-                                                            <div className="w-8 h-8 rounded-full bg-gray-200" />
-                                                            <div className="w-8 h-8 rounded-full bg-gray-300" />
+                                                            <div className="w-6 h-6 rounded-full bg-gray-200 border border-white" />
+                                                            <div className="w-6 h-6 rounded-full bg-gray-300 border border-white" />
                                                         </div>
                                                     )}
                                                 </div>
                                             )}
-                                        </>
-                                    )}
-                                </div>
+                                        </div>
+                                    </div>
+                                )}
                             </motion.div>
                         ))}
                     </motion.div>
@@ -239,4 +245,4 @@ const TimetableSection = () => {
     );
 };
 
-export default TimetableSection; 
+export default TimetableSection;
