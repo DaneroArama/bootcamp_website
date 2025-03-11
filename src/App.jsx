@@ -19,6 +19,7 @@ const App = () => {
                     direction="diagonal"
                     speed={0.05}
                     borderColor="#ffffff"
+                    opacity={0.5}
                     squareSize={150}
                     hoverFillColor="rgba(245, 176, 65, 0.1)"
                 />
