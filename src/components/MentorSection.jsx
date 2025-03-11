@@ -12,6 +12,7 @@ import ShuMawaSoe from "../img/Mentors/Shu Mawa Soe.webp";
 import MinYeHtutMyat from "../img/Mentors/Min Ye Htut Myat.webp";
 import LynnHtetThant from "../img/Mentors/Lynnhtet Thant.webp";
 import HninHayMarAung from "../img/Mentors/Hnin Hay Mar Aung.webp";
+import ThazinWin from "../img/Mentors/Thazin Win.webp";
 import White from "../img/Second Icon/white1.svg";
 
 const TrainerSection = () => {
@@ -136,7 +137,7 @@ const TrainerSection = () => {
                 "\n" +
                 "Ma Thazin Win is currently working at a Myanmar-based company, The UI Studio, where she consistently bridges the gap between business objectives and user satisfaction. She approaches design by combining technical possibilities, innovation, and user-centric solutions to create effective and impactful designs.\n",
             confirmed: true,
-            image: "" // Add mentor image path here
+            image: ThazinWin // Add mentor image path here
         },
         {
             name: "SomeOne",
