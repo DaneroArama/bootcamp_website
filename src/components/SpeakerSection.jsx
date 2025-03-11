@@ -126,20 +126,22 @@ const SpeakerSection = () => {
                         <div className="flex-grow w-full">
                             <div className="flex flex-col md:flex-row justify-between items-start gap-3 md:gap-0">
                                 <div className="w-full">
-                                            <h3 className="text-xl md:text-2xl font-bold mb-1 md:mb-2">
-                                                {speaker.confirmed ? speaker.name : "Mystery Speaker"}
-                                            </h3>
-                                            <p className="text-lg md:text-xl mb-2">
-                                                {speaker.confirmed ? speaker.position : "Role to be announced"}
-                                            </p>
+                                    <h3 className="text-xl md:text-2xl font-bold mb-1 md:mb-2">
+                                        {speaker.confirmed ? speaker.name : "Mystery Speaker"}
+                                    </h3>
+                                    <p className="text-lg md:text-xl mb-2">
+                                        {speaker.confirmed ? speaker.position : "Role to be announced"}
+                                    </p>
                                 </div>
-                                        <button 
-                                            className={`bg-white px-4 py-1.5 md:px-4 md:py-2 rounded-full flex items-center gap-2 text-sm md:text-base ${!speaker.confirmed ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                            disabled={!speaker.confirmed}
-                                        >
+                                <div className="pb-3">
+                                <button
+                                    className={`bg-white px-4 py-1.5 md:px-10 md:py-2 rounded-full flex items-center gap-2 text-sm md:text-base ${!speaker.confirmed ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    disabled={!speaker.confirmed}
+                                >
                                     <span>Speaker Details </span>
                                     <span>↓</span>
                                 </button>
+                                </div>
                             </div>
                             {/* Full-width horizontal line */}
                             <div className="w-full h-[2px] bg-black mb-4"></div>

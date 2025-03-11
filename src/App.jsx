@@ -14,7 +14,7 @@ const App = () => {
     return (
         <>
             {/* Background squares layer */}
-            <div className="fixed inset-0 -z-10">
+            <div className="fixed -z-10">
                 <Squares
                     direction="diagonal"
                     speed={0.05}

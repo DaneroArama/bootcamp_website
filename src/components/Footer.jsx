@@ -15,7 +15,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="relative text-white pt-16 pb-8 overflow-hidden">
+        <footer className="relative pt-16 pb-8 overflow-hidden">
             {/* Glass Background */}
             <div className="absolute inset-0 bg-black/30 backdrop-blur-sm z-0" />
             

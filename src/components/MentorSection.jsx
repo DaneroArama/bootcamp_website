@@ -355,8 +355,7 @@ const TrainerSection = () => {
                         className="bg-black border-white border-2 text-white px-6 py-3 rounded-full flex items-center space-x-2"
                     >
                         <span className="text-purple-400">✧</span>
-                        <span>Explore all trainers on event</span>
-                        <span>→</span>
+                        <span>Meet all trainers on event</span>
                     </motion.button>
                 </div>
             </div>

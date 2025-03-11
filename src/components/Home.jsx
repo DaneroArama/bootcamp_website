@@ -210,7 +210,7 @@ export const Home = () => {
                     </motion.div>
                 </motion.div>
 
-                {/* Mentors, Speakers & Opportunities Section */}
+                {/* TRAINERS, Speakers & Opportunities Section */}
                 <motion.div 
                     className="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_1.2fr_1.6fr] gap-6 mt-6"
                     initial="hidden"
@@ -233,12 +233,12 @@ export const Home = () => {
                             animate={{ y: [-8, 0, -8] }}
                             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
                         />
-                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">MENTORS</h3>
+                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">TRAINERS</h3>
                         <div className="flex flex-col gap-4">
                             <div className="flex flex-row ">
                                 <AnimatedAvatar items={mentor}/>
                             </div>
-                            <p className="text-xl font-malinton relative z-10">Over 20+ Mentors</p>
+                            <p className="text-xl font-malinton relative z-10">Over 20+ Trainers</p>
                         </div>
                     </motion.div>
 
