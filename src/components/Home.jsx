@@ -119,12 +119,12 @@ export const Home = () => {
                             animate={{ y: [-8, 0, -8] }}
                             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
                         />
-                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">LOCATION</h3>
+                        <h3 className="text-3xl font-bold mb-1 font-gothic relative z-10">LOCATION</h3>
                         <div className="relative z-10">
                             <p className="text-2xl font-semibold mb-6 font-malinton">CTZPay Office</p>
                             <LinkPreview
                                 url="https://maps.app.goo.gl/noQkfVBmHF4yjzwC8"
-                                className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
+                                className="font-malinton text-lg"
                             >Yangon Innovation Centre (YIC) , Kyan Mar Yay Seik Khan</LinkPreview>
                         </div>
                     </motion.div>
