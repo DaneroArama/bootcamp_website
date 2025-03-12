@@ -17,8 +17,10 @@ import PurpleStar from '../img/Second Icon/Purple Star.svg';
 import GreenStar from '../img/Second Icon/Green Star.svg';
 
 export const AboutSection = () => {
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const desktopRef = React.useRef(null);
+  const mobileRef = React.useRef(null); // Add a separate ref for mobile
+  const isDesktopInView = useInView(desktopRef, { once: true });
+  const isMobileInView = useInView(mobileRef, { once: true, amount: 0.1 }); // Lower threshold for mobile // Add separate inView for mobile
 
   const containerVariants = {
     hidden: {},
@@ -74,7 +76,7 @@ export const AboutSection = () => {
   };
 
   return (
-      <div className="min-h-screen bg-transparent p-0 md:p-10">
+      <div className="min-h-screen bg-transparent p-0 md:p-10 overflow-hidden">
 
         {/* Text Section */}
         <div className="w-full px-4 md:px-12 py-12">
@@ -217,12 +219,12 @@ export const AboutSection = () => {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden sm:flex justify-center items-center px-4 md:px-12 py-12" ref={ref}>
+        <div className="hidden sm:flex justify-center items-center px-4 md:px-12 py-12" ref={desktopRef}>
           <motion.div
               className="grid grid-cols-5 grid-rows-6 gap-2 w-full h-[800px]"
               variants={containerVariants}
               initial="hidden"
-              animate={isInView ? "show" : "hidden"}
+              animate={isDesktopInView ? "show" : "hidden"}
           >
             {/* Div 1 */}
             <motion.div
@@ -383,11 +385,18 @@ export const AboutSection = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="sm:hidden flex justify-center items-center p-4">
-          <div className="grid grid-cols-2 gap-4 w-full max-w-md">
+        <div className="sm:hidden flex justify-center items-center p-4" ref={mobileRef}>
+          <motion.div 
+              className="grid grid-cols-2 gap-4 w-full max-w-md"
+              variants={containerVariants}
+              initial="hidden"
+              animate={isMobileInView ? "show" : "hidden"}
+          >
+            {/* Mobile divs content... */}
             {/* Div 1 */}
             <motion.div
                 className="aspect-square overflow-hidden"
+                variants={divVariants.topLeft}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
             >
@@ -401,6 +410,7 @@ export const AboutSection = () => {
             {/* Div 7 */}
             <motion.div
                 className="aspect-square overflow-hidden"
+                variants={divVariants.topRight}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
             >
@@ -414,6 +424,7 @@ export const AboutSection = () => {
             {/* Div 2 */}
             <motion.div
                 className="aspect-square relative overflow-hidden h-[200px] w-full bg-purple-300 col-span-2"
+                variants={divVariants.middle}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
             >
@@ -421,20 +432,41 @@ export const AboutSection = () => {
                 <motion.img
                     src={BlueRingGhost}
                     className="absolute w-[150px] h-[150px] left-0 -bottom-10"
-                    animate={{ y: [-5, 0, -5]}}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ 
+                      y: [-5, 0, -5], 
+                      opacity: 1,
+                      transition: { 
+                        y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                        opacity: { duration: 0.5 }
+                      }
+                    }}
                 />
                 <motion.img
                     src={RedRectangleGhost}
                     className="absolute w-[150px] h-[150px] left-[30%] -bottom-10"
-                    animate={{ y: [-5, 0, -5]}}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ 
+                      y: [-5, 0, -5], 
+                      opacity: 1,
+                      transition: { 
+                        y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.2 },
+                        opacity: { duration: 0.5, delay: 0.2 }
+                      }
+                    }}
                 />
                 <motion.img
                     src={YellowOvalGhost}
                     className="absolute w-[150px] h-[150px] left-[60%] -bottom-10"
-                    animate={{ y: [-5, 0, -5]}}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ 
+                      y: [-5, 0, -5], 
+                      opacity: 1,
+                      transition: { 
+                        y: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.4 },
+                        opacity: { duration: 0.5, delay: 0.4 }
+                      }
+                    }}
                 />
               </div>
             </motion.div>
@@ -442,6 +474,7 @@ export const AboutSection = () => {
             {/* Div 3 */}
             <motion.div
                 className="col-span-2 flex justify-around items-center py-4"
+                variants={divVariants.middle}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
             >
@@ -454,6 +487,7 @@ export const AboutSection = () => {
             {/* Div 4 */}
             <motion.div
                 className="col-span-2 bg-black border-2 border-white p-2 flex flex-col gap-3 items-center"
+                variants={divVariants.middle}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
             >
@@ -494,6 +528,7 @@ export const AboutSection = () => {
             {/* Div 5 */}
             <motion.div
                 className="aspect-square overflow-hidden"
+                variants={divVariants.bottomLeft}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
             >
@@ -507,6 +542,7 @@ export const AboutSection = () => {
             {/* Div 8 */}
             <motion.div
                 className="aspect-square overflow-hidden"
+                variants={divVariants.bottomLeft}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
             >
@@ -520,6 +556,7 @@ export const AboutSection = () => {
             {/* Div 6 */}
             <motion.div
                 className="col-span-2 py-4 flex justify-center"
+                variants={divVariants.bottom}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
             >
@@ -529,7 +566,7 @@ export const AboutSection = () => {
                   className="h-20 object-contain"
               />
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </div>
   );

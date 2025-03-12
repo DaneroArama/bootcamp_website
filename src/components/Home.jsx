@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import mentor1 from "../img/Mentors/Ko Myo Maung Maung.webp"; // Adjust the path as necessary
@@ -58,6 +58,64 @@ const mentor = [
 ];
 
 export const Home = () => {
+    // Create refs for each card to track mouse position
+    const bootcampCardRef = useRef(null);
+    const locationCardRef = useRef(null);
+    const dateCardRef = useRef(null);
+    const registerCardRef = useRef(null);
+    const mentorsCardRef = useRef(null);
+    const speakersCardRef = useRef(null);
+
+    // Function to handle the magnetic effect
+    const useMagneticGhost = (ref) => {
+        const x = useMotionValue(0);
+        const y = useMotionValue(0);
+        
+        // Add spring physics for smoother movement
+        const springConfig = { damping: 15, stiffness: 150 };
+        const springX = useSpring(x, springConfig);
+        const springY = useSpring(y, springConfig);
+
+        const handleMouseMove = (e) => {
+            if (!ref.current) return;
+            
+            const rect = ref.current.getBoundingClientRect();
+            
+            // Calculate center of the card
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            // Calculate distance from mouse to center
+            const distanceX = e.clientX - centerX;
+            const distanceY = e.clientY - centerY;
+            
+            // Set motion values with some dampening
+            x.set(distanceX / 8);
+            y.set(distanceY / 8);
+        };
+
+        const handleMouseLeave = () => {
+            // Reset position when mouse leaves
+            x.set(0);
+            y.set(0);
+        };
+
+        return {
+            x: springX,
+            y: springY,
+            handleMouseMove,
+            handleMouseLeave
+        };
+    };
+
+    // Create magnetic effects for each ghost
+    const greenGhostMagnetic = useMagneticGhost(bootcampCardRef);
+    const redGhostMagnetic = useMagneticGhost(locationCardRef);
+    const blueGhostMagnetic = useMagneticGhost(dateCardRef);
+    const yellowGhostMagnetic = useMagneticGhost(registerCardRef);
+    const mentorGhostMagnetic = useMagneticGhost(mentorsCardRef);
+    const speakerGhostMagnetic = useMagneticGhost(speakersCardRef);
+
     return (
         <div className="relative min-h-screen overflow-hidden">
             {/* Hero Section with Scroll-based Pin */}
@@ -116,6 +174,7 @@ export const Home = () => {
                 >
                     {/* Bootcamp Card */}
                     <motion.div
+                        ref={bootcampCardRef}
                         variants={{
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
@@ -123,12 +182,18 @@ export const Home = () => {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="bg-emerald-400 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        onMouseMove={greenGhostMagnetic.handleMouseMove}
+                        onMouseLeave={greenGhostMagnetic.handleMouseLeave}
                     >
                         <motion.img
                             src={GreenGhost}
                             className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
                             animate={{ y: [-8, 0, -8] }}
                             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                            style={{ 
+                                x: greenGhostMagnetic.x,
+                                y: greenGhostMagnetic.y
+                            }}
                         />
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">Think, Sprint, Design</h3>
                         <div className="relative z-10">
@@ -139,6 +204,7 @@ export const Home = () => {
 
                     {/* Location Card */}
                     <motion.div
+                        ref={locationCardRef}
                         variants={{
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
@@ -146,12 +212,18 @@ export const Home = () => {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="bg-red-300 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        onMouseMove={redGhostMagnetic.handleMouseMove}
+                        onMouseLeave={redGhostMagnetic.handleMouseLeave}
                     >
                         <motion.img
                             src={RedRectangleGhost}
                             className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
                             animate={{ y: [-8, 0, -8] }}
                             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                            style={{ 
+                                x: redGhostMagnetic.x,
+                                y: redGhostMagnetic.y
+                            }}
                         />
                         <h3 className="text-3xl font-bold mb-1 font-gothic relative z-10">LOCATION</h3>
                         <div className="relative z-10">
@@ -165,6 +237,7 @@ export const Home = () => {
 
                     {/* Attendees Card */}
                     <motion.div
+                        ref={dateCardRef}
                         variants={{
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
@@ -172,12 +245,18 @@ export const Home = () => {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="bg-blue-500 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        onMouseMove={blueGhostMagnetic.handleMouseMove}
+                        onMouseLeave={blueGhostMagnetic.handleMouseLeave}
                     >
                         <motion.img
                             src={BlueSquishyGhost}
                             className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
                             animate={{ y: [-8, 0, -8] }}
                             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                            style={{ 
+                                x: blueGhostMagnetic.x,
+                                y: blueGhostMagnetic.y
+                            }}
                         />
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">DATE & TIME</h3>
                         <div className="relative z-10">
@@ -188,6 +267,7 @@ export const Home = () => {
 
                     {/* Register Card */}
                     <motion.div
+                        ref={registerCardRef}
                         variants={{
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
@@ -195,12 +275,18 @@ export const Home = () => {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="bg-[#F5B041] p-10 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        onMouseMove={yellowGhostMagnetic.handleMouseMove}
+                        onMouseLeave={yellowGhostMagnetic.handleMouseLeave}
                     >
                         <motion.img
                             src={YellowOvalGhost}
                             className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
                             animate={{ y: [-8, 0, -8] }}
                             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                            style={{ 
+                                x: yellowGhostMagnetic.x,
+                                y: yellowGhostMagnetic.y
+                            }}
                         />
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">Register</h3>
                         <div className="relative z-10">
@@ -219,6 +305,7 @@ export const Home = () => {
                 >
                     {/* Mentors Card */}
                     <motion.div
+                        ref={mentorsCardRef}
                         variants={{
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
@@ -226,12 +313,18 @@ export const Home = () => {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="bg-purple-200 p-8 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        onMouseMove={mentorGhostMagnetic.handleMouseMove}
+                        onMouseLeave={mentorGhostMagnetic.handleMouseLeave}
                     >
                         <motion.img
                             src={Mentor}
                             className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
                             animate={{ y: [-8, 0, -8] }}
                             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                            style={{ 
+                                x: mentorGhostMagnetic.x,
+                                y: mentorGhostMagnetic.y
+                            }}
                         />
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">TRAINERS</h3>
                         <div className="flex flex-col gap-4">
@@ -244,6 +337,7 @@ export const Home = () => {
 
                     {/* Speakers Card */}
                     <motion.div
+                        ref={speakersCardRef}
                         variants={{
                             hidden: { x: 100, opacity: 0 },
                             visible: { x: 0, opacity: 1 }
@@ -251,12 +345,18 @@ export const Home = () => {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="bg-purple-500 p-8 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        onMouseMove={speakerGhostMagnetic.handleMouseMove}
+                        onMouseLeave={speakerGhostMagnetic.handleMouseLeave}
                     >
                         <motion.img
                             src={Speaker}
                             className="absolute -right-5 bottom-10 w-[180px] h-[180px]"
                             animate={{ y: [-8, 0, -8] }}
                             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                            style={{ 
+                                x: speakerGhostMagnetic.x,
+                                y: speakerGhostMagnetic.y
+                            }}
                         />
                         <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">SPEAKERS</h3>
                         <div className="flex relative z-10">
