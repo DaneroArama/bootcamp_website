@@ -80,37 +80,139 @@ export const AboutSection = () => {
         <div className="w-full px-4 md:px-12 py-12">
           {/* About UXMM Section */}
           <div className="grid grid-cols-1 md:grid-cols-[0.5fr_1fr] gap-8 mb-16">
-            <div className="text-white text-xl md:text-2xl font-bold font-gothic uppercase tracking-wider">
-              About UXMM
-            </div>
-            <div className="space-y-2">
-              <p className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-white text-xl md:text-2xl font-bold font-gothic uppercase tracking-wider"
+            >
+              <motion.span 
+                className="inline-block"
+                whileHover={{ scale: 1.05, color: "#E9A0E9" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                About UXMM
+              </motion.span>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="space-y-2"
+            >
+              <motion.p 
+                className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed"
+                whileInView={{ 
+                  textShadow: ["0px 0px 0px rgba(255,255,255,0)", "0px 0px 8px rgba(255,255,255,0.3)", "0px 0px 0px rgba(255,255,255,0)"]
+                }}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 5 }}
+              >
                 Since 2020,
-                <strong className="font-bold"> UXMM (User Experience Myanmar)</strong> has been a{' '}
-                <strong className="font-bold">volunteer-driven, non-profit organization</strong> dedicated to supporting designers through{' '}
-                <strong className="font-bold">resources, education, and networking</strong>.
-              </p>
-              <p className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed">
+                <motion.strong 
+                  className="font-bold"
+                  whileHover={{ color: "#FD5359" }}
+                > UXMM (User Experience Myanmar)</motion.strong> has been a{' '}
+                <motion.strong 
+                  className="font-bold"
+                  whileHover={{ color: "#E9A0E9" }}
+                >volunteer-driven, non-profit organization</motion.strong> dedicated to supporting designers through{' '}
+                <motion.strong 
+                  className="font-bold"
+                  whileHover={{ color: "#EBFF00" }}
+                >resources, education, and networking</motion.strong>.
+              </motion.p>
+              <motion.p 
+                className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+              >
                 We provide
-                <strong className="font-bold"> meetups, conferences, workshops, and mentorship</strong> to foster innovation, collaboration, and continuous learning. Our mission is to advance{' '}
-                <strong className="font-bold">design and technology</strong> in Myanmar and beyond
-              </p>
-            </div>
+                <motion.strong 
+                  className="font-bold"
+                  whileHover={{ color: "#4A7BF7" }}
+                > meetups, conferences, workshops, and mentorship</motion.strong> to foster innovation, collaboration, and continuous learning. Our mission is to advance{' '}
+                <motion.strong 
+                  className="font-bold"
+                  whileHover={{ color: "#EBFF00" }}
+                >design and technology</motion.strong> in Myanmar and beyond
+              </motion.p>
+            </motion.div>
           </div>
 
           {/* About Bootcamp Section */}
           <div className="grid grid-cols-1 md:grid-cols-[0.5fr_1fr] gap-8">
-            <div className="text-white text-xl md:text-2xl font-bold font-gothic uppercase tracking-wider">
-              About Bootcamp
-            </div>
-            <div className="space-y-2">
-              <p className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed">
-                Gain essential UX/UI skills in user research, interaction design, and prototyping.
-              </p>
-              <p className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed">
-                Work on real projects, get expert mentorship, and build a portfolio while networking. Launch your UX/UI career with confidence!
-              </p>
-            </div>
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-white text-xl md:text-2xl font-bold font-gothic uppercase tracking-wider"
+            >
+              <motion.span 
+                className="inline-block"
+                whileHover={{ scale: 1.05, color: "#EBFF00" }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                About Bootcamp
+              </motion.span>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="space-y-2"
+            >
+              <motion.p 
+                className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed"
+                whileInView={{ 
+                  textShadow: ["0px 0px 0px rgba(255,255,255,0)", "0px 0px 8px rgba(235,255,0,0.3)", "0px 0px 0px rgba(255,255,255,0)"]
+                }}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 5 }}
+              >
+                Gain essential 
+                <motion.strong
+                  className="font-bold"
+                  whileHover={{ color: "#4A7BF7" }}
+                > UX/UI skills</motion.strong> in
+                <motion.strong
+                  className="font-bold"
+                  whileHover={{ color: "#E9A0E9" }}
+                > user research</motion.strong>,
+                <motion.strong
+                  className="font-bold"
+                  whileHover={{ color: "#EBFF00" }}
+                > interaction design</motion.strong>, and
+                <motion.strong
+                  className="font-bold"
+                  whileHover={{ color: "#4A7BF7" }}
+                > prototyping</motion.strong>.
+              </motion.p>
+              <motion.p 
+                className="text-xl md:text-2xl text-white leading-normal md:leading-relaxed"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+              >
+                Work on 
+                <motion.strong
+                  className="font-bold"
+                  whileHover={{ color: "#E9A0E9" }}
+                > real projects</motion.strong>, get
+                <motion.strong
+                  className="font-bold"
+                  whileHover={{ color: "#EBFF00" }}
+                > expert mentorship</motion.strong>, and build a
+                <motion.strong
+                  className="font-bold"
+                  whileHover={{ color: "#4A7BF7" }}
+                > portfolio</motion.strong> while networking. Launch your UX/UI career with
+                <motion.strong
+                  className="font-bold"
+                  whileHover={{ scale: 1.1, color: "#EBFF00" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                > confidence</motion.strong>!
+              </motion.p>
+            </motion.div>
           </div>
         </div>
 
