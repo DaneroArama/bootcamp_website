@@ -49,7 +49,7 @@ const OrganizerSection = () => {
     const trainers = [
         {
             name: "Ma Thiri Phyo Naing",
-            role: "ORGANIZER",
+            role: "PROGRAM MANAGER",
             bio: "Thiri Phyo Naing is a passionate UX/UI designer with a talent for creating simple, user-friendly digital product experiences. With experience in agency and job platform design, she blends creativity, problem-solving, and empathy to craft impactful designs.\n" +
                 "\n" +
                 "Her journey began at Startup Weekend Yangon 2022, where she showcased her skills and built valuable connections, leading to her first role as a UX/UI designer at Logy, a design agency startup. In December 2023, she returned to Startup Weekend Yangon as a finalist, impressing with her creative thinking and presentation skills. Thiri's dedication to innovation was further recognized when she won first prize in the Youth Innovation Challenge, where her team excelled in problem-solving and creative ideas.\n" +
@@ -60,7 +60,7 @@ const OrganizerSection = () => {
         },
         {
             name: "Mayve",
-            role: "ORGANIZER",
+            role: "PROGRAM MANAGER",
             bio: "Hehe I don't know anything yet",
             confirmed: true,
             image: Barry
@@ -82,7 +82,7 @@ const OrganizerSection = () => {
     // Get role color based on trainer role
     const getRoleColor = (role) => {
         switch (role) {
-            case "ORGANIZER":
+            case "PROGRAM MANAGER":
                 return "text-green-400";
         }
     };
@@ -90,7 +90,7 @@ const OrganizerSection = () => {
     // Get role badge background based on trainer role
     const getRoleBadgeColor = (role) => {
         switch (role) {
-            case "ORGANIZER":
+            case "PROGRAM MANAGER":
                 return "bg-green-400/20 border-green-400/50";
         }
     };
@@ -99,7 +99,7 @@ const OrganizerSection = () => {
         <section className="w-full md:w-[80%] mx-auto overflow-hidden">
             {/* Black Header Section */}
             <div ref={titleRef} className="bg-black p-4 md:p-6 flex items-center border-white border-4">
-                <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Organizer List</h2><img src={GreenStar} alt="Yellow Star" className="w-12 h-12 pl-3 inline-block text-white" />
+                <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Program Manager List</h2><img src={GreenStar} alt="Yellow Star" className="w-12 h-12 pl-3 inline-block text-white" />
             </div>
 
             {/* Trainer Cards Grid */}
@@ -181,7 +181,7 @@ const OrganizerSection = () => {
                         className="bg-black border-white border-2 text-white px-6 py-3 rounded-full flex items-center space-x-2"
                     >
                         <span className="text-green-400">✧</span>
-                        <span>This is our organizers of the bootcamp</span>
+                        <span>This is our program managers of the bootcamp</span>
                     </motion.button>
                 </div>
             </div>
