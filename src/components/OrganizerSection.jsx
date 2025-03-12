@@ -59,7 +59,7 @@ const OrganizerSection = () => {
             image: Thiri
         },
         {
-            name: "Mayve",
+            name: "Ma May Thin Khine(Mayve)",
             role: "PROGRAM MANAGER",
             bio: "Hehe I don't know anything yet",
             confirmed: true,
