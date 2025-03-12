@@ -133,7 +133,7 @@ const TrainerSection = () => {
         {
             name: "Ma Thazin Win",
             role: "TRAINER",
-            bio: "မသဇင်ဝင်းဟာဆိုရင်တော့ဖြင့် မြန်မာ base, The UI Studio မှာလုပ်ကိုင်လျက်ရှိပြီး business objectives နဲ့ user satisfaction ရဲ့ gap ကို အမြဲဖြည့်စည်းပေးလျက်ရှိပါတယ်။ technical possibilities, innovation နဲ့ user-centric solutions တွေကိုဖြေရှင်းပေးမယ့် apporach နဲ့ ဒီဇိုင်းများဖန်တီးရေးဆွဲလျက်ရှိပါတယ်။\n" +
+            bio: "မသဇင်ဝင်းဟာဆိုရင်တော့ဖြင့် မြန်မာ base, The UI Studio မှာလုပ်ကိုင်လျက်ရှိပြီး business objectives နဲ့ user satisfaction ရဲ့ gap ကို အမြဲဖြည့်စည်းပေးလျက်ရှိပါတယ်။ technical possibilities, innovation နဲ့ user-centric solutions တွေကိုဖြေရှင်းပေးမယ့် apporach နဲ့ ဒီဇိုင်းများဖန်တီးရေးဆွဲလျက်ရှိပါတယ်။\n" +
                 "\n" +
                 "Ma Thazin Win is currently working at a Myanmar-based company, The UI Studio, where she consistently bridges the gap between business objectives and user satisfaction. She approaches design by combining technical possibilities, innovation, and user-centric solutions to create effective and impactful designs.\n",
             confirmed: true,
@@ -379,12 +379,12 @@ const TrainerSection = () => {
                         >
                             <div className="flex flex-col md:flex-row h-full">
                                 {/* Image Section (Top on mobile, Right on desktop) */}
-                                <div className="w-full md:w-[300px] h-[200px] md:h-auto flex-shrink-0 bg-[#E7A8E2]">
+                                <div className="w-full md:w-[300px] h-[300px] md:h-auto flex-shrink-0 bg-[#E7A8E2]">
                                     {selectedTrainer.image ? (
                                         <img 
                                             src={selectedTrainer.image} 
                                             alt={selectedTrainer.name}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-cover object-top"
                                         />
                                     ) : (
                                         <div className="w-full h-full flex items-center justify-center bg-[#E7A8E2]">
@@ -473,12 +473,4 @@ const TrainerSection = () => {
     );
 };
 
-export default TrainerSection; 
-
-/*
-<img 
-    src={trainer.image} 
-    alt={trainer.name}
-    className="w-full aspect-square object-cover"
-/>
-*/
+export default TrainerSection;

@@ -205,12 +205,12 @@ const OrganizerSection = () => {
                         >
                             <div className="flex flex-col md:flex-row h-full">
                                 {/* Image Section (Top on mobile, Right on desktop) */}
-                                <div className="w-full md:w-[300px] h-[200px] md:h-auto flex-shrink-0 bg-[#E7A8E2]">
+                                <div className="w-full md:w-[300px] h-[300px] md:h-auto flex-shrink-0 bg-[#E7A8E2]">
                                     {selectedOrganizer.image ? (
                                         <img 
                                             src={selectedOrganizer.image}
                                             alt={selectedOrganizer.name}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-cover object-top"
                                         />
                                     ) : (
                                         <div className="w-full h-full flex items-center justify-center bg-[#E7A8E2]">
