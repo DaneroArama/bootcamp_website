@@ -2,11 +2,12 @@ import { Home } from "./components/Home";
 import { AboutSection } from "./components/AboutSection";
 import Squares from "./components/ui/SquareBackground";
 import SpeakerSection from "./components/SpeakerSection";
-import MentorSection from "./components/MentorSection";
+import MentorSection from "./components/TrainerSection";
 import HeroSection from "./components/HeroSection";
 import TimetableSection from "./components/TimetableSection";
 import SponsorSection from "./components/SponsorSection";
 import MachineGunLoader from "./components/ui/MachineGunLoader";
+import OrganizerSection from "./components/OrganizerSection";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -46,6 +47,8 @@ const App = () => {
                 <section id="mentors">
                     <MentorSection />
                 </section>
+
+                    <OrganizerSection/>
 
                 <section id="programs">
                     <TimetableSection />
