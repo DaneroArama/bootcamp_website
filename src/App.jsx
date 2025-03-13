@@ -14,19 +14,21 @@ import Footer from "./components/Footer";
 const App = () => {
     return (
         <div className="min-h-screen relative">
-            {/* Background squares layer - increased height for mobile */}
-            <Squares
-                direction="diagonal"
-                speed={0.05}
-                borderColor="#ffffff"
-                opacity={0.5}
-                squareSize={150}
-                hoverFillColor="rgba(245, 176, 65, 0.1)"
-                className="h-[250vh]" // Added extra height to cover scrolling on mobile
-            />
+            {/* Background squares layer - fixed position approach */}
+            <div className="fixed inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
+                <Squares
+                    direction="diagonal"
+                    speed={0.05}
+                    borderColor="#ffffff"
+                    opacity={0.5}
+                    squareSize={150}
+                    hoverFillColor="rgba(245, 176, 65, 0.1)"
+                    className="h-[400vh] w-full"
+                />
+            </div>
 
             {/* Content layer */}
-            <div className="relative">
+            <div className="relative z-10">
                 <Navbar/>
                 <MachineGunLoader text="Design Your Future with Real World Experience! Yesssss!" wordClassName="font-malinton"/>
                 <section className="pt-24" id="home">

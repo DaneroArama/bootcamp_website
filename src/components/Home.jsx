@@ -12,6 +12,7 @@ import speaker2 from '../img/Logo.png'; // Adjust the path as necessary
 import speaker3 from '../img/Logo.png'; // Adjust the path as necessary
 import speaker4 from '../img/Logo.png'; // Adjust the path as necessary
 import speaker5 from '../img/Logo.png'; // Adjust the path as necessary
+import YIC from '../img/YIC.png';
 import BlueSquishyGhost from '../img/Cartoon mascot/BlueSquishyGhost.svg';
 import GreenGhost from '../img/Cartoon mascot/GreenGhost.svg';
 import RedRectangleGhost from '../img/Cartoon mascot/RedRectangleGhost.svg';
@@ -231,7 +232,11 @@ export const Home = () => {
                             <LinkPreview
                                 url="https://maps.app.goo.gl/noQkfVBmHF4yjzwC8"
                                 className="font-malinton text-lg"
-                            >Yangon Innovation Centre (YIC) , Kyan Mar Yay Seik Khan</LinkPreview>
+                                imageSrc={YIC}
+                                isStatic={true}
+                            >
+                                Yangon Innovation Centre (YIC) , Kyan Mar Yay Seik Khan
+                            </LinkPreview>
                         </div>
                     </motion.div>
 
