@@ -388,7 +388,7 @@ export const AboutSection = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="sm:hidden flex justify-center items-center p-4 min-h-[800px]" ref={mobileRef}> {/* Added min-height */}
+        <div className="sm:hidden flex justify-center items-center p-4 min-h-[800px] overflow-hidden" ref={mobileRef}> {/* Added min-height */}
           <motion.div 
               className="grid grid-cols-2 gap-4 w-full max-w-md"
               variants={containerVariants}
