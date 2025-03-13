@@ -344,7 +344,7 @@ export const Home = () => {
                             <div className="flex flex-row ">
                                 <AnimatedAvatar items={mentor}/>
                             </div>
-                            <p className="text-xl font-malinton relative z-10">Over 20+ Trainers</p>
+                            <p className="text-xl font-malinton relative z-10">Over 10+ Trainers</p>
                         </div>
                     </motion.div>
 
