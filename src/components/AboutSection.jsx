@@ -110,16 +110,19 @@ export const AboutSection = () => {
                 transition={{ duration: 2, repeat: Infinity, repeatDelay: 5 }}
               >
                 Since 2020,
-                <motion.strong 
-                  className="font-bold"
+                <motion.a 
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#FD5359" }}
-                > UXMM (User Experience Myanmar)</motion.strong> has been a{' '}
+                  href="https://uxmm.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                > UXMM (User Experience Myanmar)</motion.a> has been a{' '}
                 <motion.strong 
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#E9A0E9" }}
                 >volunteer-driven, non-profit organization</motion.strong> dedicated to supporting designers through{' '}
                 <motion.strong 
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#EBFF00" }}
                 >resources, education, and networking</motion.strong>.
               </motion.p>
@@ -131,11 +134,11 @@ export const AboutSection = () => {
               >
                 We provide
                 <motion.strong 
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#4A7BF7" }}
                 > meetups, conferences, workshops, and mentorship</motion.strong> to foster innovation, collaboration, and continuous learning. Our mission is to advance{' '}
                 <motion.strong 
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#EBFF00" }}
                 >design and technology</motion.strong> in Myanmar and beyond
               </motion.p>
@@ -173,19 +176,19 @@ export const AboutSection = () => {
               >
                 Gain essential 
                 <motion.strong
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#4A7BF7" }}
                 > UX/UI skills</motion.strong> in
                 <motion.strong
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#E9A0E9" }}
                 > user research</motion.strong>,
                 <motion.strong
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#EBFF00" }}
                 > interaction design</motion.strong>, and
                 <motion.strong
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#4A7BF7" }}
                 > prototyping</motion.strong>.
               </motion.p>
@@ -197,19 +200,19 @@ export const AboutSection = () => {
               >
                 Work on 
                 <motion.strong
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#E9A0E9" }}
                 > real projects</motion.strong>, get
                 <motion.strong
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#EBFF00" }}
                 > expert mentorship</motion.strong>, and build a
                 <motion.strong
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ color: "#4A7BF7" }}
                 > portfolio</motion.strong> while networking. Launch your UX/UI career with
                 <motion.strong
-                  className="font-bold"
+                  className="font-bold cursor-pointer"
                   whileHover={{ scale: 1.1, color: "#EBFF00" }}
                   transition={{ type: "spring", stiffness: 300 }}
                 > confidence</motion.strong>!
@@ -385,7 +388,7 @@ export const AboutSection = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="sm:hidden flex justify-center items-center p-4" ref={mobileRef}>
+        <div className="sm:hidden flex justify-center items-center p-4 min-h-[800px]" ref={mobileRef}> {/* Added min-height */}
           <motion.div 
               className="grid grid-cols-2 gap-4 w-full max-w-md"
               variants={containerVariants}

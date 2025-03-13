@@ -196,7 +196,7 @@ export const Home = () => {
                                 y: greenGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-xl mb-24 font-gothic relative z-10">Think, Sprint, Design</h3>
+                        <h3 className="text-xl mb-16 font-gothic relative z-10">Think, Sprint, Design</h3>
                         <div className="relative z-10">
                             <p className="text-3xl font-semibold font-malinton">1st Myanmar In-person Bootcamp</p>
                             <p className="font-malinton text-xl">2025</p>
@@ -226,7 +226,7 @@ export const Home = () => {
                                 y: redGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-xl mb-1 font-gothic relative z-10">LOCATION</h3>
+                        <h3 className="text-xl mb-16 font-gothic relative z-10">LOCATION</h3>
                         <div className="relative z-10">
                             <LinkPreview
                                 className="text-3xl font-semibold mt-8 mb-0 font-malinton"
@@ -271,7 +271,7 @@ export const Home = () => {
                                 y: blueGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-xl mb-6 font-gothic relative z-10">DATE & TIME</h3>
+                        <h3 className="text-xl mb-16 font-gothic relative z-10">DATE & TIME</h3>
                         <div className="relative z-10">
                             <p className="text-3xl font-semibold font-malinton">April 5th to 6th</p>
                             <p className="font-malinton text-xl">9am to 4pm</p>
@@ -287,7 +287,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-[#F5B041] p-7 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        className="bg-[#f6c575] p-7 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
                         onMouseMove={yellowGhostMagnetic.handleMouseMove}
                         onMouseLeave={yellowGhostMagnetic.handleMouseLeave}
                     >
@@ -301,7 +301,7 @@ export const Home = () => {
                                 y: yellowGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-xl mb-6 font-gothic relative z-10">Register</h3>
+                        <h3 className="text-xl mb-16 font-gothic relative z-10">Register</h3>
                         <div className="relative z-10">
                             <p className="text-3xl font-semibold mb-6 font-malinton">Stay Tuned</p>
                             <p className="font-malinton text-xl">Will Be Announced</p>
@@ -339,7 +339,7 @@ export const Home = () => {
                                 y: mentorGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-xl mb-6 font-gothic relative z-10">TRAINERS</h3>
+                        <h3 className="text-xl mb-16 font-gothic relative z-10">TRAINERS</h3>
                         <div className="flex flex-col gap-4">
                             <div className="flex flex-row ">
                                 <AnimatedAvatar items={mentor}/>
@@ -371,7 +371,7 @@ export const Home = () => {
                                 y: speakerGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-xl  mb-6 font-gothic relative z-10">SPEAKERS</h3>
+                        <h3 className="text-xl mb-16 font-gothic relative z-10">SPEAKERS</h3>
                         <div className="flex relative z-10">
                             <AnimatedAvatar items={mentor}/>
                         </div>
