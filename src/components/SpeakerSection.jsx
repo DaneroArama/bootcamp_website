@@ -12,14 +12,14 @@ const SpeakerSection = () => {
             name: "Ye Lin Aung",
             position: "??????",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
-            confirmed: true,
+            confirmed: false,
             image: "" // Add speaker image path here
         },
         {
             name: "Mya Myint Zu",
             position: "Deputy Chief Executive Officer",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
-            confirmed: true
+            confirmed: false
         },
         {
             name: "Zaw Moe Thant",
@@ -120,7 +120,7 @@ const SpeakerSection = () => {
                                             </svg>
                                         </div>
                                     )}
-                        </div>
+                                </div>
 
                         {/* Content */}
                         <div className="flex-grow w-full">

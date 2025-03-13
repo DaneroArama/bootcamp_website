@@ -1,27 +1,17 @@
 import { motion } from "framer-motion";
 
 const SponsorSection = () => {
-    // Sponsors data structure - easy to add more sponsors and types
+    // Updated sponsors data structure with confirmed status and links
     const sponsors = [
         {
             type: "Lunch Sponsor",
             items: [
-                { id: 1, logo: "", name: "Sponsor 1" },
-                { id: 2, logo: "", name: "Sponsor 2" },
-                { id: 3, logo: "", name: "Sponsor 3" },
-                { id: 4, logo: "", name: "Sponsor 4" },
-                { id: 5, logo: "", name: "Sponsor 5" }
+                { id: 1, logo: "", name: "Sponsor 1", confirmed: false, link: "https://example.com/sponsor1" },
+                { id: 2, logo: "", name: "Sponsor 2", confirmed: false, link: "https://example.com/sponsor2" },
+                { id: 3, logo: "", name: "Sponsor 3", confirmed: false, link: "" },
+                { id: 4, logo: "", name: "Sponsor 4", confirmed: false, link: "" },
             ]
         },
-        {
-            type: "Something else",
-            items: [
-                { id: 1, logo: "", name: "Sponsor 1" },
-                { id: 2, logo: "", name: "Sponsor 2" },
-                { id: 3, logo: "", name: "Sponsor 3" },
-                { id: 4, logo: "", name: "Sponsor 4" }
-            ]
-        }
     ];
 
     return (
@@ -39,57 +29,58 @@ const SponsorSection = () => {
                         </h2>
 
                         {/* Floating company bubbles - positioned to overlap with title */}
-                        <motion.div 
+                        <motion.div
                             className="absolute -top-6 left-20 z-0 hidden md:block"
                             initial={{ rotate: -20 }}
-                            animate={{ 
+                            animate={{
                                 y: [0, -5, 0],
-                                transition: { repeat: Infinity, duration: 3 } 
+                                transition: { repeat: Infinity, duration: 3 }
                             }}
                         >
                             <div className="bg-[#EBFF00] px-6 py-2 rounded-full text-black font-medium transform">
                                 Company 1
                             </div>
                         </motion.div>
-                        
-                        <motion.div 
+
+                        <motion.div
                             className="absolute -top-6 left-[40%] z-0 hidden md:block"
                             initial={{ rotate: 20 }}
-                            animate={{ 
+                            animate={{
                                 y: [0, -8, 0],
-                                transition: { repeat: Infinity, duration: 4 } 
+                                transition: { repeat: Infinity, duration: 4 }
                             }}
                         >
                             <div className="bg-pink-300 px-6 py-2 rounded-full text-black font-medium transform">
                                 Company 1
                             </div>
                         </motion.div>
-                        
-                        <motion.div 
+
+                        <motion.div
                             className="absolute top-14 left-[30%] z-0 hidden md:block rotate-6"
                             initial={{ rotate: 15 }}
-                            animate={{ 
+                            animate={{
                                 y: [0, -6, 0],
-                                transition: { repeat: Infinity, duration: 3.5 } 
+                                transition: { repeat: Infinity, duration: 3.5 }
                             }}
                         >
                             <div className="bg-orange-300 px-6 py-2 rounded-full text-black font-medium transform">
                                 Company 1
                             </div>
                         </motion.div>
-                        
-                        <motion.div 
+
+                        <motion.div
                             className="absolute top-10 right-[10%] z-0 hidden md:block"
                             initial={{ rotate: -20 }}
-                            animate={{ 
+                            animate={{
                                 y: [0, -7, 0],
-                                transition: { repeat: Infinity, duration: 3.2 } 
+                                transition: { repeat: Infinity, duration: 3.2 }
                             }}
                         >
                             <div className="bg-green-800 px-6 py-2 rounded-full text-[#EBFF00] font-medium transform">
                                 Company 1
                             </div>
                         </motion.div>
+                        {/* Other floating bubbles... */}
                     </div>
                 </div>
 
@@ -99,29 +90,73 @@ const SponsorSection = () => {
                         <div key={sponsorType.type} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-2">
                             {sponsorType.items.map((sponsor) => (
                                 <div key={sponsor.id} className="relative">
-                                    {/* Sponsor Card */}
-                                    <motion.div
-                                        whileHover={{ scale: 1.02 }}
-                                        className="aspect-square bg-[#111111] rounded-md overflow-hidden flex items-center justify-center border border-zinc-900 relative"
-                                    >
-                                        {/* Logo */}
-                                        <div className="w-16 h-16 md:w-30 md:h-30">
-                                            <svg viewBox="0 0 100 100" className="w-full h-full">
-                                                <path
-                                                    d="M30,0 C30,0 70,0 70,0 C70,0 100,30 100,30 C100,30 100,70 100,70 C100,70 70,100 70,100 C70,100 30,100 30,100 C30,100 0,70 0,70 C0,70 0,30 0,30 C0,30 30,0 30,0"
-                                                    fill="white"
-                                                />
-                                            </svg>
-                                        </div>
-                                        
-                                        {/* Sponsor Type Label - positioned at bottom left */}
-                                        <div className="absolute bottom-3 left-3">
-                                            <div className="flex items-center gap-1 bg-white text-black px-3 py-1 rounded-full text-xs md:text-lg font-medium font-malinton">
-                                                <span className="text-purple-400">✦</span>
-                                                <span>{sponsorType.type}</span>
+                                    {/* Sponsor Card - Wrap with link if confirmed */}
+                                    {sponsor.confirmed ? (
+                                        <motion.a
+                                            href={sponsor.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            whileHover={{ scale: 1.02 }}
+                                            className="aspect-square bg-[#111111] rounded-md overflow-hidden flex items-center justify-center border border-zinc-900 relative block"
+                                        >
+                                            {/* Logo */}
+                                            <div className="w-16 h-16 md:w-30 md:h-30">
+                                                <svg viewBox="0 0 100 100" className="w-full h-full">
+                                                    <path
+                                                        d="M30,0 C30,0 70,0 70,0 C70,0 100,30 100,30 C100,30 100,70 100,70 C100,70 70,100 70,100 C70,100 30,100 30,100 C30,100 0,70 0,70 C0,70 0,30 0,30 C0,30 30,0 30,0"
+                                                        fill="white"
+                                                    />
+                                                </svg>
                                             </div>
-                                        </div>
-                                    </motion.div>
+                                            
+                                            {/* Sponsor Type Label - positioned at bottom left */}
+                                            <div className="absolute bottom-3 left-3">
+                                                <div className="flex items-center gap-1 bg-white text-black px-3 py-1 rounded-full text-xs md:text-lg font-medium font-malinton">
+                                                    <span className="text-purple-400">✦</span>
+                                                    <span>{sponsorType.type}</span>
+                                                </div>
+                                            </div>
+                                        </motion.a>
+                                    ) : (
+                                        // Unconfirmed sponsor - locked state with blur effect
+                                        <motion.div
+                                            whileHover={{ scale: 1.02 }}
+                                            className="aspect-square bg-[#111111] rounded-md overflow-hidden flex flex-col items-center justify-center border border-zinc-900 relative backdrop-blur-sm"
+                                        >
+                                            {/* Blurred overlay */}
+                                            <div className="absolute inset-0 bg-black/40 backdrop-blur-[3px] z-10"></div>
+                                            
+                                            {/* Locked icon - above the blur */}
+                                            <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center relative z-20">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                                </svg>
+                                            </div>
+                                            
+                                            {/* To Be Announced text - above the blur */}
+                                            <p className="text-gray-300 font-medium mt-2 text-center px-2 relative z-20">To Be Announced</p>
+                                            
+                                            {/* Placeholder logo - behind the blur */}
+                                            <div className="absolute inset-0 flex items-center justify-center opacity-30">
+                                                <div className="w-16 h-16 md:w-30 md:h-30">
+                                                    <svg viewBox="0 0 100 100" className="w-full h-full">
+                                                        <path
+                                                            d="M30,0 C30,0 70,0 70,0 C70,0 100,30 100,30 C100,30 100,70 100,70 C100,70 70,100 70,100 C70,100 30,100 30,100 C30,100 0,70 0,70 C0,70 0,30 0,30 C0,30 30,0 30,0"
+                                                            fill="white"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            
+                                            {/* Sponsor Type Label - positioned at bottom left, above the blur */}
+                                            <div className="absolute bottom-3 left-3 z-20">
+                                                <div className="flex items-center gap-1 bg-black/60 border border-white/20 text-white/70 px-3 py-1 rounded-full text-xs md:text-lg font-medium font-malinton backdrop-blur-sm">
+                                                    <span className="text-purple-400/70">✦</span>
+                                                    <span>Coming Soon</span>
+                                                </div>
+                                            </div>
+                                        </motion.div>
+                                    )}
                                 </div>
                             ))}
                         </div>
@@ -152,14 +187,23 @@ const SponsorSection = () => {
                             We value the support of our sponsors and<br />
                             offer various partnership levels
                         </p>
-                        <motion.button
+                        <motion.a
                             whileHover={{ scale: 1.05 }}
                             className="flex items-center gap-2 text-white border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white hover:text-black transition-colors w-fit font-malinton"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@uxmm.org"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => {
+                                if (navigator.userAgent.toLowerCase().includes("android")) {
+                                    e.preventDefault();
+                                    window.location.href = "intent://compose?to=info@uxmm.org#Intent;scheme=mailto;package=com.google.android.gm;end;";
+                                }
+                            }}
                         >
                             <span className="text-purple-400">✦</span>
                             Apply for Sponsorship
                             <span className="ml-1">→</span>
-                        </motion.button>
+                        </motion.a>
                     </div>
                 </div>
             </div>

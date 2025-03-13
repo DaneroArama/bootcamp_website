@@ -372,11 +372,13 @@ export const Home = () => {
                             }}
                         />
                         <h3 className="text-xl mb-16 font-gothic relative z-10">SPEAKERS</h3>
-                        <div className="flex relative z-10">
-                            <AnimatedAvatar items={mentor}/>
+                        <div className="flex flex-col gap-4">
+                            <div className="flex flex-row ">
+                                <AnimatedAvatar items={mentor}/>
+                            </div>
+                            <p className="text-xl font-malinton relative z-10">Ko Lamin & Ko Harry</p>
                         </div>
-                        <p className="text-xl font-malinton relative z-10">Ko Lamin & Ko Harry</p>
-                    </motion.div>
+                        </motion.div>
 
                     {/* Opportunities Section */}
                     <motion.div

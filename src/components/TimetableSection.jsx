@@ -121,7 +121,7 @@ const TimetableSection = () => {
                 className="bg-black text-white px-6 py-3 rounded-full flex items-center space-x-2"
             >
                 <span className="text-purple-400">✧</span>
-                <span>Go Now</span>
+                <span>Check Now</span>
                 <motion.span 
                     initial={false}
                     animate={{ rotate: showTimetable ? 90 : 0 }}

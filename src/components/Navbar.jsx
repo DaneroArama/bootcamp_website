@@ -92,8 +92,8 @@ const Navbar = () => {
                             onClick={() => window.open('#', '_blank')} // Replace '#' with your registration link
                         >
                             <span className="text-purple-400">✧</span>
-                            <span>Register Now</span>
-                            <span>→</span>
+                            <span>Registration Opens Soon!</span>
+                            <span></span>
                         </motion.button>
                     </div>
 
@@ -166,8 +166,8 @@ const Navbar = () => {
                                 onClick={() => window.open('#', '_blank')} // Replace '#' with your registration link
                             >
                                 <span className="text-purple-400">✧</span>
-                                <span>Register Now</span>
-                                <span>→</span>
+                                <span>Registration Opens Soon!</span>
+                                <span></span>
                             </motion.button>
                         </div>
                     </motion.div>

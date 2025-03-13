@@ -140,27 +140,6 @@ const TrainerSection = () => {
             image: ThazinWin // Add mentor image path here
         },
         {
-            name: "SomeOne",
-            role: "TRAINER",
-            bio: "Bio will be revealed soon.",
-            confirmed: false,
-            image: ""
-        },
-        {
-            name: "SomeOne",
-            role: "TRAINER",
-            bio: "Bio will be revealed soon.",
-            confirmed: false,
-            image: ""
-        },
-        {
-            name: "SomeOne",
-            role: "TRAINER",
-            bio: "Bio will be revealed soon.",
-            confirmed: false,
-            image: ""
-        },
-        {
             name: "Ma Ei Thaw Zin",
             role: "TRAINER ASSISTANT",
             bio: "Ei Thaw Zin is a creative and passionate UX/UI Designer with a knack for turning complex ideas into simple, innovative, and user-friendly digital products. Currently working at KBZ Bank, she specializes in transforming complex financial processes into intuitive designs that enhance usability and innovation.\n" +
@@ -200,27 +179,6 @@ const TrainerSection = () => {
                 "သူမ၏ ပရော်ဖက်ရှင်နယ်အလုပ်တာဝန်များအပြင်၊ WAI Myanmar နှင့် Google Developer Group Yangon တို့တွင် စေတနာ့ဝန်ထမ်းအဖြစ် ပါဝင်လှုပ်ရှားလျက်ရှိပြီး၊ မြန်မာနိုင်ငံရှိ IT Community ၏ ကြီးထွားဖွံ့ဖြိုးရေးအတွက် ကူညီအားဖြည့်ပေးနေသူတစ်ဦးလည်း ဖြစ်သည်။",
             confirmed: true,
             image: SeintSinsarLwin
-        },
-        {
-            name: "SomeOne",
-            role: "TRAINER ASSISTANT",
-            bio: "Bio will be revealed soon.",
-            confirmed: false,
-            image: ""
-        },
-        {
-            name: "SomeOne",
-            role: "TRAINER ASSISTANT",
-            bio: "Bio will be revealed soon.",
-            confirmed: false,
-            image: ""
-        },
-        {
-            name: "SomeOne",
-            role: "TRAINER ASSISTANT",
-            bio: "Bio will be revealed soon.",
-            confirmed: false,
-            image: ""
         },
     ];
 

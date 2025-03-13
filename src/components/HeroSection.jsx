@@ -197,8 +197,8 @@ const HeroSection = () => {
                         className="mt-4 bg-transparent text-white px-8 py-3 rounded-full border border-white flex items-center space-x-2 hover:bg-white hover:text-black"
                     >
                         <span className="text-purple-400">✦</span>
-                        <span className="mx-2">Register Now</span>
-                        <span>→</span>
+                        <span className="mx-2">Registration Opens Soon!</span>
+                        <span></span>
                     </motion.button>
                 </motion.div>
             </div>
