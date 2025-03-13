@@ -212,7 +212,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-red-300 p-7 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        className="bg-red-500 p-7 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
                         onMouseMove={redGhostMagnetic.handleMouseMove}
                         onMouseLeave={redGhostMagnetic.handleMouseLeave}
                     >
@@ -325,7 +325,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-purple-200 p-7 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        className="bg-purple-300 p-7 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
                         onMouseMove={mentorGhostMagnetic.handleMouseMove}
                         onMouseLeave={mentorGhostMagnetic.handleMouseLeave}
                     >
@@ -357,7 +357,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-purple-500 p-7 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        className="bg-purple-600 p-7 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
                         onMouseMove={speakerGhostMagnetic.handleMouseMove}
                         onMouseLeave={speakerGhostMagnetic.handleMouseLeave}
                     >

@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useRef } from "react";
 import White from "../img/Second Icon/White.svg";
-
+import Black from "../img/Second Icon/BlackStar.svg";
 const SpeakerSection = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const speakersPerPage = 3;
@@ -10,9 +10,9 @@ const SpeakerSection = () => {
     const speakers = [
         {
             name: "Ye Lin Aung",
-            position: "??????",
+            position: "Deputy Chief Executive Officer",
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
-            confirmed: false,
+            confirmed: true,
             image: "" // Add speaker image path here
         },
         {
@@ -134,13 +134,14 @@ const SpeakerSection = () => {
                                     </p>
                                 </div>
                                 <div className="pb-3">
-                                <button
-                                    className={`bg-white px-4 py-1.5 md:px-10 md:py-2 rounded-full flex items-center gap-2 text-sm md:text-base ${!speaker.confirmed ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                    disabled={!speaker.confirmed}
-                                >
-                                    <span>Speaker Details </span>
-                                    <span>↓</span>
-                                </button>
+                                    <button
+                                        className={`border-2 border-black px-7 py-2 md:py-4 rounded-full flex flex-row items-center gap-1 text-sm md:text-base whitespace-nowrap w-fit overflow-hidden ${!speaker.confirmed ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                        disabled={!speaker.confirmed}
+                                    >
+                                        <img src={Black} alt="Black Star" className="w-4 h-4 flex-shrink-0" />
+                                        <span className="font-malinton">Speaker Details</span>
+                                        <span className="font-malinton flex-shrink-0">↓</span>
+                                    </button>
                                 </div>
                             </div>
                             {/* Full-width horizontal line */}
