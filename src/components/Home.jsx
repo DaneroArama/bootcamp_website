@@ -182,7 +182,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-emerald-400 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        className="bg-emerald-400 p-7 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
                         onMouseMove={greenGhostMagnetic.handleMouseMove}
                         onMouseLeave={greenGhostMagnetic.handleMouseLeave}
                     >
@@ -196,9 +196,9 @@ export const Home = () => {
                                 y: greenGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">Think, Sprint, Design</h3>
+                        <h3 className="text-xl mb-24 font-gothic relative z-10">Think, Sprint, Design</h3>
                         <div className="relative z-10">
-                            <p className="text-2xl font-semibold font-malinton">1st Myanmar In-person Bootcamp</p>
+                            <p className="text-3xl font-semibold font-malinton">1st Myanmar In-person Bootcamp</p>
                             <p className="font-malinton text-xl">2025</p>
                         </div>
                     </motion.div>
@@ -212,7 +212,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-red-300 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        className="bg-red-300 p-7 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
                         onMouseMove={redGhostMagnetic.handleMouseMove}
                         onMouseLeave={redGhostMagnetic.handleMouseLeave}
                     >
@@ -226,9 +226,17 @@ export const Home = () => {
                                 y: redGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-3xl font-bold mb-1 font-gothic relative z-10">LOCATION</h3>
+                        <h3 className="text-xl mb-1 font-gothic relative z-10">LOCATION</h3>
                         <div className="relative z-10">
-                            <p className="text-2xl font-semibold mt-8 mb-0 font-malinton">CTZPay Office</p>
+                            <LinkPreview
+                                className="text-3xl font-semibold mt-8 mb-0 font-malinton"
+                                url="https://maps.app.goo.gl/noQkfVBmHF4yjzwC8"
+                                imageSrc={YIC}
+                                isStatic={true}
+                            >
+                                <p>CTZPay Office</p>
+                            </LinkPreview>
+
                             <LinkPreview
                                 url="https://maps.app.goo.gl/noQkfVBmHF4yjzwC8"
                                 className="font-malinton text-lg"
@@ -249,7 +257,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-blue-500 p-10 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        className="bg-blue-500 p-7 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
                         onMouseMove={blueGhostMagnetic.handleMouseMove}
                         onMouseLeave={blueGhostMagnetic.handleMouseLeave}
                     >
@@ -263,9 +271,9 @@ export const Home = () => {
                                 y: blueGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">DATE & TIME</h3>
+                        <h3 className="text-xl mb-6 font-gothic relative z-10">DATE & TIME</h3>
                         <div className="relative z-10">
-                            <p className="text-2xl font-semibold font-malinton">April 5th to 6th</p>
+                            <p className="text-3xl font-semibold font-malinton">April 5th to 6th</p>
                             <p className="font-malinton text-xl">9am to 4pm</p>
                         </div>
                     </motion.div>
@@ -279,7 +287,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-[#F5B041] p-10 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        className="bg-[#F5B041] p-7 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
                         onMouseMove={yellowGhostMagnetic.handleMouseMove}
                         onMouseLeave={yellowGhostMagnetic.handleMouseLeave}
                     >
@@ -293,9 +301,9 @@ export const Home = () => {
                                 y: yellowGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">Register</h3>
+                        <h3 className="text-xl mb-6 font-gothic relative z-10">Register</h3>
                         <div className="relative z-10">
-                            <p className="text-2xl font-semibold mb-6 font-malinton">Stay Tuned</p>
+                            <p className="text-3xl font-semibold mb-6 font-malinton">Stay Tuned</p>
                             <p className="font-malinton text-xl">Will Be Announced</p>
                         </div>
                     </motion.div>
@@ -317,7 +325,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-purple-200 p-8 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        className="bg-purple-200 p-7 border-black border-4 flex flex-col justify-between cursor-pointer relative overflow-hidden"
                         onMouseMove={mentorGhostMagnetic.handleMouseMove}
                         onMouseLeave={mentorGhostMagnetic.handleMouseLeave}
                     >
@@ -331,7 +339,7 @@ export const Home = () => {
                                 y: mentorGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">TRAINERS</h3>
+                        <h3 className="text-xl mb-6 font-gothic relative z-10">TRAINERS</h3>
                         <div className="flex flex-col gap-4">
                             <div className="flex flex-row ">
                                 <AnimatedAvatar items={mentor}/>
@@ -349,7 +357,7 @@ export const Home = () => {
                         }}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="bg-purple-500 p-8 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                        className="bg-purple-500 p-7 border-black border-4 text-white flex flex-col justify-between cursor-pointer relative overflow-hidden"
                         onMouseMove={speakerGhostMagnetic.handleMouseMove}
                         onMouseLeave={speakerGhostMagnetic.handleMouseLeave}
                     >
@@ -363,7 +371,7 @@ export const Home = () => {
                                 y: speakerGhostMagnetic.y
                             }}
                         />
-                        <h3 className="text-3xl font-bold mb-6 font-gothic relative z-10">SPEAKERS</h3>
+                        <h3 className="text-xl  mb-6 font-gothic relative z-10">SPEAKERS</h3>
                         <div className="flex relative z-10">
                             <AnimatedAvatar items={mentor}/>
                         </div>
