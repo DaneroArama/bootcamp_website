@@ -150,9 +150,9 @@ const SponsorSection = () => {
                                             
                                             {/* Sponsor Type Label - positioned at bottom left, above the blur */}
                                             <div className="absolute bottom-3 left-3 z-20">
-                                                <div className="flex items-center gap-1 bg-black/60 border border-white/20 text-white/70 px-3 py-1 rounded-full text-xs md:text-lg font-medium font-malinton backdrop-blur-sm">
-                                                    <span className="text-purple-400/70">✦</span>
-                                                    <span>Coming Soon</span>
+                                                <div className="flex items-center gap-1 bg-black/60 border border-white/20 text-white/70 px-3 py-1 rounded-full text-sm md:text-xs font-medium font-malinton backdrop-blur-sm">
+                                                    <span className="text-purple-400/70 font-malinton">✦</span>
+                                                    <span className="font-malinton">Coming Soon</span>
                                                 </div>
                                             </div>
                                         </motion.div>
