@@ -23,7 +23,7 @@ const App = () => {
                     opacity={0.5}
                     squareSize={150}
                     hoverFillColor="rgba(245, 176, 65, 0.1)"
-                    className="h-[500vh] w-full" // Increased height to ensure coverage
+                    className="h-[1000vh] w-full" // Increased height to ensure coverage
                 />
             </div>
 
