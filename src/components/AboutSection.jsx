@@ -76,7 +76,7 @@ export const AboutSection = () => {
   };
 
   return (
-      <div className="min-h-screen bg-transparent p-0 md:p-10">
+      <div className="min-h-screen bg-transparent p-0 md:p-10 overflow-hidden">
 
         {/* Text Section */}
         <div className="w-full px-4 md:px-12 py-12">

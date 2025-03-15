@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useRef, useEffect } from "react";
 import Barry from "../img/Mentors/Aye Chan Pyae.webp";
 import Thiri from "../img/Organizers/thiri.webp";
+import Mayve from "../img/Organizers/May Thin Khine (Mayve).jpg";
 import GreenStar from "../img/Second Icon/Green Star.svg";
 
 const OrganizerSection = () => {
@@ -48,29 +49,41 @@ const OrganizerSection = () => {
 
     const trainers = [
         {
-            name: "Ma Thiri Phyo Naing",
+            name: "Ma May Thin Khine (Mayve)",
             role: "PROGRAM MANAGER",
-            bio: "Thiri Phyo Naing is a passionate UX/UI designer with a talent for creating simple, user-friendly digital product experiences. With experience in agency and job platform design, she blends creativity, problem-solving, and empathy to craft impactful designs.\n" +
+            bio: "Ma May Thin Khine (Mayve), a Program Manager of Think, Sprint, Design! Bootcamp has over three years of experience in the UI/UX field. She currently works as a Senior UI/UX Designer at a Cambodia-based 3D Animation and Game Development Company, specializing in crafting immersive and user-friendly game UI designs. Beyond her design work, she is passionate about fostering learning and collaboration within the design community through event organization.\n" +
                 "\n" +
-                "Her journey began at Startup Weekend Yangon 2022, where she showcased her skills and built valuable connections, leading to her first role as a UX/UI designer at Logy, a design agency startup. In December 2023, she returned to Startup Weekend Yangon as a finalist, impressing with her creative thinking and presentation skills. Thiri's dedication to innovation was further recognized when she won first prize in the Youth Innovation Challenge, where her team excelled in problem-solving and creative ideas.\n" +
+                "In addition to her expertise in game UI design, Mayve has practical experience as a UI Developer, where she honed her skills in crafting visually engaging and highly functional user interfaces. She also has a strong background in designing for ERP systems, demonstrating her versatility in developing intuitive solutions for complex digital environments.\n" +
                 "\n" +
-                "Now, Thiri is a Volunteering and Coordination Specialist at UX Myanmar (UXMM), she dreams of making UX/UI design a strong and recognized field in Myanmar and inspiring the next generation of designers. With her passion for design and commitment to community, Thiri Phyo Naing is making a positive impact on Myanmar's UI/UX design industry.",
+                "Her commitment to community growth and innovation extends to her role as a Coordination Specialist at UXMM, where she plays a key part in organizing and streamlining design-related initiatives. Always eager to share her knowledge and insights, she welcomes any questions about the Bootcamp program or her work in the field.\n" +
+                "\n" +
+                "Contact - 09422846284",
             confirmed: true,
-            image: Thiri,
+            image: Mayve,
             contacts: {
-                email: "mayve@uxmm.org",
-                linkedin: "https://linkedin.com/in/mayve"
+                email: "graelynmaeve1198@gmail.com",
+                linkedin: "https://www.linkedin.com/in/may-thin-khine-798351201/"
             }
         },
         {
-            name: "Ma May Thin Khine (Mayve)",
+            name: "Ma Thiri Phyo Naing",
             role: "PROGRAM MANAGER",
-            bio: "Hehe I don't know anything yet",
+            bio: "မသီရိဖြိုးနိုင်ဟာဆိုရင် UXMM ရဲ့ ယခုလက်ရှိMember တစ်ဦးဖြစ်တဲ့အပြင် အတွေ့အကြုံတစ်နှစ်ကျော် နှစ်နှစ်နီးပါးရှိတဲ့ တက်ကြွတဲ့ UX/UI Designer တစ်ယောက်ဖြစ်ပြီး အခုလက်ရှိမှာတော့  MyJobs  Myanmar မှာလုပ်ကိုင်လျက်ရှိနေပါတယ်။ သူမက Userတွေအတွက် experience ကောင်းမွန်တဲ့ product တွေကို ဖန်တီးရတာသဘောကျနှစ်သက်သူ ဖြစ်ပြီးတော့  Enterprenurship, Business  နဲ့ Technology ပိုင်းဆိုင်ရာ Startup Weekend Yangonလို ပြိုင်ပွဲမျိုးတွေမှာလဲ ပါဝင်ယှဉ်ပြိုင်ခဲ့ဖူးတဲ့အပြင် Youth Innovation Challenge ပြိုင်ပွဲမှာလဲ 1st Runner Up ကိုရရှိခဲ့သူတစ်ဦးဖြစ်ပါတယ်။ ဒါ့အပြင် သူမက သူမရဲ့အသက် ၁၈နှစ်ကတည်းက Community အတွက်ပြုလုပ်တဲ့ပွဲတွေမှာဆိုရင်လဲ အမြဲလိုလိုတစ်ထောင့်တစ်နေရာကနေ ပါဝင်ကူညီပေးဖို စိတ်အားထက်သန် တက်ကြွတဲ့သူတစ်ဦးဆိုရင်လဲမမှားပါဘူး။ Spaceship to UXUIverse Mission 001 : Exploring the UX/UI Cosmoses, From Idea to Market: Networking the innovation and enterpreneurship Event, AWS Community Day Myanmar 2024, DevFest 2024, Empowerment Exchange Event, Startup Weekend Mandalay နဲ့ Think, Sprint, Design! Bootcamp တိုဟာဆိုရင် UX/UI Designer Journey ကိုလျှောက်လှမ်းနေရင်း သူမပါဝင်ပေးနိုင်ခဲ့တဲ့ Community ပွဲတွေပဲဖြစ်ပါတယ်။\n" +
+                "\n" +
+                "Ma Thiri Phyo Naing is a dedicated UX/UI Designer with over one years of experience, currently shaping digital experiences at MyJobs Myanmar. As a member of UXMM, she actively contributes to the UX/UI community, sharing her knowledge and passion for great user experiences.\n" +
+                "\n" +
+                "Beyond her professional role, Thiri has immersed herself in various competitions, including Startup Weekend Yangon, Entrepreneurship, Business and Technology, and was recognized as the 1st Runner-Up in the Youth Innovation Challenge. \n" +
+                "\n" +
+                "Since the age of 18, she has been an enthusiastic supporter of community events, engaging in impactful initiatives such as Spaceship to UXUIverse Mission 001, From Idea to Market: Networking the Innovation and Entrepreneurship Event, AWS Community Day Myanmar 2024, DevFest 2024, Empowerment Exchange Event, Startup Weekend Mandalay, and Think, Sprint, Design! Bootcamp.\n" +
+                "\n" +
+                "With a deep passion for innovation and collaboration, Thiri continues to explore, learn, and contribute to the ever-evolving UX/UI landscape. She dreams of making UX/UI design a strong and recognized field in Myanmar and inspiring the next generation of designers. With her passion for design and commitment to community, Thiri Phyo Naing is making a positive impact on Myanmar's UX/UI design industry.\n" +
+                "\n" +
+                "Contact - 09884735005",
             confirmed: true,
-            image: Barry,
+            image: Thiri,
             contacts: {
-                email: "mayve@uxmm.org",
-                linkedin: "https://linkedin.com/in/mayve"
+                email: "thiriphyon@gmail.com",
+                linkedin: "https://www.linkedin.com/in/thiri-phyo-naing-naing-7b478b274/"
             }
         },
     ];
@@ -183,7 +196,12 @@ const OrganizerSection = () => {
                                         {trainer.confirmed && trainer.contacts && (
                                             <div className="flex items-center gap-3">
                                                 {trainer.contacts.email && (
-                                                    <a href={`mailto:${trainer.contacts.email}`} className="text-gray-400 hover:text-white transition-colors">
+                                                    <a 
+                                                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=${trainer.contacts.email}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-gray-400 hover:text-white transition-colors"
+                                                    >
                                                         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                         </svg>
@@ -279,7 +297,12 @@ const OrganizerSection = () => {
                                                 {selectedOrganizer.contacts && (
                                                     <div className="flex items-center gap-2">
                                                         {selectedOrganizer.contacts.email && (
-                                                            <a href={`mailto:${selectedOrganizer.contacts.email}`} className="text-gray-400 hover:text-white transition-colors">
+                                                            <a 
+                                                                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${selectedOrganizer.contacts.email}`}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="text-gray-400 hover:text-white transition-colors"
+                                                            >
                                                                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                                 </svg>
