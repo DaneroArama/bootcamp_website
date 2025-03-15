@@ -102,7 +102,7 @@ const OrganizerSection = () => {
     };
 
     return (
-        <section className="w-full md:w-[80%] mx-auto overflow-hidden">
+        <section className="w-full md:w-[80%] mx-auto overflow-hidden py-8">
             {/* Black Header Section */}
             <div ref={titleRef} className="bg-black p-4 md:p-6 flex items-center border-white border-4">
                 <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Program Manager List</h2>
@@ -216,7 +216,7 @@ const OrganizerSection = () => {
                                                         rel="noopener noreferrer"
                                                         className="text-gray-400 hover:text-white transition-colors"
                                                     >
-                                                        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                                                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                                                         </svg>
                                                     </a>
@@ -291,14 +291,23 @@ const OrganizerSection = () => {
                                 <div className="flex-1 flex flex-col p-4 h-full">
                                     {/* Header section remains the same */}
                                     <div className="flex justify-between items-start mb-4">
-                                        <div>
-                                            <div className="flex items-center gap-3 mb-2">
-                                                <h2 className="text-white text-2xl font-bold">{selectedOrganizer.name}</h2>
+                                        <div className="w-full">
+                                            {/* Name */}
+                                            <h2 className="text-white text-2xl font-bold mb-2">{selectedOrganizer.name}</h2>
+                                            
+                                            {/* Role and Contact Icons Row */}
+                                            <div className="flex justify-between items-center w-full">
+                                                {/* Role Badge */}
+                                                <div className={`inline-block px-3 py-1 rounded-full text-sm border ${getRoleBadgeColor(selectedOrganizer.role)}`}>
+                                                    <span className={getRoleColor(selectedOrganizer.role)}>
+                                                        {selectedOrganizer.role}
+                                                    </span>
+                                                </div>
+
+                                                {/* Contact Icons */}
                                                 {selectedOrganizer.contacts && (
-                                                    <div className="flex items-center gap-2">
-                                                        
-                                                        {/* Contact Icons */}
-                                                        {/* Phone Icon in Modal */}
+                                                    <div className="flex items-center gap-3">
+                                                        {/* Phone Icon */}
                                                         <button
                                                             onClick={() => {
                                                                 navigator.clipboard.writeText(selectedOrganizer.contacts.phone);
@@ -310,13 +319,12 @@ const OrganizerSection = () => {
                                                             </svg>
                                                         </button>
 
-                                                        {/* Email Icon in Modal */}
+                                                        {/* Email Icon */}
                                                         {selectedOrganizer.contacts.email && (
-                                                            <a
-                                                                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${selectedOrganizer.contacts.email}`}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="text-gray-400 hover:text-white transition-colors"
+                                                            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${selectedOrganizer.contacts.email}`} 
+                                                               target="_blank" 
+                                                               rel="noopener noreferrer"
+                                                               className="text-gray-400 hover:text-white transition-colors"
                                                             >
                                                                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -324,13 +332,12 @@ const OrganizerSection = () => {
                                                             </a>
                                                         )}
 
-                                                        {/* LinkedIn Icon in Modal */}
+                                                        {/* LinkedIn Icon */}
                                                         {selectedOrganizer.contacts.linkedin && (
-                                                            <a
-                                                                href={selectedOrganizer.contacts.linkedin}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="text-gray-400 hover:text-white transition-colors"
+                                                            <a href={selectedOrganizer.contacts.linkedin}
+                                                               target="_blank"
+                                                               rel="noopener noreferrer"
+                                                               className="text-gray-400 hover:text-white transition-colors"
                                                             >
                                                                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                                                                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -340,24 +347,17 @@ const OrganizerSection = () => {
                                                     </div>
                                                 )}
                                             </div>
-                                            {/* Role Badge */}
-                                            <div className={`inline-block px-3 py-1 rounded-full text-sm border ${getRoleBadgeColor(selectedOrganizer.role)} mb-2`}>
-                                                <span className={getRoleColor(selectedOrganizer.role)}>
-                                                    {selectedOrganizer.role}
-                                                </span>
-                                            </div>
                                         </div>
 
                                         {/* Close button */}
                                         <button
                                             onClick={closeBioModal}
-                                            className="text-gray-400 hover:text-white"
+                                            className="text-gray-400 hover:text-white ml-4"
                                         >
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                             </svg>
                                         </button>
-
                                     </div>
 
                                     {/* Bio Content - Scrollable with fixed height */}
