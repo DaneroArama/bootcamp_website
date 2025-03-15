@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-
+import CTZPay from "../img/Sponsors/CTZPay.png";
+import TintTint from "../img/Sponsors/Tint Tint.JPG";
+import Sponsors from "../img/Second Icon/Sponsor.svg";
 const SponsorSection = () => {
     // Updated sponsors data structure with confirmed status and links
     const sponsors = [
         {
-            type: "Lunch Sponsor",
+            type: "Venue Sponsor",
             items: [
-                { id: 1, logo: "", name: "Sponsor 1", confirmed: false, link: "https://example.com/sponsor1" },
-                { id: 2, logo: "", name: "Sponsor 2", confirmed: false, link: "https://example.com/sponsor2" },
+                { id: 1, logo: CTZPay, name: "CTZPay", confirmed: true, link: "https://ctzpay.com/" },
+                { id: 2, logo: TintTint, name: "Tint Tint", confirmed: false, link: "" },
                 { id: 3, logo: "", name: "Sponsor 3", confirmed: false, link: "" },
                 { id: 4, logo: "", name: "Sponsor 4", confirmed: false, link: "" },
             ]
@@ -30,7 +32,7 @@ const SponsorSection = () => {
 
                         {/* Floating company bubbles - positioned to overlap with title */}
                         <motion.div
-                            className="absolute -top-6 left-20 z-0 hidden md:block"
+                            className="absolute -top-8 left-20 z-0 hidden md:block"
                             initial={{ rotate: -20 }}
                             animate={{
                                 y: [0, -5, 0],
@@ -38,12 +40,12 @@ const SponsorSection = () => {
                             }}
                         >
                             <div className="bg-[#EBFF00] px-6 py-2 rounded-full text-black font-medium transform">
-                                Company 1
+                                CTZPay
                             </div>
                         </motion.div>
 
                         <motion.div
-                            className="absolute -top-6 left-[40%] z-0 hidden md:block"
+                            className="absolute -top-8 left-[45%] z-0 hidden md:block"
                             initial={{ rotate: 20 }}
                             animate={{
                                 y: [0, -8, 0],
@@ -51,7 +53,7 @@ const SponsorSection = () => {
                             }}
                         >
                             <div className="bg-pink-300 px-6 py-2 rounded-full text-black font-medium transform">
-                                Company 1
+                                Coming Soon
                             </div>
                         </motion.div>
 
@@ -64,7 +66,7 @@ const SponsorSection = () => {
                             }}
                         >
                             <div className="bg-orange-300 px-6 py-2 rounded-full text-black font-medium transform">
-                                Company 1
+                                Coming Soon
                             </div>
                         </motion.div>
 
@@ -77,7 +79,7 @@ const SponsorSection = () => {
                             }}
                         >
                             <div className="bg-green-800 px-6 py-2 rounded-full text-[#EBFF00] font-medium transform">
-                                Company 1
+                                Coming Soon
                             </div>
                         </motion.div>
                         {/* Other floating bubbles... */}
@@ -100,20 +102,19 @@ const SponsorSection = () => {
                                             className="aspect-square bg-[#111111] rounded-md overflow-hidden flex items-center justify-center border border-zinc-900 relative block"
                                         >
                                             {/* Logo */}
-                                            <div className="w-16 h-16 md:w-30 md:h-30">
-                                                <svg viewBox="0 0 100 100" className="w-full h-full">
-                                                    <path
-                                                        d="M30,0 C30,0 70,0 70,0 C70,0 100,30 100,30 C100,30 100,70 100,70 C100,70 70,100 70,100 C70,100 30,100 30,100 C30,100 0,70 0,70 C0,70 0,30 0,30 C0,30 30,0 30,0"
-                                                        fill="white"
-                                                    />
-                                                </svg>
+                                            <div className="w-auto h-auto md:w-auto md:h-auto flex items-center justify-center">
+                                                <img 
+                                                    src={sponsor.logo} 
+                                                    alt={sponsor.name}
+                                                    className="w-full h-full object-cover"
+                                                />
                                             </div>
                                             
-                                            {/* Sponsor Type Label - positioned at bottom left */}
+                                            {/* Sponsor Type Label */}
                                             <div className="absolute bottom-3 left-3">
-                                                <div className="flex items-center gap-1 bg-white text-black px-3 py-1 rounded-full text-xs md:text-lg font-medium font-malinton">
+                                                <div className="border-2 border-black flex items-center gap-1 bg-white text-black hover:bg-black hover:text-white transition duration-75 px-4 py-2 rounded-full text-lg md:text-base font-medium  font-malinton">
                                                     <span className="text-purple-400">✦</span>
-                                                    <span>{sponsorType.type}</span>
+                                                    <span className="font-malinton">{sponsorType.type}</span>
                                                 </div>
                                             </div>
                                         </motion.a>
@@ -138,13 +139,8 @@ const SponsorSection = () => {
                                             
                                             {/* Placeholder logo - behind the blur */}
                                             <div className="absolute inset-0 flex items-center justify-center opacity-30">
-                                                <div className="w-16 h-16 md:w-30 md:h-30">
-                                                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                                                        <path
-                                                            d="M30,0 C30,0 70,0 70,0 C70,0 100,30 100,30 C100,30 100,70 100,70 C100,70 70,100 70,100 C70,100 30,100 30,100 C30,100 0,70 0,70 C0,70 0,30 0,30 C0,30 30,0 30,0"
-                                                            fill="white"
-                                                        />
-                                                    </svg>
+                                                <div className="w-50 h-50 md:w-30 md:h-30 items-center justify-center">
+                                                        <img className="w-full h-full " src={Sponsors}/>
                                                 </div>
                                             </div>
                                             

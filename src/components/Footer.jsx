@@ -71,7 +71,7 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     whileHover={{ scale: 1.2, rotate: 5 }}
-                                    className="bg-white/5 backdrop-blur-sm p-3 rounded-full hover:bg-white/20 transition-all duration-300 border border-white/10 text-white hover:text-white"
+                                    className="flex justify-center items-center bg-white/5 backdrop-blur-sm p-3 w-12 rounded-full hover:bg-white/20 transition-all duration-300 border border-white/10 text-white hover:text-white"
                                     aria-label={social.name}
                                 >
                                     <i className={`${social.icon} text-lg`}></i>

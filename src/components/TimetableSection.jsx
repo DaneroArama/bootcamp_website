@@ -254,7 +254,7 @@ const TimetableSection = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5 }}
-                            className="text-center py-8 px-4"
+                            className="text-center py-6 px-4"
                         >
                             <motion.div
                                 animate={{

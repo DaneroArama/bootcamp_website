@@ -99,12 +99,12 @@ const TrainerSection = () => {
             role: "TRAINER",
             bio: "မင်းရဲထွဋ်မြတ်ဟာဆိုရင်တော့ဖြင့်  design, technology နဲ့ business တို့ရဲ့ပြဿနာတွေကိုဖြေရှင်းပေးနေတဲ့ passionate designer တစ်ဦးဖြစ်ပါတယ်။ နာမည်ကြီး Start-up company မှာ product တွေနဲ့ solution တွေဖန်တီးပေးနေသူတစ်ဦးအဖြစ် အတွေ့အကြုံရှိခဲ့ဖူးသူတစ်ဦးလည်းဖြစ်ပါတယ်။\n" +
                 "\n" +
-                "Min Ye Htet Myat is a passionate designer who specializes in solving problems at the intersection of design, technology, and business. He has experience working at a well-known start-up company, where he created products and solutions, showcasing his expertise and innovative approach.\n",
+                "Min Ye Htet Myat is a passionate designer who specializes in solving problems at the intersection of design, technology, and business. He has experience working at a well-known start-up company, where he created products and solutions, showcasing his expertise and innovative approach.",
             confirmed: true,
             image: MinYeHtutMyat
         },
         {
-            name: "Zwe Kaung Htet",
+            name: "Ko Zwe Kaung Htet",
             role: "TRAINER",
             bio: "ဇွဲကောင်းထက်ဟာဆိုရင်တော့ဖြင့် အခုလက်ရှိ စီနီယာ UI/UX Designer အနေနဲ့ Ooredoo Myanmar မှာလုပ်ကိုင်လျက်ရှိပါတယ်။ A Bank ရဲ့ Senior Designer တစ်ဦးအနေနဲ့လည်း တာဝန်ထမ်းဆောင်ခဲ့ဖူးပြီး eCommerce, POS systems, ERP Systems, Banking, Fintech နဲ့ Telecommunications ပိုင်းတွေမှာ ၆ နှစ်ကျော်အတွ့အကြုံရှိသူတစ်ဦးဖြစ်ပါတယ်။ seamless user experience တွေနဲ့ ထိရောက်တဲ့ interface တွေဖန်တီးတဲ့နေရာမှာ အထူးကျွမ်းကျင်သူတစ်ဦးဖြစ်ပါတယ်။ Community ထဲမှာလဲ လူတိုင်းအတွက်အကျိုးရှိစေမယ့် အကြံဉာဏ်တွေသာမက knowledge sharing တွေကိုပါဝေမျှလျက်ရှိပါတယ်။ \n" +
                 "\n" +
@@ -142,11 +142,9 @@ const TrainerSection = () => {
         {
             name: "Ma Ei Thaw Zin",
             role: "TRAINER ASSISTANT",
-            bio: "Ei Thaw Zin is a creative and passionate UX/UI Designer with a knack for turning complex ideas into simple, innovative, and user-friendly digital products. Currently working at KBZ Bank, she specializes in transforming complex financial processes into intuitive designs that enhance usability and innovation.\n" +
+            bio: "Multimedia design နဲ့ art အပိုင်းမှာပါထူးချွန်တဲ့ မအိသော်ဇင်ဟာဆိုရင်တော့ ဖြေရှင်းရခက်တဲ့အရာတွေရဲ့ Design Solution တွေကို ရိုးရိုးရှင်းရှင်းနဲ့ user-friendly ဖြစ်အောင် ဖန်တီးနေသူတစ်ဦးဖြစ်ပါတယ်။ လက်ရှိမှာတော့ KBZ Bank မှာ လုပ်ကိုင်နေပြီး Dinger ရဲ့ Former UX/UI Designer တစ်ဦးဖြစ်ပါတယ်။ Finetech,  LMS systems နဲ့ အခြားသော Digital Product များစွာကိုလည်းလုပ်ဆောင်ခဲ့ပြီး IT နယ်ပယ်မှာရှိတဲ့ ပွဲတွေမှာလည်း တက်တက်ကြွကြွနဲ့လုပ်အားပေးနေသူတစ်ဦးဖြစ်ပါတယ်။\n" +
                 "\n" +
-                "Prior to this, Ei Thaw Zin made her mark at Dinger, playing a key role in crafting innovative e-wallet solutions from initial sketches to final launch. As a freelancer, she has worked on diverse projects, including fintech platforms, LMS systems, and community-driven digital products, consistently bringing fresh ideas and unique perspectives.\n" +
-                "\n" +
-                "Beyond her professional work, Ei Thaw Zin explores multimedia design, art-inspired projects, and community initiatives, constantly striving for originality and innovation. She is also deeply committed to giving back to the community through IT-related volunteering, sharing her expertise, and learning from others.",
+                "Ei Thaw Zin, who is good at multimedia design and art, is creating simple and user-friendly design solutions for complex products. Currently, she is working at KBZ Bank and is a former UX/UI Designer at Dinger. She has also worked on Fintech, LMS systems, and various other digital products, and is an active volunteer to events in the IT field.",
             confirmed: true,
             image: EiThawZin
         },
@@ -161,22 +159,18 @@ const TrainerSection = () => {
         {
             name: "Ma Nwe Oo Lwin",
             role: "TRAINER ASSISTANT",
-            bio: "I am a UI/UX Designer at an Information and Technology company, focusing on creating intuitive and user-friendly experiences. With a strong interest in UX principles, I enjoy sharing knowledge and supporting others in their design journey. As a Trainer Assistant, I aim to guide participants in developing their design thinking and practical skills.\n" +
+            bio: "မနွယ်ဦးလွင်ဟာဆိုရင်တော့ IT Company တစ်ခုမှာ UX/UI Designer အဖြစ်လုပ်ကိုင်နေသူဖြစ်ပြီး, UX ကောင်းမွန်သော product များဖန်တီးရန် ကြိုးပမ်းတဲ့အပြင်, development process အဆင့်ထိ အဆင်ပြေစေရန် ပါဝင်ကူညီပေးနေသူဖြစ်ပါတယ်။Product design ပိုင်းတွင်လည်း အတွေ့အကြုံရှိပြီး, အသုံးပြုသူအတွက် သုံးလွယ်ရိုးရှင်းသည့် digital experience များဖန်တီးရန် အာရုံစိုက်လျှက်ရှိသူလည်းဖြစ်ပါတယ်။\n" +
                 "\n" +
-                "Quote - We were born to be real, not perfect.",
+                "Ma Nwe Oo Lwin is a UX/UI Designer working at an IT company. She likes to create products with excellent UX and actively contributes to ensuring a smooth development process. With experience in product design, she focuses on crafting simple and user-friendly digital experiences for users.",
             confirmed: true,
             image: NweOoLwin
         },
         {
             name: "Ma Seint Sinsar Lwin",
             role: "TRAINER ASSISTANT",
-            bio: "Seint Sinsar Lwin is a Sr. UI/UX Designer with over 4 years of experience in the UI/UX design field. She currently works at one of Myanmar’s leading local banks, where she plays a pivotal role in leading the design team to enhance the organization’s UX Maturity level. \n" +
+            bio: "မစိမ့်စဥ္စာလွင်ဟာဆိုရင်တော့ သက်တမ်း(၄)နှစ်ကျော်ရှိတဲ့ Senior UX/UI Designer တစ်ဦးဖြစ်ပါတယ်။ လက်ရှိမှာတော့ မြန့်မာထိပ်တန်းဘဏ်တစ်ခုတွင်လုပ်ကိုင်နေပြီး ဒီဇိုင်းအဖွဲ့များကို UX Maturity မြှင့်တင်ရန်ဦးဆောင်လုပ်ဆောင်လျက်ရှိပါတယ်။ WAI Myanmar နှင့် Google Developer Group Yangon ရဲ့ Volunteer တစ်ဦးဖြစ်ပြီး IT Community တိုးတက်စေရန် ကူညီအားဖြည့်ပါဝင်ပေးနေသူတစ်ဦးလည်းဖြစ်ပါတယ်။\n" +
                 "\n" +
-                "In addition to her professional role, Seint actively contributes to the broader tech community by volunteering with WAI Myanmar and Google Developer Group Yangon, helping foster growth and development within the Myanmar IT Community.\n" +
-                "\n" +
-                "Seint Sinsar Lwin သည် Sr. UI/UX Designer တစ်ဦးဖြစ်ပြီး၊ UI/UX ဒီဇိုင်းနယ်ပယ်တွင် အတွေ့အကြုံ ၄ နှစ်ကျော် ရှိသူဖြစ်သည်။ သူမသည် မြန်မာနိုင်ငံ၏ ထိပ်တန်းဘဏ်တစ်ခုတွင် လက်ရှိအလုပ်လုပ်ကိုင်နေပြီး၊ အဖွဲ့အစည်း၏ UX Maturity level မြှင့်တင်ရာတွင် ဒီဇိုင်းအဖွဲ့ကို ဦးဆောင်ကာ အဓိကအခန်းကဏ္ဍမှ ပါဝင်လျက်ရှိသည်။\n" +
-                "\n" +
-                "သူမ၏ ပရော်ဖက်ရှင်နယ်အလုပ်တာဝန်များအပြင်၊ WAI Myanmar နှင့် Google Developer Group Yangon တို့တွင် စေတနာ့ဝန်ထမ်းအဖြစ် ပါဝင်လှုပ်ရှားလျက်ရှိပြီး၊ မြန်မာနိုင်ငံရှိ IT Community ၏ ကြီးထွားဖွံ့ဖြိုးရေးအတွက် ကူညီအားဖြည့်ပေးနေသူတစ်ဦးလည်း ဖြစ်သည်။",
+                "Ma Seint Sinsar Lwin is a Senior UX/UI Designer with over 4 years of experience. Currently, she is working at one of Myanmar's top-tier banks, leading efforts to enhance UX maturity within design teams. She is also a volunteer for WAI Myanmar and Google Developer Group Yangon, actively contributing to the advancement of the IT community.",
             confirmed: true,
             image: SeintSinsarLwin
         },
@@ -394,7 +388,7 @@ const TrainerSection = () => {
                                             scrollbarWidth: 'none', 
                                             msOverflowStyle: 'none',
                                             WebkitOverflowScrolling: 'touch',
-                                            height: '30vh',
+                                            height: '40vh',
                                             minHeight: '150px',
                                             maxHeight: '50vh'
                                         }}

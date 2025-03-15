@@ -7,11 +7,11 @@ import mentor2 from "../img/Mentors/Barry.webp"; // Adjust the path as necessary
 import mentor3 from "../img/Mentors/Min Nanda Zan.webp"; // Adjust the path as necessary
 import mentor4 from "../img/Mentors/Zwekaunghtet.webp";
 import mentor5 from "../img/Mentors/Aye Chan Pyae.webp";
-import speaker1 from '../img/Logo.png'; // Adjust the path as necessary
-import speaker2 from '../img/Logo.png'; // Adjust the path as necessary
-import speaker3 from '../img/Logo.png'; // Adjust the path as necessary
-import speaker4 from '../img/Logo.png'; // Adjust the path as necessary
-import speaker5 from '../img/Logo.png'; // Adjust the path as necessary
+import speaker1 from '../img/Profile.png'; // Adjust the path as necessary
+import speaker2 from '../img/Profile.png'; // Adjust the path as necessary
+import speaker3 from '../img/Profile.png'; // Adjust the path as necessary
+import speaker4 from '../img/Profile.png'; // Adjust the path as necessary
+import speaker5 from '../img/Profile.png'; // Adjust the path as necessary
 import YIC from '../img/YIC.png';
 import BlueSquishyGhost from '../img/Cartoon mascot/BlueSquishyGhost.svg';
 import GreenGhost from '../img/Cartoon mascot/GreenGhost.svg';
@@ -29,35 +29,67 @@ const mentor = [
     {
         id: 1,
         name: "Ko Myo Maung Maung",
-        designation: "Mentor",
+        designation: "Trainer",
         image: mentor1
     },
     {
         id: 2,
         name: "Ko Khant",
-        designation: "Mentor",
+        designation: "Trainer",
         image: mentor2
    },
     {
         id: 3,
         name: "Min Nanda Zan",
-        designation: "Mentor",
+        designation: "Trainer",
         image: mentor3
     },
     {
         id: 4,
         name: "Zwe Kaung Htet",
-        designation: "Mentor",
+        designation: "Trainer",
         image: mentor4
     },
     {
         id: 5,
         name: "Aye Chan Pyae",
-        designation: "Mentor",
+        designation: "Trainer",
         image: mentor5
     },
 ];
 
+const speaker = [
+    {
+        id: 1,
+        name: "Coming Soon",
+        designation: "Coming Soon",
+        image: speaker1
+    },
+    {
+        id: 2,
+        name: "Coming Soon",
+        designation: "Coming Soon",
+        image: speaker2
+    },
+    {
+        id: 3,
+        name: "Coming Soon",
+        designation: "Coming Soon",
+        image: speaker3
+    },
+    {
+        id: 4,
+        name: "Coming Soon",
+        designation: "Coming Soon",
+        image: speaker4
+    },
+    {
+        id: 5,
+        name: "Coming Soon",
+        designation: "Coming Soon",
+        image: speaker5
+    },
+];
 export const Home = () => {
     // Create refs for each card to track mouse position
     const bootcampCardRef = useRef(null);
@@ -374,9 +406,9 @@ export const Home = () => {
                         <h3 className="text-xl mb-16 font-gothic relative z-10">SPEAKERS</h3>
                         <div className="flex flex-col gap-4">
                             <div className="flex flex-row ">
-                                <AnimatedAvatar items={mentor}/>
+
                             </div>
-                            <p className="text-xl font-malinton relative z-10">Ko Lamin & Ko Harry</p>
+                            <p className="text-3xl font-malinton relative z-10">Coming Soon</p>
                         </div>
                         </motion.div>
 
