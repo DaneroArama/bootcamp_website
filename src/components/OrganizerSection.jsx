@@ -57,7 +57,7 @@ const OrganizerSection = () => {
                     "\n" +
                     "In addition to her expertise in game UI design, Mayve has practical experience as a UI Developer, where she honed her skills in crafting visually engaging and highly functional user interfaces. She also has a strong background in designing for ERP systems, demonstrating her versatility in developing intuitive solutions for complex digital environments.\n" +
                     "\n" +
-                    "Her commitment to community growth and innovation extends to her role as a Coordination Specialist at UXMM, where she plays a key part in organizing and streamlining design-related initiatives. Always eager to share her knowledge and insights, she welcomes any questions about the Bootcamp program or her work in the field.\n",
+                    "Her commitment to community growth and innovation extends to her role as a Coordination Specialist at UXMM, where she plays a key part in organizing and streamlining design-related initiatives. Always eager to share her knowledge and insights, she welcomes any questions about the Bootcamp program or her work in the field. \n",
             confirmed: true,
             image: Mayve,
             contacts: {
