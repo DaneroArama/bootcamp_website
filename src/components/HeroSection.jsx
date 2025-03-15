@@ -175,7 +175,7 @@ const HeroSection = () => {
                         <motion.img 
                             src={DesignSVG} 
                             alt="Design" 
-                            className="w-[300px] md:w-[450px]"
+                            className="w-[325px] md:w-[475px]"
                             initial={{ opacity: 0, x: -100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ 
