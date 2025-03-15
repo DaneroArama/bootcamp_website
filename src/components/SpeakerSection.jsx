@@ -3,15 +3,14 @@ import React, { useState, useRef } from "react";
 import White from "../img/Second Icon/White.svg";
 import Black from "../img/Second Icon/BlackStar.svg";
 const SpeakerSection = () => {
-    const [currentPage, setCurrentPage] = useState(1);
-    const speakersPerPage = 3;
+    const [expandedSpeaker, setExpandedSpeaker] = useState(null);
     const titleRef = useRef(null);
 
     const speakers = [
         {
             name: "Ye Lin Aung",
             position: "Deputy Chief Executive Officer",
-            description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ante nec augue tincidunt fermentum vel nec nunc. Nullam nec nunc nec augue tincidunt fermentum vel nec nunc. Nullam nec nunc nec augue tincidunt fermentum vel nec nunc. Nullam nec nunc nec augue tincidunt fermentum vel nec nunc. Nullam nec nunc nec augue tincidunt fermentum vel nec nunc. Nullam nec nunc nec augue tincidunt fermentum vel nec nunc. Nullam nec nunc nec augue tincidunt fermentum vel nec nunc. Nullam nec nunc nec augue tincidunt fermentum vel nec nunc. Nullam nec nunc nec augue tincidunt fermentum vel nec nunc. Nullam nec nunc nec augue tincidunt fermentum vel nec nunc.",
             confirmed: true,
             image: "" // Add speaker image path here
         },
@@ -27,21 +26,13 @@ const SpeakerSection = () => {
             description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
             confirmed: false
         },
+        {
+            name: "Zaw Moe Thant",
+            position: "??????",
+            description: "Nay Toe is an Arakanese film actor and comedian with the Burmese traditional anyeint troupe Htawara Hninzi. He won Myanmar Motion Picture Academy Awards for Best Actor three times: in 2009 with Moe Nya Einmet Myu, in 2015 with Nat Khat Mhar Tae Tite Pwal and in 2017 with Tar Tay Gyi.",
+            confirmed: false
+        },
     ];
-
-    // Calculate total pages
-    const totalPages = Math.ceil(speakers.length / speakersPerPage);
-
-    // Get current speakers
-    const indexOfLastSpeaker = currentPage * speakersPerPage;
-    const indexOfFirstSpeaker = indexOfLastSpeaker - speakersPerPage;
-    const currentSpeakers = speakers.slice(indexOfFirstSpeaker, indexOfLastSpeaker);
-
-    // Change page with smooth scroll
-    const paginate = (pageNumber) => {
-        setCurrentPage(pageNumber);
-        titleRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
 
     // Container animation variants
     const containerVariants = {
@@ -55,24 +46,33 @@ const SpeakerSection = () => {
         exit: { opacity: 0 }
     };
 
+    const toggleSpeakerDetails = (index) => {
+        if (expandedSpeaker === index) {
+            setExpandedSpeaker(null);
+        } else {
+            setExpandedSpeaker(index);
+        }
+    };
+
+    // Remove pagination-related code and use speakers directly
     return (
         <section className="w-full md:w-[80%] mx-auto">
             {/* Black Header Section */}
             <div ref={titleRef} className="bg-black p-4 md:p-6 flex items-center border-white border-4">
-                <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Speaker List </h2><img src={White} alt="Yellow Star" className="w-12 h-12 pl-3 inline-block text-white" />
+                <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Speaker List </h2>
+                <img src={White} alt="Yellow Star" className="w-12 h-12 pl-3 inline-block text-white" />
             </div>
 
             {/* Speaker Cards Container */}
             <div className="container mx-auto px-2 md:px-4 py-4 md:py-8">
                 <AnimatePresence mode="wait">
                     <motion.div
-                        key={currentPage}
                         variants={containerVariants}
                         initial="hidden"
                         animate="show"
                         exit="exit"
                     >
-                        {currentSpeakers.map((speaker, index) => (
+                        {speakers.map((speaker, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 50 }}
@@ -135,142 +135,36 @@ const SpeakerSection = () => {
                                 </div>
                                 <div className="pb-3">
                                     <button
+                                        onClick={() => speaker.confirmed && toggleSpeakerDetails(index)}
                                         className={`border-2 border-black px-7 py-2 md:py-4 rounded-full flex flex-row items-center gap-1 text-sm md:text-base whitespace-nowrap w-fit overflow-hidden ${!speaker.confirmed ? 'opacity-50 cursor-not-allowed' : ''}`}
                                         disabled={!speaker.confirmed}
                                     >
                                         <img src={Black} alt="Black Star" className="w-4 h-4 flex-shrink-0" />
                                         <span className="font-malinton">Speaker Details</span>
-                                        <span className="font-malinton flex-shrink-0">↓</span>
+                                        <span className={`px-2 font-malinton flex-shrink-0 transition-transform duration-300 ${expandedSpeaker === index ? 'rotate-180' : ''}`}>↓</span>
                                     </button>
                                 </div>
                             </div>
                             {/* Full-width horizontal line */}
                             <div className="w-full h-[2px] bg-black mb-4"></div>
-                                    <p className="text-base md:text-lg">
-                                        {speaker.confirmed ? speaker.description : "Speaker details will be revealed soon..."}
-                                    </p>
+                                    <div className="relative">
+                                        <div className={`transition-all duration-300 overflow-hidden ${expandedSpeaker === index ? 'max-h-[1000px]' : 'max-h-[150px]'}`}>
+                                            <p className="text-base md:text-lg">
+                                                {speaker.confirmed ? speaker.description : "Speaker details will be revealed soon..."}
+                                            </p>
+                                        </div>
+                                        {expandedSpeaker !== index && speaker.confirmed && (
+                                            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#E7A8E2] to-transparent"></div>
+                                        )}
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}
                     </motion.div>
                 </AnimatePresence>
-
-                {/* Pagination */}
-                {totalPages > 1 && (
-                    <motion.div 
-                        className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mt-8"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
-                    >
-                        <button
-                            onClick={() => paginate(currentPage - 1)}
-                            disabled={currentPage === 1}
-                            className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full transition-all duration-300 text-sm md:text-base ${
-                                currentPage === 1
-                                    ? 'bg-gray-600 cursor-not-allowed'
-                                    : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
-                            }`}
-                        >
-                            Previous
-                        </button>
-                        
-                        {/* Mobile pagination (with ellipsis) */}
-                        <div className="flex gap-1 sm:hidden">
-                            {/* First page */}
-                            <button
-                                onClick={() => paginate(1)}
-                                className={`w-8 h-8 rounded-full transition-all duration-300 text-sm ${
-                                    currentPage === 1
-                                        ? 'bg-[#E7A8E2] text-black'
-                                        : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
-                                }`}
-                            >
-                                1
-                            </button>
-                            
-                            {/* Middle section */}
-                            {currentPage !== 1 && currentPage !== totalPages ? (
-                                <>
-                                    {/* Ellipsis before current page if needed */}
-                                    {currentPage > 2 && (
-                                        <div className="w-8 h-8 flex items-center justify-center text-white text-sm">
-                                            ...
-                                        </div>
-                                    )}
-                                    
-                                    {/* Current page */}
-                                    <button
-                                        onClick={() => paginate(currentPage)}
-                                        className="w-8 h-8 rounded-full bg-[#E7A8E2] text-black text-sm"
-                                    >
-                                        {currentPage}
-                                    </button>
-                                    
-                                    {/* Ellipsis after current page if needed */}
-                                    {currentPage < totalPages - 1 && (
-                                        <div className="w-8 h-8 flex items-center justify-center text-white text-sm">
-                                            ...
-                                        </div>
-                                    )}
-                                </>
-                            ) : (
-                                /* Simple ellipsis when on first or last page */
-                                totalPages > 2 && (
-                                    <div className="w-8 h-8 flex items-center justify-center text-white text-sm">
-                                        ...
-                                    </div>
-                                )
-                            )}
-                            
-                            {/* Last page (if more than one page) */}
-                            {totalPages > 1 && (
-                                <button
-                                    onClick={() => paginate(totalPages)}
-                                    className={`w-8 h-8 rounded-full transition-all duration-300 text-sm ${
-                                        currentPage === totalPages
-                                            ? 'bg-[#E7A8E2] text-black'
-                                            : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
-                                    }`}
-                                >
-                                    {totalPages}
-                                </button>
-                            )}
-                        </div>
-                        
-                        {/* Desktop pagination (all page numbers) */}
-                        <div className="hidden sm:flex gap-2">
-                            {[...Array(totalPages)].map((_, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => paginate(i + 1)}
-                                    className={`w-10 h-10 rounded-full transition-all duration-300 ${
-                                        currentPage === i + 1
-                                            ? 'bg-[#E7A8E2] text-black'
-                                            : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
-                                    }`}
-                                >
-                                    {i + 1}
-                                </button>
-                            ))}
-                        </div>
-
-                        <button
-                            onClick={() => paginate(currentPage + 1)}
-                            disabled={currentPage === totalPages}
-                            className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full transition-all duration-300 text-sm md:text-base ${
-                                currentPage === totalPages
-                                    ? 'bg-gray-600 cursor-not-allowed'
-                                    : 'bg-black text-white hover:bg-gray-800 border-2 border-white'
-                            }`}
-                        >
-                            Next
-                        </button>
-                    </motion.div>
-                )}
             </div>
         </section>
     );
 };
 
-export default SpeakerSection; 
+export default SpeakerSection;

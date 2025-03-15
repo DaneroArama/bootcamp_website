@@ -49,15 +49,15 @@ const OrganizerSection = () => {
 
     const trainers = [
         {
-            name: "Ma May Thin Khine (Mayve)",
-            role: "PROGRAM MANAGER",
-            bio: "Ma May Thin Khine (Mayve), a Program Manager of Think, Sprint, Design! Bootcamp has over three years of experience in the UI/UX field. She currently works as a Senior UI/UX Designer at a Cambodia-based 3D Animation and Game Development Company, specializing in crafting immersive and user-friendly game UI designs. Beyond her design work, she is passionate about fostering learning and collaboration within the design community through event organization.\n" +
-                "\n" +
-                "In addition to her expertise in game UI design, Mayve has practical experience as a UI Developer, where she honed her skills in crafting visually engaging and highly functional user interfaces. She also has a strong background in designing for ERP systems, demonstrating her versatility in developing intuitive solutions for complex digital environments.\n" +
-                "\n" +
-                "Her commitment to community growth and innovation extends to her role as a Coordination Specialist at UXMM, where she plays a key part in organizing and streamlining design-related initiatives. Always eager to share her knowledge and insights, she welcomes any questions about the Bootcamp program or her work in the field.\n" +
-                "\n" +
-                "Contact - 09422846284",
+            name:   "Ma May Thin Khine (Mayve)",
+            role:   "PROGRAM MANAGER",
+            bio:    "Contact - 09422846284\n" +
+                    "\n" +
+                    "Ma May Thin Khine (Mayve), a Program Manager of Think, Sprint, Design! Bootcamp has over three years of experience in the UI/UX field. She currently works as a Senior UI/UX Designer at a Cambodia-based 3D Animation and Game Development Company, specializing in crafting immersive and user-friendly game UI designs. Beyond her design work, she is passionate about fostering learning and collaboration within the design community through event organization.\n" +
+                    "\n" +
+                    "In addition to her expertise in game UI design, Mayve has practical experience as a UI Developer, where she honed her skills in crafting visually engaging and highly functional user interfaces. She also has a strong background in designing for ERP systems, demonstrating her versatility in developing intuitive solutions for complex digital environments.\n" +
+                    "\n" +
+                    "Her commitment to community growth and innovation extends to her role as a Coordination Specialist at UXMM, where she plays a key part in organizing and streamlining design-related initiatives. Always eager to share her knowledge and insights, she welcomes any questions about the Bootcamp program or her work in the field.\n",
             confirmed: true,
             image: Mayve,
             contacts: {
@@ -66,19 +66,19 @@ const OrganizerSection = () => {
             }
         },
         {
-            name: "Ma Thiri Phyo Naing",
-            role: "PROGRAM MANAGER",
-            bio: "မသီရိဖြိုးနိုင်ဟာဆိုရင် UXMM ရဲ့ ယခုလက်ရှိMember တစ်ဦးဖြစ်တဲ့အပြင် အတွေ့အကြုံတစ်နှစ်ကျော် နှစ်နှစ်နီးပါးရှိတဲ့ တက်ကြွတဲ့ UX/UI Designer တစ်ယောက်ဖြစ်ပြီး အခုလက်ရှိမှာတော့  MyJobs  Myanmar မှာလုပ်ကိုင်လျက်ရှိနေပါတယ်။ သူမက Userတွေအတွက် experience ကောင်းမွန်တဲ့ product တွေကို ဖန်တီးရတာသဘောကျနှစ်သက်သူ ဖြစ်ပြီးတော့  Enterprenurship, Business  နဲ့ Technology ပိုင်းဆိုင်ရာ Startup Weekend Yangonလို ပြိုင်ပွဲမျိုးတွေမှာလဲ ပါဝင်ယှဉ်ပြိုင်ခဲ့ဖူးတဲ့အပြင် Youth Innovation Challenge ပြိုင်ပွဲမှာလဲ 1st Runner Up ကိုရရှိခဲ့သူတစ်ဦးဖြစ်ပါတယ်။ ဒါ့အပြင် သူမက သူမရဲ့အသက် ၁၈နှစ်ကတည်းက Community အတွက်ပြုလုပ်တဲ့ပွဲတွေမှာဆိုရင်လဲ အမြဲလိုလိုတစ်ထောင့်တစ်နေရာကနေ ပါဝင်ကူညီပေးဖို စိတ်အားထက်သန် တက်ကြွတဲ့သူတစ်ဦးဆိုရင်လဲမမှားပါဘူး။ Spaceship to UXUIverse Mission 001 : Exploring the UX/UI Cosmoses, From Idea to Market: Networking the innovation and enterpreneurship Event, AWS Community Day Myanmar 2024, DevFest 2024, Empowerment Exchange Event, Startup Weekend Mandalay နဲ့ Think, Sprint, Design! Bootcamp တိုဟာဆိုရင် UX/UI Designer Journey ကိုလျှောက်လှမ်းနေရင်း သူမပါဝင်ပေးနိုင်ခဲ့တဲ့ Community ပွဲတွေပဲဖြစ်ပါတယ်။\n" +
-                "\n" +
-                "Ma Thiri Phyo Naing is a dedicated UX/UI Designer with over one years of experience, currently shaping digital experiences at MyJobs Myanmar. As a member of UXMM, she actively contributes to the UX/UI community, sharing her knowledge and passion for great user experiences.\n" +
-                "\n" +
-                "Beyond her professional role, Thiri has immersed herself in various competitions, including Startup Weekend Yangon, Entrepreneurship, Business and Technology, and was recognized as the 1st Runner-Up in the Youth Innovation Challenge. \n" +
-                "\n" +
-                "Since the age of 18, she has been an enthusiastic supporter of community events, engaging in impactful initiatives such as Spaceship to UXUIverse Mission 001, From Idea to Market: Networking the Innovation and Entrepreneurship Event, AWS Community Day Myanmar 2024, DevFest 2024, Empowerment Exchange Event, Startup Weekend Mandalay, and Think, Sprint, Design! Bootcamp.\n" +
-                "\n" +
-                "With a deep passion for innovation and collaboration, Thiri continues to explore, learn, and contribute to the ever-evolving UX/UI landscape. She dreams of making UX/UI design a strong and recognized field in Myanmar and inspiring the next generation of designers. With her passion for design and commitment to community, Thiri Phyo Naing is making a positive impact on Myanmar's UX/UI design industry.\n" +
-                "\n" +
-                "Contact - 09884735005",
+            name:   "Ma Thiri Phyo Naing",
+            role:   "PROGRAM MANAGER",
+            bio:    "Contact - 09884735005\n" +
+                    "\n" +
+                    "မသီရိဖြိုးနိုင်ဟာဆိုရင် UXMM ရဲ့ ယခုလက်ရှိMember တစ်ဦးဖြစ်တဲ့အပြင် အတွေ့အကြုံတစ်နှစ်ကျော် နှစ်နှစ်နီးပါးရှိတဲ့ တက်ကြွတဲ့ UX/UI Designer တစ်ယောက်ဖြစ်ပြီး အခုလက်ရှိမှာတော့  MyJobs  Myanmar မှာလုပ်ကိုင်လျက်ရှိနေပါတယ်။ သူမက Userတွေအတွက် experience ကောင်းမွန်တဲ့ product တွေကို ဖန်တီးရတာသဘောကျနှစ်သက်သူ ဖြစ်ပြီးတော့  Enterprenurship, Business  နဲ့ Technology ပိုင်းဆိုင်ရာ Startup Weekend Yangonလို ပြိုင်ပွဲမျိုးတွေမှာလဲ ပါဝင်ယှဉ်ပြိုင်ခဲ့ဖူးတဲ့အပြင် Youth Innovation Challenge ပြိုင်ပွဲမှာလဲ 1st Runner Up ကိုရရှိခဲ့သူတစ်ဦးဖြစ်ပါတယ်။ ဒါ့အပြင် သူမက သူမရဲ့အသက် ၁၈နှစ်ကတည်းက Community အတွက်ပြုလုပ်တဲ့ပွဲတွေမှာဆိုရင်လဲ အမြဲလိုလိုတစ်ထောင့်တစ်နေရာကနေ ပါဝင်ကူညီပေးဖို စိတ်အားထက်သန် တက်ကြွတဲ့သူတစ်ဦးဆိုရင်လဲမမှားပါဘူး။ Spaceship to UXUIverse Mission 001 : Exploring the UX/UI Cosmoses, From Idea to Market: Networking the innovation and enterpreneurship Event, AWS Community Day Myanmar 2024, DevFest 2024, Empowerment Exchange Event, Startup Weekend Mandalay နဲ့ Think, Sprint, Design! Bootcamp တိုဟာဆိုရင် UX/UI Designer Journey ကိုလျှောက်လှမ်းနေရင်း သူမပါဝင်ပေးနိုင်ခဲ့တဲ့ Community ပွဲတွေပဲဖြစ်ပါတယ်။\n" +
+                    "\n" +
+                    "Ma Thiri Phyo Naing is a dedicated UX/UI Designer with over one years of experience, currently shaping digital experiences at MyJobs Myanmar. As a member of UXMM, she actively contributes to the UX/UI community, sharing her knowledge and passion for great user experiences.\n" +
+                    "\n" +
+                    "Beyond her professional role, Thiri has immersed herself in various competitions, including Startup Weekend Yangon, Entrepreneurship, Business and Technology, and was recognized as the 1st Runner-Up in the Youth Innovation Challenge. \n" +
+                    "\n" +
+                    "Since the age of 18, she has been an enthusiastic supporter of community events, engaging in impactful initiatives such as Spaceship to UXUIverse Mission 001, From Idea to Market: Networking the Innovation and Entrepreneurship Event, AWS Community Day Myanmar 2024, DevFest 2024, Empowerment Exchange Event, Startup Weekend Mandalay, and Think, Sprint, Design! Bootcamp.\n" +
+                    "\n" +
+                    "With a deep passion for innovation and collaboration, Thiri continues to explore, learn, and contribute to the ever-evolving UX/UI landscape. She dreams of making UX/UI design a strong and recognized field in Myanmar and inspiring the next generation of designers. With her passion for design and commitment to community, Thiri Phyo Naing is making a positive impact on Myanmar's UX/UI design industry.\n",
             confirmed: true,
             image: Thiri,
             contacts: {

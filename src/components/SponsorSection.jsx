@@ -149,8 +149,8 @@ const SponsorSection = () => {
                                             </div>
                                             
                                             {/* Sponsor Type Label - positioned at bottom left, above the blur */}
-                                            <div className="absolute bottom-3 left-3 z-20">
-                                                <div className="flex items-center gap-1 bg-black/60 border border-white/20 text-white/70 px-3 py-1 rounded-full text-sm md:text-xs font-medium font-malinton backdrop-blur-sm">
+                                            <div className="absolute bottom-2 left-3 z-20">
+                                                <div className="flex items-center gap-1 bg-black/60 border border-white/20 text-white/70 px-4 py-2 rounded-full text-lg md:text-base font-medium font-malinton backdrop-blur-sm">
                                                     <span className="text-purple-400/70 font-malinton">✦</span>
                                                     <span className="font-malinton">Coming Soon</span>
                                                 </div>
