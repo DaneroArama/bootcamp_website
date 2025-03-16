@@ -45,7 +45,7 @@ const OrganizerSection = () => {
     const trainers = [
         {
             name: "Ma May Thin Khine (Mayve)",
-            role: "PROGRAM   MANAGER",
+            role: "PROGRAM MANAGER",
             bio: "Ma May Thin Khine (Mayve), a Program Manager of Think, Sprint, Design! Bootcamp has over three years of experience in the UI/UX field. She currently works as a Senior UI/UX Designer at a Cambodia-based 3D Animation and Game Development Company, specializing in crafting immersive and user-friendly game UI designs. Beyond her design work, she is passionate about fostering learning and collaboration within the design community through event organization.\n\nIn addition to her expertise in game UI design, Mayve has practical experience as a UI Developer, where she honed her skills in crafting visually engaging and highly functional user interfaces. She also has a strong background in designing for ERP systems, demonstrating her versatility in developing intuitive solutions for complex digital environments.\n\nHer commitment to community growth and innovation extends to her role as a Coordination Specialist at UXMM, where she plays a key part in organizing and streamlining design-related initiatives. Always eager to share her knowledge and insights, she welcomes any questions about the Bootcamp program or her work in the field.",
             confirmed: true,
             image: Mayve,
@@ -57,7 +57,7 @@ const OrganizerSection = () => {
         },
         {
             name: "Ma Thiri Phyo Naing",
-            role: "PROGRAM   MANAGER",
+            role: "PROGRAM MANAGER",
             bio: "မသီရိဖြိုးနိုင်ဟာဆိုရင် UXMM ရဲ့ ယခုလက်ရှိMember တစ်ဦးဖြစ်တဲ့အပြင် အတွေ့အကြုံတစ်နှစ်ကျော် နှစ်နှစ်နီးပါးရှိတဲ့ တက်ကြွတဲ့ UX/UI Designer တစ်ယောက်ဖြစ်ပြီး အခုလက်ရှိမှာတော့  MyJobs  Myanmar မှာလုပ်ကိုင်လျက်ရှိနေပါတယ်။ သူမက Userတွေအတွက် experience ကောင်းမွန်တဲ့ product တွေကို ဖန်တီးရတာသဘောကျနှစ်သက်သူ ဖြစ်ပြီးတော့  Enterprenurship, Business  နဲ့ Technology ပိုင်းဆိုင်ရာ Startup Weekend Yangonလို ပြိုင်ပွဲမျိုးတွေမှာလဲ ပါဝင်ယှဉ်ပြိုင်ခဲ့ဖူးတဲ့အပြင် Youth Innovation Challenge ပြိုင်ပွဲမှာလဲ 1st Runner Up ကိုရရှိခဲ့သူတစ်ဦးဖြစ်ပါတယ်။ ဒါ့အပြင် သူမက သူမရဲ့အသက် ၁၈နှစ်ကတည်းက Community အတွက်ပြုလုပ်တဲ့ပွဲတွေမှာဆိုရင်လဲ အမြဲလိုလိုတစ်ထောင့်တစ်နေရာကနေ ပါဝင်ကူညီပေးဖို စိတ်အားထက်သန် တက်ကြွတဲ့သူတစ်ဦးဆိုရင်လဲမမှားပါဘူး။ Spaceship to UXUIverse Mission 001 : Exploring the UX/UI Cosmoses, From Idea to Market: Networking the innovation and enterpreneurship Event, AWS Community Day Myanmar 2024, DevFest 2024, Empowerment Exchange Event, Startup Weekend Mandalay နဲ့ Think, Sprint, Design! Bootcamp တိုဟာဆိုရင် UX/UI Designer Journey ကိုလျှောက်လှမ်းနေရင်း သူမပါဝင်ပေးနိုင်ခဲ့တဲ့ Community ပွဲတွေပဲဖြစ်ပါတယ်။\n\nMa Thiri Phyo Naing is a dedicated UX/UI Designer with over one years of experience, currently shaping digital experiences at MyJobs Myanmar. As a member of UXMM, she actively contributes to the UX/UI community, sharing her knowledge and passion for great user experiences.\n\nBeyond her professional role, Thiri has immersed herself in various competitions, including Startup Weekend Yangon, Entrepreneurship, Business and Technology, and was recognized as the 1st Runner-Up in the Youth Innovation Challenge.\n\nSince the age of 18, she has been an enthusiastic supporter of community events, engaging in impactful initiatives such as Spaceship to UXUIverse Mission 001, From Idea to Market: Networking the Innovation and Entrepreneurship Event, AWS Community Day Myanmar 2024, DevFest 2024, Empowerment Exchange Event, Startup Weekend Mandalay, and Think, Sprint, Design! Bootcamp.\n\nWith a deep passion for innovation and collaboration, Thiri continues to explore, learn, and contribute to the ever-evolving UX/UI landscape. She dreams of making UX/UI design a strong and recognized field in Myanmar and inspiring the next generation of designers. With her passion for design and commitment to community, Thiri Phyo Naing is making a positive impact on Myanmar's UX/UI design industry.",
             confirmed: true,
             image: Thiri,
@@ -84,7 +84,7 @@ const OrganizerSection = () => {
     // Get role color based on trainer role
     const getRoleColor = (role) => {
         switch (role) {
-            case "PROGRAM   MANAGER":
+            case "PROGRAM MANAGER":
                 return "text-green-400";
             default:
                 return "text-gray-400";
@@ -94,7 +94,7 @@ const OrganizerSection = () => {
     // Get role badge background based on trainer role
     const getRoleBadgeColor = (role) => {
         switch (role) {
-            case "PROGRAM   MANAGER":
+            case "PROGRAM MANAGER":
                 return "bg-green-400/20 border-green-400/50";
             default:
                 return "bg-gray-400/20 border-gray-400/50";
@@ -164,7 +164,7 @@ const OrganizerSection = () => {
                                 </div>
 
                                 {/* Trainer Info Section */}
-                                <div className="px-4 py-2 flex-grow">
+                                <div className="px-3 py-2 flex-grow">
                                     <div className="flex items-center justify-between">
                                         <div>
                                             <h3 className="text-white text-lg font-medium">
@@ -180,7 +180,7 @@ const OrganizerSection = () => {
                                         </div>
 
                                         {trainer.confirmed && trainer.contacts && (
-                                            <div className="flex items-center gap-3">
+                                            <div className="flex items-center gap-2 md:gap-3">
                                                 {/* Phone Icon */}
                                                 <button
                                                     onClick={(e) => {
@@ -189,7 +189,7 @@ const OrganizerSection = () => {
                                                     }}
                                                     className="text-gray-400 hover:text-white transition-colors"
                                                 >
-                                                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                                     </svg>
                                                 </button>
