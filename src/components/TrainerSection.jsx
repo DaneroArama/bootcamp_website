@@ -151,8 +151,9 @@ const TrainerSection = () => {
         {
             name: "Ma Hnin Hay Mar Aung",
             role: "TRAINER ASSISTANT",
-            bio: "မနှင်းဟေမာအောင်ဟာ Product Designer အနေဖြင့် Business Education Background မှလာသူဖြစ်ပြီး uab bank ရဲ့ Former Fintech Product Designer တစ်ဦးဖြစ်ပါတယ်\n" +
-                "E-wallets, B2B, B2C, ATS system, Travel & Community စတဲ့ projectတွေမှာ Product Designer အနေဖြင့်တာဝန်ယူလုပ်ကိုင်ခဲ့ပြီး လက်ရှိမှာတော့ Celestial Dragon Tech ရဲ့ founder တစ်ဦးအနေဖြင့် User တွေအတွက် လွယ်ကူရိုးရှင်းပြီး Value ပေးနိုင်မယ့် Digital Products တွေကို Business Concept နဲ့ အညီ ပူးပေါင်းဖန်တီးပေးနေပါတယ်",
+            bio: "Product Designer အနေနဲ့ (၅) နှစ်ကျော် အတွေ့အကြုံရှိသူဖြစ်တဲ့ နှင်းဟေမာအောင် ဟာဆိုရင်တော့ Travel & Business ဘက်မှလာသူဖြစ်ပြီး e-wallets, B2B, B2C, ATS system, Travel & Community, Inventory Management System စတဲ့ Projects တွေကိုလည်းတာဝန်ယူလုပ်ကိုင်ခဲ့ဖူးပါတယ် uab Bank - Fintech ရဲ့ former Product Designer အနေနဲ့လည်းတာဝန်ယူလုပ်ကိုင်ခဲ့ဖူးပါတယ် အခုလက်ရှိမှာတော့ Celestial Dragon Tech ရဲ့ founder တစ်ဦးဖြစ်ပြီး start-up Product ဖြစ်တဲ့ EzyPet App ကို launch လုပ်နိုင်ခဲ့တဲ့အပြင် User တွေအတွက် လွယ်ကူရိုးရှင်းပြီး Value ပေးနိုင်မယ့် Digital Products တွေကို Business Concept နဲ့ အညီ ပူးပေါင်းဖန်တီးပေးနိုင်ဖို့ကို အဓိကထားလုပ်ဆောင်နေသူဖြစ်ပါတယ်\n" +
+                "\n" +
+                "Hnin Hay Mar Aung comes from a Travel & Business background and has over 5 years of experience as a Product Designer. She has also taken on responsibilities for various projects, including e-wallets, B2B, B2C, ATS systems, Travel & Community platforms, and Inventory Management Systems. She previously worked as the Former Product Designer at uab Bank - Fintech. Currently, she is the Founder of Celestial Dragon Tech and has successfully launched the startup product EzyPet App. She is primarily focused on creating user-friendly and value-driven digital products that align with business concepts, aiming to deliver solutions that are simple, accessible, and valuable for users.\n",
             confirmed: true,
             image: HninHayMarAung
         },
@@ -323,7 +324,7 @@ const TrainerSection = () => {
                         onClick={closeBioModal}
                     >
                         <motion.div 
-                            className="bg-[#1A1A1A] max-w-4xl w-full rounded-lg overflow-hidden max-h-[90vh]"
+                            className="bg-[#1A1A1A] max-w-4xl w-full rounded-lg overflow-hidden max-h-[100vh]"
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.9, opacity: 0 }}

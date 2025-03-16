@@ -261,12 +261,12 @@ const OrganizerSection = () => {
                         >
                             <div className="flex flex-col md:flex-row h-full">
                                 {/* Image Section */}
-                                <div className="w-full md:w-[300px] h-[300px] md:h-auto flex-shrink-0 bg-[#E7A8E2]">
+                                <div className="w-full md:w-[300px] h-[250px] md:h-auto flex-shrink-0 bg-[#E7A8E2]">
                                     {selectedOrganizer.image ? (
                                         <img
                                             src={selectedOrganizer.image}
                                             alt={selectedOrganizer.name}
-                                            className="w-full h-full object-cover object-top"
+                                            className="w-full h-full md:h-full object-cover object-top"
                                         />
                                     ) : (
                                         <div className="w-full h-full flex items-center justify-center bg-[#E7A8E2]">
@@ -360,6 +360,9 @@ const OrganizerSection = () => {
                                         </button>
                                     </div>
 
+                                    <div className="text-gray-400 text-sm">
+                                        Contact: {selectedOrganizer.contacts.phone}
+                                    </div>
                                     {/* Bio Content - Scrollable with fixed height */}
                                     <div
                                         ref={bioContentRef}
@@ -369,9 +372,9 @@ const OrganizerSection = () => {
                                             scrollbarWidth: 'none',
                                             msOverflowStyle: 'none',
                                             WebkitOverflowScrolling: 'touch',
-                                            height: '40vh',
+                                            height: '30vh',
                                             minHeight: '150px',
-                                            maxHeight: '60vh'
+                                            maxHeight: '50vh'
                                         }}
                                     >
                                         <div className="text-gray-300 space-y-4 pr-4 pb-10">

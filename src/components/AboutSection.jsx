@@ -140,7 +140,7 @@ export const AboutSection = () => {
                 <motion.strong 
                   className="font-bold cursor-pointer"
                   whileHover={{ color: "#EBFF00" }}
-                >design and technology</motion.strong> in Myanmar and beyond
+                >design and technology</motion.strong> in Myanmar and beyond.
               </motion.p>
             </motion.div>
           </div>

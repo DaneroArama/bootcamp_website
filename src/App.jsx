@@ -46,7 +46,7 @@ const App = () => {
                     <SpeakerSection />
                 </section>
 
-                <section id="mentors">
+                <section id="trainers">
                     <MentorSection />
                 </section>
 
