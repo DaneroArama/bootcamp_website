@@ -62,7 +62,7 @@ const OrganizerSection = () => {
             confirmed: true,
             image: Thiri,
             contacts: {
-                phone: "09422846284",
+                phone: "09884735005",
                 email: "thiriphyon@gmail.com",
                 linkedin: "https://www.linkedin.com/in/thiri-phyo-naing-naing-7b478b274/"
             }
