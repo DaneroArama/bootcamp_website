@@ -26,8 +26,8 @@ export const AboutSection = () => {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.4, // Increased from 0.2
+        delayChildren: 0.5,  // Increased from 0.3
       },
     },
   };
@@ -256,21 +256,21 @@ export const AboutSection = () => {
                     className="absolute top-0 -right-20 w-[260px] h-[260px]"
                     initial={{ rotate: -90 }}
                     animate={{ y: [-5, 0, -5], rotate: -90 }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 />
                 <motion.img
                     src={RedRectangleGhost}
                     className="absolute top-[30%] -right-20 w-[260px] h-[260px]"
                     initial={{ rotate: -90 }}
                     animate={{ y: [-5, 0, -5], rotate: -90 }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
                 />
                 <motion.img
                     src={YellowOvalGhost}
                     className="absolute top-30 -right-20 w-[260px] h-[260px]"
                     initial={{ rotate: -90 }}
                     animate={{ y: [-5, 0, -5], rotate: -90 }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
                 />
               </div>
             </motion.div>
