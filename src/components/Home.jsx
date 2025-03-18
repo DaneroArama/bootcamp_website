@@ -7,11 +7,10 @@ import mentor2 from "../img/Mentors/Barry.webp"; // Adjust the path as necessary
 import mentor3 from "../img/Mentors/Min Nanda Zan.webp"; // Adjust the path as necessary
 import mentor4 from "../img/Mentors/Zwekaunghtet.webp";
 import mentor5 from "../img/Mentors/Aye Chan Pyae.webp";
-import speaker1 from '../img/Profile.png'; // Adjust the path as necessary
-import speaker2 from '../img/Profile.png'; // Adjust the path as necessary
-import speaker3 from '../img/Profile.png'; // Adjust the path as necessary
-import speaker4 from '../img/Profile.png'; // Adjust the path as necessary
-import speaker5 from '../img/Profile.png'; // Adjust the path as necessary
+import speaker1 from "../img/Speaker/Du Wun Aung.webp";
+import speaker2 from "../img/Speaker/KyawMyoThet.webp";
+import speaker3 from "../img/Speaker/Pyit Sone Oo.webp";
+import speaker4 from "../img/Speaker/Wai Yi Mon Soe.webp";
 import YIC from '../img/YIC.png';
 import BlueSquishyGhost from '../img/Cartoon mascot/BlueSquishyGhost.svg';
 import GreenGhost from '../img/Cartoon mascot/GreenGhost.svg';
@@ -61,33 +60,27 @@ const mentor = [
 const speaker = [
     {
         id: 1,
-        name: "Coming Soon",
-        designation: "Coming Soon",
+        name: "Ko Du Wun Aung",
+        designation: "Speaker",
         image: speaker1
     },
     {
         id: 2,
-        name: "Coming Soon",
-        designation: "Coming Soon",
+        name: "Ko Kyaw Myo Thet",
+        designation: "Speaker",
         image: speaker2
     },
     {
         id: 3,
-        name: "Coming Soon",
-        designation: "Coming Soon",
+        name: "Ko Pyit Sone Oo",
+        designation: "Speaker",
         image: speaker3
     },
     {
         id: 4,
-        name: "Coming Soon",
-        designation: "Coming Soon",
+        name: "Ma Wai Yi Mon Soe",
+        designation: "Speaker",
         image: speaker4
-    },
-    {
-        id: 5,
-        name: "Coming Soon",
-        designation: "Coming Soon",
-        image: speaker5
     },
 ];
 export const Home = () => {
@@ -406,9 +399,9 @@ export const Home = () => {
                         <h3 className="text-xl mb-16 font-gothic relative z-10">SPEAKERS</h3>
                         <div className="flex flex-col gap-4">
                             <div className="flex flex-row ">
-
+                                <AnimatedAvatar items={speaker}/>
                             </div>
-                            <p className="text-3xl font-malinton relative z-10">Coming Soon</p>
+                            <p className="text-xl font-malinton relative z-10">Our Speakers</p>
                         </div>
                         </motion.div>
 
