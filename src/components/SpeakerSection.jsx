@@ -85,8 +85,8 @@ const SpeakerSection = () => {
             {/* Fun Header Section */}
             <div ref={titleRef} className="bg-black p-4 md:p-6 flex items-center justify-between border-4 border-white mb-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200">
                 <div className="flex items-center gap-4">
-                    <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Meet Our Awesome Speakers!</h2>
-                    <img src={White} alt="Star" className="w-12 h-12 animate-bounce" />
+                    <h2 className="text-white text-2xl md:text-4xl font-bold font-malinton">Speaker List</h2>
+                    <img src={White} alt="Star" className="w-12 h-12" />
                 </div>
             </div>
 
@@ -107,7 +107,7 @@ const SpeakerSection = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -50 }}
                                 transition={{ duration: 0.5 }}
-                                className={`bg-white p-6 flex flex-col md:flex-row gap-6 relative rounded-xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ${!speaker.confirmed ? 'select-none' : ''}`}
+                                className={`bg-white p-3 md:p-6 flex flex-col md:flex-row gap-6 relative rounded-xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 ${!speaker.confirmed ? 'select-none' : ''}`}
                             >
                                 {/* Locked Overlay for Unconfirmed Speakers */}
                                 {!speaker.confirmed && (
