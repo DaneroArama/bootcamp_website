@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useRef, useEffect } from "react";
-import Barry from "../img/Mentors/Aye Chan Pyae.webp";
-import Thiri from "../img/Organizers/thiri.webp";
+import Thiri from "../img/Organizers/Thiri.png";
 import Mayve from "../img/Organizers/May Thin Khin (Mayve).jpg";
 import GreenStar from "../img/Second Icon/Green Star.svg";
 

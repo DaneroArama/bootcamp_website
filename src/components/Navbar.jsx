@@ -83,17 +83,17 @@ const Navbar = () => {
 
                         {/* Register Button */}
                         <motion.button
-                            whileHover={{ scale: 1.05}}
+                            whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3, delay: 0.7 }}
-                            className="bg-black border-white border-2 text-white px-3 py-2 rounded-full flex items-center space-x-2"
-                            onClick={() => window.open('#', '_blank')} // Replace '#' with your registration link
+                            className="bg-black border-white border-2 text-white px-3 py-2 rounded-full flex items-center space-x-2 hover:bg-white hover:text-black hover:border-black"
+                            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeCDWlyR4HPWXe3PRhybZkwRq49Er1CBdcf-Gty-HGqSDuJ5w/viewform?usp=dialog', '_blank')}
                         >
                             <span className="text-purple-400">✧</span>
-                            <span>Registration Opens Soon!</span>
-                            <span></span>
+                            <span>Register Now!</span>
+                            <span>→</span>
                         </motion.button>
                     </div>
 
@@ -163,11 +163,11 @@ const Navbar = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3, delay: 0.7 }}
                                 className="w-full bg-black border-white border-2 text-white px-6 py-3 rounded-full flex items-center space-x-2"
-                                onClick={() => window.open('#', '_blank')} // Replace '#' with your registration link
+                                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeCDWlyR4HPWXe3PRhybZkwRq49Er1CBdcf-Gty-HGqSDuJ5w/viewform?usp=dialog', '_blank')}
                             >
                                 <span className="text-purple-400">✧</span>
-                                <span>Registration Opens Soon!</span>
-                                <span></span>
+                                <span>Register Now!</span>
+                                <span>→</span>
                             </motion.button>
                         </div>
                     </motion.div>
