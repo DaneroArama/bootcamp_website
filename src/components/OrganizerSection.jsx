@@ -149,7 +149,7 @@ const OrganizerSection = () => {
                                 </motion.div>
 
                                 {/* Organizer Info Section */}
-                                <motion.div layoutId={`organizer-content-${trainer.name}`} className="px-4 py-2 flex-grow">
+                                <motion.div layoutId={`organizer-content-${trainer.name}`} className="px-2 md:px-4 py-2 flex-grow">
                                     <div className="flex items-center justify-between">
                                         <div>
                                             <h3 className="text-white text-lg font-medium">
