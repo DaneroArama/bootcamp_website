@@ -136,36 +136,20 @@ const OrganizerSection = () => {
                             )}
 
                             <div className="flex items-center">
-                                {/* Trainer Image Section */}
-                                <div className="w-24 h-24 bg-[#E7A8E2] flex items-center justify-center flex-shrink-0">
-                                    {trainer.image ? (
+                                {/* Organizer Image Section */}
+                                <motion.div layoutId={`organizer-image-${trainer.name}`} className="w-24 h-24 bg-[#E7A8E2] flex-shrink-0">
+                                    {trainer.image && (
                                         <img
                                             loading="lazy"
-                                            src={trainer.image}
+                                            src={trainer.image} 
                                             alt={trainer.name}
                                             className="w-full h-full object-cover"
                                         />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center bg-[#E7A8E2]">
-                                            <svg
-                                                className="w-10 h-10 text-white"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth="2"
-                                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                                                />
-                                            </svg>
-                                        </div>
                                     )}
-                                </div>
+                                </motion.div>
 
-                                {/* Trainer Info Section */}
-                                <div className="px-3 py-2 flex-grow">
+                                {/* Organizer Info Section */}
+                                <motion.div layoutId={`organizer-content-${trainer.name}`} className="px-4 py-2 flex-grow">
                                     <div className="flex items-center justify-between">
                                         <div>
                                             <h3 className="text-white text-lg font-medium">
@@ -225,7 +209,7 @@ const OrganizerSection = () => {
                                             </div>
                                         )}
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                         </motion.div>
                     ))}
@@ -246,134 +230,111 @@ const OrganizerSection = () => {
             {/* Bio Modal */}
             <AnimatePresence>
                 {selectedOrganizer && (
-                    <motion.div
+                    <motion.div 
                         className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={closeBioModal}
                     >
-                        <motion.div
-                            className="bg-[#1A1A1A] max-w-4xl w-full rounded-lg overflow-hidden max-h-[90vh]"
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
+                        <motion.div 
+                            className="bg-[#1A1A1A] max-w-4xl w-full rounded-lg overflow-hidden max-h-[100vh] relative"
                             onClick={(e) => e.stopPropagation()}
                         >
+                            {/* Close Button */}
+                            <button
+                                className="absolute top-4 right-4 z-10 bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
+                                onClick={closeBioModal}
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+
                             <div className="flex flex-col md:flex-row h-full">
-                                {/* Image Section */}
-                                <div className="w-full md:w-[300px] h-[250px] md:h-auto flex-shrink-0 bg-[#E7A8E2]">
-                                    {selectedOrganizer.image ? (
-                                        <img
-                                            src={selectedOrganizer.image}
-                                            alt={selectedOrganizer.name}
-                                            className="w-full h-full md:h-full object-cover object-top"
-                                        />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center bg-[#E7A8E2]">
-                                            <svg
-                                                className="w-24 h-24 text-white"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth="2"
-                                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                                                />
-                                            </svg>
+                                <motion.div 
+                                    layoutId={`organizer-image-${selectedOrganizer.name}`} 
+                                    className="w-full md:w-[300px] h-[300px] md:h-auto flex-shrink-0 bg-[#E7A8E2]"
+                                >
+                                    <img 
+                                        src={selectedOrganizer.image} 
+                                        alt={selectedOrganizer.name}
+                                        className="w-full h-full object-cover object-top"
+                                    />
+                                </motion.div>
+
+                                {/* Content Section */}
+                                <div className="flex-1 flex flex-col p-4">
+                                    <motion.div layoutId={`organizer-content-${selectedOrganizer.name}`}>
+                                        <h2 className="text-white text-2xl font-bold">{selectedOrganizer.name}</h2>
+                                        <div className={`inline-block px-3 py-1 rounded-full text-sm border ${getRoleBadgeColor(selectedOrganizer.role)} mt-2`}>
+                                            <span className={getRoleColor(selectedOrganizer.role)}>
+                                                {selectedOrganizer.role}
+                                            </span>
                                         </div>
-                                    )}
-                                </div>
 
-                                {/* Content Section - Modified to use full height */}
-                                <div className="flex-1 flex flex-col p-4 h-full">
-                                    {/* Header section remains the same */}
-                                    <div className="flex justify-between items-start mb-4">
-                                        <div className="w-full">
-                                            {/* Name */}
-                                            <h2 className="text-white text-2xl font-bold mb-2">{selectedOrganizer.name}</h2>
-                                            
-                                            {/* Role and Contact Icons Row */}
-                                            <div className="flex justify-between items-center w-full">
-                                                {/* Role Badge */}
-                                                <div className={`inline-block px-3 py-1 rounded-full text-sm border ${getRoleBadgeColor(selectedOrganizer.role)}`}>
-                                                    <span className={getRoleColor(selectedOrganizer.role)}>
-                                                        {selectedOrganizer.role}
-                                                    </span>
-                                                </div>
+                                        {/* Contact Icons */}
+                                        {selectedOrganizer.contacts && (
+                                            <div className="flex items-center gap-4 mt-4">
+                                                {/* Phone Icon */}
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        navigator.clipboard.writeText(selectedOrganizer.contacts.phone);
+                                                    }}
+                                                    className="text-gray-400 hover:text-white transition-colors"
+                                                >
+                                                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                                    </svg>
+                                                </button>
 
-                                                {/* Contact Icons */}
-                                                {selectedOrganizer.contacts && (
-                                                    <div className="flex items-center gap-3">
-                                                        {/* Phone Icon */}
-                                                        <button
-                                                            onClick={() => {
-                                                                navigator.clipboard.writeText(selectedOrganizer.contacts.phone);
-                                                            }}
-                                                            className="text-gray-400 hover:text-white transition-colors"
-                                                        >
-                                                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                                            </svg>
-                                                        </button>
+                                                {/* Email Icon */}
+                                                {selectedOrganizer.contacts.email && (
+                                                    <a
+                                                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=${selectedOrganizer.contacts.email}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                        className="text-gray-400 hover:text-white transition-colors"
+                                                    >
+                                                        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                        </svg>
+                                                    </a>
+                                                )}
 
-                                                        {/* Email Icon */}
-                                                        {selectedOrganizer.contacts.email && (
-                                                            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${selectedOrganizer.contacts.email}`} 
-                                                               target="_blank" 
-                                                               rel="noopener noreferrer"
-                                                               className="text-gray-400 hover:text-white transition-colors"
-                                                            >
-                                                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                                                </svg>
-                                                            </a>
-                                                        )}
-
-                                                        {/* LinkedIn Icon */}
-                                                        {selectedOrganizer.contacts.linkedin && (
-                                                            <a href={selectedOrganizer.contacts.linkedin}
-                                                               target="_blank"
-                                                               rel="noopener noreferrer"
-                                                               className="text-gray-400 hover:text-white transition-colors"
-                                                            >
-                                                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                                                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                                                                </svg>
-                                                            </a>
-                                                        )}
-                                                    </div>
+                                                {/* LinkedIn Icon */}
+                                                {selectedOrganizer.contacts.linkedin && (
+                                                    <a
+                                                        href={selectedOrganizer.contacts.linkedin}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                        className="text-gray-400 hover:text-white transition-colors"
+                                                    >
+                                                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                                        </svg>
+                                                    </a>
                                                 )}
                                             </div>
-                                        </div>
+                                        )}
+                                    </motion.div>
 
-                                        {/* Close button */}
-                                        <button
-                                            onClick={closeBioModal}
-                                            className="text-gray-400 hover:text-white ml-4"
-                                        >
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div className="text-gray-400 text-sm">
-                                        Contact: {selectedOrganizer.contacts.phone}
-                                    </div>
-                                    {/* Bio Content - Scrollable with fixed height */}
-                                    <div
+                                    {/* Bio Content with animation */}
+                                    <motion.div 
+                                        initial={{ opacity: 0, y: -20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.2, duration: 0.3 }}
                                         ref={bioContentRef}
                                         onScroll={handleScroll}
-                                        className="overflow-y-auto scrollbar-hide relative touch-auto"
-                                        style={{
-                                            scrollbarWidth: 'none',
+                                        className="mt-6 overflow-y-auto scrollbar-hide relative touch-auto" 
+                                        style={{ 
+                                            scrollbarWidth: 'none', 
                                             msOverflowStyle: 'none',
                                             WebkitOverflowScrolling: 'touch',
-                                            height: '30vh',
+                                            height: '40vh',
                                             minHeight: '150px',
                                             maxHeight: '50vh'
                                         }}
@@ -381,17 +342,12 @@ const OrganizerSection = () => {
                                         <div className="text-gray-300 space-y-4 pr-4 pb-10">
                                             {selectedOrganizer.bio.split('\n\n').map((paragraph, index) => (
                                                 <p key={index} className="text-sm md:text-base">
-                                                    {paragraph.split('\n').map((line, lineIndex) => (
-                                                        <React.Fragment key={lineIndex}>
-                                                            {line}
-                                                            {lineIndex < paragraph.split('\n').length - 1 && <br />}
-                                                        </React.Fragment>
-                                                    ))}
+                                                    {paragraph}
                                                 </p>
                                             ))}
                                         </div>
-
-                                        {/* Scroll indicator arrow - Positioned at bottom */}
+                                        
+                                        {/* Scroll indicator arrow */}
                                         {showScrollIndicator && (
                                             <div className="sticky bottom-0 left-0 w-full bg-gradient-to-t from-[#1A1A1A] to-transparent h-14 flex justify-center items-end pb-3">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -399,7 +355,7 @@ const OrganizerSection = () => {
                                                 </svg>
                                             </div>
                                         )}
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </motion.div>

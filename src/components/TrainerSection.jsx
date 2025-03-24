@@ -162,7 +162,7 @@ const TrainerSection = () => {
             role: "TRAINER ASSISTANT",
             bio: "Ma Nwe Oo Lwin is a UX/UI Designer working at an IT company. She likes to create products with excellent UX and actively contributes to ensuring a smooth development process. With experience in product design, she focuses on crafting simple and user-friendly digital experiences for users.\n"+
                     "\n"+
-                    "မနွယ်ဦးလွင်ဟာဆိုရင်တော့ IT Company တစ်ခုမှာ UX/UI Designer အဖြစ်လုပ်ကိုင်နေသူဖြစ်ပြီး, UX ကောင်းမွန်သော product များဖန်တီးရန် ကြိုးပမ်းတဲ့အပြင်, development process အဆင့်ထိ အဆင်ပြေစေရန် ပါဝင်ကူညီပေးနေသူဖြစ်ပါတယ်။Product design ပိုင်းတွင်လည်း အတွေ့အကြုံရှိပြီး, အသုံးပြုသူအတွက် သုံးလွယ်ရိုးရှင်းသည့် digital experience များဖန်တီးရန် အာရုံစိုက်လျှက်ရှိသူလည်းဖြစ်ပါတယ်။",
+                    "မနယ်ဦးလွင်ဟာဆိုရင်တော့ IT Company တစ်ခုမှာ UX/UI Designer အဖြစ်လုပ်ကိုင်နေသူဖြစ်ပြီး, UX ကောင်းမွန်သော product များဖန်တီးရန် ကြိုးပမ်းတဲ့အပြင်, development process အဆင့်ထိ အဆင်ပြေစေရန် ပါဝင်ကူညီပေးနေသူဖြစ်ပါတယ်။Product design ပိုင်းတွင်လည်း အတွေ့အကြုံရှိပြီး, အသုံးပြုသူအတွက် သုံးလွယ်ရိုးရှင်းသည့် digital experience များဖန်တီးရန် အာရုံစိုက်လျှက်ရှိသူလည်းဖြစ်ပါတယ်။",
             confirmed: true,
             image: NweOoLwin
         },
@@ -176,11 +176,6 @@ const TrainerSection = () => {
             image: SeintSinsarLwin
         },
     ];
-
-    // Filter trainers by role
-    const trainerLead = trainers.filter(trainer => trainer.role === "TRAINER LEAD");
-    const trainersList = trainers.filter(trainer => trainer.role === "TRAINER");
-    const trainerAssistants = trainers.filter(trainer => trainer.role === "TRAINER ASSISTANT");
 
     // Open trainer bio modal
     const openBioModal = (trainer) => {
@@ -242,60 +237,30 @@ const TrainerSection = () => {
                             onClick={() => trainer.confirmed && openBioModal(trainer)}
                             className={`bg-[#1A1A1A] relative overflow-hidden cursor-pointer ${!trainer.confirmed ? 'pointer-events-none' : ''}`}
                         >
-                            {/* Locked Overlay for Unconfirmed Trainers */}
-                            {!trainer.confirmed && (
-                                <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-10">
-                                    <div className="text-center text-white">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mx-auto mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                                        </svg>
-                                        <p className="text-sm">Coming Soon</p>
-                                    </div>
-                                </div>
-                            )}
-
                             <div className="flex items-center">
                                 {/* Trainer Image Section */}
-                            <div className="w-24 h-24 bg-[#E7A8E2] flex items-center justify-center flex-shrink-0">
-                                    {trainer.image ? (
+                                <motion.div layoutId={`trainer-image-${trainer.name}`} className="w-24 h-24 bg-[#E7A8E2] flex-shrink-0">
+                                    {trainer.image && (
                                         <img
                                             loading="lazy"
                                             src={trainer.image} 
                                             alt={trainer.name}
                                             className="w-full h-full object-cover"
                                         />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center bg-[#E7A8E2]">
-                                            <svg 
-                                                className="w-10 h-10 text-white" 
-                                                fill="none" 
-                                                stroke="currentColor" 
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path 
-                                                    strokeLinecap="round" 
-                                                    strokeLinejoin="round" 
-                                                    strokeWidth="2" 
-                                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" 
-                                                />
-                                            </svg>
-                                        </div>
                                     )}
-                            </div>
+                                </motion.div>
 
                                 {/* Trainer Info Section */}
-                                <div className="px-4 py-2 flex-grow">
+                                <motion.div layoutId={`trainer-content-${trainer.name}`} className="px-4 py-2 flex-grow">
                                     <h3 className="text-white text-lg font-medium">
                                         {trainer.confirmed ? trainer.name : "Mystery Trainer"}
                                     </h3>
-                                    
-                                    {/* Role Badge */}
                                     <div className={`inline-block px-2 py-1 rounded-full text-xs border ${getRoleBadgeColor(trainer.role)} mt-1`}>
                                         <span className={getRoleColor(trainer.role)}>
                                             {trainer.confirmed ? trainer.role : "Role to be announced"}
                                         </span>
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                         </motion.div>
                     ))}
@@ -324,67 +289,51 @@ const TrainerSection = () => {
                         onClick={closeBioModal}
                     >
                         <motion.div 
-                            className="bg-[#1A1A1A] max-w-4xl w-full rounded-lg overflow-hidden max-h-[100vh]"
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="bg-[#1A1A1A] max-w-4xl w-full rounded-lg overflow-hidden max-h-[100vh] relative"
                             onClick={(e) => e.stopPropagation()}
                         >
+                            {/* Close Button */}
+                            <button
+                                className="absolute top-4 right-4 z-10 bg-white rounded-full p-2 hover:bg-gray-200 transition-colors"
+                                onClick={closeBioModal}
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+
                             <div className="flex flex-col md:flex-row h-full">
-                                {/* Image Section (Top on mobile, Right on desktop) */}
-                                <div className="w-full md:w-[300px] h-[300px] md:h-auto flex-shrink-0 bg-[#E7A8E2]">
-                                    {selectedTrainer.image ? (
-                                        <img 
-                                            src={selectedTrainer.image} 
-                                            alt={selectedTrainer.name}
-                                            className="w-full h-full object-cover object-top"
-                                        />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center bg-[#E7A8E2]">
-                                            <svg 
-                                                className="w-24 h-24 text-white" 
-                                                fill="none" 
-                                                stroke="currentColor" 
-                                                viewBox="0 0 24 24"
-                                            >
-                                                <path 
-                                                    strokeLinecap="round" 
-                                                    strokeLinejoin="round" 
-                                                    strokeWidth="2" 
-                                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" 
-                                                />
-                                            </svg>
-                                        </div>
-                                    )}
-                                </div>
+                                {/* Rest of the modal content */}
+                                <motion.div 
+                                    layoutId={`trainer-image-${selectedTrainer.name}`} 
+                                    className="w-full md:w-[300px] h-[300px] md:h-auto flex-shrink-0 bg-[#E7A8E2]"
+                                >
+                                    <img 
+                                        src={selectedTrainer.image} 
+                                        alt={selectedTrainer.name}
+                                        className="w-full h-full object-cover object-top"
+                                    />
+                                </motion.div>
 
-                                {/* Content Section (Bottom on mobile, Left on desktop) */}
+                                {/* Content Section */}
                                 <div className="flex-1 flex flex-col p-4">
-                                    {/* Header with close button */}
-                                    <div className="flex justify-between items-start mb-4">
-                                        <div>
-                                            <h2 className="text-white text-2xl font-bold">{selectedTrainer.name}</h2>
-                                            <div className={`inline-block px-3 py-1 rounded-full text-sm border ${getRoleBadgeColor(selectedTrainer.role)} mt-2`}>
-                                                <span className={getRoleColor(selectedTrainer.role)}>
-                                                    {selectedTrainer.role}
-                                                </span>
-                                            </div>
+                                    <motion.div layoutId={`trainer-content-${selectedTrainer.name}`}>
+                                        <h2 className="text-white text-2xl font-bold">{selectedTrainer.name}</h2>
+                                        <div className={`inline-block px-3 py-1 rounded-full text-sm border ${getRoleBadgeColor(selectedTrainer.role)} mt-2`}>
+                                            <span className={getRoleColor(selectedTrainer.role)}>
+                                                {selectedTrainer.role}
+                                            </span>
                                         </div>
-                                        <button 
-                                            onClick={closeBioModal}
-                                            className="text-gray-400 hover:text-white"
-                                        >
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </button>
-                                    </div>
+                                    </motion.div>
 
-                                    {/* Bio Content - Scrollable with fixed height */}
-                                    <div 
+                                    {/* Bio Content with animation */}
+                                    <motion.div 
+                                        initial={{ opacity: 0, y: -20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.2, duration: 0.3 }}
                                         ref={bioContentRef}
                                         onScroll={handleScroll}
-                                        className="overflow-y-auto scrollbar-hide relative touch-auto" 
+                                        className="mt-6 overflow-y-auto scrollbar-hide relative touch-auto" 
                                         style={{ 
                                             scrollbarWidth: 'none', 
                                             msOverflowStyle: 'none',
@@ -397,17 +346,12 @@ const TrainerSection = () => {
                                         <div className="text-gray-300 space-y-4 pr-4 pb-10">
                                             {selectedTrainer.bio.split('\n\n').map((paragraph, index) => (
                                                 <p key={index} className="text-sm md:text-base">
-                                                    {paragraph.split('\n').map((line, lineIndex) => (
-                                                        <React.Fragment key={lineIndex}>
-                                                            {line}
-                                                            {lineIndex < paragraph.split('\n').length - 1 && <br />}
-                                                        </React.Fragment>
-                                                    ))}
+                                                    {paragraph}
                                                 </p>
                                             ))}
                                         </div>
                                         
-                                        {/* Scroll indicator arrow - Positioned at bottom */}
+                                        {/* Scroll indicator arrow */}
                                         {showScrollIndicator && (
                                             <div className="sticky bottom-0 left-0 w-full bg-gradient-to-t from-[#1A1A1A] to-transparent h-14 flex justify-center items-end pb-3">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -415,7 +359,7 @@ const TrainerSection = () => {
                                                 </svg>
                                             </div>
                                         )}
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </motion.div>
