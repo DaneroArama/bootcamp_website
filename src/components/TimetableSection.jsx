@@ -337,15 +337,15 @@ const TimetableSection = () => {
                                         }`}
                                     >
                                         {event.isBreak ? (
-                                            <div className="w-full flex items-center justify-center py-4">
-                                                <div className="flex items-center">
+                                            <div className="w-full flex items-center justify-center py-4 px-6">
+                                                <div className="flex items-center flex-wrap justify-center gap-2">
                                                     <img
                                                         src={Coffee}
                                                         alt="Coffee Break Icon"
-                                                        className="w-8 h-8 mr-2"
+                                                        className="w-8 h-8"
                                                     />
                                                     <span className="font-medium">{event.title}</span>
-                                                    <span className="ml-4 bg-[#EBFF00] px-4 py-1 rounded-full text-sm">
+                                                    <span className="bg-[#EBFF00] px-4 py-1 rounded-full text-sm">
                                                         {event.time.start} TO {event.time.end}
                                                     </span>
                                                 </div>
