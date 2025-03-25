@@ -3,47 +3,140 @@ import { useState } from "react";
 import Coffee from "../img/Second Icon/CoffeeBreak.svg";
 import Speaker from '../img/Event Logo & Icon/Speaker.svg';
 import Participant from '../img/Event Logo & Icon/Participant.svg';
+import Trainer from '../img/Event Logo & Icon/Trainer.svg'
+import Opening from '../img/Event Logo & Icon/Opening.svg'
+import Closed from '../img/Event Logo & Icon/Closing.svg'
+import Sponsor from '../img/Event Logo & Icon/Sponsor.svg'
+
+import CTZ from '../img/Sponsors/CTZPay.png'
+
+import DuWunAung from "../img/Speaker/Du Wun Aung.webp";
+import KyawMyoThet from "../img/Speaker/KyawMyoThet.webp";
+import PyitSoneOo from "../img/Speaker/Pyit Sone Oo.webp";
+import WaiYiMonSoe from "../img/Speaker/Wai Yi Mon Soe.webp";
+
+import Barry from "../img/Mentors/Barry.webp";
+import NweOoLwin from "../img/Mentors/Nwe Oo Lwin.webp";
+import Zawkaunghtet from "../img/Mentors/Zwekaunghtet.webp";
+import MinNandaZaw from "../img/Mentors/Min Nanda Zan.webp";
+import SeintSinsarLwin from "../img/Mentors/Seint Sinsar Lwin.webp";
+import AChanPyae from "../img/Mentors/Aye Chan Pyae.webp";
+import KoMyoMaungMaung from "../img/Mentors/Ko Myo Maung Maung.webp";
+import ShuMawaSoe from "../img/Mentors/Shu Mawa Soe.webp";
+import MinYeHtutMyat from "../img/Mentors/Min Ye Htut Myat.webp";
+import LynnHtetThant from "../img/Mentors/Lynnhtet Thant.webp";
+import HninHayMarAung from "../img/Mentors/Hnin Hay Mar Aung.webp";
+import ThazinWin from "../img/Mentors/Thazin Win.webp";
+import White from "../img/Second Icon/white1.svg";
+
 
 const TimetableSection = () => {
     const [showTimetable, setShowTimetable] = useState(false);
     const [activeTab, setActiveTab] = useState(0);
-    const [isTimetableReady] = useState(false);
+    const [isTimetableReady] = useState(true);
 
     const timetableData = [
         {
             day: "Day 1",
             date: "April 5th",
             events: [
+                // Example of how to update event types in timetableData
                 {
-                    time: { start: "12:00", end: "14:00" },
-                    title: "What we mean when we say \"strategy\", and the role UX plays",
+                    time: { start: "9:00 AM", end: "9:10 AM" },
+                    title: "Greeting by Host & Bootcamp Introduction",
+                    isOpening: true,  // New type for opening ceremonies
                     speaker: {
-                        name: "Ko Khant (Barry)",
-                        role: "COMPANY NAME OR JOB TITLE",
-                        image: "path_to_image"
+                        name: "Ma Wai Yi",
+                        role: "UXMM",
+                        image: [WaiYiMonSoe]
                     }
                 },
                 {
-                    time: { start: "14:00", end: "15:00" },
-                    title: "What we mean when we say \"strategy\", and the role UX plays blah blah",
+                    time: { start: "9:10 AM", end: "9:20 AM" },
+                    title: "Sponsor Speech",
+                    isSponsor: true,  // New type for sponsor sessions
+                    speaker: {
+                        name: "Sponsor",
+                        role: "Sponsor Speech",
+                        image: CTZ
+                    }
+                },
+                {
+                    time: { start: "9:25 AM", end: "10:25 AM" },
+                    title: "Panel Discussion",
+                    isPanel: true,  // New type for panel discussions
+                    speaker: {
+                        name: "Panel Speakers",
+                        role: "Industry Experts",
+                        image: [PyitSoneOo, KyawMyoThet, WaiYiMonSoe, DuWunAung]
+                    }
+                },
+                {
+                    time: { start: "10:45 AM", end: "11:00 AM" },
+                    title: "Team Dividing, Ice Breaking & Idea Pick",
                     isWorkshop: true,
                     speaker: {
-                        name: "Workshop with Participant",
-                        role: "COMPANY NAME OR JOB TITLE"
+                        name: "Workshop Session",
+                        role: "Team Formation",
                     }
                 },
                 {
-                    time: { start: "14:00", end: "15:00" }, // Fixed time format
-                    title: "Breaktime",
+                    time: { start: "11:00 AM", end: "12:00 PM" },
+                    title: "Session 1: Design Thinking + Q&A",
+                    isTrainer: true,
+                    speaker: {
+                        name: "Ko Myo Maung Maung & Ko Min Nanda Zan",
+                        role: "Session Trainers",
+                        image: [KoMyoMaungMaung, MinNandaZaw]
+                    }
+                },
+                {
+                    time: { start: "12:00 PM", end: "12:30 PM" },
+                    title: "Lunch Break",
                     isBreak: true
                 },
                 {
-                    time: { start: "14:00", end: "15:00" },
-                    title: "What we mean when we say \"strategy\", and the role UX plays blah blah",
-                    isWorkshop: true,
+                    time: { start: "12:30 PM", end: "1:30 PM" },
+                    title: "Session 2: Understanding the Users + Q&A",
+                    isTrainer: true,
                     speaker: {
-                        name: "Workshop with Participant",
-                        role: "COMPANY NAME OR JOB TITLE"
+                        name: "Ko Lynn Htet Thant",
+                        role: "Session Trainer",
+                        image: [LynnHtetThant]
+                    }
+                },
+                {
+                    time: { start: "1:30 PM", end: "2:30 PM" },
+                    title: "Session 3: User Journey Mapping + Q&A",
+                    isTrainer: true,
+                    speaker: {
+                        name: "Ma Thazin & Ko Min Ye Htut",
+                        role: "Session Trainers",
+                        image: [ThazinWin, MinYeHtutMyat]
+                    }
+                },
+                {
+                    time: { start: "2:30 PM", end: "3:30 PM" },
+                    title: "Brainstorming the Idea Concept",
+                    isTrainer: true,
+                    speaker: {
+                        name: "Ko Myo Maung Maung",
+                        role: "Session Trainer",
+                        image: [KoMyoMaungMaung]
+                    }
+                },
+                {
+                    time: { start: "3:30 PM", end: "3:45 PM" },
+                    title: "Tea Break",
+                    isBreak: true
+                },
+                {
+                    time: { start: "3:45 PM", end: "4:00 PM" },
+                    title: "Day 1 Recap & Day 2 Agenda",
+                    isClosing: true,  // Add this type for closing sessions
+                    speaker: {
+                        name: "Closing Remarks",
+                        role: "Day 1 Wrap-up",
                     }
                 }
             ]
@@ -53,35 +146,98 @@ const TimetableSection = () => {
             date: "April 6th",
             events: [
                 {
-                    time: { start: "12:00", end: "14:00" },
-                    title: "What we mean when we say \"strategy\", and the role UX plays",
+                    time: { start: "8:00 AM", end: "8:30 AM" },
+                    title: "Arrival Time for participants",
+                    isOpening: true,
                     speaker: {
-                        name: "Ko Khant (Barry)",
-                        role: "COMPANY NAME OR JOB TITLE",
-                        image: "path_to_image"
+                        name: "Registration",
+                        role: "Participant Check-in"
                     }
                 },
                 {
-                    time: { start: "14:00", end: "15:00" },
-                    title: "What we mean when we say \"strategy\", and the role UX plays blah blah",
-                    isWorkshop: true,
+                    time: { start: "8:30 AM", end: "9:30 AM" },
+                    title: "Session 4: Core UX Principles + Q&A",
+                    isTrainer: true,
                     speaker: {
-                        name: "Workshop with Participant",
-                        role: "COMPANY NAME OR JOB TITLE"
+                        name: "Ma Shu",
+                        role: "Session Trainer",
+                        image: [ShuMawaSoe]
                     }
                 },
                 {
-                    time: { start: "14:00", end: "15:00" }, // Fixed time format
-                    title: "Breaktime",
+                    time: { start: "9:30 AM", end: "10:15 AM" },
+                    title: "Session 5: Visual Design & UI Basics + Q&A",
+                    isTrainer: true,
+                    speaker: {
+                        name: "Ko Khant & Ko Zawe Kaung Htet",
+                        role: "Session Trainers",
+                        image: [Barry, Zawkaunghtet]
+                    }
+                },
+                {
+                    time: { start: "10:15 AM", end: "11:30 AM" },
+                    title: "Session 6: Sketching and Wireframing + Q&A",
+                    isTrainer: true,
+                    speaker: {
+                        name: "Ko Min Nanda Zan",
+                        role: "Session Trainer",
+                        image: [MinNandaZaw]
+                    }
+                },
+                {
+                    time: { start: "11:30 AM", end: "12:00 PM" },
+                    title: "Lunch Break",
                     isBreak: true
                 },
                 {
-                    time: { start: "14:00", end: "15:00" },
-                    title: "What we mean when we say \"strategy\", and the role UX plays blah blah",
+                    time: { start: "12:00 PM", end: "12:45 PM" },
+                    title: "Session 7: Usability Testing & Iteration + Q&A",
+                    isTrainer: true,
+                    speaker: {
+                        name: "Ma Aye Chan Pyae",
+                        role: "Session Trainer",
+                        image: [AChanPyae]
+                    }
+                },
+                {
+                    time: { start: "12:45 PM", end: "1:45 PM" },
+                    title: "Preparation Time",
                     isWorkshop: true,
                     speaker: {
-                        name: "Workshop with Participant",
-                        role: "COMPANY NAME OR JOB TITLE"
+                        name: "Team Work",
+                        role: "Project Preparation"
+                    }
+                },
+                {
+                    time: { start: "1:45 PM", end: "2:00 PM" },
+                    title: "Tea Break (Networking Time)",
+                    isBreak: true
+                },
+                {
+                    time: { start: "2:00 PM", end: "3:00 PM" },
+                    title: "Team Presentation",
+                    isWorkshop: true,
+                    speaker: {
+                        name: "All Teams",
+                        role: "5 minutes per group"
+                    }
+                },
+                {
+                    time: { start: "3:00 PM", end: "3:30 PM" },
+                    title: "Voting & Results",
+                    isWorkshop: true,
+                    speaker: {
+                        name: "Competition Results",
+                        role: "Winner Announcement"
+                    }
+                },
+                {
+                    time: { start: "3:30 PM", end: "4:00 PM" },
+                    title: "Day 2 Recaps, Thank You & Closing",
+                    isClosing: true,
+                    speaker: {
+                        name: "Closing Ceremony",
+                        role: "Photography Session"
                     }
                 }
             ]
@@ -197,8 +353,8 @@ const TimetableSection = () => {
                                         ) : (
                                             <div className="flex flex-col md:flex-row">
                                                 {/* Time Column */}
-                                                <div className="w-full md:w-48 p-4 flex-shrink-0 flex items-center">
-                                                    <div className="text-xl font-medium">
+                                                <div className="w-full md:w-56 p-4 flex-shrink-0 flex items-center">
+                                                    <div className="text-xl font-medium whitespace-nowrap">
                                                         {event.time.start}
                                                         <span className="mx-2 text-gray-400 text-sm">TO</span>
                                                         {event.time.end}
@@ -206,24 +362,32 @@ const TimetableSection = () => {
                                                 </div>
 
                                                 {/* Content Column */}
-                                                <div className={`flex-grow p-4 ${event.isWorkshop ? 'border-l-4 border-blue-400' : 'border-l-4 border-purple-400'}`}>
+                                                <div className={`flex-grow p-4 ${
+                                                    event.isWorkshop ? 'border-l-4 border-blue-400' : 
+                                                    event.isPanel ? 'border-l-4 border-purple-400' :
+                                                    event.isTrainer ? 'border-l-4 border-pink-400' :
+                                                    event.isOpening ? 'border-l-4 border-yellow-400' :
+                                                    event.isSponsor ? 'border-l-4 border-orange-400' : 
+                                                    event.isClosing ? 'border-l-4 border-yellow-400' :
+                                                    'border-l-4 border-purple-400'
+                                                }`}>
                                                     <h3 className="text-lg font-bold mb-2">{event.title}</h3>
 
                                                     {event.speaker && (
                                                         <div className="flex items-center justify-between">
                                                             <div className="flex items-center gap-3">
                                                                 {event.isWorkshop ? (
-                                                                    <img
-                                                                        src={Participant}
-                                                                        alt="Participant Icon"
-                                                                        className="w-6 h-6 flex items-center justify-center"
-                                                                    />
+                                                                    <img src={Participant} alt="Participant Icon" className="w-6 h-6" />
+                                                                ) : event.isPanel ? (
+                                                                    <img src={Speaker} alt="Panel Icon" className="w-6 h-6" />
+                                                                ) : event.isOpening ? (
+                                                                    <img src={Opening} alt="Opening Icon" className="w-6 h-6" />
+                                                                ) : event.isSponsor ? (
+                                                                    <img src={Sponsor} alt="Sponsor Icon" className="w-6 h-6" />
+                                                                ) : event.isClosing ? (
+                                                                    <img src={Closed} alt="Closing Icon" className="w-6 h-6" />
                                                                 ) : (
-                                                                    <img
-                                                                        src={Speaker}
-                                                                        alt="Speaker Icon"
-                                                                        className="w-6 h-6 flex items-center justify-center"
-                                                                    />
+                                                                    <img src={Trainer} alt="Trainer Icon" className="w-6 h-6" />
                                                                 )}
                                                                 <div>
                                                                     <p className="text-sm font-medium">{event.speaker.name}</p>
@@ -233,11 +397,23 @@ const TimetableSection = () => {
 
                                                             {event.speaker.image && (
                                                                 <div className="flex -space-x-2">
-                                                                    <img
-                                                                        src={event.speaker.image}
-                                                                        alt={event.speaker.name}
-                                                                        className="w-6 h-6 rounded-full border border-white"
-                                                                    />
+                                                                    {Array.isArray(event.speaker.image) ? (
+                                                                        // Multiple speakers
+                                                                        event.speaker.image.map((img, idx) => (
+                                                                            <img
+                                                                                key={idx}
+                                                                                src={img}
+                                                                                alt={`Speaker ${idx + 1}`}
+                                                                                className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                                                                            />
+                                                                        ))
+                                                                    ) : (
+                                                                        <img
+                                                                            src={event.speaker.image}
+                                                                            alt={event.speaker.name}
+                                                                            className="w-10 h-10 rounded-full border-2 border-white"
+                                                                        />
+                                                                    )}
                                                                 </div>
                                                             )}
                                                         </div>

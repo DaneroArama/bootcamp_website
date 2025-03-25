@@ -16,7 +16,7 @@ import BlueSquishyGhost from '../img/Cartoon mascot/BlueSquishyGhost.svg';
 import GreenGhost from '../img/Cartoon mascot/GreenGhost.svg';
 import RedRectangleGhost from '../img/Cartoon mascot/RedRectangleGhost.svg';
 import YellowOvalGhost from '../img/Cartoon mascot/YellowOvalGhost.svg';
-import Mentor from '../img/Event Logo & Icon/Mentor.svg'
+import Mentor from '../img/Event Logo & Icon/Trainer.svg'
 import Speaker from '../img/Event Logo & Icon/Speaker.svg'
 import BlueFlower from '../img/Second Icon/Blue Flower.svg';
 import GreenStar from '../img/Second Icon/Green Star.svg';
