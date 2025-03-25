@@ -16,18 +16,14 @@ import PyitSoneOo from "../img/Speaker/Pyit Sone Oo.webp";
 import WaiYiMonSoe from "../img/Speaker/Wai Yi Mon Soe.webp";
 
 import Barry from "../img/Mentors/Barry.webp";
-import NweOoLwin from "../img/Mentors/Nwe Oo Lwin.webp";
 import Zawkaunghtet from "../img/Mentors/Zwekaunghtet.webp";
 import MinNandaZaw from "../img/Mentors/Min Nanda Zan.webp";
-import SeintSinsarLwin from "../img/Mentors/Seint Sinsar Lwin.webp";
 import AChanPyae from "../img/Mentors/Aye Chan Pyae.webp";
 import KoMyoMaungMaung from "../img/Mentors/Ko Myo Maung Maung.webp";
 import ShuMawaSoe from "../img/Mentors/Shu Mawa Soe.webp";
 import MinYeHtutMyat from "../img/Mentors/Min Ye Htut Myat.webp";
 import LynnHtetThant from "../img/Mentors/Lynnhtet Thant.webp";
-import HninHayMarAung from "../img/Mentors/Hnin Hay Mar Aung.webp";
 import ThazinWin from "../img/Mentors/Thazin Win.webp";
-import White from "../img/Second Icon/white1.svg";
 
 
 const TimetableSection = () => {

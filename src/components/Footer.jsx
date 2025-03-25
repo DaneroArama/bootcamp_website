@@ -40,7 +40,7 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-lg font-bold mb-11 font-malinton bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Contact Us</h3>
+                        <h3 className="text-lg font-bold mb-3 md:mb-11 font-malinton bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Contact Us</h3>
                         <ul className="space-y-2 text-gray-300">
                             <motion.li whileHover={{ x: 5 }} className="font-malinton hover:text-white transition-colors duration-300">
                                 <a
@@ -62,7 +62,7 @@ const Footer = () => {
 
                     {/* Social Links */}
                     <div>
-                        <h3 className="text-lg font-bold mb-8 font-malinton bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Follow Us</h3>
+                        <h3 className="text-lg font-bold mb-3 md:mb-8 font-malinton bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Follow Us</h3>
                         <div className="flex flex-wrap gap-3">
                             {socialLinks.map((social) => (
                                 <motion.a
