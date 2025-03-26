@@ -6,7 +6,6 @@ import Model2 from "../img/Product/Model1.png";
 
 const MerchandiseSection = () => {
     const [activeImage, setActiveImage] = useState(0);
-    const [quantity, setQuantity] = useState(1);
 
     // Product data for tote bag
     const toteProduct = {
@@ -25,14 +24,6 @@ const MerchandiseSection = () => {
             "Interior pocket",
             "Limited edition design"
         ]
-    };
-
-    const incrementQuantity = () => {
-        setQuantity(prev => Math.min(prev + 1, 10));
-    };
-
-    const decrementQuantity = () => {
-        setQuantity(prev => Math.max(prev - 1, 1));
     };
 
     return (
