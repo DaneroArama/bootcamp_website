@@ -49,7 +49,7 @@ const TimetableSection = () => {
             events: [
                 // Example of how to update event types in timetableData
                 {
-                    time: { start: "8:30 AM", end: "9:00 AM" },
+                    time: { start: "8:30 AM"},
                     title: "Arrival Time for Attendees",
                     isOpening: true,  // New type for opening ceremonies
                     speaker: {
@@ -59,7 +59,7 @@ const TimetableSection = () => {
                 },
                 {
                     time: { start: "9:00 AM", end: "9:10 AM" },
-                    title: "Greeting by Host & Bootcamp Introduction, Agenda and Greeting about Mentor by Host",
+                    title: "Greeting & Bootcamp Introduction, Agenda and Greeting about Mentor by Host",
                     isWorkshop: true,  // New type for opening ceremonies
                     speaker: {
                         name: "Host Thiri Phyo Naing & Ma Wai Yi Mon Soe",
@@ -136,7 +136,7 @@ const TimetableSection = () => {
                     title: "Session 3: User Journey Mapping + Q&A",
                     isTrainer: true,
                     speaker: {
-                        name: "Ma Thazin & Ko Min Ye Htut",
+                        name: "Ma Thazin Win & Ko Min Ye Htut Myat",
                         role: "Session Trainers",
                         image: [ThazinWin, MinYeHtutMyat]
                     }
@@ -172,7 +172,7 @@ const TimetableSection = () => {
             date: "April 6th",
             events: [
                 {
-                    time: { start: "8:00 AM", end: "8:30 AM" },
+                    time: { start: "8:00 AM" },
                     title: "Arrival Time for Attendees",
                     isOpening: true,
                     speaker: {
@@ -185,7 +185,7 @@ const TimetableSection = () => {
                     title: "Session 4: Core UX Principles + Q&A",
                     isTrainer: true,
                     speaker: {
-                        name: "Ma Shu",
+                        name: "Ma Shu Ma Wa Soe",
                         role: "Session Trainer",
                         image: [ShuMawaSoe]
                     }

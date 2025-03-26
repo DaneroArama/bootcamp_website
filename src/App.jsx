@@ -8,6 +8,7 @@ import TimetableSection from "./components/TimetableSection";
 import SponsorSection from "./components/SponsorSection";
 import MachineGunLoader from "./components/ui/MachineGunLoader";
 import OrganizerSection from "./components/OrganizerSection";
+import MerchandiseSection from './components/MerchandiseSection';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -56,6 +57,8 @@ const App = () => {
                     <TimetableSection />
                 </section>
 
+                <MerchandiseSection />
+                
                 <section id="sponsors">
                     <SponsorSection />
                 </section>
