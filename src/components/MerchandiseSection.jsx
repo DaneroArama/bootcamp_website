@@ -82,7 +82,7 @@ const MerchandiseSection = () => {
                         transition={{ duration: 0.6 }}
                         className="lg:col-span-7 relative"
                     >
-                            <div className="relative w-[500px] h-[500px] mx-auto rounded-xl overflow-hidden border-2 border-white">
+                            <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] mx-auto rounded-xl overflow-hidden border-2 border-white">
                                 <img 
                                     src={toteProduct.images[activeImage].src} 
                                     alt={toteProduct.images[activeImage].alt}
