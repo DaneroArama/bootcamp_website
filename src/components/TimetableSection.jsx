@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import {useRef, useState} from "react";
 import Coffee from "../img/Second Icon/CoffeeBreak.svg";
 import Speaker from '../img/Event Logo & Icon/Speaker.svg';
 import Participant from '../img/Event Logo & Icon/Participant.svg';
@@ -24,12 +24,23 @@ import ShuMawaSoe from "../img/Mentors/Shu Mawa Soe.webp";
 import MinYeHtutMyat from "../img/Mentors/Min Ye Htut Myat.webp";
 import LynnHtetThant from "../img/Mentors/Lynnhtet Thant.webp";
 import ThazinWin from "../img/Mentors/Thazin Win.webp";
+import Thiri from "../img/Organizers/Thiri.png";
 
 
 const TimetableSection = () => {
     const [showTimetable, setShowTimetable] = useState(false);
     const [activeTab, setActiveTab] = useState(0);
     const [isTimetableReady] = useState(true);
+    const timetableSectionRef = useRef(null); // Add this ref for scrolling
+
+    // Function to handle tab change and scroll to top of timetable
+    const handleTabChange = (index) => {
+        setActiveTab(index);
+        // Scroll to the top of the timetable section
+        if (timetableSectionRef.current) {
+            timetableSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     const timetableData = [
         {
@@ -38,13 +49,22 @@ const TimetableSection = () => {
             events: [
                 // Example of how to update event types in timetableData
                 {
-                    time: { start: "9:00 AM", end: "9:10 AM" },
-                    title: "Greeting by Host & Bootcamp Introduction",
+                    time: { start: "8:30 AM", end: "9:00 AM" },
+                    title: "Arrival Time for Attendees",
                     isOpening: true,  // New type for opening ceremonies
                     speaker: {
-                        name: "Ma Wai Yi",
+                        name: "Registration",
+                        role: "Attendees Check-in"
+                    }
+                },
+                {
+                    time: { start: "9:00 AM", end: "9:10 AM" },
+                    title: "Greeting by Host & Bootcamp Introduction, Agenda and Greeting about Mentor by Host",
+                    isWorkshop: true,  // New type for opening ceremonies
+                    speaker: {
+                        name: "Host Thiri Phyo Naing & Ma Wai Yi Mon Soe",
                         role: "UXMM",
-                        image: [WaiYiMonSoe]
+                        image: [Thiri, WaiYiMonSoe]
                     }
                 },
                 {
@@ -55,6 +75,16 @@ const TimetableSection = () => {
                         name: "Sponsor",
                         role: "Sponsor Speech",
                         image: CTZ
+                    }
+                },
+                {
+                    time: { start: "9:20 AM", end: "9:25 AM" },
+                    title: "Speaker Intro by Host",
+                    isWorkshop: true,
+                    speaker: {
+                        name: "Host Thiri Phyo Naing",
+                        role: "UXMM",
+                        image: [Thiri]
                     }
                 },
                 {
@@ -143,11 +173,11 @@ const TimetableSection = () => {
             events: [
                 {
                     time: { start: "8:00 AM", end: "8:30 AM" },
-                    title: "Arrival Time for participants",
+                    title: "Arrival Time for Attendees",
                     isOpening: true,
                     speaker: {
                         name: "Registration",
-                        role: "Participant Check-in"
+                        role: "Attendees Check-in"
                     }
                 },
                 {
@@ -241,7 +271,7 @@ const TimetableSection = () => {
     ];
 
     return (
-        <section className="w-full bg-white py-16 flex flex-col items-center overflow-hidden">
+        <section className="w-full bg-white py-16 flex flex-col items-center overflow-hidden" ref={timetableSectionRef}>
             {/* Title */}
             <motion.p
                 initial={{ opacity: 0, y: -20 }}
@@ -296,25 +326,6 @@ const TimetableSection = () => {
                 >
                     {isTimetableReady ? (
                         <>
-                            <div className="flex flex-wrap justify-center gap-4 mb-6">
-                                {timetableData.map((day, index) => (
-                                    <motion.button
-                                        key={index}
-                                        onClick={() => setActiveTab(index)}
-                                        className={`px-6 py-3 rounded-full font-malinton text-lg transition-all duration-300 ${
-                                            activeTab === index
-                                                ? 'bg-purple-200 text-black shadow-lg scale-105'
-                                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                                        }`}
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                    >
-                                        <span className="md:hidden">{day.day}</span>
-                                        <span className="hidden md:inline">{`${day.day} - ${day.date}`}</span>
-                                    </motion.button>
-                                ))}
-                            </div>
-
                             <motion.div
                                 key={activeTab}
                                 initial={{ opacity: 0, x: 20 }}
@@ -328,7 +339,7 @@ const TimetableSection = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.3, delay: eventIndex * 0.1 }}
-                                        className={`border border-gray-200 rounded-lg overflow-hidden ${
+                                        className={`border border-gray-500 rounded-lg overflow-hidden ${
                                             event.isBreak ? 'flex flex-col items-center' : ''
                                         }`}
                                     >
@@ -420,6 +431,26 @@ const TimetableSection = () => {
                                     </motion.div>
                                 ))}
                             </motion.div>
+
+                            {/* Update the tab buttons to use the new handler */}
+                            <div className="flex flex-wrap justify-center gap-4 mt-6">
+                                {timetableData.map((day, index) => (
+                                    <motion.button
+                                        key={index}
+                                        onClick={() => handleTabChange(index)}
+                                        className={`px-6 py-3 rounded-full font-malinton text-lg transition-all duration-300 ${
+                                            activeTab === index
+                                                ? 'bg-purple-200 text-black shadow-lg scale-105'
+                                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                        }`}
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                    >
+                                        <span className="md:hidden">{day.day}</span>
+                                        <span className="hidden md:inline">{`${day.day} - ${day.date}`}</span>
+                                    </motion.button>
+                                ))}
+                            </div>
                         </>
                     ) : (
                         <motion.div

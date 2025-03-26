@@ -3,7 +3,7 @@ import CTZPay from "../img/Sponsors/CTZPay.png";
 import TintTint from "../img/Sponsors/Tint Tint.JPG";
 import Sponsors from "../img/Second Icon/Sponsor.svg";
 const SponsorSection = () => {
-    // Updated sponsors data structure with confirmed status and links
+
     const sponsors = [
         {
             type: "Venue Sponsor",
@@ -18,7 +18,6 @@ const SponsorSection = () => {
 
     return (
         <section className="w-full">
-
             {/* Our Partners & Sponsors */}
             <div className="px-4 md:px-12 py-12 md:py-16">
                 {/* Title with floating bubbles */}
@@ -106,7 +105,7 @@ const SponsorSection = () => {
                                                 <img 
                                                     src={sponsor.logo} 
                                                     alt={sponsor.name}
-                                                    className="w-full h-full object-cover"
+                                                    className="w-full h-full object-cover rounded-full"
                                                 />
                                             </div>
                                             
@@ -140,7 +139,7 @@ const SponsorSection = () => {
                                             {/* Placeholder logo - behind the blur */}
                                             <div className="absolute inset-0 flex items-center justify-center opacity-30">
                                                 <div className="w-50 h-50 md:w-30 md:h-30 items-center justify-center">
-                                                        <img className="w-full h-full " src={Sponsors}/>
+                                                        <img className="w-full h-full" src={Sponsors}/>
                                                 </div>
                                             </div>
                                             
