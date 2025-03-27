@@ -62,7 +62,7 @@ const TimetableSection = () => {
                     title: "Greeting & Bootcamp Introduction, Agenda and Greeting about Mentor by Host",
                     isWorkshop: true,  // New type for opening ceremonies
                     speaker: {
-                        name: "Host Thiri Phyo Naing & Ma Wai Yi Mon Soe",
+                        name: "Host Ma Thiri Phyo Naing & Ma Wai Yi Mon Soe",
                         role: "UXMM",
                         image: [Thiri, WaiYiMonSoe]
                     }
@@ -82,7 +82,7 @@ const TimetableSection = () => {
                     title: "Speaker Intro by Host",
                     isWorkshop: true,
                     speaker: {
-                        name: "Host Thiri Phyo Naing",
+                        name: "Host Ma Thiri Phyo Naing",
                         role: "UXMM",
                         image: [Thiri]
                     }

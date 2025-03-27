@@ -104,12 +104,12 @@ const SponsorSection = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             whileHover={{ scale: 1.02 }}
-                                            className={`aspect-square bg-white rounded-md overflow-hidden flex items-center justify-center ${sponsorType.type === "Venue Sponsor" 
+                                            className={`aspect-square bg-white rounded-md overflow-hidden md:h-[300px] md:w-[300px] flex items-center justify-center ${sponsorType.type === "Venue Sponsor" 
                                                 ? "border-[3px] border-pink-500 shadow-xl shadow-pink-500/40 scale-110 z-10" 
                                                 : "border border-zinc-900"} relative block`}
                                         >
                                             {/* Logo */}
-                                            <div className={`w-auto h-auto md:w-auto md:h-auto flex items-center justify-center ${sponsorType.type === "Venue Sponsor" ? "scale-150" : "scale-75"}`}>
+                                            <div className={`w-auto h-auto md:w-auto md:h-auto flex items-center justify-center ${sponsorType.type === "Venue Sponsor" ? "scale-150 pb-5" : "scale-75"}`}>
                                                 <img
                                                     src={sponsor.logo}
                                                     alt={sponsor.name}
@@ -118,7 +118,7 @@ const SponsorSection = () => {
                                             </div>
 
                                             {/* Sponsor Type Label */}
-                                            <div className="absolute top-3 left-3">
+                                            <div className="absolute bottom-3 left-3">
                                                 <div 
                                                     style={{ backgroundColor: sponsorType.color }}
                                                     className={`border-2 ${sponsorType.type === "Venue Sponsor" 
