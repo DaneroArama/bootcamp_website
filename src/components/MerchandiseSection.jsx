@@ -17,12 +17,6 @@ const MerchandiseSection = () => {
             { src: Totebag, alt: "Tote bag product image" },
             { src: Model1, alt: "Model with tote bag - For illustration purposes only" },
             { src: Model2, alt: "Model with tote bag - For illustration purposes only" }
-        ],
-        features: [
-            "Premium canvas material",
-            "Reinforced handles",
-            "Interior pocket",
-            "Limited edition design"
         ]
     };
 
@@ -131,29 +125,12 @@ const MerchandiseSection = () => {
                             </p>
                             
                             <div className="flex items-center mb-8">
-                                <span className="text-3xl font-bold mr-4 text-[#EBFF00]">
+                                <span className="text-xl md:text-3xl font-bold mr-4 text-[#EBFF00]">
                                     KS {toteProduct.price.toLocaleString()}
                                 </span>
-                                <span className="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-sm">
+                                <span className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-3 rounded-full text-center text-sm">
                                     Pre-order Available
                                 </span>
-                            </div>
-                            
-                            {/* Features List */}
-                            <div className="mb-8">
-                                <h4 className="text-sm font-medium text-white mb-3 uppercase tracking-wider">Features</h4>
-                                <ul className="grid grid-cols-1 gap-3">
-                                    {toteProduct.features.map((feature, idx) => (
-                                        <li key={idx} className="flex items-center text-white">
-                                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#EBFF00] flex items-center justify-center mr-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-black" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                                </svg>
-                                            </span>
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
                             </div>
                             
                             {/* Pre-order Button */}
@@ -161,6 +138,7 @@ const MerchandiseSection = () => {
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className="w-full bg-gradient-to-r from-[#EBFF00] to-yellow-400 text-black py-4 px-8 rounded-lg font-bold flex items-center justify-center gap-2 mb-6 shadow-lg shadow-yellow-500/20"
+                                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfHdVzuh-k8p8gIkJAdXCM6zbXxriptkNgyR0tZ0811R5LK6Q/viewform?usp=preview', '_blank')}
                             >
                                 <span>Pre-order Now</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

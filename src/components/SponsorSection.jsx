@@ -1,17 +1,36 @@
-import { motion } from "framer-motion";
-import CTZPay from "../img/Sponsors/CTZPay.png";
+import { color, motion } from "framer-motion";
+import CTZPay from "../img/Sponsors/CTZPay.svg";
 import TintTint from "../img/Sponsors/Tint Tint.JPG";
+import MyJobs from "../img/Sponsors/myjobscommm.png";
 import Sponsors from "../img/Second Icon/Sponsor.svg";
 const SponsorSection = () => {
 
     const sponsors = [
         {
             type: "Venue Sponsor",
+            color: "#EC1092",
+            textColor: "text-white",
+            hoverColor: "hover:bg-white hover:text-white",
             items: [
                 { id: 1, logo: CTZPay, name: "CTZPay", confirmed: true, link: "https://ctzpay.com/" },
-                { id: 2, logo: TintTint, name: "Tint Tint", confirmed: false, link: "" },
-                { id: 3, logo: "", name: "Sponsor 3", confirmed: false, link: "" },
-                { id: 4, logo: "", name: "Sponsor 4", confirmed: false, link: "" },
+            ]
+        },
+        {
+            type: "Sponsor",
+            color: "#290302",
+            textColor: "text-white",
+            hoverColor: "hover:bg-white hover:text-white",
+            items: [
+                { id: 1, logo: TintTint, name: "Tint Tint", confirmed: true, link: "https://m.facebook.com/tinttintmyansnack/" },
+            ]
+        },
+        {
+            type: "Sponsor",
+            color: "#FFA500",
+            textColor: "text-white",
+            hoverColor: "hover:bg-white hover:text-white",
+            items: [
+                { id: 1, logo: MyJobs, name: "MyJobs.com.mm", confirmed: true, link: "https://myjobs.com.mm/" },
             ]
         },
     ];
@@ -38,7 +57,7 @@ const SponsorSection = () => {
                                 transition: { repeat: Infinity, duration: 3 }
                             }}
                         >
-                            <div className="bg-[#EBFF00] px-6 py-2 rounded-full text-black font-medium transform">
+                            <div className="bg-[#EC1092] px-6 py-2 rounded-full text-black font-medium transform">
                                 CTZPay
                             </div>
                         </motion.div>
@@ -51,8 +70,8 @@ const SponsorSection = () => {
                                 transition: { repeat: Infinity, duration: 4 }
                             }}
                         >
-                            <div className="bg-pink-300 px-6 py-2 rounded-full text-black font-medium transform">
-                                Coming Soon
+                            <div className="bg-[#290302] px-6 py-2 rounded-full text-white font-medium transform">
+                                Tint Tint
                             </div>
                         </motion.div>
 
@@ -64,8 +83,8 @@ const SponsorSection = () => {
                                 transition: { repeat: Infinity, duration: 3.5 }
                             }}
                         >
-                            <div className="bg-orange-300 px-6 py-2 rounded-full text-black font-medium transform">
-                                Coming Soon
+                            <div className="bg-orange-400 px-6 py-2 rounded-full text-white font-medium transform">
+                                MyJobs.com.mm
                             </div>
                         </motion.div>
 
@@ -87,10 +106,10 @@ const SponsorSection = () => {
 
                 {/* Sponsor Logos Grid */}
                 <div className="max-w-5xl mx-auto">
-                    {sponsors.map((sponsorType) => (
-                        <div key={sponsorType.type} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-2">
-                            {sponsorType.items.map((sponsor) => (
-                                <div key={sponsor.id} className="relative">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-2 justify-items-center">
+                        {sponsors.flatMap(sponsorType => 
+                            sponsorType.items.map(sponsor => (
+                                <div key={`${sponsorType.type}-${sponsor.id}`} className="relative w-full max-w-xs">
                                     {/* Sponsor Card - Wrap with link if confirmed */}
                                     {sponsor.confirmed ? (
                                         <motion.a
@@ -98,20 +117,23 @@ const SponsorSection = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             whileHover={{ scale: 1.02 }}
-                                            className="aspect-square bg-[#111111] rounded-md overflow-hidden flex items-center justify-center border border-zinc-900 relative block"
+                                            className="aspect-square bg-white rounded-md overflow-hidden flex items-center justify-center border border-zinc-900 relative block"
                                         >
                                             {/* Logo */}
                                             <div className="w-auto h-auto md:w-auto md:h-auto flex items-center justify-center">
-                                                <img 
-                                                    src={sponsor.logo} 
+                                                <img
+                                                    src={sponsor.logo}
                                                     alt={sponsor.name}
-                                                    className="w-full h-full object-cover rounded-full"
+                                                    className="w-full h-full object-cover"
                                                 />
                                             </div>
-                                            
+
                                             {/* Sponsor Type Label */}
                                             <div className="absolute bottom-3 left-3">
-                                                <div className="border-2 border-black flex items-center gap-1 bg-white text-black hover:bg-black hover:text-white transition duration-75 px-4 py-2 rounded-full text-lg md:text-base font-medium  font-malinton">
+                                                <div 
+                                                    style={{ backgroundColor: sponsorType.color }}
+                                                    className={`border-2 border-black flex items-center gap-1 ${sponsorType.textColor} ${sponsorType.hoverColor} transition duration-75 px-4 py-2 rounded-full text-lg md:text-base font-medium font-malinton`}
+                                                >
                                                     <span className="text-purple-400">✦</span>
                                                     <span className="font-malinton">{sponsorType.type}</span>
                                                 </div>
@@ -125,24 +147,24 @@ const SponsorSection = () => {
                                         >
                                             {/* Blurred overlay */}
                                             <div className="absolute inset-0 bg-black/40 backdrop-blur-[3px] z-10"></div>
-                                            
+
                                             {/* Locked icon - above the blur */}
                                             <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center relative z-20">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                                                 </svg>
                                             </div>
-                                            
+
                                             {/* To Be Announced text - above the blur */}
                                             <p className="text-gray-300 font-medium mt-2 text-center px-2 relative z-20">To Be Announced</p>
-                                            
+
                                             {/* Placeholder logo - behind the blur */}
                                             <div className="absolute inset-0 flex items-center justify-center opacity-30">
                                                 <div className="w-50 h-50 md:w-30 md:h-30 items-center justify-center">
-                                                        <img className="w-full h-full" src={Sponsors}/>
+                                                    <img className="w-full h-full" src={Sponsors}/>
                                                 </div>
                                             </div>
-                                            
+
                                             {/* Sponsor Type Label - positioned at bottom left, above the blur */}
                                             <div className="absolute bottom-2 left-3 z-20">
                                                 <div className="flex items-center gap-1 bg-black/60 border border-white/20 text-white/70 px-4 py-2 rounded-full text-lg md:text-base font-medium font-malinton backdrop-blur-sm">
@@ -152,12 +174,12 @@ const SponsorSection = () => {
                                             </div>
                                         </motion.div>
                                     )}
-                                </div>
-                            ))}
+                                    </div>
+                                ))
+                            )}
                         </div>
-                    ))}
+                    </div>
                 </div>
-            </div>
 
             {/* Become a Sponsor Section */}
             <div className="px-4 md:px-12 py-12 md:py-16">
