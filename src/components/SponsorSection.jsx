@@ -45,12 +45,12 @@ const SponsorSection = () => {
                     <div className="relative mx-auto max-w-3xl">
                         {/* Main title */}
                         <h2 className="text-3xl md:text-5xl font-bold text-center text-white relative z-10 font-malinton">
-                            Our Partner & Sponsors
+                            Our Sponsors
                         </h2>
 
                         {/* Floating company bubbles - positioned to overlap with title */}
                         <motion.div
-                            className="absolute -top-8 left-20 z-0 hidden md:block"
+                            className="absolute -top-8 left-32 z-0 hidden md:block"
                             initial={{ rotate: -20 }}
                             animate={{
                                 y: [0, -5, 0],
@@ -63,7 +63,7 @@ const SponsorSection = () => {
                         </motion.div>
 
                         <motion.div
-                            className="absolute -top-8 left-[45%] z-0 hidden md:block"
+                            className="absolute -top-8 right-[20%] z-0 hidden md:block"
                             initial={{ rotate: 20 }}
                             animate={{
                                 y: [0, -8, 0],
@@ -76,7 +76,7 @@ const SponsorSection = () => {
                         </motion.div>
 
                         <motion.div
-                            className="absolute top-14 left-[30%] z-0 hidden md:block rotate-6"
+                            className="absolute top-14 left-[40%] z-0 hidden md:block rotate-6"
                             initial={{ rotate: 15 }}
                             animate={{
                                 y: [0, -6, 0],
@@ -85,19 +85,6 @@ const SponsorSection = () => {
                         >
                             <div className="bg-orange-400 px-6 py-2 rounded-full text-white font-medium transform">
                                 MyJobs.com.mm
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            className="absolute top-10 right-[10%] z-0 hidden md:block"
-                            initial={{ rotate: -20 }}
-                            animate={{
-                                y: [0, -7, 0],
-                                transition: { repeat: Infinity, duration: 3.2 }
-                            }}
-                        >
-                            <div className="bg-green-800 px-6 py-2 rounded-full text-[#EBFF00] font-medium transform">
-                                Coming Soon
                             </div>
                         </motion.div>
                         {/* Other floating bubbles... */}
@@ -117,10 +104,12 @@ const SponsorSection = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             whileHover={{ scale: 1.02 }}
-                                            className="aspect-square bg-white rounded-md overflow-hidden flex items-center justify-center border border-zinc-900 relative block"
+                                            className={`aspect-square bg-white rounded-md overflow-hidden flex items-center justify-center ${sponsorType.type === "Venue Sponsor" 
+                                                ? "border-[3px] border-pink-500 shadow-xl shadow-pink-500/40 scale-110 z-10" 
+                                                : "border border-zinc-900"} relative block`}
                                         >
                                             {/* Logo */}
-                                            <div className="w-auto h-auto md:w-auto md:h-auto flex items-center justify-center">
+                                            <div className={`w-auto h-auto md:w-auto md:h-auto flex items-center justify-center ${sponsorType.type === "Venue Sponsor" ? "scale-125" : "scale-75"}`}>
                                                 <img
                                                     src={sponsor.logo}
                                                     alt={sponsor.name}
@@ -132,7 +121,9 @@ const SponsorSection = () => {
                                             <div className="absolute bottom-3 left-3">
                                                 <div 
                                                     style={{ backgroundColor: sponsorType.color }}
-                                                    className={`border-2 border-black flex items-center gap-1 ${sponsorType.textColor} ${sponsorType.hoverColor} transition duration-75 px-4 py-2 rounded-full text-lg md:text-base font-medium font-malinton`}
+                                                    className={`border-2 ${sponsorType.type === "Venue Sponsor" 
+                                                        ? "border-white font-bold animate-pulse" 
+                                                        : "border-black"} flex items-center gap-1 ${sponsorType.textColor} ${sponsorType.hoverColor} transition duration-75 px-4 py-2 rounded-full text-lg md:text-base font-medium font-malinton`}
                                                 >
                                                     <span className="text-purple-400">✦</span>
                                                     <span className="font-malinton">{sponsorType.type}</span>
