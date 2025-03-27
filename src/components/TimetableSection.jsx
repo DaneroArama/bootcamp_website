@@ -363,8 +363,12 @@ const TimetableSection = () => {
                                                 <div className="w-full md:w-56 p-4 flex-shrink-0 flex items-center">
                                                     <div className="text-xl font-medium whitespace-nowrap">
                                                         {event.time.start}
-                                                        <span className="mx-2 text-gray-400 text-sm">TO</span>
-                                                        {event.time.end}
+                                                        {event.time.end && (
+                                                            <>
+                                                                <span className="mx-2 text-gray-400 text-sm">TO</span>
+                                                                {event.time.end}
+                                                            </>
+                                                        )}
                                                     </div>
                                                 </div>
 
