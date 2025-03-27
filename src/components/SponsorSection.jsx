@@ -109,7 +109,7 @@ const SponsorSection = () => {
                                                 : "border border-zinc-900"} relative block`}
                                         >
                                             {/* Logo */}
-                                            <div className={`w-auto h-auto md:w-auto md:h-auto flex items-center justify-center ${sponsorType.type === "Venue Sponsor" ? "scale-125" : "scale-75"}`}>
+                                            <div className={`w-auto h-auto md:w-auto md:h-auto flex items-center justify-center ${sponsorType.type === "Venue Sponsor" ? "scale-150" : "scale-75"}`}>
                                                 <img
                                                     src={sponsor.logo}
                                                     alt={sponsor.name}
@@ -118,7 +118,7 @@ const SponsorSection = () => {
                                             </div>
 
                                             {/* Sponsor Type Label */}
-                                            <div className="absolute bottom-3 left-3">
+                                            <div className="absolute top-3 left-3">
                                                 <div 
                                                     style={{ backgroundColor: sponsorType.color }}
                                                     className={`border-2 ${sponsorType.type === "Venue Sponsor" 
