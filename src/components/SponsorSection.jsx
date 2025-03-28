@@ -1,4 +1,4 @@
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import CTZPay from "../img/Sponsors/CTZPay.svg";
 import TintTint from "../img/Sponsors/Tint Tint.JPG";
 import MyJobs from "../img/Sponsors/myjobscommm.png";
@@ -152,7 +152,7 @@ const SponsorSection = () => {
                                             {/* Placeholder logo - behind the blur */}
                                             <div className="absolute inset-0 flex items-center justify-center opacity-30">
                                                 <div className="w-50 h-50 md:w-30 md:h-30 items-center justify-center">
-                                                    <img className="w-full h-full" src={Sponsors}/>
+                                                    <img className="w-full h-full" src={Sponsors} alt="sponsor"/>
                                                 </div>
                                             </div>
 

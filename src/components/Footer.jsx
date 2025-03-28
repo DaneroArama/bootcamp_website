@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import uxmmlogo from '../img/uxmm_nav_logo.png';
 
 const Footer = () => {
-    const navItems = ['home', 'speakers', 'mentors', 'programs', 'sponsors'];
     
     const socialLinks = [
         { name: 'Facebook', url: 'https://www.facebook.com/uxmyanmar', icon: 'fab fa-facebook-f' },

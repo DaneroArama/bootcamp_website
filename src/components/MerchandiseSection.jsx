@@ -1,24 +1,42 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Totebag from "../img/Product/tote bag.png";
-import Model1 from "../img/Product/Model2.png";
-import Model2 from "../img/Product/Model1.png";
+import Totebag1 from "../img/Product/toe bag mock.jpg";
+import Totebag2 from "../img/Product/toe bag mock1.jpg"; // Add the second design image
+import Model1 from "../img/Product/Model 1.png";
+import Model2 from "../img/Product/Model 2.png";
+import Model3 from "../img/Product/Model 3.png";
 
 const MerchandiseSection = () => {
+    const [activeProduct, setActiveProduct] = useState(0);
     const [activeImage, setActiveImage] = useState(0);
 
-    // Product data for tote bag
-    const toteProduct = {
-        id: 1,
-        name: "Think, Sprint, Design Tote Bag",
-        description: "Exclusive limited edition tote bag featuring custom artwork from our design bootcamp. Made with premium materials for durability and style.",
-        price: 55000,
-        images: [
-            { src: Totebag, alt: "Tote bag product image" },
-            { src: Model1, alt: "Model with tote bag - For illustration purposes only" },
-            { src: Model2, alt: "Model with tote bag - For illustration purposes only" }
-        ]
-    };
+    // Product data for tote bags
+    const toteProducts = [
+        {
+            id: 1,
+            name: "Think, Sprint, Design Tote Bag",
+            description: "Exclusive limited edition tote bag featuring custom artwork from our design bootcamp. Made with premium materials for durability and style.",
+            price: 15000,
+            images: [
+                { src: Totebag1, alt: "Tote bag design 1 product image" },
+                { src: Model1, alt: "Model with tote bag - For illustration purposes only" },
+                { src: Model2, alt: "Model with tote bag - For illustration purposes only" }
+            ]
+        },
+        {
+            id: 2,
+            name: "hink, Sprint, Design Tote Bag",
+            description: "Exclusive limited edition tote bag featuring custom artwork from our design bootcamp. Made with premium materials for durability and style.",
+            price: 15000,
+            images: [
+                { src: Totebag2, alt: "Tote bag design 2 product image" },
+                { src: Model3, alt: "Model with tote bag - For illustration purposes only" },
+            ]
+        }
+    ];
+
+    // Get current product
+    const currentProduct = toteProducts[activeProduct];
 
     return (
         <section className="py-24 bg-transparent relative overflow-hidden" id="merchandise">
@@ -44,7 +62,7 @@ const MerchandiseSection = () => {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-5xl md:text-7xl font-bold mb-6 font-malinton text-white"
                     >
-                        Limited Edition <span className="text-[#EBFF00]">Tote Bag</span>
+                        Limited Edition <span className="text-[#EBFF00]">Tote Bags</span>
                     </motion.h2>
                     
                     <motion.p
@@ -53,38 +71,61 @@ const MerchandiseSection = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="max-w-2xl mx-auto text-white text-lg opacity-80"
                     >
-                        Carry your design passion with our exclusive Think, Sprint, Design tote bag.
+                        Carry your design passion with our exclusive Think, Sprint, Design tote bags.
                         Each bag is a statement piece that celebrates creativity and innovation.
                     </motion.p>
+                </div>
+
+                {/* Design Selection Tabs */}
+                <div className="flex justify-center mb-12">
+                    {toteProducts.map((product, idx) => (
+                        <motion.button
+                            key={product.id}
+                            onClick={() => {
+                                setActiveProduct(idx);
+                                setActiveImage(0); // Reset to first image when switching products
+                            }}
+                            className={`px-6 py-3 mx-2 rounded-full font-medium transition-all ${
+                                activeProduct === idx 
+                                    ? 'bg-[#EBFF00] text-black scale-105 shadow-lg shadow-[#EBFF00]/20' 
+                                    : 'bg-white/10 text-white hover:bg-white/20'
+                            }`}
+                            whileHover={{ scale: activeProduct === idx ? 1.05 : 1.03 }}
+                            whileTap={{ scale: 0.98 }}
+                        >
+                            Design {idx + 1}
+                        </motion.button>
+                    ))}
                 </div>
 
                 {/* Product Display */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
                     {/* Product Image Side */}
                     <motion.div
+                        key={`product-${activeProduct}`}
                         initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         className="lg:col-span-7 relative"
                     >
-                            <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] mx-auto rounded-xl overflow-hidden border-2 border-white">
-                                <img 
-                                    src={toteProduct.images[activeImage].src} 
-                                    alt={toteProduct.images[activeImage].alt}
-                                    className="w-full h-full object-cover bg-black"
-                                />
-                                
-                                {/* Watermark for model photos */}
-                                {activeImage > 0 && (
-                                    <div className="absolute bottom-4 right-4 bg-black bg-opacity-70 px-3 py-1 rounded-lg text-white text-xs">
-                                        For illustration purposes only
-                                    </div>
-                                )}
-                            </div>
-                        
+                        <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] mx-auto rounded-xl overflow-hidden border-2 border-white">
+                            <img 
+                                src={currentProduct.images[activeImage].src} 
+                                alt={currentProduct.images[activeImage].alt}
+                                className="w-full h-full object-cover bg-black"
+                            />
+                            
+                            {/* Watermark for model photos */}
+                            {activeImage > 0 && (
+                                <div className="absolute bottom-4 right-4 bg-black bg-opacity-70 px-3 py-1 rounded-lg text-white text-xs">
+                                    For illustration purposes only
+                                </div>
+                            )}
+                        </div>
+                    
                         {/* Thumbnail navigation */}
                         <div className="flex gap-3 mt-4 justify-center">
-                            {toteProduct.images.map((image, idx) => (
+                            {currentProduct.images.map((image, idx) => (
                                 <button 
                                     key={idx} 
                                     onClick={() => setActiveImage(idx)}
@@ -110,23 +151,24 @@ const MerchandiseSection = () => {
 
                     {/* Product Details Side */}
                     <motion.div
+                        key={`details-${activeProduct}`}
                         initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         className="lg:col-span-5 flex flex-col justify-center"
                     >
                         <div className="bg-black bg-opacity-40 backdrop-blur-sm p-8 rounded-2xl border border-gray-800">
                             <h3 className="text-3xl font-bold mb-4 font-malinton text-white">
-                                {toteProduct.name}
+                                {currentProduct.name}
                             </h3>
                             
                             <p className="mb-6 text-white opacity-80">
-                                {toteProduct.description}
+                                {currentProduct.description}
                             </p>
                             
                             <div className="flex items-center mb-8">
                                 <span className="text-xl md:text-3xl font-bold mr-4 text-[#EBFF00]">
-                                    KS {toteProduct.price.toLocaleString()}
+                                    KS {currentProduct.price.toLocaleString()}
                                 </span>
                                 <span className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-3 rounded-full text-center text-sm">
                                     Pre-order Available
@@ -149,9 +191,7 @@ const MerchandiseSection = () => {
                             {/* Pre-order Info */}
                             <div className="p-4 border border-yellow-500/30 rounded-lg bg-black bg-opacity-30">
                                 <p className="text-white text-sm">
-                                    <span className="text-[#EBFF00] font-bold">Note:</span> Pre-orders close on March 25th. 
-                                    Tote bags will be available for pickup at the event registration desk. 
-                                    Limited quantity available!
+                                    <span className="text-[#EBFF00] font-bold">Note:</span> Based of bag material, color might be different. Delivery fees may also apply.
                                 </p>
                             </div>
                         </div>
