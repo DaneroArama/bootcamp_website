@@ -56,8 +56,6 @@ const App = () => {
                 <section id="programs">
                     <TimetableSection />
                 </section>
-
-                <MerchandiseSection />
                 
                 <section id="sponsors">
                     <SponsorSection />
