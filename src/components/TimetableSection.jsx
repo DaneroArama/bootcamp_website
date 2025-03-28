@@ -347,7 +347,7 @@ const TimetableSection = () => {
                                             <div className="w-full flex items-center justify-center py-4 px-6">
                                                 <div className="flex items-center flex-wrap justify-center gap-2">
                                                     <img
-                                                        src={Coffee}
+                                                        src={String(Coffee)}
                                                         alt="Coffee Break Icon"
                                                         className="w-8 h-8"
                                                     />
@@ -388,17 +388,17 @@ const TimetableSection = () => {
                                                         <div className="flex items-center justify-between">
                                                             <div className="flex items-center gap-3">
                                                                 {event.isWorkshop ? (
-                                                                    <img src={Participant} alt="Participant Icon" className="w-6 h-6" />
+                                                                    <img src={String(Participant)} alt="Participant Icon" className="w-6 h-6" />
                                                                 ) : event.isPanel ? (
-                                                                    <img src={Speaker} alt="Panel Icon" className="w-6 h-6" />
+                                                                    <img src={String(Speaker)} alt="Panel Icon" className="w-6 h-6" />
                                                                 ) : event.isOpening ? (
-                                                                    <img src={Opening} alt="Opening Icon" className="w-6 h-6" />
+                                                                    <img src={String(Opening)} alt="Opening Icon" className="w-6 h-6" />
                                                                 ) : event.isSponsor ? (
-                                                                    <img src={Sponsor} alt="Sponsor Icon" className="w-6 h-6" />
+                                                                    <img src={String(Sponsor)} alt="Sponsor Icon" className="w-6 h-6" />
                                                                 ) : event.isClosing ? (
-                                                                    <img src={Closed} alt="Closing Icon" className="w-6 h-6" />
+                                                                    <img src={String(Closed)} alt="Closing Icon" className="w-6 h-6" />
                                                                 ) : (
-                                                                    <img src={Trainer} alt="Trainer Icon" className="w-6 h-6" />
+                                                                    <img src={String(Trainer)} alt="Trainer Icon" className="w-6 h-6" />
                                                                 )}
                                                                 <div>
                                                                     <p className="text-sm font-medium">{event.speaker.name}</p>

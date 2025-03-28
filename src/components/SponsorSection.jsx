@@ -152,7 +152,8 @@ const SponsorSection = () => {
                                             {/* Placeholder logo - behind the blur */}
                                             <div className="absolute inset-0 flex items-center justify-center opacity-30">
                                                 <div className="w-50 h-50 md:w-30 md:h-30 items-center justify-center">
-                                                    <img className="w-full h-full" src={Sponsors} alt="sponsor"/>
+                                                    <img className="w-full h-full" src={String(Sponsors)} alt="sponsor" />
+
                                                 </div>
                                             </div>
 

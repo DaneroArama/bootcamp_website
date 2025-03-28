@@ -14,8 +14,19 @@ const MerchandiseSection = () => {
     const toteProducts = [
         {
             id: 1,
-            name: "Think, Sprint, Design Tote Bag",
-            description: "Exclusive limited edition tote bag featuring custom artwork from our design bootcamp. Made with premium materials for durability and style.",
+            name: "Think, Sprint, Design Tote Bag : Design 1",
+            description: "Exclusive limited edition tote bag featuring custom artwork from our design bootcamp with Think, Sprint, Design Star.",
+            price: 15000,
+            images: [
+                { src: Totebag2, alt: "Tote bag design 2 product image" },
+                { src: Model3, alt: "Model with tote bag - For illustration purposes only" },
+            ]
+        },
+
+        {
+            id: 2,
+            name: "Think, Sprint, Design Tote Bag : Design 2",
+            description: "Exclusive limited edition tote bag featuring custom artwork from our design bootcamp with UXMM logo.",
             price: 15000,
             images: [
                 { src: Totebag1, alt: "Tote bag design 1 product image" },
@@ -23,16 +34,7 @@ const MerchandiseSection = () => {
                 { src: Model2, alt: "Model with tote bag - For illustration purposes only" }
             ]
         },
-        {
-            id: 2,
-            name: "Think, Sprint, Design Tote Bag",
-            description: "Exclusive limited edition tote bag featuring custom artwork from our design bootcamp. Made with premium materials for durability and style.",
-            price: 15000,
-            images: [
-                { src: Totebag2, alt: "Tote bag design 2 product image" },
-                { src: Model3, alt: "Model with tote bag - For illustration purposes only" },
-            ]
-        }
+
     ];
 
     // Get current product
