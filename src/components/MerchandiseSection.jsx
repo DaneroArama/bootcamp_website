@@ -25,7 +25,7 @@ const MerchandiseSection = () => {
         },
         {
             id: 2,
-            name: "hink, Sprint, Design Tote Bag",
+            name: "Think, Sprint, Design Tote Bag",
             description: "Exclusive limited edition tote bag featuring custom artwork from our design bootcamp. Made with premium materials for durability and style.",
             price: 15000,
             images: [

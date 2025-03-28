@@ -44,7 +44,7 @@ const SponsorSection = () => {
                     {/* Main title with bubbles positioned around it */}
                     <div className="relative mx-auto max-w-3xl">
                         {/* Main title */}
-                        <h2 className="text-3xl md:text-5xl font-bold text-center text-white relative z-10 font-malinton">
+                        <h2 className="text-5xl md:text-7xl font-bold text-center text-white relative z-10 font-malinton">
                             Our Sponsors
                         </h2>
 
