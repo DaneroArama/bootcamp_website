@@ -31,6 +31,8 @@ const TimetableSection = () => {
     const [showTimetable, setShowTimetable] = useState(false);
     const [activeTab, setActiveTab] = useState(0);
     const [isTimetableReady] = useState(true);
+    const [isBootcampPaused] = useState(true); // New state to indicate bootcamp is paused
+    const [showCondolencePopup, setShowCondolencePopup] = useState(false); // Add this state for the popup
     const timetableSectionRef = useRef(null); // Add this ref for scrolling
 
     // Function to handle tab change and scroll to top of timetable
@@ -289,10 +291,20 @@ const TimetableSection = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-4xl md:text-6xl font-bold text-center mb-8 font-malinton flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5"
             >
-                Check
-                <span className="px-8 py-2 bg-purple-200 rounded-full font-malinton">our</span>
-                event
-                <span className="px-8 py-2 bg-[#EBFF00] rounded-full font-malinton">timetable</span>
+                {isBootcampPaused ? (
+                    <>
+                        Tentative
+                        <span className="px-8 py-2 bg-purple-200 rounded-full font-malinton">event</span>
+                        <span className="px-8 py-2 bg-[#EBFF00] rounded-full font-malinton">timetable</span>
+                    </>
+                ) : (
+                    <>
+                        Check
+                        <span className="px-8 py-2 bg-purple-200 rounded-full font-malinton">our</span>
+                        event
+                        <span className="px-8 py-2 bg-[#EBFF00] rounded-full font-malinton">timetable</span>
+                    </>
+                )}
             </motion.h2>
 
             {/* Go Now Button */}
@@ -305,7 +317,7 @@ const TimetableSection = () => {
                 className="bg-black text-white px-6 py-3 rounded-full flex items-center space-x-2"
             >
                 <span className="text-purple-400">✧</span>
-                <span>Check Now</span>
+                <span>{isBootcampPaused ? "View Tentative Schedule" : "Check Now"}</span>
                 <motion.span
                     initial={false}
                     animate={{ rotate: showTimetable ? 90 : 0 }}
@@ -324,6 +336,43 @@ const TimetableSection = () => {
                     transition={{ duration: 0.5 }}
                     className="w-full mt-12"
                 >
+                    {/* Postponement Notice */}
+                    {isBootcampPaused && (
+                        <motion.div 
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="max-w-6xl mx-auto px-4 mb-8"
+                        >
+                            <div className="bg-gray-900 border-l-4 border-yellow-500 text-white p-6 rounded-lg shadow-lg">
+                                <div className="flex items-start">
+                                    <div className="flex-shrink-0 mt-0.5">
+                                        <svg className="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div className="ml-3">
+                                        <h3 className="text-lg font-medium text-yellow-300">Bootcamp Postponed</h3>
+                                        <div className="mt-2 text-sm text-gray-300">
+                                            <p>Due to the recent earthquake in Myanmar, our bootcamp has been postponed. The dates shown below are tentative and will be confirmed once the situation stabilizes.</p>
+                                        </div>
+                                        <div className="mt-4">
+                                            <div className="-mx-2 -my-1.5 flex">
+                                                <button 
+                                                    type="button" 
+                                                    className="px-4 py-1.5 bg-gray-800 text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-yellow-500 rounded-md"
+                                                    onClick={() => setShowCondolencePopup(true)}
+                                                >
+                                                    Read our statement
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )}
+
                     {isTimetableReady ? (
                         <>
                             <motion.div
@@ -497,8 +546,58 @@ const TimetableSection = () => {
                     )}
                 </motion.div>
             )}
+            
+            {/* Condolence Popup */}
+            {showCondolencePopup && (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+                    onClick={() => setShowCondolencePopup(false)}
+                >
+                    <motion.div 
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0.9, opacity: 0 }}
+                        transition={{ type: "spring", damping: 20 }}
+                        className="bg-gray-900 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="p-6 relative">
+                            <button 
+                                onClick={() => setShowCondolencePopup(false)}
+                                className="absolute top-4 right-4 text-gray-400 hover:text-white"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                            
+                            <div className="border-l-4 border-gray-500 pl-4 mb-6">
+                                <h2 className="text-2xl md:text-3xl font-bold font-malinton text-white">
+                                    Our Heartfelt <span className="text-gray-400">Condolences</span>
+                                </h2>
+                            </div>
+                            
+                            <div className="text-gray-300 space-y-4">
+                                <p className="leading-relaxed">
+                                    We extend our deepest condolences to everyone affected by the recent earthquake in Myanmar. Our hearts go out to those who have lost loved ones, homes, and livelihoods in this devastating tragedy.
+                                </p>
+                                
+                                <p className="leading-relaxed">
+                                    In light of these difficult circumstances, we have made the decision to postpone our THINK, SPRINT, DESIGN bootcamp until the situation stabilizes and our community has had time to heal and rebuild.
+                                </p>
+                                
+                                <p className="leading-relaxed">
+                                    During this challenging time, we believe our focus should be on supporting recovery efforts and standing in solidarity with those who are suffering. We will announce new dates for our bootcamp when it is appropriate to do so.
+                                </p>
+                            </div>
+                        </div>
+                    </motion.div>
+                </motion.div>
+            )}
         </section>
-    );
-};
-
+        );
+    };
 export default TimetableSection;

@@ -298,8 +298,8 @@ export const Home = () => {
                         />
                         <h3 className="text-xl mb-16 font-gothic relative z-10">DATE & TIME</h3>
                         <div className="relative z-10">
-                            <p className="text-3xl font-semibold font-malinton">April 5th to 6th</p>
-                            <p className="font-malinton text-xl">9am to 4pm</p>
+                            <p className="text-3xl font-semibold font-malinton">Postponed</p>
+                            <p className="font-malinton text-xl">will be announced soon </p>
                         </div>
                     </motion.div>
 
@@ -328,8 +328,8 @@ export const Home = () => {
                         />
                         <h3 className="text-xl mb-16 font-gothic relative z-10">Register</h3>
                         <div className="relative z-10">
-                            <p className="text-3xl font-semibold mb-6 font-malinton">Stay Tuned</p>
-                            <p className="font-malinton text-xl">Will Be Announced</p>
+                            <p className="text-3xl font-semibold mb-2 font-malinton">Registration Paused</p>
+                            <p className="font-malinton text-lg mb-1">Due to recent events</p>
                         </div>
                     </motion.div>
                 </motion.div>

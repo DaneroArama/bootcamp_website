@@ -30,7 +30,7 @@ const CondolenceSection = () => {
           </p>
           
           <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-            In light of these difficult circumstances, we have made the decision to postpone our think, sprint, design bootcamp until the situation stabilizes and our community has had time to heal and rebuild.
+            In light of these difficult circumstances, we have made the decision to postpone our THINK, SPRINT, DESIGN bootcamp until the situation stabilizes and our community has had time to heal and rebuild.
           </p>
           
           <p className="text-gray-300 text-lg leading-relaxed">
@@ -70,9 +70,6 @@ const CondolenceSection = () => {
           </motion.a>
         </div>
       </div>
-      
-      {/* Optional: Candle or memorial visual element */}
-      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent"></div>
     </section>
   );
 };
