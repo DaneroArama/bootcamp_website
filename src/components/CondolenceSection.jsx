@@ -7,7 +7,7 @@ const CondolenceSection = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-900 to-black opacity-80"></div>
       <div className="absolute top-40 left-10 w-64 h-64 rounded-full bg-gray-800 opacity-10 blur-3xl"></div>
       
-      <div className="max-w-4xl mx-auto px-4 relative z-10">
+      <div className="max-w-4xl mx-auto pt-10 px-4 relative z-10">
         <div className="border-l-4 border-gray-500 pl-6 mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
