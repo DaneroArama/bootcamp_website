@@ -5,6 +5,21 @@ const CondolenceSection = () => {
   const [activeTab, setActiveTab] = useState("message"); // "message", "donate", "updates"
   const [donations, setDonations] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Add scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // Function to fetch donations from Google Sheets
   const fetchDonations = async (forceRefresh = false) => {
@@ -78,7 +93,10 @@ const CondolenceSection = () => {
             Message
           </button>
           <button 
-            onClick={() => setActiveTab("donate")}
+            onClick={() => {
+              setActiveTab("donate");
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className={`px-6 py-3 font-medium text-sm transition-colors ${
               activeTab === "donate" 
                 ? "text-white border-b-2 border-yellow-500" 
@@ -112,7 +130,10 @@ const CondolenceSection = () => {
             {/* Ways to Help Button */}
             <div className="mt-8 text-center">
               <button
-                onClick={() => setActiveTab("donate")}
+                onClick={() => {
+                  setActiveTab("donate");
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
                 className="px-6 py-3 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg transition-colors inline-flex items-center gap-2 text-sm font-medium"
               >
                 Ways to Help
@@ -306,6 +327,19 @@ const CondolenceSection = () => {
           </motion.div>
         )}
       </div>
+      
+      {/* Add scroll to top button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-50 p-3 bg-yellow-600 hover:bg-yellow-700 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+          aria-label="Scroll to top"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      )}
     </section>
   );
 };
