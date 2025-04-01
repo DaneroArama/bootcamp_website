@@ -108,6 +108,16 @@ const CondolenceSection = () => {
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
               During this challenging time, we believe our focus should be on supporting recovery efforts and standing in solidarity with those who are suffering. We will announce new dates for our bootcamp when it is appropriate to do so.
             </p>
+
+            {/* Ways to Help Button */}
+            <div className="mt-8 text-center">
+              <button
+                onClick={() => setActiveTab("donate")}
+                className="px-6 py-3 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg transition-colors inline-flex items-center gap-2 text-sm font-medium"
+              >
+                Ways to Help
+              </button>
+            </div>
           </motion.div>
         )}
         
