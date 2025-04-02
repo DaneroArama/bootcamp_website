@@ -167,7 +167,7 @@ const CondolenceSection = () => {
                   Important Note
                 </h4>
                 <p className="text-sm text-gray-300">
-                  Please include "EQ - (Your Name)" in your transfer note to help us track donations.
+                  Please include 'EQ - (Your Name)' in your transfer note to help us track donations. If you prefer not to include your name, kindly inform us in advance.
                 </p>
               </div>
 
@@ -216,6 +216,16 @@ const CondolenceSection = () => {
                         </div>
                       </div>
                     </div>
+
+                    <div>
+                      <h5 className="font-medium text-white mb-2">Ma Nwe Oo Lwin</h5>
+                      <div className="grid grid-cols-1 gap-2 text-sm">
+                        <div className="flex items-center">
+                          <span className="text-gray-400 mr-2 min-w-[70px]">KBZ Pay:</span>
+                          <span className="text-yellow-400 break-all">09254997284 </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
@@ -232,8 +242,8 @@ const CondolenceSection = () => {
                       <h5 className="font-medium text-white mb-2">Ko La Min Thaw</h5>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
                         <div className="flex items-center">
-                          <span className="text-gray-400 mr-2 min-w-[90px]">Bangkok Bank:</span>
-                          <span className="text-yellow-400 break-all">149-4-167180</span>
+                          <span className="text-gray-400 mr-1 min-w-[90px]">Bangkok Bank:</span>
+                          <span className="text-yellow-400 break-all">1494167180</span>
                         </div>
                         <div className="flex items-center">
                           <span className="text-gray-400 mr-2 min-w-[90px]">PromptPay:</span>
@@ -247,7 +257,7 @@ const CondolenceSection = () => {
                       <div className="grid grid-cols-1 gap-2 text-sm">
                         <div className="flex items-center">
                           <span className="text-gray-400 mr-2 min-w-[90px]">TTB Bank:</span>
-                          <span className="text-yellow-400 break-all">807-2-09537-8</span>
+                          <span className="text-yellow-400 break-all">8072095378</span>
                         </div>
                       </div>
                     </div>
@@ -263,7 +273,7 @@ const CondolenceSection = () => {
                   Important Note
                 </h4>
                 <p className="text-sm text-gray-300">
-                  Please include "EQ - (Your Name)" in your transfer note to help us track donations.
+                  Please include 'EQ - (Your Name)' in your transfer note to help us track donations. If you prefer not to include your name, kindly inform us in advance.
                 </p>
               </div>
             </div>
@@ -288,21 +298,21 @@ const CondolenceSection = () => {
                   <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-yellow-400"></div>
                 </div>
               ) : donations.length > 0 ? (
-                <div className="overflow-hidden rounded-lg border border-gray-700">
+                <div className="overflow-x-auto rounded-lg border border-gray-700">
                   <table className="min-w-full divide-y divide-gray-700">
                     <thead className="bg-gray-800">
                       <tr>
-                        <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Date</th>
-                        <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Name</th>
-                        <th scope="col" className="px-6 py-4 text-right text-xs font-medium text-gray-400 uppercase tracking-wider">Amount</th>
+                        <th scope="col" className="px-4 sm:px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Date</th>
+                        <th scope="col" className="px-4 sm:px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Name</th>
+                        <th scope="col" className="px-4 sm:px-6 py-4 text-right text-xs font-medium text-gray-400 uppercase tracking-wider min-w-[100px]">Amount</th>
                       </tr>
                     </thead>
                     <tbody className="bg-gray-800/30 divide-y divide-gray-700">
                       {donations.map((donation, index) => (
                         <tr key={index} className={index % 2 === 0 ? 'bg-gray-800/30' : 'bg-gray-800/10'}>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">{donation.Date}</td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">{donation.Name}</td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-yellow-400 text-right">{donation.Amount}</td>
+                          <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-300">{donation.Date}</td>
+                          <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm font-medium text-white">{donation.Name}</td>
+                          <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-yellow-400 text-right">{donation.Amount}</td>
                         </tr>
                       ))}
                     </tbody>
