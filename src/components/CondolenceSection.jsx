@@ -298,25 +298,59 @@ const CondolenceSection = () => {
                   <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-yellow-400"></div>
                 </div>
               ) : donations.length > 0 ? (
-                <div className="overflow-x-auto rounded-lg border border-gray-700">
-                  <table className="min-w-full divide-y divide-gray-700">
-                    <thead className="bg-gray-800">
-                      <tr>
-                        <th scope="col" className="px-4 sm:px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Date</th>
-                        <th scope="col" className="px-4 sm:px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Name</th>
-                        <th scope="col" className="px-4 sm:px-6 py-4 text-right text-xs font-medium text-gray-400 uppercase tracking-wider min-w-[100px]">Amount</th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-gray-800/30 divide-y divide-gray-700">
+                <div>
+                  {/* Desktop Table View */}
+                  <div className="hidden md:block relative">
+                    <div className="overflow-x-auto overflow-y-auto max-h-[600px] rounded-lg border border-gray-700 scrollbar-none">
+                      <table className="min-w-full divide-y divide-gray-700">
+                        <thead className="bg-gray-800 sticky top-0 z-10">
+                          <tr>
+                            <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Date</th>
+                            <th scope="col" className="px-6 py-4 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Name</th>
+                            <th scope="col" className="px-6 py-4 text-right text-xs font-medium text-gray-400 uppercase tracking-wider">Amount</th>
+                          </tr>
+                        </thead>
+                        <tbody className="bg-gray-800/30 divide-y divide-gray-700">
+                          {donations.map((donation, index) => (
+                            <tr key={index} className={index % 2 === 0 ? 'bg-gray-800/30' : 'bg-gray-800/10'}>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">{donation.Date}</td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">{donation.Name}</td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-yellow-400 text-right">{donation.Amount}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    {donations.length > 10 && (
+                      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none flex justify-center items-end pb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Mobile Card View */}
+                  <div className="md:hidden relative">
+                    <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800/50">
                       {donations.map((donation, index) => (
-                        <tr key={index} className={index % 2 === 0 ? 'bg-gray-800/30' : 'bg-gray-800/10'}>
-                          <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-gray-300">{donation.Date}</td>
-                          <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm font-medium text-white">{donation.Name}</td>
-                          <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-sm text-yellow-400 text-right">{donation.Amount}</td>
-                        </tr>
+                        <div key={index} className="bg-gray-800/30 p-4 rounded-lg border border-gray-700">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-sm text-gray-300">{donation.Date}</span>
+                            <span className="text-sm text-yellow-400 font-medium">{donation.Amount}</span>
+                          </div>
+                          <div className="text-white font-medium">{donation.Name}</div>
+                        </div>
                       ))}
-                    </tbody>
-                  </table>
+                    </div>
+                    {donations.length > 2 && (
+                      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none flex justify-center items-end pb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    )}
+                  </div>
                 </div>
               ) : (
                 <div className="bg-gray-800/30 rounded-lg border border-gray-700 p-12 text-center">
