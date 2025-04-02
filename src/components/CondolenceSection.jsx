@@ -76,14 +76,29 @@ const CondolenceSection = () => {
           return donation;
         }).filter(donation => donation.Date && donation.Name); // Filter out empty rows
         
-        // Sort donations by date (newest first)
+        // Reverse the array to get the most recently added entries first
+        // This assumes the Google Sheet has newest entries at the bottom
+        donationData.reverse();
+        
+        // Then sort by date (newest first)
         donationData.sort((a, b) => {
           // Try to parse dates (assuming format is MM/DD/YYYY or similar)
           const dateA = new Date(a.Date);
           const dateB = new Date(b.Date);
-          return dateB - dateA; // Newest first
+          
+          // Check if dates are valid and different
+          if (!isNaN(dateA.getTime()) && !isNaN(dateB.getTime()) && dateA.getTime() !== dateB.getTime()) {
+            return dateB - dateA; // Newest date first
+          }
+          
+          // If dates are the same or invalid, keep the reversed order
+          return 0;
         });
         
+        // Remove the temporary _originalIndex property
+        donationData.forEach(donation => {
+          delete donation._originalIndex;
+        });
         setDonations(donationData);
       } catch (error) {
         console.error("Error fetching donations:", error);
@@ -93,6 +108,45 @@ const CondolenceSection = () => {
     }
   };
 
+  // Calculate total donation amount
+  const calculateTotalAmount = () => {
+    let totalKS = 0;
+    let totalTHB = 0;
+    let totalSGD = 0;
+    
+    donations.forEach(donation => {
+      // Extract numeric value from amount string
+      const amount = donation.Amount || '';
+      
+      if (amount.includes('KS')) {
+        // Extract number from strings like "50000 KS"
+        const numericValue = parseFloat(amount.replace(/[^0-9.]/g, ''));
+        if (!isNaN(numericValue)) {
+          totalKS += numericValue;
+        }
+      } else if (amount.includes('THB')) {
+        // Extract number from strings like "2000 THB"
+        const numericValue = parseFloat(amount.replace(/[^0-9.]/g, ''));
+        if (!isNaN(numericValue)) {
+          totalTHB += numericValue;
+        }
+      }
+
+      else if (amount.includes('SGD')) {
+        // Extract number from strings like "2000 THB"
+        const numericValue = parseFloat(amount.replace(/[^0-9.]/g, ''));
+        if (!isNaN(numericValue)) {
+          totalSGD += numericValue;
+        }
+      }
+    });
+    
+    return { totalKS, totalTHB, totalSGD };
+  };
+  
+  // Get formatted totals
+  const { totalKS, totalTHB, totalSGD } = calculateTotalAmount();
+  
   // Fetch donations when tab changes to donate
   useEffect(() => {
     fetchDonations();
@@ -330,6 +384,35 @@ const CondolenceSection = () => {
                 </button>
               </div>
               
+              {/* Total Donations Summary */}
+              {donations.length > 0 && (
+                <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700 mb-6">
+                  <h4 className="text-lg font-medium text-white mb-2">Total Donations</h4>
+                  <p className="text-gray-300 mb-3">We have raised a total of:</p>
+                  <div className="flex flex-wrap gap-4">
+                        {totalKS > 0 && (
+                          <div className="bg-yellow-900/30 px-4 py-2 rounded-md border border-yellow-700/50">
+                            <span className="text-yellow-400 font-bold text-xl">{totalKS.toLocaleString()}</span>
+                            <span className="text-yellow-500 ml-1">KS</span>
+                          </div>
+                        )}
+                        {totalTHB > 0 && (
+                          <div className="bg-yellow-900/30 px-4 py-2 rounded-md border border-yellow-700/50">
+                            <span className="text-yellow-400 font-bold text-xl">{totalTHB.toLocaleString()}</span>
+                            <span className="text-yellow-500 ml-1">THB</span>
+                          </div>
+                        )}
+                      {totalSGD > 0 && (
+                          <div className="bg-yellow-900/30 px-4 py-2 rounded-md border border-yellow-700/50">
+                              <span className="text-yellow-400 font-bold text-xl">{totalSGD.toLocaleString()}</span>
+                              <span className="text-yellow-500 ml-1">SGD</span>
+                          </div>
+                      )}
+                  </div>
+                  <p className="text-gray-400 text-sm mt-3">Thank you for your generous support!</p>
+                </div>
+              )}
+
               {isLoading ? (
                 <div className="flex justify-center py-12">
                   <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-yellow-400"></div>
