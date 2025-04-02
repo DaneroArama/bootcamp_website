@@ -6,6 +6,11 @@ const CondolenceSection = () => {
   const [donations, setDonations] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  // Add state to track scroll position
+  const [isScrolledToBottom, setIsScrolledToBottom] = useState({
+    desktop: false,
+    mobile: false
+  });
 
   // Add scroll event listener
   useEffect(() => {
@@ -15,6 +20,30 @@ const CondolenceSection = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Handle scroll events for donation lists
+  const handleDesktopScroll = (e) => {
+    const { scrollTop, scrollHeight, clientHeight } = e.target;
+    // Check if scrolled to bottom (with a small buffer)
+    setIsScrolledToBottom(prev => ({
+      ...prev,
+      desktop: scrollHeight - scrollTop - clientHeight < 20
+    }));
+  };
+
+  const handleMobileScroll = (e) => {
+    const { scrollTop, scrollHeight, clientHeight } = e.target;
+    // Check if scrolled to bottom (with a small buffer)
+    setIsScrolledToBottom(prev => ({
+      ...prev,
+      mobile: scrollHeight - scrollTop - clientHeight < 20
+    }));
+  };
+
+  // Reset scroll state when donations change
+  useEffect(() => {
+    setIsScrolledToBottom({ desktop: false, mobile: false });
+  }, [donations]);
 
   // Scroll to top function
   const scrollToTop = () => {
@@ -46,6 +75,14 @@ const CondolenceSection = () => {
           });
           return donation;
         }).filter(donation => donation.Date && donation.Name); // Filter out empty rows
+        
+        // Sort donations by date (newest first)
+        donationData.sort((a, b) => {
+          // Try to parse dates (assuming format is MM/DD/YYYY or similar)
+          const dateA = new Date(a.Date);
+          const dateB = new Date(b.Date);
+          return dateB - dateA; // Newest first
+        });
         
         setDonations(donationData);
       } catch (error) {
@@ -301,7 +338,10 @@ const CondolenceSection = () => {
                 <div>
                   {/* Desktop Table View */}
                   <div className="hidden md:block relative">
-                    <div className="overflow-x-auto overflow-y-auto max-h-[600px] rounded-lg border border-gray-700 scrollbar-none">
+                    <div 
+                      className="overflow-x-auto overflow-y-auto max-h-[600px] rounded-lg border border-gray-700 scrollbar-none pb-12"
+                      onScroll={handleDesktopScroll}
+                    >
                       <table className="min-w-full divide-y divide-gray-700">
                         <thead className="bg-gray-800 sticky top-0 z-10">
                           <tr>
@@ -321,7 +361,7 @@ const CondolenceSection = () => {
                         </tbody>
                       </table>
                     </div>
-                    {donations.length > 10 && (
+                    {donations.length > 10 && !isScrolledToBottom.desktop && (
                       <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none flex justify-center items-end pb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -332,7 +372,10 @@ const CondolenceSection = () => {
 
                   {/* Mobile Card View */}
                   <div className="md:hidden relative">
-                    <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800/50">
+                    <div 
+                      className="space-y-4 max-h-[600px] overflow-y-auto pr-2 scrollbar-none pb-12"
+                      onScroll={handleMobileScroll}
+                    >
                       {donations.map((donation, index) => (
                         <div key={index} className="bg-gray-800/30 p-4 rounded-lg border border-gray-700">
                           <div className="flex justify-between items-center mb-2">
@@ -343,7 +386,7 @@ const CondolenceSection = () => {
                         </div>
                       ))}
                     </div>
-                    {donations.length > 2 && (
+                    {donations.length > 2 && !isScrolledToBottom.mobile && (
                       <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none flex justify-center items-end pb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
