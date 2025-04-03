@@ -198,8 +198,8 @@ const HeroSection = () => {
                         onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeCDWlyR4HPWXe3PRhybZkwRq49Er1CBdcf-Gty-HGqSDuJ5w/viewform?usp=dialog', '_blank')}
                     >
                         <span className="text-purple-400">✦</span>
-                        <span className="mx-2">Register Now!</span>
-                        <span>→</span>
+                        <span className="mx-2">Register Paused</span>
+                        <span></span>
                     </motion.button>
                 </motion.div>
             </div>
