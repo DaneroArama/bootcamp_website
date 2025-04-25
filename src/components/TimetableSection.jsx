@@ -10,7 +10,6 @@ import Sponsor from '../img/Event Logo & Icon/Sponsor.svg'
 
 import CTZ from '../img/Sponsors/CTZPay.png'
 
-import DuWunAung from "../img/Speaker/Du Wun Aung.webp";
 import KyawMyoThet from "../img/Speaker/KyawMyoThet.webp";
 import PyitSoneOo from "../img/Speaker/Pyit Sone Oo.webp";
 import WaiYiMonSoe from "../img/Speaker/Wai Yi Mon Soe.webp";
@@ -31,7 +30,7 @@ const TimetableSection = () => {
     const [showTimetable, setShowTimetable] = useState(false);
     const [activeTab, setActiveTab] = useState(0);
     const [isTimetableReady] = useState(true);
-    const [isBootcampPaused] = useState(true); // New state to indicate bootcamp is paused
+    const [isBootcampPaused] = useState(false); // New state to indicate bootcamp is paused
     const [showCondolencePopup, setShowCondolencePopup] = useState(false); // Add this state for the popup
     const timetableSectionRef = useRef(null); // Add this ref for scrolling
 
@@ -96,7 +95,7 @@ const TimetableSection = () => {
                     speaker: {
                         name: "Panel Speakers",
                         role: "Industry Experts",
-                        image: [PyitSoneOo, KyawMyoThet, WaiYiMonSoe, DuWunAung]
+                        image: [PyitSoneOo, KyawMyoThet, WaiYiMonSoe]
                     }
                 },
                 {

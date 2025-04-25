@@ -92,8 +92,8 @@ const Navbar = () => {
                             onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeCDWlyR4HPWXe3PRhybZkwRq49Er1CBdcf-Gty-HGqSDuJ5w/viewform?usp=dialog', '_blank')}
                         >
                             <span className="text-purple-400">✧</span>
-                            <span>Register Paused</span>
-                            <span></span>
+                            <span>Register Now</span>
+                            <span>→</span>
                         </motion.button>
                     </div>
 
@@ -166,8 +166,8 @@ const Navbar = () => {
                                 onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeCDWlyR4HPWXe3PRhybZkwRq49Er1CBdcf-Gty-HGqSDuJ5w/viewform?usp=dialog', '_blank')}
                             >
                                 <span className="text-purple-400">✧</span>
-                                <span>Register Paused</span>
-                                <span></span>
+                                <span>Register Now</span>
+                                <span>→</span>
                             </motion.button>
                         </div>
                     </motion.div>

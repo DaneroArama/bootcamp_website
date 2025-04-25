@@ -7,7 +7,6 @@ import mentor2 from "../img/Mentors/Barry.webp"; // Adjust the path as necessary
 import mentor3 from "../img/Mentors/Min Nanda Zan.webp"; // Adjust the path as necessary
 import mentor4 from "../img/Mentors/Zwekaunghtet.webp";
 import mentor5 from "../img/Mentors/Aye Chan Pyae.webp";
-import speaker1 from "../img/Speaker/Du Wun Aung.webp";
 import speaker2 from "../img/Speaker/KyawMyoThet.webp";
 import speaker3 from "../img/Speaker/Pyit Sone Oo.webp";
 import speaker4 from "../img/Speaker/Wai Yi Mon Soe.webp";
@@ -58,12 +57,6 @@ const mentor = [
 ];
 
 const speaker = [
-    {
-        id: 1,
-        name: "Ko Du Wun Aung",
-        designation: "Speaker",
-        image: speaker1
-    },
     {
         id: 2,
         name: "Ko Kyaw Myo Thet",
@@ -298,8 +291,8 @@ export const Home = () => {
                         />
                         <h3 className="text-xl mb-16 font-gothic relative z-10">DATE & TIME</h3>
                         <div className="relative z-10">
-                            <p className="text-3xl font-semibold font-malinton">Postponed</p>
-                            <p className="font-malinton text-xl">will be announced soon </p>
+                            <p className="text-3xl font-semibold font-malinton">May 3rd and 4th</p>
+                            <p className="font-malinton text-xl">9am to 4pm</p>
                         </div>
                     </motion.div>
 

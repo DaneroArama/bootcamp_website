@@ -2,7 +2,6 @@ import {AnimatePresence, motion} from "framer-motion";
 import React, {useRef, useState} from "react";
 import White from "../img/Second Icon/White.svg";
 import Black from "../img/Second Icon/BlackStar.svg";
-import DuWunAung from "../img/Speaker/Du Wun Aung.webp";
 import KyawMyoThet from "../img/Speaker/KyawMyoThet.webp";
 import PyitSoneOo from "../img/Speaker/Pyit Sone Oo.webp";
 import WaiYiMonSoe from "../img/Speaker/Wai Yi Mon Soe.webp";
@@ -19,15 +18,6 @@ const SpeakerSection = () => {
     };
 
     const speakers = [
-        {
-            name:           "Ko Du Wun Aung",
-            position:       "Product Owner",
-            description:    "Ko Du Wun Aung is an Product Owner with expertise in software engineering, product management, and technical operations. With a background in Business Information Technology and System Analysis, he has held various roles such as developer, technical director, and product owner, bringing a wealth of experience to his work.\n"+
-                            "\n" +
-                            "ကိုဓူဝံအောင်ဟာဆိုရင်တော့  software engineering, product management နဲ့ technical operations အပိုင်းတွေမှာထူးချွန်တဲ့ Product Owner တစ်ဦးဖြစ်ပါတယ်။  Business Information Technology နဲ့ System Analysis Background က လာတဲ့သူဖြစ်တဲ့အလျောက် developer, technical director, product owner အစရှိတဲ့အလုပ်အကိုင်တွေကို လုပ်ကိုင်ဖူးသူတစ်ဦးလည်းဖြစ်ပါတယ်။\n",
-            confirmed:      true,
-            image:          DuWunAung
-        },
         {
             name: "Ko Kyaw Myo Thet",
             position: "Chief Technical Officer (CTO)",

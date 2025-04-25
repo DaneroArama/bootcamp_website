@@ -9,7 +9,6 @@ import SponsorSection from "./components/SponsorSection";
 import MachineGunLoader from "./components/ui/MachineGunLoader";
 import OrganizerSection from "./components/OrganizerSection";
 import MerchandiseSection from './components/MerchandiseSection';
-import CondolenceSection from "./components/CondolenceSection";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -33,8 +32,6 @@ const App = () => {
             <div className="relative z-10">
                 <Navbar/>
                 <MachineGunLoader text="Design Your Future with Real World Experience! Yesssss!" wordClassName="font-malinton"/>
-
-                <CondolenceSection/>
 
                 <section className="pt-24" id="home">
                     <Home />
@@ -60,6 +57,8 @@ const App = () => {
                 <section id="programs">
                     <TimetableSection />
                 </section>
+
+                <MerchandiseSection/>
 
                 <section id="sponsors">
                     <SponsorSection />
