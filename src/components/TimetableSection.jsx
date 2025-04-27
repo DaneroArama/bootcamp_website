@@ -13,6 +13,7 @@ import CTZ from '../img/Sponsors/CTZPay.png'
 import KyawMyoThet from "../img/Speaker/KyawMyoThet.webp";
 import PyitSoneOo from "../img/Speaker/Pyit Sone Oo.webp";
 import WaiYiMonSoe from "../img/Speaker/Wai Yi Mon Soe.webp";
+import BoBoMin from "../img/Speaker/Bo Bo Min.jpg"
 
 import Barry from "../img/Mentors/Barry.webp";
 import Zawkaunghtet from "../img/Mentors/Zwekaunghtet.webp";
@@ -95,7 +96,7 @@ const TimetableSection = () => {
                     speaker: {
                         name: "Panel Speakers",
                         role: "Industry Experts",
-                        image: [PyitSoneOo, KyawMyoThet, WaiYiMonSoe]
+                        image: [PyitSoneOo, KyawMyoThet, WaiYiMonSoe, BoBoMin]
                     }
                 },
                 {

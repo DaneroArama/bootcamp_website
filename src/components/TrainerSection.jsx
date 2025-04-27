@@ -140,15 +140,6 @@ const TrainerSection = () => {
             image: ThazinWin // Add mentor image path here
         },
         {
-            name: "Ma Ei Thaw Zin",
-            role: "TRAINER ASSISTANT",
-            bio:  "Ei Thaw Zin, who is good at multimedia design and art, is creating simple and user-friendly design solutions for complex products. Currently, she is working at KBZ Bank and is a former UX/UI Designer at Dinger. She has also worked on Fintech, LMS systems, and various other digital products, and is an active volunteer to events in the IT field.\n"+
-                "\n"+
-                "Multimedia design နဲ့ art အပိုင်းမှာပါထူးချွန်တဲ့ မအိသော်ဇင်ဟာဆိုရင်တော့ ဖြေရှင်းရခက်တဲ့အရာတွေရဲ့ Design Solution တွေကို ရိုးရိုးရှင်းရှင်းနဲ့ user-friendly ဖြစ်အောင် ဖန်တီးနေသူတစ်ဦးဖြစ်ပါတယ်။ လက်ရှိမှာတော့ KBZ Bank မှာ လုပ်ကိုင်နေပြီး Dinger ရဲ့ Former UX/UI Designer တစ်ဦးဖြစ်ပါတယ်။ Finetech,  LMS systems နဲ့ အခြားသော Digital Product များစွာကိုလည်းလုပ်ဆောင်ခဲ့ပြီး IT နယ်ပယ်မှာရှိတဲ့ ပွဲတွေမှာလည်း တက်တက်ကြွကြွနဲ့လုပ်အားပေးနေသူတစ်ဦးဖြစ်ပါတယ်။",
-            confirmed: true,
-            image: EiThawZin
-        },
-        {
             name: "Ma Hnin Hay Mar Aung",
             role: "TRAINER ASSISTANT",
             bio: "Product Designer အနေနဲ့ (၅) နှစ်ကျော် အတွေ့အကြုံရှိသူဖြစ်တဲ့ နှင်းဟေမာအောင် ဟာဆိုရင်တော့ Travel & Business ဘက်မှလာသူဖြစ်ပြီး e-wallets, B2B, B2C, ATS system, Travel & Community, Inventory Management System စတဲ့ Projects တွေကိုလည်းတာဝန်ယူလုပ်ကိုင်ခဲ့ဖူးပါတယ် uab Bank - Fintech ရဲ့ former Product Designer အနေနဲ့လည်းတာဝန်ယူလုပ်ကိုင်ခဲ့ဖူးပါတယ် အခုလက်ရှိမှာတော့ Celestial Dragon Tech ရဲ့ founder တစ်ဦးဖြစ်ပြီး start-up Product ဖြစ်တဲ့ EzyPet App ကို launch လုပ်နိုင်ခဲ့တဲ့အပြင် User တွေအတွက် လွယ်ကူရိုးရှင်းပြီး Value ပေးနိုင်မယ့် Digital Products တွေကို Business Concept နဲ့ အညီ ပူးပေါင်းဖန်တီးပေးနိုင်ဖို့ကို အဓိကထားလုပ်ဆောင်နေသူဖြစ်ပါတယ်\n" +

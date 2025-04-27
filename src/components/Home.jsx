@@ -7,9 +7,10 @@ import mentor2 from "../img/Mentors/Barry.webp"; // Adjust the path as necessary
 import mentor3 from "../img/Mentors/Min Nanda Zan.webp"; // Adjust the path as necessary
 import mentor4 from "../img/Mentors/Zwekaunghtet.webp";
 import mentor5 from "../img/Mentors/Aye Chan Pyae.webp";
-import speaker2 from "../img/Speaker/KyawMyoThet.webp";
-import speaker3 from "../img/Speaker/Pyit Sone Oo.webp";
-import speaker4 from "../img/Speaker/Wai Yi Mon Soe.webp";
+import speaker1 from "../img/Speaker/KyawMyoThet.webp";
+import speaker2 from "../img/Speaker/Pyit Sone Oo.webp";
+import speaker3 from "../img/Speaker/Wai Yi Mon Soe.webp";
+import speaker4 from "../img/Speaker/Bo Bo Min.jpg";
 import YIC from '../img/YIC.png';
 import BlueSquishyGhost from '../img/Cartoon mascot/BlueSquishyGhost.svg';
 import GreenGhost from '../img/Cartoon mascot/GreenGhost.svg';
@@ -58,23 +59,29 @@ const mentor = [
 
 const speaker = [
     {
-        id: 2,
+        id: 1,
         name: "Ko Kyaw Myo Thet",
+        designation: "Speaker",
+        image: speaker1
+    },
+    {
+        id: 2,
+        name: "Ko Pyit Sone Oo",
         designation: "Speaker",
         image: speaker2
     },
     {
         id: 3,
-        name: "Ko Pyit Sone Oo",
+        name: "Ma Wai Yi Mon Soe",
         designation: "Speaker",
         image: speaker3
     },
     {
         id: 4,
-        name: "Ma Wai Yi Mon Soe",
+        name: "Bo Bo Min",
         designation: "Speaker",
         image: speaker4
-    },
+    }
 ];
 export const Home = () => {
     // Create refs for each card to track mouse position

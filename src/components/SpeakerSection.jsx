@@ -5,6 +5,7 @@ import Black from "../img/Second Icon/BlackStar.svg";
 import KyawMyoThet from "../img/Speaker/KyawMyoThet.webp";
 import PyitSoneOo from "../img/Speaker/Pyit Sone Oo.webp";
 import WaiYiMonSoe from "../img/Speaker/Wai Yi Mon Soe.webp";
+import BoBoMin from "../img/Speaker/Bo Bo Min.jpg";
 
 const SpeakerSection = () => {
     const [expandedSpeaker, setExpandedSpeaker] = useState(null);
@@ -48,6 +49,16 @@ const SpeakerSection = () => {
             confirmed: true,
             image: WaiYiMonSoe
         },
+        {
+            name: "Ko Bo Bo Min",
+            position: "Software Development | Education",
+            company: "Technortal",
+            description: "Ko Bo Bo Min is the founder of Technortal, a community-centric learning center dedicated to offering high-quality IT education at an affordable price for young people in Myanmar who are passionate about Programming and Computer Science. Additionally, he is  a YouTuber on the Technortal YouTube channel, a developer, and an educator. \n" +
+                "\n" +
+                "ကိုဘိုဘိုမင်းဟာဆိုရင်တော့ဖြင့် လက်ရှိ Technortal ဆိုတဲ့ Community-Centric Learning Center တစ်ခုတည်ထောင်ထားပြီး မြန်မာနိုင်ငံမှာရှိတဲ့ လူငယ်တိုင်း IT နဲ့ ပတ်သတ်တဲ့ ပညာရေးစနစ်ကို လွယ်လွယ်ကူကူ ထိတွေ့နိုင်အောင် ဆောင်ရွက်ပေးလျှက်ရှိပါတယ်။​ ဒါ့အပြင် Technortal ကို ၂၀၂၂ မှာ Youtube Channel တစ်ခုအနေနဲ့ပဲ​စတင်ခဲ့ပြီး Youtube Video တွေကိုလည်း ဆက်လက် ဖန်တီးလျှက်ရှိပါတယ်။​ Local Education Organization တွေမှာ Educator အဖြစ်လည်း လုပ်ကိုင်လျှက်ရှိပြီး Software Developer တစ်ယောက်လည်းဖြစ်ပါတယ်။\n",
+            confirmed: true,
+            image: BoBoMin
+        }
     ];
 
     // Container animation variants
