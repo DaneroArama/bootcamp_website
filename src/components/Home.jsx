@@ -328,8 +328,8 @@ export const Home = () => {
                         />
                         <h3 className="text-xl mb-16 font-gothic relative z-10">Register</h3>
                         <div className="relative z-10">
-                            <p className="text-3xl font-semibold mb-2 font-malinton">Registration Paused</p>
-                            <p className="font-malinton text-lg mb-1">Due to recent events</p>
+                            <p className="text-3xl font-semibold mb-2 font-malinton">Registration Open!</p>
+                            <p className="font-malinton text-lg mb-1">Closing Soon!</p>
                         </div>
                     </motion.div>
                 </motion.div>
