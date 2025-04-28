@@ -153,7 +153,7 @@ const TrainerSection = () => {
             role: "TRAINER ASSISTANT",
             bio: "Ma Nwe Oo Lwin is a UX/UI Designer working at an IT company. She likes to create products with excellent UX and actively contributes to ensuring a smooth development process. With experience in product design, she focuses on crafting simple and user-friendly digital experiences for users.\n"+
                     "\n"+
-                    "မနယ်ဦးလွင်ဟာဆိုရင်တော့ IT Company တစ်ခုမှာ UX/UI Designer အဖြစ်လုပ်ကိုင်နေသူဖြစ်ပြီး, UX ကောင်းမွန်သော product များဖန်တီးရန် ကြိုးပမ်းတဲ့အပြင်, development process အဆင့်ထိ အဆင်ပြေစေရန် ပါဝင်ကူညီပေးနေသူဖြစ်ပါတယ်။Product design ပိုင်းတွင်လည်း အတွေ့အကြုံရှိပြီး, အသုံးပြုသူအတွက် သုံးလွယ်ရိုးရှင်းသည့် digital experience များဖန်တီးရန် အာရုံစိုက်လျှက်ရှိသူလည်းဖြစ်ပါတယ်။",
+                    "မနွယ်ဦးလွင်ဟာဆိုရင်တော့ IT Company တစ်ခုမှာ UX/UI Designer အဖြစ်လုပ်ကိုင်နေသူဖြစ်ပြီး, UX ကောင်းမွန်သော product များဖန်တီးရန် ကြိုးပမ်းတဲ့အပြင်, development process အဆင့်ထိ အဆင်ပြေစေရန် ပါဝင်ကူညီပေးနေသူဖြစ်ပါတယ်။Product design ပိုင်းတွင်လည်း အတွေ့အကြုံရှိပြီး, အသုံးပြုသူအတွက် သုံးလွယ်ရိုးရှင်းသည့် digital experience များဖန်တီးရန် အာရုံစိုက်လျှက်ရှိသူလည်းဖြစ်ပါတယ်။",
             confirmed: true,
             image: NweOoLwin
         },

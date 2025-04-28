@@ -7,6 +7,8 @@ import GreenStar from "../img/Second Icon/Green Star.svg";
 const OrganizerSection = () => {
     const [selectedOrganizer, setSelectedOrganizer] = useState(null);
     const [showScrollIndicator, setShowScrollIndicator] = useState(false);
+    const [showToast, setShowToast] = useState(false);
+    const [toastMessage, setToastMessage] = useState(""); // Add this line to define the missing state
     const titleRef = useRef(null);
     const bioContentRef = useRef(null);
 
@@ -39,6 +41,14 @@ const OrganizerSection = () => {
         const element = e.target;
         const isAtBottom = Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 10;
         setShowScrollIndicator(!isAtBottom);
+    };
+
+    const handleCopyPhone = (e, phone) => {
+        e.stopPropagation();
+        navigator.clipboard.writeText(phone);
+        setToastMessage("Phone number copied!");
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 2000); // Hide toast after 2 seconds
     };
 
     const trainers = [
@@ -168,16 +178,30 @@ const OrganizerSection = () => {
                                             <div className="flex items-center gap-2 md:gap-3">
                                                 {/* Phone Icon */}
                                                 <button
-                                                    onClick={(e) => {
-                                                        e.stopPropagation();
-                                                        navigator.clipboard.writeText(trainer.contacts.phone);
-                                                    }}
+                                                    onClick={(e) => handleCopyPhone(e, trainer.contacts.phone)}
                                                     className="text-gray-400 hover:text-white transition-colors"
                                                 >
                                                     <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                                     </svg>
                                                 </button>
+
+                                                {/* Toast Notification */}
+                                                <AnimatePresence>
+                                                    {showToast && (
+                                                        <motion.div
+                                                            initial={{ opacity: 0, y: 20 }}
+                                                            animate={{ opacity: 1, y: 0 }}
+                                                            exit={{ opacity: 0, y: 20 }}
+                                                            className="fixed bottom-4 left-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 flex items-center space-x-2"
+                                                        >
+                                                            <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                            </svg>
+                                                            <span>Phone number copied!</span>
+                                                        </motion.div>
+                                                    )}
+                                                </AnimatePresence>
 
                                                 {/* Email Icon */}
                                                 {trainer.contacts.email && (
@@ -362,7 +386,23 @@ const OrganizerSection = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-            
+
+            {/* Global Toast Notification - Moved outside of the card components */}
+            <AnimatePresence>
+                {showToast && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 20 }}
+                        className="fixed bottom-4 left-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 flex items-center space-x-2"
+                    >
+                        <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span>{toastMessage}</span>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };
