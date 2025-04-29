@@ -58,8 +58,6 @@ const App = () => {
                     <TimetableSection />
                 </section>
 
-                <MerchandiseSection/>
-
                 <section id="sponsors">
                     <SponsorSection />
                 </section>

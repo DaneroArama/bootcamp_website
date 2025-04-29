@@ -47,7 +47,7 @@ const TimetableSection = () => {
     const timetableData = [
         {
             day: "Day 1",
-            date: "April 5th",
+            date: "May 3rd",
             events: [
                 // Example of how to update event types in timetableData
                 {
@@ -171,7 +171,7 @@ const TimetableSection = () => {
         },
         {
             day: "Day 2",
-            date: "April 6th",
+            date: "May 4th",
             events: [
                 {
                     time: { start: "8:00 AM" },
