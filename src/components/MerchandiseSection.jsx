@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Totebag1 from "../img/Product/toe bag mock.jpg";
-import Totebag2 from "../img/Product/toe bag mock1.jpg"; // Add the second design image
-import Model1 from "../img/Product/Model 1.png";
-import Model2 from "../img/Product/Model 2.png";
-import Model3 from "../img/Product/Model 3.png";
+import Totebag1 from "../img/Product/toe bag mock.webp";
+import Totebag2 from "../img/Product/toe bag mock1.webp"; // Add the second design image
+import Model1 from "../img/Product/Model 1.webp";
+import Model2 from "../img/Product/Model 2.webp";
+import Model3 from "../img/Product/Model 3.webp";
 
 const MerchandiseSection = () => {
     const [activeProduct, setActiveProduct] = useState(0);

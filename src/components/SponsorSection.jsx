@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import CTZPay from "../img/Sponsors/CTZPay.svg";
-import TintTint from "../img/Sponsors/Tint Tint.JPG";
+import Untitled from "../img/Sponsors/untitled.png";
 import MyJobs from "../img/Sponsors/myjobscommm.png";
 import Sponsors from "../img/Second Icon/Sponsor.svg";
 const SponsorSection = () => {
@@ -17,11 +17,11 @@ const SponsorSection = () => {
         },
         {
             type: "Sponsor",
-            color: "#290302",
+            color: "#4B4F2C",
             textColor: "text-white",
             hoverColor: "hover:bg-white hover:text-white",
             items: [
-                { id: 1, logo: TintTint, name: "Tint Tint", confirmed: true, link: "https://m.facebook.com/tinttintmyansnack/" },
+                { id: 1, logo: Untitled, name: "Untitled", confirmed: true, link: "https://www.facebook.com/Untitled.DessertStudio/" },
             ]
         },
         {
@@ -70,8 +70,8 @@ const SponsorSection = () => {
                                 transition: { repeat: Infinity, duration: 4 }
                             }}
                         >
-                            <div className="bg-[#290302] px-6 py-2 rounded-full text-white font-medium transform">
-                                Tint Tint
+                            <div className="bg-[#4B4F2C] px-6 py-2 rounded-full text-white font-medium transform">
+                                Untitled
                             </div>
                         </motion.div>
 
@@ -87,7 +87,6 @@ const SponsorSection = () => {
                                 MyJobs.com.mm
                             </div>
                         </motion.div>
-                        {/* Other floating bubbles... */}
                     </div>
                 </div>
 
