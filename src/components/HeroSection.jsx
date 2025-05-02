@@ -191,15 +191,12 @@ const HeroSection = () => {
                         First Myanmar In-person Bootcamp 2025
                     </p>
 
-                    {/* Register Button */}
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         className="mt-4 bg-transparent text-white px-8 py-3 rounded-full border border-white flex items-center space-x-2 hover:bg-white hover:text-black hover:border-black"
-                        onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSeCDWlyR4HPWXe3PRhybZkwRq49Er1CBdcf-Gty-HGqSDuJ5w/viewform?usp=dialog', '_blank')}
                     >
                         <span className="text-purple-400">✦</span>
-                        <span className="mx-2">Register Now</span>
-                        <span>→</span>
+                        <span className="mx-2">Register Closed</span>
                     </motion.button>
                 </motion.div>
             </div>

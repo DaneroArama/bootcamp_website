@@ -172,9 +172,6 @@ const MerchandiseSection = () => {
                                 <span className="text-xl md:text-3xl font-bold mr-4 text-[#EBFF00]">
                                     KS {currentProduct.price.toLocaleString()}
                                 </span>
-                                <span className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-3 rounded-full text-center text-sm">
-                                    Pre-order Available
-                                </span>
                             </div>
                             
                             {/* Pre-order Button */}
@@ -182,12 +179,8 @@ const MerchandiseSection = () => {
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 className="w-full bg-gradient-to-r from-[#EBFF00] to-yellow-400 text-black py-4 px-8 rounded-lg font-bold flex items-center justify-center gap-2 mb-6 shadow-lg shadow-yellow-500/20"
-                                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSfHdVzuh-k8p8gIkJAdXCM6zbXxriptkNgyR0tZ0811R5LK6Q/viewform?usp=preview', '_blank')}
                             >
-                                <span>Pre-order Now</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />
-                                </svg>
+                                <span>Thanks For Buying!</span>
                             </motion.button>
                             
                             {/* Pre-order Info */}
