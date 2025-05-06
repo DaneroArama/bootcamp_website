@@ -91,7 +91,7 @@ const Navbar = () => {
                             className="bg-black border-white border-2 text-white px-3 py-2 rounded-full flex items-center space-x-2 hover:bg-white hover:text-black hover:border-black"
                         >
                             <span className="text-purple-400">✧</span>
-                            <span>See You At Bootcamp !</span>
+                            <span>Thanks For Joining Bootcamp!</span>
                         </motion.button>
                     </div>
 

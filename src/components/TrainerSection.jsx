@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useRef, useEffect } from "react";
-import EiThawZin from '../img/Mentors/EiThaw Zin.webp';
 import Barry from "../img/Mentors/Barry.webp";
 import NweOoLwin from "../img/Mentors/Nwe Oo Lwin.webp";
 import Zawkaunghtet from "../img/Mentors/Zwekaunghtet.webp";
